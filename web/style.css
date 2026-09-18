@@ -611,16 +611,9 @@ h3 {
     padding: 20px 0 40px;
 }
 
-/* Gridy se 4 kartami (přijímačky na indexu, fakulty ČVUT) */
+/* Gridy se 4 kartami (přijímačky na indexu, fakulty ČVUT) - vždy 2 sloupce */
 .detail-grid-4 {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-@media (max-width: 900px) {
-    /* 4 karty -> 2 sloupce */
-    .detail-grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(2, 1fr);
 }
 
 @media (max-width: 600px) {
@@ -631,21 +624,21 @@ h3 {
     }
 }
 
-/* "Vyber si své přijímačky" na indexu - flex místo gridu, karty se roztáhnou podle šířky */
+/* "Vyber si své přijímačky" na indexu - vždy 2 sloupce na širších obrazovkách */
 #prijimacky-nav {
     max-width: 1400px;
 }
 
 #prijimacky-nav .detail-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-#prijimacky-nav .detail-grid .card {
-    flex: 1 1 280px;
-    max-width: 420px;
+@media (max-width: 600px) {
+    #prijimacky-nav .detail-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card {
