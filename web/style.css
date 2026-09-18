@@ -2780,3 +2780,13 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
         transform: translateY(-6px);
     }
 }
+
+/* Na stránce Individuální doučování ať je nadpis nad textem, ne vedle něj */
+.page-individual .timeline-body {
+    flex-direction: column;
+    gap: 6px;
+}
+
+.page-individual .timeline-heading {
+    min-width: 0;
+}
