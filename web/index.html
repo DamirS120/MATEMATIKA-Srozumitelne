@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<script>
+  // Automatické přesměrování na ruskou verzi podle jazyka prohlížeče
+  // (jen při první návštěvě - pokud si uživatel jazyk už sám vybral, respektuje se jeho volba)
+  (function () {
+    if (!localStorage.getItem('lang_choice')) {
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.indexOf('ru') === 0) {
+        window.location.replace('index_ru.html');
+      }
+    }
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18450634718');
+</script>
+
+    <script src="menu.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doučování matematiky Praha | Matematika Srozumitelně</title>
+    <meta name="description" content="Doučování matematiky v Praze i online. Příprava na přijímačky CERMAT, ČVUT, UK i SCIO nebo pomoc s látkou na vysoké škole. Žádné biflování, jen pochopení.">
+
+    <link rel="alternate" hreflang="cs" href="https://matematika-srozumitelne.cz/index.html">
+    <link rel="alternate" hreflang="ru" href="https://matematika-srozumitelne.cz/index_ru.html">
+    <link rel="alternate" hreflang="x-default" href="https://matematika-srozumitelne.cz/index.html">
+
+    <meta property="og:title" content="Matematika Srozumitelně | Lektor z ČVUT">
+    <meta property="og:description" content="Doučování matematiky v Praze i online. Příprava na přijímačky CERMAT, ČVUT, UK i SCIO nebo pomoc s látkou na vysoké škole. Žádné biflování, jen pochopení.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matematika-srozumitelne.cz/index.html">
+    <meta property="og:image" content="https://matematika-srozumitelne.cz/images/og-image.jpg">
+    <meta property="og:locale" content="cs_CZ">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Matematika Srozumitelně",
+        "description": "Individuální doučování matematiky v Praze i online. Příprava na přijímačky CERMAT, ČVUT, UK i SCIO testy.",
+        "url": "https://matematika-srozumitelne.cz",
+        "telephone": "+420705914190",
+        "email": "rimad.1203@seznam.cz",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Praha",
+            "addressCountry": "CZ"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Praha"
+        },
+        "priceRange": "180–200 Kč/hod",
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=100087010827036",
+            "https://www.instagram.com/rimad.120/"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Doučování a příprava na přijímačky",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Příprava na přijímačky CERMAT z matematiky",
+                        "url": "https://matematika-srozumitelne.cz/cermat.html"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Příprava na přijímačky ČVUT z matematiky",
+                        "url": "https://matematika-srozumitelne.cz/cvut.html"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Příprava na přijímačky UK z matematiky",
+                        "url": "https://matematika-srozumitelne.cz/uk.html"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Příprava na SCIO testy z matematiky",
+                        "url": "https://matematika-srozumitelne.cz/scio.html"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Individuální doučování matematiky",
+                        "url": "https://matematika-srozumitelne.cz/individualni.html"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+
+<body class="page-index">
+
+   <nav class="navbar">
+    <div class="container nav-flex">
+        <a href="index.html" class="logo">MATEMATIKA <span>Srozumitelně</span></a>
+        
+        <input type="checkbox" id="menu-toggle" class="dropdown-check">
+        <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+        
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">PŘIJÍMAČKY <span class="dd-caret"></span></a>
+                <div class="dropdown-content">
+                    <a href="cermat.html">CERMAT</a>
+                    <a href="cvut.html">ČVUT</a>
+                    <a href="uk.html">UK</a>
+                    <a href="scio.html">SCIO</a>
+                </div>
+            </li>
+            <li><a href="individualni.html">DOUČOVÁNÍ</a></li>
+            <li><a href="omne.html">O MNĚ</a></li>
+            <li><a href="spoluprace.html">SPOLUPRÁCE</a></li>
+            <li><a href="#kontakt" class="btn-nav">KONTAKT</a></li>
+            
+            <div class="lang-switch">
+                <a href="index.html" class="lang-link active">CZ</a>
+                <span>|</span>
+                <a href="index_ru.html" class="lang-link">RU</a>
+            </div>
+        </ul>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-badge">Individuální přístup & Zkušenosti z ČVUT</span>
+            <h1>Doučování matematiky, které ti konečně <span class="highlight">začne dávat smysl</span></h1>
+            <p>Nabízím doučování matematiky v Praze i online. Připravím tě na přijímačky z matematiky (CERMAT, ČVUT, UK, SCIO) nebo pomůžu s náročnou látkou na vysoké škole. Žádné biflování, jen čisté pochopení.</p>
+            <div class="hero-btns">
+                <a href="#kontakt" class="btn-primary">CHCI DOUČOVÁNÍ</a>
+                <a href="#sluzby" class="btn-secondary">MOJE SLUŽBY</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <section class="container" id="prijimacky-nav">
+        <h2 class="section-title">Vyber si své přijímačky</h2>
+        <div class="detail-grid detail-grid-4">
+            <a href="cermat.html" class="card" style="border-top: 5px solid var(--primary); box-shadow: 0 10px 25px rgba(30, 58, 138, 0.18);">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=500&q=80" class="card-img" alt="CERMAT příprava">
+                <div class="card-body">
+                    <h3 style="color:var(--primary)">Příprava na CERMAT</h3>
+                    <p>Pro deváťáky i maturanty. Projdeme testy z minulých let a odhalíme chytáky.</p>
+                </div>
+            </a>
+            <a href="cvut.html" class="card" style="border-top: 5px solid #0ea5e9; box-shadow: 0 10px 25px rgba(14, 165, 233, 0.2);">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=500&q=80" class="card-img" alt="ČVUT příprava">
+                <div class="card-body">
+                    <h3 style="color:#0ea5e9">Přijímačky na ČVUT</h3>
+                        <p>Příprava na FIT, FEL a další fakulty od někoho, kdo tam úspěšně studuje.</p>
+                    </div>
+                </a>
+                <a href="uk.html" class="card" style="border-top: 5px solid #b91c1c; box-shadow: 0 10px 25px rgba(185, 28, 28, 0.18);">
+                    <img src="images/mff.jpg" class="card-img" alt="MFF UK Troja">
+                    <div class="card-body">
+                        <h3 style="color:#b91c1c">Matematika na UK</h3>
+                        <p>Příprava pro budoucí učitele i vědce. Zaměřeno na hluboké porozumění teorii.</p>
+                    </div>
+                </a>
+                <a href="scio.html" class="card" style="border-top: 5px solid #b45309; box-shadow: 0 10px 25px rgba(180, 83, 9, 0.18);">
+                    <img src="images/scio-priprava.jpg" class="card-img" alt="Příprava na SCIO testy">
+                    <div class="card-body">
+                        <h3 style="color:#b45309">SCIO testy</h3>
+                        <p>OSP, NSZ i přijímačky na gymnázia. Naučím tě přemýšlet tak, jak to testy vyžadují.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+<section class="steps-wrapper container">
+    <h2 class="section-title">Jak probíhá doučování?</h2>
+    <div class="steps-container">
+        
+        <div class="step-item">
+            <div class="step-circle">1</div>
+            <h4>První kontakt</h4>
+            <p>Domluvíme se přes WhatsApp nebo Telegram na termínu a probereme, co potřebuješ zlepšit.</p>
+        </div>
+        
+        <div class="step-item">
+            <div class="step-circle">2</div>
+            <h4>Příprava</h4>
+                <p>Na základě tvých potřeb připravím materiály, příklady z minulých testů a plán lekce.</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-circle">3</div>
+                <h4>Lekce</h4>
+                <p>Vysvětlíme si látku srozumitelně. Žádné stresy, počítáme tak dlouho, dokud to nepochopíš.</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-circle">4</div>
+                <h4>Výsledky</h4>
+                <p>Po lekci budeš vědět, jak na to. Získáš jistotu v počítání a klid na zkoušky.</p>
+            </div>
+            
+        </div>
+    </section>
+
+<section id="cenik-pro" class="container py-10">
+
+    <div class="pricing-flow">
+        <!-- 1. Konzultace -->
+        <div class="bubble side">
+            <div class="bubble-content">
+                <span class="bubble-tag">START</span>
+                <div class="bubble-price">Zdarma</div>
+                <p>Konzultace</p>
+            </div>
+        </div>
+
+        <!-- 2. Hlavní nabídka (Zvýrazněná) -->
+        <div class="bubble main">
+            <div class="bubble-content">
+                <span class="bubble-tag highlight">NEJLEPŠÍ VOLBA</span>
+                <div class="bubble-price">180 Kč</div>
+                <p>Doučování / hod</p>
+                <a href="#kontakt" class="bubble-action">MÁM ZÁJEM</a>
+            </div>
+        </div>
+
+        <!-- 3. Přijímačky -->
+        <div class="bubble side">
+            <div class="bubble-content">
+                <span class="bubble-tag">EXPERT</span>
+                <div class="bubble-price">200+ Kč</div>
+                <p>Přijímačky / hod</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+    <section id="sluzby" class="services-section">
+    <div class="container">
+        <h2 class="section-title">S čím ti pomohu</h2>
+        <div class="services-grid">
+            <a class="service-card" href="cermat.html">
+                <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>CERMAT</h3>
+                <p>Kompletní příprava na státní přijímací zkoušky na SŠ a víceletá gymnázia.</p>
+            </a>
+            <a class="service-card" href="cvut.html">
+                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+                <h3>ČVUT</h3>
+                <p>Matematika pro technické fakulty. Příprava na přijímačky i první semestr.</p>
+            </a>
+            <a class="service-card" href="uk.html">
+                <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                <h3>UK</h3>
+                <p>Logické testy a matematika pro PedF a další fakulty Univerzity Karlovy.</p>
+            </a>
+            <a class="service-card" href="scio.html">
+                <div class="icon-box"><i class="fa-solid fa-file-lines"></i></div>
+                <h3>SCIO</h3>
+                <p>Obecné studijní předpoklady, NSZ i přijímačky na gymnázia.</p>
+            </a>
+            <a class="service-card" href="individualni.html">
+                <div class="icon-box"><i class="fa-solid fa-user-group"></i></div>
+                <h3>Osobní doučování</h3>
+                <p>Individuální lekce zaměřené na tvé konkrétní potřeby a školní látku.</p>
+            </a>
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-pen-to-square"></i></div>
+                <h3>Příprava na testy</h3>
+                <p>Intenzivní bloky před čtvrtletkami, maturitou nebo zkouškovým obdobím.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container">
+    <h2 class="section-title">Spolupracuji s nejlepšími</h2>
+    <div class="partner-grid">
+            <a class="partner-card" href="spoluprace.html#edujoy">
+                <h3>EduJoy</h3>
+                <p>Interaktivní vzdělávání a kroužky pro děti. Společně tvoříme moderní metodiku výuky.</p>
+                <span class="partner-card-link">Zjistit více →</span>
+            </a>
+            <a class="partner-card" href="spoluprace.html#newlife">
+                <h3>NEWLIFE</h3>
+                <p>Specialisté na doučování "na poslední chvíli" a přípravu k reparátům a maturitám.</p>
+                <span class="partner-card-link">Zjistit více →</span>
+            </a>
+    </div>
+</section>
+
+<section id="kontakt" class="contact-section">
+    <div class="contact-form-container">
+        <h2 class="section-title">Domluv si úvodní lekci</h2>
+        
+        <form action="https://formspree.io/f/mdaprpqk" method="POST">
+            
+            <div class="form-group">
+                <label for="jmeno">Tvé jméno</label>
+                <input type="text" id="jmeno" name="jmeno" required placeholder="např. Alexej Novák">
+            </div>
+            
+            <div class="form-group">
+                <label for="kontakt">E-mail nebo Telefon</label>
+                <input type="text" id="kontakt" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+            </div>
+
+            <div class="form-group">
+                <label for="jazyk">V jakém jazyce budeme mluvit?</label>
+                <select id="jazyk" name="jazyk">
+                    <option value="CZ">Čeština</option>
+                    <option value="RU">Ruština</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="typ_pripravy">O co máš zájem?</label>
+                <select id="typ_pripravy" name="typ_pripravy">
+                    <option value="CERMAT">Příprava na CERMAT</option>
+                    <option value="CVUT">Příprava na ČVUT</option>
+                    <option value="UK">Příprava na UK</option>
+                    <option value="SCIO">Příprava na SCIO</option>
+                    <option value="INDIVIDUALNI">Individuální doučování</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="zprava">Tvůj vzkaz (volitelné)</label>
+                <textarea id="zprava" name="zprava" rows="4" placeholder="Napiš mi, co tě trápí..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-nav" style="width: 100%; border: none; cursor: pointer;">
+                ODESLAT POPTÁVKU
+            </button>
+        </form>
+    </div>
+</section>
+
+ <footer class="main-footer">
+    <div class="container footer-grid">
+        
+        <div class="footer-column">
+            <h3>Kontakty</h3>
+            <ul class="footer-list">
+                <li><i class="fa-solid fa-location-dot"></i> Praha, Česká republika</li>
+                <li><i class="fa-solid fa-phone"></i> +420 705 914 190</li>
+                <li><i class="fa-solid fa-envelope"></i> rimad.1203@seznam.cz</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Sociální sítě</h3>
+            <ul class="footer-list">
+                <li><a href="https://wa.me/420777209320" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                <li><a href="https://t.me/damir_121" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i> Telegram</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100087010827036" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i> Facebook </a></li>
+                <li><a href="https://www.instagram.com/rimad.120/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Rychlé menu</h3>
+            <ul class="footer-list">
+                <li><a href="omne.html">O mně</a></li>
+                <li><a href="cermat.html">CERMAT</a></li>
+                <li><a href="cvut.html">ČVUT</a></li>
+                <li><a href="uk.html">UK</a></li>
+                <li><a href="scio.html">SCIO</a></li>
+                <li><a href="individualni.html">Doučování</a></li>
+                <li><a href="spoluprace.html">Spolupráce</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Matematika srozumitelně. Všechna práva vyhrazena.</p>
+    </div>
+</footer>
+
+</body>
+</html>
