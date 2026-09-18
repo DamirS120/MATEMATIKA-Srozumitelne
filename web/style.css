@@ -611,6 +611,13 @@ h3 {
     padding: 20px 0 40px;
 }
 
+@media (max-width: 900px) {
+    /* 3 úzké sloupce by na tabletu vypadaly stlačeně - radši 1 sloupec */
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Gridy se 4 kartami (přijímačky na indexu, fakulty ČVUT) - vždy 2 sloupce */
 .detail-grid-4 {
     grid-template-columns: repeat(2, 1fr);
@@ -1233,23 +1240,6 @@ h3 {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-/* Logo místo fotky - nedeformovat/neořezávat, jen vycentrovat na jemném pozadí */
-.mini-poll-image-logo {
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-.mini-poll-image-logo img {
-    width: auto;
-    height: auto;
-    max-width: 240px;
-    max-height: 240px;
-    object-fit: contain;
 }
 
 @media (max-width: 768px) {
