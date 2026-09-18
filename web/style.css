@@ -102,7 +102,7 @@ h3 {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -626,7 +626,7 @@ h3 {
 
 /* "Vyber si své přijímačky" na indexu - popis vlevo, kartičky vpravo jako velký carousel se šipkami */
 #prijimacky-nav {
-    max-width: 1500px;
+    max-width: 1650px;
 }
 
 .prijimacky-split {

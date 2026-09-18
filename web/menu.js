@@ -40,11 +40,26 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
+    function atStart() {
+      return track.scrollLeft <= step() / 2;
+    }
+    function atEnd() {
+      return track.scrollLeft >= track.scrollWidth - track.clientWidth - step() / 2;
+    }
+
     prevBtn.addEventListener("click", function () {
-      track.scrollBy({ left: -step(), behavior: "smooth" });
+      if (atStart()) {
+        track.scrollTo({ left: track.scrollWidth - track.clientWidth, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: -step(), behavior: "smooth" });
+      }
     });
     nextBtn.addEventListener("click", function () {
-      track.scrollBy({ left: step(), behavior: "smooth" });
+      if (atEnd()) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: step(), behavior: "smooth" });
+      }
     });
     dots.forEach(function (dot, i) {
       dot.addEventListener("click", function () {
