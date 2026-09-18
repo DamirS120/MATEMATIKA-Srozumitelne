@@ -337,6 +337,19 @@ h3 {
     display: block;
 }
 
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 18px;
+}
+
 .hero p {
     font-size: 1.3rem;
     opacity: 0.9;

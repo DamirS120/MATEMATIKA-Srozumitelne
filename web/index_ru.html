@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <script src="menu.js" defer></script>
+    <script src="hero-carousel.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Репетитор по математике в Праге | Matematika Srozumitelně</title>
@@ -134,19 +135,122 @@
     </div>
 </nav>
 
-<header class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <span class="hero-badge">Индивидуальный подход и опыт учёбы в ČVUT</span>
-            <h1>Репетиторство по математике, которое наконец <span class="highlight">начнёт обретать смысл</span></h1>
-            <p>Предлагаю репетиторство по математике в Праге и онлайн. Подготовлю тебя к поступлению (CERMAT, ČVUT, UK, SCIO) или помогу со сложным материалом в вузе. Никакой зубрёжки — только чистое понимание.</p>
-            <div class="hero-btns">
+<header class="hero-split">
+    <div class="container hero-split-grid">
+        <div class="hero-left">
+            <span class="hero-eyebrow">Индивидуальный подход и опыт учёбы в ČVUT</span>
+            <h1 class="hero-split-title">Репетиторство по математике, которое наконец <span class="highlight-alt">начнёт обретать смысл</span></h1>
+            <p class="hero-split-text">Подготовлю тебя к поступлению (CERMAT, ČVUT, UK, SCIO) или помогу со сложным материалом в вузе. Никакой зубрёжки — только чистое понимание.</p>
+
+            <div class="mode-picker">
+                <h3>Занимаюсь очно и онлайн</h3>
+                <p>Выбери, что тебе удобнее — оба формата работают с одинаковым вниманием и результатом.</p>
+
+                <label class="mode-option">
+                    <input type="radio" name="vyuka-forma" checked>
+                    <span class="mode-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="mode-text">
+                        <strong>Очно в Праге</strong>
+                        Занятия у меня, по договорённости возможно и у тебя дома.
+                    </span>
+                </label>
+
+                <label class="mode-option">
+                    <input type="radio" name="vyuka-forma">
+                    <span class="mode-icon"><i class="fa-solid fa-laptop"></i></span>
+                    <span class="mode-text">
+                        <strong>Онлайн откуда угодно</strong>
+                        По видеосвязи с общим экраном, без разъездов.
+                    </span>
+                </label>
+            </div>
+
+            <div class="hero-split-btns">
                 <a href="#kontakt" class="btn-primary">ХОЧУ ЗАНЯТИЯ</a>
-                <a href="#sluzby" class="btn-secondary">МОИ УСЛУГИ</a>
+                <a href="#sluzby" class="btn-secondary-outline-dark">МОИ УСЛУГИ</a>
+            </div>
+        </div>
+
+        <div class="hero-carousel" id="hero-carousel">
+            <div class="carousel-slide active" style="background-image:url('images/cermat-9.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <div class="carousel-caption">
+                    <h3>Подготовка к CERMAT</h3>
+                    <p>Для девятиклассников и выпускников. Разберём тесты прошлых лет и найдём все подвохи.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/cvut-budova.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-microchip"></i></span>
+                <div class="carousel-caption">
+                    <h3>Поступление в ČVUT</h3>
+                    <p>Подготовка на FIT, FEL и другие факультеты от человека, который сам там успешно учится.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/mff.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-book-open"></i></span>
+                <div class="carousel-caption">
+                    <h3>Математика для UK</h3>
+                    <p>Подготовка для будущих учителей и учёных. Упор на глубокое понимание теории.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/scio-priprava.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-file-lines"></i></span>
+                <div class="carousel-caption">
+                    <h3>Тесты SCIO</h3>
+                    <p>OSP, NSZ и поступление в гимназии. Научу тебя мыслить так, как этого требуют тесты.</p>
+                </div>
+            </div>
+
+            <button type="button" class="carousel-arrow prev" aria-label="Предыдущее предложение"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="carousel-arrow next" aria-label="Следующее предложение"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="carousel-dots">
+                <button type="button" class="dot active" aria-label="Слайд 1"></button>
+                <button type="button" class="dot" aria-label="Слайд 2"></button>
+                <button type="button" class="dot" aria-label="Слайд 3"></button>
+                <button type="button" class="dot" aria-label="Слайд 4"></button>
             </div>
         </div>
     </div>
 </header>
+
+<section class="container" id="lektor">
+    <div class="about-hero">
+        <div class="about-image">
+            <img src="images/profil.jpg" alt="Репетитор по математике - студент ČVUT и PedF UK">
+        </div>
+        <div class="about-text">
+            <h2>Кто будет тебя учить?</h2>
+            <p class="lead-text">
+                Я студент Педагогического факультета Карлова университета с опытом учёбы в ČVUT. Знаю, что требуют оба экзамена и учёба в вузе — и научу тебя идти к этому шаг за шагом, а не зубрить.
+            </p>
+            <ul class="focus-list">
+                <li>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>Актуальные знания</strong>
+                        Знаю требования CERMAT, ČVUT, UK и SCIO из первых рук.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-comments"></i>
+                    <div>
+                        <strong>Человеческое объяснение</strong>
+                        Говорю на языке студентов, а не учебников.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <div>
+                        <strong>Индивидуальный темп</strong>
+                        Никакой спешки — разбираем материал, пока ты действительно его не поймёшь.
+                    </div>
+                </li>
+            </ul>
+            <a href="omne_ru.html" class="btn-nav">ВСЯ МОЯ ИСТОРИЯ</a>
+        </div>
+    </div>
+</section>
 
     <section class="container" id="prijimacky-nav">
         <h2 class="section-title">Выбери свои вступительные экзамены</h2>
@@ -188,60 +292,79 @@
         
         <div class="step-item">
             <div class="step-circle">1</div>
-            <h4>Первый контакт</h4>
-            <p>Договоримся о времени через WhatsApp или Telegram и обсудим, что нужно подтянуть.</p>
+            <div class="step-item-card">
+                <h4>Первый контакт</h4>
+                <p>Договоримся о времени через WhatsApp или Telegram и обсудим, что нужно подтянуть.</p>
+            </div>
         </div>
-        
+
         <div class="step-item">
             <div class="step-circle">2</div>
-            <h4>Подготовка</h4>
+            <div class="step-item-card">
+                <h4>Подготовка</h4>
                 <p>На основе твоих потребностей подготовлю материалы, примеры из прошлых тестов и план занятия.</p>
             </div>
-            
-            <div class="step-item">
-                <div class="step-circle">3</div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-circle">3</div>
+            <div class="step-item-card">
                 <h4>Занятие</h4>
                 <p>Разберём материал понятно. Никакого стресса — считаем столько, сколько нужно, пока не поймёшь.</p>
             </div>
-            
-            <div class="step-item">
-                <div class="step-circle">4</div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-circle">4</div>
+            <div class="step-item-card">
                 <h4>Результаты</h4>
                 <p>После занятия будешь знать, как решать. Обретёшь уверенность в расчётах и спокойствие перед экзаменами.</p>
             </div>
-            
         </div>
-    </section>
+
+    </div>
+</section>
 
 <section id="cenik-pro" class="container py-10">
 
-    <div class="pricing-flow">
+    <div class="pricing-cards">
         <!-- 1. Консультация -->
-        <div class="bubble side">
-            <div class="bubble-content">
-                <span class="bubble-tag">СТАРТ</span>
-                <div class="bubble-price">Бесплатно</div>
-                <p>Консультация</p>
-            </div>
+        <div class="price-card">
+            <span class="price-tag">СТАРТ</span>
+            <div class="price-value">Бесплатно</div>
+            <p class="price-desc">Вводная консультация</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Обсудим, что тебе нужно</li>
+                <li><i class="fa-solid fa-check"></i> Без обязательств</li>
+                <li><i class="fa-solid fa-check"></i> Через WhatsApp / Telegram</li>
+            </ul>
+            <a href="#kontakt" class="btn-secondary-outline">ДОГОВОРИТЬСЯ</a>
         </div>
 
         <!-- 2. Главное предложение -->
-        <div class="bubble main">
-            <div class="bubble-content">
-                <span class="bubble-tag highlight">ЛУЧШИЙ ВЫБОР</span>
-                <div class="bubble-price">180 Kč</div>
-                <p>Занятия / час</p>
-                <a href="#kontakt" class="bubble-action">МНЕ ИНТЕРЕСНО</a>
-            </div>
+        <div class="price-card featured">
+            <span class="price-tag highlight">ЛУЧШИЙ ВЫБОР</span>
+            <div class="price-value">180 Kč <span>/ час</span></div>
+            <p class="price-desc">Регулярные занятия</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Индивидуальный план занятий</li>
+                <li><i class="fa-solid fa-check"></i> Свои материалы и примеры</li>
+                <li><i class="fa-solid fa-check"></i> Очно в Праге или онлайн</li>
+            </ul>
+            <a href="#kontakt" class="btn-cta-featured">МНЕ ИНТЕРЕСНО</a>
         </div>
 
         <!-- 3. Поступление -->
-        <div class="bubble side">
-            <div class="bubble-content">
-                <span class="bubble-tag">ЭКСПЕРТ</span>
-                <div class="bubble-price">200+ Kč</div>
-                <p>Поступление / час</p>
-            </div>
+        <div class="price-card">
+            <span class="price-tag">ЭКСПЕРТ</span>
+            <div class="price-value">200+ Kč <span>/ час</span></div>
+            <p class="price-desc">Подготовка к поступлению</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Тесты прошлых лет</li>
+                <li><i class="fa-solid fa-check"></i> Фокус на CERMAT / ČVUT / UK / SCIO</li>
+                <li><i class="fa-solid fa-check"></i> Стратегия на экзамен</li>
+            </ul>
+            <a href="#kontakt" class="btn-secondary-outline">ДОГОВОРИТЬСЯ</a>
         </div>
     </div>
 </section>
@@ -301,6 +424,32 @@
                 <p>Специалисты по репетиторству «в последний момент» и подготовке к пересдачам и выпускным экзаменам.</p>
                 <span class="partner-card-link">Узнать больше →</span>
             </a>
+    </div>
+</section>
+
+<section class="container faq-section">
+    <h2 class="section-title">Частые вопросы</h2>
+    <div class="faq-list">
+        <details class="faq-item">
+            <summary>Как проходит первое занятие?</summary>
+            <p>Напиши мне в WhatsApp или Telegram, договоримся о времени и обсудим, с чем именно нужна помощь. Первая консультация бесплатна и ни к чему не обязывает.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Вы занимаетесь онлайн или только очно в Праге?</summary>
+            <p>И то, и другое. Очные занятия проходят в Праге, онлайн-занятия — где угодно через видеозвонок с общим экраном или материалами.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Что если занятия мне не подойдут?</summary>
+            <p>Никаких проблем. Ты ничем не связан(а) — продолжаем только пока это имеет для тебя смысл и приносит результат.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Сколько занятий мне понадобится?</summary>
+            <p>Зависит от твоей цели и текущего уровня. На первой консультации обсудим, где ты сейчас, и составим реальный план — без лишних часов.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Как записаться на занятие?</summary>
+            <p>Быстрее всего через WhatsApp или Telegram (ссылки в подвале сайта), либо заполни форму ниже — я свяжусь с тобой.</p>
+        </details>
     </div>
 </section>
 
