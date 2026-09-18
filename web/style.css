@@ -1008,7 +1008,7 @@ h3 {
 .steps-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     position: relative;
     margin-top: 50px;
     gap: 30px;
@@ -1048,6 +1048,23 @@ h3 {
     margin-bottom: 20px;
     border: 4px solid white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-item-card {
+    width: 100%;
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 22px 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+}
+
+.step-item:hover .step-item-card {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent);
 }
 
 .step-item h4 {
