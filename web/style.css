@@ -693,6 +693,65 @@ h3 {
     margin-bottom: 2px;
 }
 
+/* Nadpis zarovnaný doleva (varianta section-title pro dvousloupcové sekce) */
+.section-title-left {
+    text-align: left;
+}
+
+.section-title-left::after {
+    left: 0;
+    transform: none;
+}
+
+/* --- FAQ (rozbalovací otázky) --- */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 0 25px;
+    border: 1px solid #eef1f5;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 22px 0;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary i {
+    color: var(--accent);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.faq-item[open] summary i {
+    transform: rotate(180deg);
+}
+
+.faq-item p {
+    color: var(--text-light);
+    padding-bottom: 24px;
+    margin: 0;
+    line-height: 1.6;
+}
+
 .prijimacky-carousel {
     position: relative;
     min-width: 0;
@@ -714,12 +773,36 @@ h3 {
 }
 
 .prijimacky-track .card {
+    position: relative;
     flex: 0 0 100%;
     scroll-snap-align: start;
+    height: clamp(420px, 70vh, 620px);
+    justify-content: flex-end;
 }
 
 .prijimacky-track .card-img {
-    height: 300px;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.prijimacky-track .card-body {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    background: linear-gradient(to top, rgba(10, 15, 30, 0.88) 0%, rgba(10, 15, 30, 0.55) 55%, rgba(10, 15, 30, 0) 100%);
+    padding: 60px 35px 30px;
+}
+
+.prijimacky-track .card-body h3,
+.prijimacky-track .card-body p {
+    color: #ffffff !important;
+}
+
+.prijimacky-track .card-body p {
+    opacity: 0.9;
 }
 
 .carousel-arrow {
@@ -1867,12 +1950,46 @@ h3 {
 
     .steps-container {
         flex-direction: column;
-        align-items: center;
-        gap: 50px;
+        align-items: stretch;
+        gap: 0;
+        max-width: 480px;
+        margin: 50px auto 0;
     }
 
     .steps-container::before {
         display: none;
+    }
+
+    .step-item {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 22px;
+        position: relative;
+        padding-bottom: 36px;
+    }
+
+    .step-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .step-item::after {
+        content: '';
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 29px;
+        width: 2px;
+        background: #e2e8f0;
+    }
+
+    .step-item:last-child::after {
+        display: none;
+    }
+
+    .step-circle {
+        margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     .services-grid {
