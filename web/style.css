@@ -680,6 +680,20 @@ h3 {
     display: flex;
     align-items: flex-start;
     gap: 16px;
+    position: relative;
+    padding-left: 24px;
+}
+
+.mode-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6), 0 0 0 4px var(--accent);
 }
 
 .mode-item i {
