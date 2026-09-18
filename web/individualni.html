@@ -126,6 +126,39 @@
         </a>
     </div>
 </div>
+
+<section class="mini-poll">
+    <div class="mini-poll-grid">
+        <div class="mini-poll-form">
+            <span class="mini-poll-tag">RYCHLÁ ANKETA</span>
+            <h2>Zajímá tě individuální doučování?</h2>
+            <p>Napiš mi pár údajů a domluvíme si první lekci na míru.</p>
+            <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                <div class="form-group">
+                    <label for="mp-jmeno">Tvé jméno</label>
+                    <input type="text" id="mp-jmeno" name="jmeno" required placeholder="např. Jan Novák">
+                </div>
+                <div class="form-group">
+                    <label for="mp-kontakt">E-mail nebo telefon</label>
+                    <input type="text" id="mp-kontakt" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                </div>
+                <div class="form-group">
+                    <label for="mp-jazyk">Jazyk konzultace</label>
+                    <select id="mp-jazyk" name="jazyk">
+                        <option value="CZ">Čeština</option>
+                        <option value="RU">Ruština</option>
+                    </select>
+                </div>
+                <input type="hidden" name="typ_pripravy" value="INDIVIDUALNI">
+                <div class="mini-poll-topic"><i class="fa-solid fa-user-group"></i> Zájem: Individuální doučování</div>
+                <button type="submit" class="btn-submit">DOMLUVIT TERMÍN</button>
+            </form>
+        </div>
+        <div class="mini-poll-image">
+            <img src="images/individual.jpg" alt="Individuální doučování">
+        </div>
+    </div>
+</section>
     </main>
 
  <footer class="main-footer">

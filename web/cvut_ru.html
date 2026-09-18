@@ -172,6 +172,39 @@
 
         </div>
     </section>
+
+    <section class="mini-poll">
+        <div class="mini-poll-grid">
+            <div class="mini-poll-form">
+                <span class="mini-poll-tag">БЫСТРЫЙ ОПРОС</span>
+                <h2>Интересует подготовка к ČVUT?</h2>
+                <p>Напиши мне пару данных, и договоримся о вводной консультации по поступлению в ČVUT.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="mp-jmeno">Твоё имя</label>
+                        <input type="text" id="mp-jmeno" name="jmeno" required placeholder="напр. Алексей Новак">
+                    </div>
+                    <div class="form-group">
+                        <label for="mp-kontakt">E-mail или телефон</label>
+                        <input type="text" id="mp-kontakt" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
+                    </div>
+                    <div class="form-group">
+                        <label for="mp-jazyk">Язык консультации</label>
+                        <select id="mp-jazyk" name="jazyk">
+                            <option value="RU">Русский</option>
+                            <option value="CZ">Чешский</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="CVUT">
+                    <div class="mini-poll-topic"><i class="fa-solid fa-microchip"></i> Интерес: Подготовка к ČVUT</div>
+                    <button type="submit" class="btn-submit">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+                </form>
+            </div>
+            <div class="mini-poll-image">
+                <img src="images/cvut-budova.jpg" alt="Подготовка к ČVUT">
+            </div>
+        </div>
+    </section>
 </main>
 
  <footer class="main-footer">
