@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<script>
+  // Автоматическое перенаправление на русскую версию по языку браузера
+  // (только при первом посещении - если пользователь уже сам выбрал язык, выбор уважается)
+  (function () {
+    if (!localStorage.getItem('lang_choice')) {
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.indexOf('ru') === 0) {
+        localStorage.setItem('lang_choice', 'ru');
+        window.location.replace('index_ru.html');
+      }
+    }
+  })();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18450634718');
+</script>
+
     <script src="menu.js" defer></script>
     <script src="hero-carousel.js" defer></script>
     <meta charset="UTF-8">
@@ -21,7 +43,7 @@
     <meta property="og:url" content="https://matematika-srozumitelne.cz/index_ru.html">
     <meta property="og:image" content="https://matematika-srozumitelne.cz/images/og-image.jpg">
     <meta property="og:locale" content="ru_RU">
-    
+
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,19 +123,19 @@
     }
     </script>
 </head>
-<!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script> 
- <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18450634718');    
- </script> 
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script>
+ <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18450634718');
+ </script>
 <body class="page-index">
 
    <nav class="navbar">
     <div class="container nav-flex">
-        <a href="index_ru.html" class="logo"><img src="images/logo.png" alt="Matematika Srozumitelně" class="logo-img">MATEMATIKA <span>Srozumitelně</span></a>
-        
+        <a href="index_ru.html" class="logo">MATEMATIKA <span>Srozumitelně</span></a>
+
         <input type="checkbox" id="menu-toggle" class="dropdown-check">
         <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-        
+
         <ul class="nav-links">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle">ПОСТУПЛЕНИЕ <span class="dd-caret"></span></a>
@@ -128,7 +150,7 @@
             <li><a href="omne_ru.html">ОБО МНЕ</a></li>
             <li><a href="spoluprace_ru.html">СОТРУДНИЧЕСТВО</a></li>
             <li><a href="#kontakt" class="btn-nav">КОНТАКТЫ</a></li>
-            
+
             <div class="lang-switch">
                 <a href="index.html" class="lang-link">CZ</a>
                 <span>|</span>
@@ -217,178 +239,163 @@
     </div>
 </header>
 
+<section class="container" id="lektor">
+    <div class="about-hero">
+        <div class="about-image">
+            <img src="images/profil.jpg" alt="Репетитор по математике - студент ČVUT и PedF UK">
+        </div>
+        <div class="about-text">
+            <h2>Кто будет тебя учить?</h2>
+            <p class="lead-text">
+                Я студент Педагогического факультета Карлова университета с опытом учёбы в ČVUT. Знаю, что требуют оба экзамена и учёба в вузе — и научу тебя идти к этому шаг за шагом, а не зубрить.
+            </p>
+            <ul class="focus-list">
+                <li>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>Актуальные знания</strong>
+                        Знаю требования CERMAT, ČVUT, UK и SCIO из первых рук.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-comments"></i>
+                    <div>
+                        <strong>Человеческое объяснение</strong>
+                        Говорю на языке студентов, а не учебников.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <div>
+                        <strong>Индивидуальный темп</strong>
+                        Никакой спешки — разбираем материал, пока ты действительно его не поймёшь.
+                    </div>
+                </li>
+            </ul>
+            <a href="omne_ru.html" class="btn-nav">ВСЯ МОЯ ИСТОРИЯ</a>
+        </div>
+    </div>
+</section>
+
     <section class="container" id="prijimacky-nav">
         <h2 class="section-title">Выбери свои вступительные экзамены</h2>
-        <div class="prijimacky-split">
-            <div class="prijimacky-intro">
-                <h3>Занимаюсь очно и онлайн</h3>
-                <p>Выбери, что тебе удобнее — оба формата работают с одинаковым вниманием и результатом.</p>
-                <div class="mode-list">
-                    <div class="mode-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div><strong>Очно в Праге</strong>Занятия у меня, по договорённости возможно и у тебя дома.</div>
+        <div class="detail-grid detail-grid-4">
+            <a href="cermat_ru.html" class="card" style="border-top: 5px solid var(--primary); box-shadow: 0 10px 25px rgba(30, 58, 138, 0.18);">
+                <img src="images/cermat-gymnazia.jpg" class="card-img" alt="Подготовка к CERMAT">
+                <div class="card-body">
+                    <h3 style="color:var(--primary)">Подготовка к CERMAT</h3>
+                    <p>Для девятиклассников и выпускников. Разберём тесты прошлых лет и найдём все подвохи.</p>
+                </div>
+            </a>
+            <a href="cvut_ru.html" class="card" style="border-top: 5px solid #0ea5e9; box-shadow: 0 10px 25px rgba(14, 165, 233, 0.2);">
+                <img src="images/cvut-budova.jpg" class="card-img" alt="Подготовка к ČVUT">
+                <div class="card-body">
+                    <h3 style="color:#0ea5e9">Поступление в ČVUT</h3>
+                        <p>Подготовка на FIT, FEL и другие факультеты от человека, который сам там успешно учится.</p>
                     </div>
-                    <div class="mode-item">
-                        <i class="fa-solid fa-laptop"></i>
-                        <div><strong>Онлайн откуда угодно</strong>По видеосвязи с общим экраном, без разъездов.</div>
+                </a>
+                <a href="uk_ru.html" class="card" style="border-top: 5px solid #b91c1c; box-shadow: 0 10px 25px rgba(185, 28, 28, 0.18);">
+                    <img src="images/mff.jpg" class="card-img" alt="MFF UK Troja">
+                    <div class="card-body">
+                        <h3 style="color:#b91c1c">Математика для UK</h3>
+                        <p>Подготовка для будущих учителей и учёных. Упор на глубокое понимание теории.</p>
                     </div>
-                </div>
+                </a>
+                <a href="scio_ru.html" class="card" style="border-top: 5px solid #b45309; box-shadow: 0 10px 25px rgba(180, 83, 9, 0.18);">
+                    <img src="images/scio-priprava.jpg" class="card-img" alt="Подготовка к тестам SCIO">
+                    <div class="card-body">
+                        <h3 style="color:#b45309">Тесты SCIO</h3>
+                        <p>OSP, NSZ и поступление в гимназии. Научу тебя мыслить так, как этого требуют тесты.</p>
+                    </div>
+                </a>
             </div>
-
-            <div class="prijimacky-carousel">
-                <button type="button" class="carousel-arrow carousel-prev" aria-label="Предыдущий экзамен">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <div class="prijimacky-track">
-                    <a href="cermat_ru.html" class="card" style="border-top: 5px solid #3e38b4; box-shadow: 0 10px 25px rgba(62, 56, 180, 0.18);">
-                        <img src="images/cermat-gymnazia.jpg" class="card-img" alt="Подготовка к CERMAT">
-                        <div class="card-logo"><img src="images/logo.png" alt="Logo"></div>
-                        <div class="card-body" style="background: linear-gradient(to top, rgba(62, 56, 180, 0.92) 0%, rgba(62, 56, 180, 0.6) 55%, rgba(62, 56, 180, 0) 100%);">
-                            <h3>Подготовка к CERMAT</h3>
-                            <p>Для девятиклассников и выпускников. Разберём тесты прошлых лет и найдём все подвохи.</p>
-                        </div>
-                    </a>
-                    <a href="cvut_ru.html" class="card" style="border-top: 5px solid #094e9d; box-shadow: 0 10px 25px rgba(9, 78, 157, 0.2);">
-                        <img src="images/cvut-budova.jpg" class="card-img" alt="Подготовка к ČVUT">
-                        <div class="card-logo"><img src="images/logo.png" alt="Logo"></div>
-                        <div class="card-body" style="background: linear-gradient(to top, rgba(9, 78, 157, 0.92) 0%, rgba(9, 78, 157, 0.6) 55%, rgba(9, 78, 157, 0) 100%);">
-                            <h3>Поступление в ČVUT</h3>
-                            <p>Подготовка на FIT, FEL и другие факультеты от человека, который сам там успешно учится.</p>
-                        </div>
-                    </a>
-                    <a href="uk_ru.html" class="card" style="border-top: 5px solid #b40d0d; box-shadow: 0 10px 25px rgba(180, 13, 13, 0.18);">
-                        <img src="images/mff.jpg" class="card-img" alt="MFF UK Troja">
-                        <div class="card-logo"><img src="images/logo.png" alt="Logo"></div>
-                        <div class="card-body" style="background: linear-gradient(to top, rgba(180, 13, 13, 0.92) 0%, rgba(180, 13, 13, 0.6) 55%, rgba(180, 13, 13, 0) 100%);">
-                            <h3>Математика для UK</h3>
-                            <p>Подготовка для будущих учителей и учёных. Упор на глубокое понимание теории.</p>
-                        </div>
-                    </a>
-                    <a href="scio_ru.html" class="card" style="border-top: 5px solid #b45309; box-shadow: 0 10px 25px rgba(180, 83, 9, 0.18);">
-                        <img src="images/scio-priprava.jpg" class="card-img" alt="Подготовка к тестам SCIO">
-                        <div class="card-logo"><img src="images/logo.png" alt="Logo"></div>
-                        <div class="card-body" style="background: linear-gradient(to top, rgba(180, 83, 9, 0.92) 0%, rgba(180, 83, 9, 0.6) 55%, rgba(180, 83, 9, 0) 100%);">
-                            <h3>Тесты SCIO</h3>
-                            <p>OSP, NSZ и поступление в гимназии. Научу тебя мыслить так, как этого требуют тесты.</p>
-                        </div>
-                    </a>
-                </div>
-                <button type="button" class="carousel-arrow carousel-next" aria-label="Следующий экзамен">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-                <div class="carousel-dots">
-                    <button type="button" class="dot active" aria-label="CERMAT"></button>
-                    <button type="button" class="dot" aria-label="ČVUT"></button>
-                    <button type="button" class="dot" aria-label="UK"></button>
-                    <button type="button" class="dot" aria-label="SCIO"></button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
 <section class="steps-wrapper container">
     <h2 class="section-title">Как проходят занятия?</h2>
     <div class="steps-container">
-        
+
         <div class="step-item">
             <div class="step-circle">1</div>
-            <h4>Первый контакт</h4>
-            <p>Договоримся о времени через WhatsApp или Telegram и обсудим, что нужно подтянуть.</p>
+            <div class="step-item-card">
+                <h4>Первый контакт</h4>
+                <p>Договоримся о времени через WhatsApp или Telegram и обсудим, что нужно подтянуть.</p>
+            </div>
         </div>
-        
+
         <div class="step-item">
             <div class="step-circle">2</div>
-            <h4>Подготовка</h4>
+            <div class="step-item-card">
+                <h4>Подготовка</h4>
                 <p>На основе твоих потребностей подготовлю материалы, примеры из прошлых тестов и план занятия.</p>
             </div>
-            
-            <div class="step-item">
-                <div class="step-circle">3</div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-circle">3</div>
+            <div class="step-item-card">
                 <h4>Занятие</h4>
                 <p>Разберём материал понятно. Никакого стресса — считаем столько, сколько нужно, пока не поймёшь.</p>
             </div>
-            
-            <div class="step-item">
-                <div class="step-circle">4</div>
+        </div>
+
+        <div class="step-item">
+            <div class="step-circle">4</div>
+            <div class="step-item-card">
                 <h4>Результаты</h4>
                 <p>После занятия будешь знать, как решать. Обретёшь уверенность в расчётах и спокойствие перед экзаменами.</p>
             </div>
+        </div>
 
-        </div>
-    </section>
-
-<section class="container">
-    <div class="about-hero">
-        <div class="about-image">
-            <img src="images/profil.jpg" alt="Репетитор математики">
-        </div>
-        <div class="about-text">
-            <h2 class="section-title section-title-left">Кто будет тебя учить?</h2>
-            <p class="lead-text">Я студент Педагогического факультета Карлова университета с опытом учёбы в ČVUT. Знаю, чего требуют оба экзамена и учёба — и научу тебя идти к этому шаг за шагом, а не зубрить наизусть.</p>
-            <div class="about-teaser-list">
-                <div class="about-teaser-item">
-                    <strong>Актуальные знания</strong>
-                    <p>Знаю требования CERMAT, ČVUT, UK и SCIO из первых рук.</p>
-                </div>
-                <div class="about-teaser-item">
-                    <strong>Человеческое объяснение</strong>
-                    <p>Говорю на языке студентов, а не учебников.</p>
-                </div>
-                <div class="about-teaser-item">
-                    <strong>Индивидуальный темп</strong>
-                    <p>Никакой спешки – разбираем материал, пока ты его действительно не поймёшь.</p>
-                </div>
-            </div>
-            <a href="omne_ru.html" class="btn-primary">ЧИТАТЬ МОЮ ИСТОРИЮ</a>
-        </div>
     </div>
 </section>
 
 <section id="cenik-pro" class="container py-10">
-    <h2 class="section-title">Сколько стоят занятия?</h2>
 
     <div class="pricing-cards">
-        <div class="pricing-card">
-            <span class="pricing-card-tag">СТАРТ</span>
-            <div class="pricing-card-price">Бесплатно</div>
-            <p class="pricing-card-sub">Вводная консультация</p>
-            <ul class="pricing-card-list">
-                <li>Обсудим, что тебе нужно</li>
-                <li>Без обязательств</li>
-                <li>Через WhatsApp / Telegram</li>
+        <!-- 1. Консультация -->
+        <div class="price-card">
+            <span class="price-tag">СТАРТ</span>
+            <div class="price-value">Бесплатно</div>
+            <p class="price-desc">Вводная консультация</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Обсудим, что тебе нужно</li>
+                <li><i class="fa-solid fa-check"></i> Без обязательств</li>
+                <li><i class="fa-solid fa-check"></i> Через WhatsApp / Telegram</li>
             </ul>
-            <a href="#kontakt" class="pricing-card-btn">ДОГОВОРИТЬСЯ</a>
+            <a href="#kontakt" class="btn-secondary-outline">ДОГОВОРИТЬСЯ</a>
         </div>
 
-        <div class="pricing-card pricing-card-featured">
-            <span class="pricing-card-tag">САМЫЙ ПОПУЛЯРНЫЙ</span>
-            <div class="pricing-card-price">180 Kč <span>/ час</span></div>
-            <p class="pricing-card-sub">Регулярные занятия</p>
-            <ul class="pricing-card-list">
-                <li>Индивидуальный план занятий</li>
-                <li>Свои материалы и примеры</li>
-                <li>Очно в Праге или онлайн</li>
+        <!-- 2. Главное предложение -->
+        <div class="price-card featured">
+            <span class="price-tag highlight">ЛУЧШИЙ ВЫБОР</span>
+            <div class="price-value">180 Kč <span>/ час</span></div>
+            <p class="price-desc">Регулярные занятия</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Индивидуальный план занятий</li>
+                <li><i class="fa-solid fa-check"></i> Свои материалы и примеры</li>
+                <li><i class="fa-solid fa-check"></i> Очно в Праге или онлайн</li>
             </ul>
-            <a href="#kontakt" class="pricing-card-btn pricing-card-btn-filled">МНЕ ИНТЕРЕСНО</a>
+            <a href="#kontakt" class="btn-cta-featured">МНЕ ИНТЕРЕСНО</a>
         </div>
 
-        <div class="pricing-card">
-            <span class="pricing-card-tag">ЭКСПЕРТ</span>
-            <div class="pricing-card-price">200+ Kč <span>/ час</span></div>
-            <p class="pricing-card-sub">Подготовка к поступлению</p>
-            <ul class="pricing-card-list">
-                <li>Тесты прошлых лет</li>
-                <li>Упор на CERMAT / ČVUT / UK / SCIO</li>
-                <li>Стратегия на экзамене</li>
+        <!-- 3. Поступление -->
+        <div class="price-card">
+            <span class="price-tag">ЭКСПЕРТ</span>
+            <div class="price-value">200+ Kč <span>/ час</span></div>
+            <p class="price-desc">Подготовка к поступлению</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Тесты прошлых лет</li>
+                <li><i class="fa-solid fa-check"></i> Фокус на CERMAT / ČVUT / UK / SCIO</li>
+                <li><i class="fa-solid fa-check"></i> Стратегия на экзамен</li>
             </ul>
-            <a href="#kontakt" class="pricing-card-btn">ДОГОВОРИТЬСЯ</a>
+            <a href="#kontakt" class="btn-secondary-outline">ДОГОВОРИТЬСЯ</a>
         </div>
     </div>
-    <p class="pricing-note-text">При занятиях в группе цена ниже. Напиши мне для уточнения деталей.</p>
 </section>
 
 
-    
+
     <section id="sluzby" class="services-section">
     <div class="container">
         <h2 class="section-title">В чём я могу помочь</h2>
@@ -445,28 +452,28 @@
     </div>
 </section>
 
-<section class="container">
+<section class="container faq-section">
     <h2 class="section-title">Частые вопросы</h2>
     <div class="faq-list">
         <details class="faq-item">
-            <summary>Как проходит онлайн-занятие? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>По видеосвязи с общим экраном — ты видишь всё так, будто мы сидим за одним столом. Достаточно обычного подключения к интернету, ничего устанавливать не нужно.</p>
+            <summary>Как проходит первое занятие? <i class="fa-solid fa-chevron-down"></i></summary>
+            <p>Напиши мне в WhatsApp или Telegram, договоримся о времени и обсудим, с чем именно нужна помощь. Первая консультация бесплатна и ни к чему не обязывает.</p>
         </details>
         <details class="faq-item">
-            <summary>Как быстро ты отвечаешь после заполнения формы? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Обычно в течение 24 часов. Договоримся о времени бесплатной вводной консультации и обсудим, что именно тебе нужно.</p>
+            <summary>Вы занимаетесь онлайн или только очно в Праге? <i class="fa-solid fa-chevron-down"></i></summary>
+            <p>И то, и другое. Очные занятия проходят в Праге, онлайн-занятия — где угодно через видеозвонок с общим экраном или материалами.</p>
         </details>
         <details class="faq-item">
-            <summary>Занятия только в Праге или можно онлайн? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>И то, и другое — очно в Праге или онлайн откуда угодно. Выбери, что тебе удобнее, качество занятий не меняется.</p>
+            <summary>Что если занятия мне не подойдут? <i class="fa-solid fa-chevron-down"></i></summary>
+            <p>Никаких проблем. Ты ничем не связан(а) — продолжаем только пока это имеет для тебя смысл и приносит результат.</p>
         </details>
         <details class="faq-item">
-            <summary>Сколько стоят занятия? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Обычные занятия — 180 Kč за час, подготовка к поступлению — от 200 Kč за час. Первая консультация всегда бесплатна.</p>
+            <summary>Сколько занятий мне понадобится? <i class="fa-solid fa-chevron-down"></i></summary>
+            <p>Зависит от твоей цели и текущего уровня. На первой консультации обсудим, где ты сейчас, и составим реальный план — без лишних часов.</p>
         </details>
         <details class="faq-item">
-            <summary>На каком языке проходят занятия? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>На чешском и на русском — выбери, что тебе удобнее.</p>
+            <summary>Как записаться на занятие? <i class="fa-solid fa-chevron-down"></i></summary>
+            <p>Быстрее всего через WhatsApp или Telegram (ссылки в подвале сайта), либо заполни форму ниже — я свяжусь с тобой.</p>
         </details>
     </div>
 </section>
@@ -474,14 +481,14 @@
 <section id="kontakt" class="contact-section">
     <div class="contact-form-container">
         <h2 class="section-title">Запишись на вводное занятие</h2>
-        
+
         <form action="https://formspree.io/f/mdaprpqk" method="POST">
-            
+
             <div class="form-group">
                 <label for="jmeno">Твоё имя</label>
                 <input type="text" id="jmeno" name="jmeno" required placeholder="напр. Алексей Новак">
             </div>
-            
+
             <div class="form-group">
                 <label for="kontakt">E-mail или телефон</label>
                 <input type="text" id="kontakt" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
@@ -521,7 +528,7 @@
 
  <footer class="main-footer">
     <div class="container footer-grid">
-        
+
         <div class="footer-column">
             <h3>Контакты</h3>
             <ul class="footer-list">

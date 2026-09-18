@@ -219,12 +219,6 @@ h3 {
     gap: 8px;
 }
 
-.logo-img {
-    height: 34px;
-    width: auto;
-    display: block;
-}
-
 .logo span {
     color: #000000;
     font-weight: 100;
