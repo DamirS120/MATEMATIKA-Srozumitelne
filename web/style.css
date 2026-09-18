@@ -352,35 +352,308 @@ h3 {
     justify-content: center;
 }
 
-/* Důvěryhodnostní odznaky pod tlačítky v hero */
-.hero-trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px 32px;
-    justify-content: center;
-    margin-top: 36px;
-    padding-top: 26px;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
+/* --- ROZDĚLENÝ HERO S KARUSELEM (index) --- */
+.hero-split {
+    padding: 150px 0 80px;
+    background: linear-gradient(180deg, #eef2ff 0%, #ffffff 70%);
 }
 
-.hero-trust span {
+.hero-split-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-split-title {
+    text-align: left;
+    font-size: clamp(2rem, 3.4vw, 2.9rem);
+    color: var(--primary) !important;
+    padding-bottom: 0;
+    margin-bottom: 18px;
+}
+
+.hero-split-title .highlight-alt {
+    color: #e8830a;
+}
+
+.hero-split-text {
+    text-align: left;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+/* Výběr formy výuky (osobně / online) */
+.mode-picker {
+    background: var(--bg-light);
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 28px;
+    margin-bottom: 30px;
+}
+
+.mode-picker h3 {
+    font-size: 1.15rem;
+    padding-bottom: 0;
+    margin-bottom: 6px;
+}
+
+.mode-picker>p {
+    color: var(--text-light);
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+}
+
+.mode-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.mode-option:last-child {
+    margin-bottom: 0;
+}
+
+.mode-option:hover {
+    border-color: var(--accent);
+}
+
+.mode-option input {
+    accent-color: var(--primary);
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.mode-option:has(input:checked) {
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.06);
+}
+
+.mode-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-light);
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    opacity: 0.95;
+    justify-content: center;
+    color: var(--primary);
+    flex-shrink: 0;
 }
 
-.hero-trust i {
-    color: #fca311;
+.mode-text {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.mode-text strong {
+    display: block;
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.hero-split-btns {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary-outline-dark {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    transition: 0.3s;
+}
+
+.btn-secondary-outline-dark:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* Karusel s přehledem nabídky */
+.hero-carousel {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    box-shadow: 0 25px 50px rgba(30, 58, 138, 0.18);
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--primary);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carousel-slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.75) 100%);
+    z-index: 1;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.carousel-icon {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-caption {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 0 28px 34px;
+}
+
+.carousel-caption h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    padding-bottom: 0;
+}
+
+.carousel-caption p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.25s;
+}
+
+.carousel-arrow:hover {
+    background: #fff;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-arrow.prev {
+    left: 16px;
+}
+
+.carousel-arrow.next {
+    right: 16px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0;
+    transition: 0.25s;
+}
+
+.dot.active {
+    background: #ffffff;
+    width: 22px;
+    border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+    .hero-split-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-carousel {
+        aspect-ratio: 16 / 10;
+        order: -1;
+    }
+
+    .hero-split-title,
+    .hero-split-text {
+        text-align: center;
+    }
+
+    .hero-split-btns {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
-    .hero-trust {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+    .hero-split {
+        padding: 100px 0 50px;
+    }
+
+    .mode-picker {
+        padding: 20px;
     }
 }
 
