@@ -88,7 +88,7 @@
                 <h1 class="hero-split-title">Příprava na přijímačky <span class="highlight-alt">ČVUT</span> z matematiky</h1>
                 <p class="hero-split-text">Nabízím přípravu na přijímačky z matematiky na ČVUT — nejlepší technickou univerzitu v ČR. Se zkušeností z vlastního studia tě naučím triky, které u zkoušek skutečně využiješ.</p>
                 <div class="hero-split-btns">
-                    <a href="index.html#kontakt" class="btn-primary"><i class="fa-solid fa-arrow-right"></i>DOMLUVIT KONZULTACI</a>
+                    <a href="#anketa" class="btn-primary"><i class="fa-solid fa-arrow-right"></i>DOMLUVIT KONZULTACI</a>
                 </div>
                 <div class="hero-facts">
                     <div class="hero-fact">
@@ -123,7 +123,7 @@
             </div>
             <div class="hero-visual-frame">
                 <div class="hero-visual hero-visual-tilted">
-                    <img src="images/cvut-budova.jpg" alt="ČVUT Dejvice">
+                    <img src="images/cvut-programovani.jpg" alt="Příprava na ČVUT">
                     <div class="hero-visual-quote-text">FIT, FEL, FS i FSv</div>
                 </div>
             </div>
@@ -234,6 +234,40 @@
         </div>
     </section>
 </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Zjisti, jak jsi na tom s přijímačkami na ČVUT</h2>
+                <p class="anketa-lead">Vyplň krátkou anketu a ozvu se ti s doporučením, na co se zaměřit.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-cvut">Tvé jméno</label>
+                        <input type="text" id="jmeno-cvut" name="jmeno" required placeholder="např. Alexej Novák">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-cvut">E-mail nebo telefon</label>
+                        <input type="text" id="kontakt-cvut" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                    </div>
+                    <div class="form-group">
+                        <label for="fakulta-cvut">Na jakou fakultu se hlásíš?</label>
+                        <select id="fakulta-cvut" name="fakulta">
+                            <option value="FIT">FIT</option>
+                            <option value="FEL">FEL</option>
+                            <option value="FS">FS</option>
+                            <option value="FSv">FSv</option>
+                            <option value="jina">Jiná / nevím ještě</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="CVUT">
+                    <button type="submit" class="btn-submit">ODESLAT ANKETU</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/cvut-programovani.jpg" alt="Příprava na ČVUT">
+            </div>
+        </div>
+    </section>
 
  <footer class="main-footer">
     <div class="container footer-grid">

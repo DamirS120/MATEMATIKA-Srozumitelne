@@ -89,7 +89,7 @@
                 <h1 class="hero-split-title">Příprava na přijímačky <span class="highlight-alt">CERMAT</span> z matematiky</h1>
                 <p class="hero-split-text">Nabízím přípravu na přijímačky CERMAT z matematiky — strategie, typové příklady a klid u zkoušek pro 5., 7. i 9. třídy i maturitu.</p>
                 <div class="hero-split-btns">
-                    <a href="index.html#kontakt" class="btn-primary"><i class="fa-solid fa-arrow-right"></i>DOMLUVIT KONZULTACI</a>
+                    <a href="#anketa" class="btn-primary"><i class="fa-solid fa-arrow-right"></i>DOMLUVIT KONZULTACI</a>
                 </div>
                 <div class="hero-facts">
                     <div class="hero-fact">
@@ -124,7 +124,7 @@
             </div>
             <div class="hero-visual-frame">
                 <div class="hero-visual hero-visual-tilted">
-                    <img src="images/cermat-gymnazia.jpg" alt="Příprava na CERMAT">
+                    <img src="images/cermat-psani.jpg" alt="Příprava na CERMAT">
                     <div class="hero-visual-quote-text">5., 7. i 9. třída<br>i maturita</div>
                 </div>
             </div>
@@ -307,11 +307,43 @@
                 </details>
                 <details class="faq-item">
                     <summary>Jak si domluvím první lekci?</summary>
-                    <p>Napiš mi přes WhatsApp nebo Telegram (odkazy v patičce), nebo vyplň <a href="index.html#kontakt">kontaktní formulář</a> na hlavní stránce.</p>
+                    <p>Napiš mi přes WhatsApp nebo Telegram (odkazy v patičce), nebo vyplň <a href="#anketa">anketu níže</a>.</p>
                 </details>
             </div>
         </section>
     </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Zjisti, jak jsi na tom s přípravou na CERMAT</h2>
+                <p class="anketa-lead">Vyplň krátkou anketu a ozvu se ti s doporučením, na co se zaměřit.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-cermat">Tvé jméno</label>
+                        <input type="text" id="jmeno-cermat" name="jmeno" required placeholder="např. Alexej Novák">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-cermat">E-mail nebo telefon</label>
+                        <input type="text" id="kontakt-cermat" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                    </div>
+                    <div class="form-group">
+                        <label for="rocnik-cermat">Na jaký ročník/zkoušku se připravuješ?</label>
+                        <select id="rocnik-cermat" name="rocnik">
+                            <option value="5-7 trida">5. nebo 7. třída</option>
+                            <option value="9 trida">9. třída (SŠ)</option>
+                            <option value="maturita">Maturita</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="CERMAT">
+                    <button type="submit" class="btn-submit">ODESLAT ANKETU</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/cermat-psani.jpg" alt="Příprava na CERMAT">
+            </div>
+        </div>
+    </section>
 
     <footer class="main-footer">
         <div class="container footer-grid">
