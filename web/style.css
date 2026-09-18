@@ -699,12 +699,12 @@ h3 {
 }
 
 .prijimacky-track .card {
-    flex: 0 0 260px;
+    flex: 0 0 100%;
     scroll-snap-align: start;
 }
 
 .prijimacky-track .card-img {
-    height: 200px;
+    height: 260px;
 }
 
 .carousel-arrow {
@@ -753,12 +753,6 @@ h3 {
 
     .carousel-next {
         right: 4px;
-    }
-}
-
-@media (max-width: 600px) {
-    .prijimacky-track .card {
-        flex-basis: 220px;
     }
 }
 

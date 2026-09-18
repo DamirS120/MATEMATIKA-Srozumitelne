@@ -8,6 +8,7 @@
     if (!localStorage.getItem('lang_choice')) {
       var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
       if (lang.indexOf('ru') === 0) {
+        localStorage.setItem('lang_choice', 'ru');
         window.location.replace('index_ru.html');
       }
     }
