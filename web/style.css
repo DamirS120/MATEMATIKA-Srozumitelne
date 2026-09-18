@@ -394,7 +394,7 @@ h3 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 20px 0;
 }
@@ -712,14 +712,7 @@ h3 {
 }
 
 .prijimacky-track .card-img {
-    height: auto;
-    aspect-ratio: 16 / 9;
-}
-
-@media (min-width: 1200px) {
-    .prijimacky-track .card-img {
-        aspect-ratio: 16 / 8;
-    }
+    height: 300px;
 }
 
 .carousel-arrow {
