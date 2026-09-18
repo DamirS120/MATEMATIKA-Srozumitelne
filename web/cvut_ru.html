@@ -21,7 +21,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="application/ld+json">
@@ -84,16 +84,48 @@
     <header class="hero-split">
         <div class="container hero-split-grid">
             <div class="hero-left">
-                <span class="hero-eyebrow">Репетитор, который сам успешно учится в ČVUT</span>
+                <span class="hero-eyebrow"><i class="fa-solid fa-graduation-cap"></i> Репетитор, который сам успешно учится в ČVUT</span>
                 <h1 class="hero-split-title">Подготовка к экзаменам <span class="highlight-alt">ČVUT</span> по математике</h1>
                 <p class="hero-split-text">Предлагаю подготовку к вступительным экзаменам по математике в ČVUT — лучший технический университет Чехии. С опытом собственной учёбы научу тебя приёмам, которые реально пригодятся на экзаменах.</p>
                 <div class="hero-split-btns">
-                    <a href="index_ru.html#kontakt" class="btn-primary">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
+                    <a href="#anketa" class="btn-primary"><i class="fa-solid fa-arrow-right"></i>ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
+                </div>
+                <div class="hero-facts">
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <div>
+                            <strong>Реальный опыт</strong>
+                            <span>учёба в ČVUT</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <div>
+                            <strong>Эффективные методы</strong>
+                            <span>понятно и по делу</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <div>
+                            <strong>Индивидуальный подход</strong>
+                            <span>в твоём темпе</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <div>
+                            <strong>Результаты</strong>
+                            <span>больше уверенности на экзамене</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <img src="images/cvut-budova.jpg" alt="ČVUT Дейвице">
-                <div class="hero-visual-caption">FIT, FEL, FS и FSv</div>
+            <div class="hero-visual-frame">
+                <div class="hero-visual hero-visual-tilted">
+                    <img src="images/cvut-programovani.jpg" alt="Подготовка к ČVUT">
+                    <div class="hero-visual-quote-text">FIT, FEL, FS и FSv</div>
+                </div>
             </div>
         </div>
     </header>
@@ -202,6 +234,40 @@
         </div>
     </section>
 </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Узнай, на каком ты уровне перед поступлением в ČVUT</h2>
+                <p class="anketa-lead">Заполни короткую анкету, и я свяжусь с тобой с рекомендацией, на что обратить внимание.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-cvut-ru">Твоё имя</label>
+                        <input type="text" id="jmeno-cvut-ru" name="jmeno" required placeholder="напр. Алексей Новак">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-cvut-ru">E-mail или телефон</label>
+                        <input type="text" id="kontakt-cvut-ru" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
+                    </div>
+                    <div class="form-group">
+                        <label for="fakulta-cvut-ru">На какой факультет поступаешь?</label>
+                        <select id="fakulta-cvut-ru" name="fakulta">
+                            <option value="FIT">FIT</option>
+                            <option value="FEL">FEL</option>
+                            <option value="FS">FS</option>
+                            <option value="FSv">FSv</option>
+                            <option value="jina">Другой / ещё не знаю</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="CVUT">
+                    <button type="submit" class="btn-submit">ОТПРАВИТЬ АНКЕТУ</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/cvut-programovani.jpg" alt="Подготовка к ČVUT">
+            </div>
+        </div>
+    </section>
 
  <footer class="main-footer">
     <div class="container footer-grid">

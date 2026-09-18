@@ -22,7 +22,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="application/ld+json">
@@ -85,16 +85,48 @@
     <header class="hero-split">
         <div class="container hero-split-grid">
             <div class="hero-left">
-                <span class="hero-eyebrow">Индивидуальный подход & без зубрёжки</span>
+                <span class="hero-eyebrow"><i class="fa-solid fa-file-lines"></i> Индивидуальный подход & без зубрёжки</span>
                 <h1 class="hero-split-title">Подготовка к экзаменам <span class="highlight-alt">CERMAT</span> по математике</h1>
                 <p class="hero-split-text">Предлагаю подготовку к экзаменам CERMAT по математике — стратегия, типовые задания и спокойствие на экзаменах для 5, 7 и 9 классов, а также для выпускных экзаменов.</p>
                 <div class="hero-split-btns">
-                    <a href="index_ru.html#kontakt" class="btn-primary">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
+                    <a href="#anketa" class="btn-primary"><i class="fa-solid fa-arrow-right"></i>ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
+                </div>
+                <div class="hero-facts">
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div>
+                            <strong>Понятная подготовка</strong>
+                            <span>по актуальным требованиям</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-list-check"></i>
+                        <div>
+                            <strong>Типовые задания</strong>
+                            <span>с объяснением</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-user"></i>
+                        <div>
+                            <strong>Индивидуальный подход</strong>
+                            <span>каждый ученик особенный</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <strong>Лучшие результаты</strong>
+                            <span>больше уверенности на экзамене</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <img src="images/cermat-gymnazia.jpg" alt="Подготовка к CERMAT">
-                <div class="hero-visual-caption">5–9 класс и выпускные экзамены</div>
+            <div class="hero-visual-frame">
+                <div class="hero-visual hero-visual-tilted">
+                    <img src="images/cermat-psani.jpg" alt="Подготовка к CERMAT">
+                    <div class="hero-visual-quote-text">5, 7 и 9 класс<br>и выпускные экзамены</div>
+                </div>
             </div>
         </div>
     </header>
@@ -275,11 +307,43 @@
                 </details>
                 <details class="faq-item">
                     <summary>Как записаться на первое занятие?</summary>
-                    <p>Напиши мне в WhatsApp или Telegram (ссылки в подвале сайта), либо заполни <a href="index_ru.html#kontakt">форму на главной странице</a>.</p>
+                    <p>Напиши мне в WhatsApp или Telegram (ссылки в подвале сайта), либо заполни <a href="#anketa">анкету ниже</a>.</p>
                 </details>
             </div>
         </section>
     </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Узнай, на каком ты уровне перед CERMAT</h2>
+                <p class="anketa-lead">Заполни короткую анкету, и я свяжусь с тобой с рекомендацией, на что обратить внимание.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-cermat-ru">Твоё имя</label>
+                        <input type="text" id="jmeno-cermat-ru" name="jmeno" required placeholder="напр. Алексей Новак">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-cermat-ru">E-mail или телефон</label>
+                        <input type="text" id="kontakt-cermat-ru" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
+                    </div>
+                    <div class="form-group">
+                        <label for="rocnik-cermat-ru">К какому классу/экзамену готовишься?</label>
+                        <select id="rocnik-cermat-ru" name="rocnik">
+                            <option value="5-7 trida">5 или 7 класс</option>
+                            <option value="9 trida">9 класс</option>
+                            <option value="maturita">Выпускной экзамен</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="CERMAT">
+                    <button type="submit" class="btn-submit">ОТПРАВИТЬ АНКЕТУ</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/cermat-psani.jpg" alt="Подготовка к CERMAT">
+            </div>
+        </div>
+    </section>
 
     <footer class="main-footer">
         <div class="container footer-grid">

@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="hero-split-btns">
-                    <a href="index.html#kontakt" class="btn-primary">DOMLUVIT LEKCI</a>
+                    <a href="#anketa" class="btn-primary">DOMLUVIT LEKCI</a>
                 </div>
             </div>
             <div class="hero-visual hero-visual-quote">
@@ -215,6 +215,40 @@
         </div>
     </section>
 </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Chceš se učit se mnou?</h2>
+                <p class="anketa-lead">Vyplň krátkou anketu a ozvu se ti zpět s návrhem, jak začít.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-omne">Tvé jméno</label>
+                        <input type="text" id="jmeno-omne" name="jmeno" required placeholder="např. Alexej Novák">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-omne">E-mail nebo telefon</label>
+                        <input type="text" id="kontakt-omne" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                    </div>
+                    <div class="form-group">
+                        <label for="zajem-omne">O co máš zájem?</label>
+                        <select id="zajem-omne" name="typ_pripravy">
+                            <option value="CERMAT">Příprava na CERMAT</option>
+                            <option value="CVUT">Příprava na ČVUT</option>
+                            <option value="UK">Příprava na UK</option>
+                            <option value="SCIO">Příprava na SCIO</option>
+                            <option value="INDIVIDUALNI">Individuální doučování</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">ODESLAT ANKETU</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/profil.jpg" alt="Lektor matematiky">
+            </div>
+        </div>
+    </section>
+
  <footer class="main-footer">
     <div class="container footer-grid">
         

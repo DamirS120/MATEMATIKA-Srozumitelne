@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="hero-split-btns">
-                    <a href="index_ru.html#kontakt" class="btn-primary">ЗАПИСАТЬСЯ НА УРОК</a>
+                    <a href="#anketa" class="btn-primary">ЗАПИСАТЬСЯ НА УРОК</a>
                 </div>
             </div>
             <div class="hero-visual hero-visual-quote">
@@ -215,6 +215,40 @@
         </div>
     </section>
 </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Хочешь учиться со мной?</h2>
+                <p class="anketa-lead">Заполни короткую анкету, и я свяжусь с тобой с предложением, как начать.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-omne-ru">Твоё имя</label>
+                        <input type="text" id="jmeno-omne-ru" name="jmeno" required placeholder="напр. Алексей Новак">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-omne-ru">E-mail или телефон</label>
+                        <input type="text" id="kontakt-omne-ru" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
+                    </div>
+                    <div class="form-group">
+                        <label for="zajem-omne-ru">Что тебя интересует?</label>
+                        <select id="zajem-omne-ru" name="typ_pripravy">
+                            <option value="CERMAT">Подготовка к CERMAT</option>
+                            <option value="CVUT">Подготовка к ČVUT</option>
+                            <option value="UK">Подготовка к UK</option>
+                            <option value="SCIO">Подготовка к SCIO</option>
+                            <option value="INDIVIDUALNI">Индивидуальные занятия</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">ОТПРАВИТЬ АНКЕТУ</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/profil.jpg" alt="Репетитор математики">
+            </div>
+        </div>
+    </section>
+
  <footer class="main-footer">
     <div class="container footer-grid">
         

@@ -89,7 +89,7 @@
                 <h1 class="hero-split-title">Подготовка к <span class="highlight-alt">тестам SCIO</span> по математике</h1>
                 <p class="hero-split-text">Предлагаю подготовку к тестам SCIO по математике — общие учебные предпосылки, NSZ и поступление в гимназии. Научу тебя мыслить так, как этого требуют тесты SCIO.</p>
                 <div class="hero-split-btns">
-                    <a href="index_ru.html#kontakt" class="btn-primary">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
+                    <a href="#anketa" class="btn-primary">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -106,7 +106,7 @@
         </div>
         <div class="about-text">
             <h2 class="section-title">Чем SCIO отличается от CERMAT</h2>
-            <p>Тесты SCIO проверяют не только то, что ты умеешь считать, но прежде всего то, как быстро и точно ты умеешь рассуждать. Вместо долгих вычислений тебя ждёт множество коротких заданий на время, где решает логика, а не зубрёжка формул.</p>
+            <p class="lead-text">Тесты SCIO проверяют не только то, что ты умеешь считать, но прежде всего то, как быстро и точно ты умеешь рассуждать. Вместо долгих вычислений тебя ждёт множество коротких заданий на время, где решает логика, а не зубрёжка формул.</p>
             <p class="lead-text">
                 Тесты общих учебных предпосылок (OSP) используют многие гимназии и средние школы, а Национальные сравнительные экзамены (NSZ) принимают вместо собственных вступительных экзаменов десятки вузов — в основном экономические, юридические и социальные направления. Покажу тебе, как справиться с обоими типами тестов и как эффективно распределить время.
             </p>
@@ -149,7 +149,7 @@
             </ul>
 
             <div class="about-cta">
-                <a href="index_ru.html#kontakt" class="btn-primary">ХОЧУ ПОДГОТОВИТЬСЯ</a>
+                <a href="#anketa" class="btn-primary">ХОЧУ ПОДГОТОВИТЬСЯ</a>
             </div>
         </div>
     </div>
@@ -162,7 +162,7 @@
                 <div class="card-body">
                     <h3>OSP для средних школ</h3>
                     <p>Общие учебные предпосылки для поступления в многолетние гимназии, средние и высшие школы. Помогаю только с аналитической частью теста.</p>
-                    <a href="index_ru.html#kontakt" class="btn-detail btn-osp">Записаться на подготовку</a>
+                    <a href="#anketa" class="btn-detail btn-osp">Записаться на подготовку</a>
                 </div>
             </div>
 
@@ -171,7 +171,7 @@
                 <div class="card-body">
                     <h3>NSZ для вузов</h3>
                     <p>Национальные сравнительные экзамены, принимаемые вместо собственных вступительных на десятках направлений вузов.</p>
-                    <a href="index_ru.html#kontakt" class="btn-detail btn-nsz">Записаться на подготовку</a>
+                    <a href="#anketa" class="btn-detail btn-nsz">Записаться на подготовку</a>
                 </div>
             </div>
 
@@ -200,6 +200,38 @@
         </div>
     </section>
 </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Узнай, на каком ты уровне перед тестами SCIO</h2>
+                <p class="anketa-lead">Заполни короткую анкету, и я свяжусь с тобой с рекомендацией, на что обратить внимание.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-scio-ru">Твоё имя</label>
+                        <input type="text" id="jmeno-scio-ru" name="jmeno" required placeholder="напр. Алексей Новак">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-scio-ru">E-mail или телефон</label>
+                        <input type="text" id="kontakt-scio-ru" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
+                    </div>
+                    <div class="form-group">
+                        <label for="test-scio-ru">К какому тесту SCIO готовишься?</label>
+                        <select id="test-scio-ru" name="test">
+                            <option value="OSP">OSP</option>
+                            <option value="NSZ">NSZ</option>
+                            <option value="nevim">Ещё не знаю</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="SCIO">
+                    <button type="submit" class="btn-submit">ОТПРАВИТЬ АНКЕТУ</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/scio-priprava.jpg" alt="Подготовка к тестам SCIO">
+            </div>
+        </div>
+    </section>
 
  <footer class="main-footer">
     <div class="container footer-grid">

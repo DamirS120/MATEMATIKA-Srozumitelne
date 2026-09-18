@@ -89,7 +89,7 @@
                 <h1 class="hero-split-title">Подготовка к экзаменам <span class="highlight-alt">Карлова университета</span> по математике</h1>
                 <p class="hero-split-text">Предлагаю подготовку к вступительным экзаменам по математике в Карлов университет — традиционное образование с высокими требованиями. Подготовлю тебя на PedF, Matfyz и другие факультеты.</p>
                 <div class="hero-split-btns">
-                    <a href="index_ru.html#kontakt" class="btn-primary">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
+                    <a href="#anketa" class="btn-primary">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -107,7 +107,7 @@
         </div>
     <div class="about-text">
     <h2 class="section-title">Традиции и наука в UK</h2>
-    <p>Карлов университет предлагает престижное образование. Подготовлю тебя к сложным логическим тестам и математическому анализу.</p>
+    <p class="lead-text">Карлов университет предлагает престижное образование. Подготовлю тебя к сложным логическим тестам и математическому анализу.</p>
     <p class="lead-text">
     Основанный в <strong>1348</strong> году Карлом IV, Карлов университет — старейший и самый престижный университет в Центральной Европе. 
     Он стабильно входит в число <strong>2% лучших университетов мира</strong>. Учёба здесь для иностранных студентов — это билет 
@@ -153,7 +153,7 @@
         </ul>
         
         <div class="about-cta">
-            <a href="index_ru.html#kontakt" class="btn-primary">ХОЧУ ПОДГОТОВИТЬСЯ</a>
+            <a href="#anketa" class="btn-primary">ХОЧУ ПОДГОТОВИТЬСЯ</a>
         </div>
     </div>
 </div>
@@ -215,6 +215,39 @@
         </div>
     </section>
     </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Узнай, на каком ты уровне перед поступлением в UK</h2>
+                <p class="anketa-lead">Заполни короткую анкету, и я свяжусь с тобой с рекомендацией, на что обратить внимание.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-uk-ru">Твоё имя</label>
+                        <input type="text" id="jmeno-uk-ru" name="jmeno" required placeholder="напр. Алексей Новак">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-uk-ru">E-mail или телефон</label>
+                        <input type="text" id="kontakt-uk-ru" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
+                    </div>
+                    <div class="form-group">
+                        <label for="fakulta-uk-ru">На какой факультет поступаешь?</label>
+                        <select id="fakulta-uk-ru" name="fakulta">
+                            <option value="Matfyz">Matfyz (MFF)</option>
+                            <option value="PedF">Педагогический факультет</option>
+                            <option value="PrF">Естественнонаучный факультет</option>
+                            <option value="jina">Другой / ещё не знаю</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="UK">
+                    <button type="submit" class="btn-submit">ОТПРАВИТЬ АНКЕТУ</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/karolinum.jpg" alt="Карлов университет">
+            </div>
+        </div>
+    </section>
 
  <footer class="main-footer">
     <div class="container footer-grid">
