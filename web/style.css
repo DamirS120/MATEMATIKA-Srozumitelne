@@ -631,7 +631,7 @@ h3 {
 
 .prijimacky-split {
     display: grid;
-    grid-template-columns: 0.62fr 1.38fr;
+    grid-template-columns: 1fr 1fr;
     gap: 55px;
     align-items: center;
 }
@@ -1233,6 +1233,23 @@ h3 {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* Logo místo fotky - nedeformovat/neořezávat, jen vycentrovat na jemném pozadí */
+.mini-poll-image-logo {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.mini-poll-image-logo img {
+    width: auto;
+    height: auto;
+    max-width: 240px;
+    max-height: 240px;
+    object-fit: contain;
 }
 
 @media (max-width: 768px) {
