@@ -624,52 +624,60 @@ h3 {
     }
 }
 
-/* "Vyber si své přijímačky" na indexu - popis vlevo, kartičky vpravo jako carousel se šipkami */
+/* "Vyber si své přijímačky" na indexu - popis vlevo, kartičky vpravo jako velký carousel se šipkami */
 #prijimacky-nav {
-    max-width: 1400px;
+    max-width: 1500px;
 }
 
 .prijimacky-split {
     display: grid;
-    grid-template-columns: 0.85fr 1.35fr;
-    gap: 50px;
+    grid-template-columns: 0.62fr 1.38fr;
+    gap: 55px;
     align-items: center;
+}
+
+.prijimacky-intro {
+    background: var(--bg-light);
+    border-radius: 28px;
+    padding: 45px 38px;
 }
 
 .prijimacky-intro h3 {
     text-align: left;
     padding-bottom: 0;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    font-size: 1.7rem;
 }
 
 .prijimacky-intro>p {
     color: var(--text-light);
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .mode-list {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 22px;
 }
 
 .mode-item {
     display: flex;
     align-items: flex-start;
-    gap: 14px;
+    gap: 16px;
 }
 
 .mode-item i {
     flex-shrink: 0;
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
-    background: var(--bg-light);
+    background: #ffffff;
     color: var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .mode-item strong {
@@ -685,7 +693,7 @@ h3 {
 
 .prijimacky-track {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -704,15 +712,22 @@ h3 {
 }
 
 .prijimacky-track .card-img {
-    height: 260px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 1200px) {
+    .prijimacky-track .card-img {
+        aspect-ratio: 16 / 8;
+    }
 }
 
 .carousel-arrow {
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: #ffffff;
     border: 1px solid #e5e7eb;
@@ -721,7 +736,7 @@ h3 {
     align-items: center;
     justify-content: center;
     color: var(--primary);
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     z-index: 5;
     transition: 0.2s;
@@ -734,17 +749,45 @@ h3 {
 }
 
 .carousel-prev {
-    left: -18px;
+    left: -22px;
 }
 
 .carousel-next {
-    right: -18px;
+    right: -22px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d1d5db;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.carousel-dots .dot.active {
+    background: var(--primary);
+    width: 26px;
+    border-radius: 5px;
 }
 
 @media (max-width: 1024px) {
     .prijimacky-split {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .prijimacky-intro {
+        padding: 35px 30px;
     }
 
     .carousel-prev {

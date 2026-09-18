@@ -18,11 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Carousel "Vyber si své přijímačky" na indexu - šipky posouvají o jednu kartu
+  // Carousel "Vyber si své přijímačky" na indexu - šipky/tečky posouvají o jednu kartu
   document.querySelectorAll(".prijimacky-carousel").forEach(function (carousel) {
     var track = carousel.querySelector(".prijimacky-track");
     var prevBtn = carousel.querySelector(".carousel-prev");
     var nextBtn = carousel.querySelector(".carousel-next");
+    var dots = carousel.querySelectorAll(".carousel-dots .dot");
     if (!track || !prevBtn || !nextBtn) return;
 
     function step() {
@@ -31,11 +32,33 @@ document.addEventListener("DOMContentLoaded", function () {
       return card ? card.getBoundingClientRect().width + gap : 280;
     }
 
+    function updateDots() {
+      if (!dots.length) return;
+      var index = Math.round(track.scrollLeft / step());
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
     prevBtn.addEventListener("click", function () {
       track.scrollBy({ left: -step(), behavior: "smooth" });
     });
     nextBtn.addEventListener("click", function () {
       track.scrollBy({ left: step(), behavior: "smooth" });
+    });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        track.scrollTo({ left: i * step(), behavior: "smooth" });
+      });
+    });
+
+    var dotsRaf = null;
+    track.addEventListener("scroll", function () {
+      if (dotsRaf) return;
+      dotsRaf = window.requestAnimationFrame(function () {
+        updateDots();
+        dotsRaf = null;
+      });
     });
   });
 
