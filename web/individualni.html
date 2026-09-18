@@ -82,21 +82,25 @@
     </div>
 </nav>
     
-    <header class="hero">
-        <div class="container">
-            <h1>Individuální doučování <span class="highlight">matematiky</span></h1>
-            <p>Nabízím individuální doučování matematiky v Praze i online. Tempo, které ti vyhovuje. Jazyk, kterému rozumíš. Výsledky, které uvidíš.</p>
-            <div class="hero-btns">
-                <a href="index.html#kontakt" class="btn-primary">DOMLUVIT TERMÍN</a>
+    <header class="hero-split">
+        <div class="container hero-split-grid">
+            <div class="hero-left">
+                <span class="hero-eyebrow">Individuální tempo & osobní přístup</span>
+                <h1 class="hero-split-title">Individuální doučování <span class="highlight-alt">matematiky</span></h1>
+                <p class="hero-split-text">Nabízím individuální doučování matematiky v Praze i online. Tempo, které ti vyhovuje. Jazyk, kterému rozumíš. Výsledky, které uvidíš.</p>
+                <div class="hero-split-btns">
+                    <a href="#anketa" class="btn-primary">DOMLUVIT TERMÍN</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="images/individual.jpg" alt="Lekce matematiky">
+                <div class="hero-visual-caption">Tempo a jazyk, který ti sedne</div>
             </div>
         </div>
     </header>
 
     <main class="container">
         <div class="about-hero">
-            <div class="about-image">
-                <img src="images/individual.jpg" alt="Lekce matematiky">
-            </div>
     <div class="about-text">
         <h2 class="section-title">Proč zvolit individuální lekce?</h2>
         
@@ -121,12 +125,66 @@
             </li>
         </ul>
 
-        <a href="index.html#kontakt" class="btn-submit" style="text-decoration: none; margin-top: 20px;">
+        <a href="#anketa" class="btn-submit" style="text-decoration: none; margin-top: 20px;">
             DOMLUVIT TERMÍN
         </a>
     </div>
 </div>
+
+    <section class="faq-section">
+        <h2 class="section-title">Časté otázky</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Pro koho jsou individuální lekce vhodné?</summary>
+                <p>Pro žáky ZŠ, SŠ i studenty VŠ – lekce přizpůsobím tvému ročníku, škole a tempu.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Musím vědět přesně, co potřebuju probrat?</summary>
+                <p>Ne, stačí říct, s čím máš problém nebo jaké téma zrovna probíráte ve škole – zbytek vymyslíme společně.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Jak často se lekce obvykle konají?</summary>
+                <p>Podle potřeby – od jedné lekce týdně po intenzivní bloky před testy nebo zkouškami.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Probíhá výuka i online?</summary>
+                <p>Ano, osobně v Praze i online, podle toho, co je pro tebe pohodlnější.</p>
+            </details>
+        </div>
+    </section>
     </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Zjisti, jak ti může pomoct individuální doučování</h2>
+                <p class="anketa-lead">Vyplň krátkou anketu a ozvu se ti s doporučením, na co se zaměřit.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-ind">Tvé jméno</label>
+                        <input type="text" id="jmeno-ind" name="jmeno" required placeholder="např. Alexej Novák">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-ind">E-mail nebo telefon</label>
+                        <input type="text" id="kontakt-ind" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                    </div>
+                    <div class="form-group">
+                        <label for="potreba-ind">Co aktuálně nejvíc řešíš?</label>
+                        <select id="potreba-ind" name="potreba">
+                            <option value="ZS-SS">Školní látka na ZŠ/SŠ</option>
+                            <option value="VS">Vysokoškolská matematika</option>
+                            <option value="test">Příprava na konkrétní test/zkoušku</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="INDIVIDUALNI">
+                    <button type="submit" class="btn-submit">ODESLAT ANKETU</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/individual.jpg" alt="Lekce matematiky">
+            </div>
+        </div>
+    </section>
 
  <footer class="main-footer">
     <div class="container footer-grid">

@@ -82,14 +82,19 @@
     </div>
 </nav>
 
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Příprava na přijímačky <span class="highlight">Univerzity Karlovy</span> z matematiky</h1>
-                <p>Nabízím přípravu na přijímačky z matematiky na Univerzitu Karlovu — tradiční vzdělání s vysokými nároky. Připravím tě na PedF, Matfyz i další fakulty.</p>
-                <div class="hero-btns">
-                    <a href="index.html#kontakt" class="btn-primary">DOMLUVIT KONZULTACI</a>
+    <header class="hero-split">
+        <div class="container hero-split-grid">
+            <div class="hero-left">
+                <span class="hero-eyebrow">Zkušenost s didaktikou z PedF UK</span>
+                <h1 class="hero-split-title">Příprava na přijímačky <span class="highlight-alt">Univerzity Karlovy</span> z matematiky</h1>
+                <p class="hero-split-text">Nabízím přípravu na přijímačky z matematiky na Univerzitu Karlovu — tradiční vzdělání s vysokými nároky. Připravím tě na PedF, Matfyz i další fakulty.</p>
+                <div class="hero-split-btns">
+                    <a href="#anketa" class="btn-primary">DOMLUVIT KONZULTACI</a>
                 </div>
+            </div>
+            <div class="hero-visual">
+                <img src="images/matfyz.jpg" alt="Univerzita Karlova">
+                <div class="hero-visual-caption">PedF, Matfyz i další fakulty</div>
             </div>
         </div>
     </header>
@@ -102,7 +107,7 @@
         </div>
     <div class="about-text">
     <h2 class="section-title">Tradice a věda na UK</h2>
-    <p>Univerzita Karlova nabízí prestižní vzdělání. Připravím tě na náročné logické testy a matematickou analýzu.</p>
+    <p class="lead-text">Univerzita Karlova nabízí prestižní vzdělání. Připravím tě na náročné logické testy a matematickou analýzu.</p>
     <p class="lead-text">
     Založená v roce <strong>1348</strong> Karlem IV., Univerzita Karlova je nejstarší a nejprestižnější univerzitou ve střední Evropě. 
     Trvale se řadí mezi <strong>2 % nejlepších univerzit na světě</strong>. Studium zde je pro studenty ze zahraničí vstupenkou 
@@ -148,7 +153,7 @@
         </ul>
         
         <div class="about-cta">
-            <a href="index.html#kontakt" class="btn-primary">CHCI SE PŘIPRAVIT</a>
+            <a href="#anketa" class="btn-primary">CHCI SE PŘIPRAVIT</a>
         </div>
     </div>
 </div>
@@ -187,7 +192,62 @@
 
     </div>
 </section>
+
+    <section class="faq-section">
+        <h2 class="section-title">Časté otázky</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Připravujete jen na PedF, nebo i na Matfyz?</summary>
+                <p>Obojí – Matfyz vyžaduje hlubší teorii a důkazy, PedF spíš logiku a OSP. Přípravu přizpůsobím podle fakulty, na kterou se hlásíš.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Musím umět dokonale česky?</summary>
+                <p>Ne, ale rozumět zadání v akademické češtině je klíčové – právě na to se s cizojazyčnými studenty hodně zaměřujeme.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Jak dlouho příprava obvykle trvá?</summary>
+                <p>Probereme na úvodní konzultaci podle termínu tvých přijímaček a aktuální úrovně.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Je možné učit se online?</summary>
+                <p>Ano, osobně v Praze i online, podle toho, co je pro tebe pohodlnější.</p>
+            </details>
+        </div>
+    </section>
     </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Zjisti, jak jsi na tom s přijímačkami na UK</h2>
+                <p class="anketa-lead">Vyplň krátkou anketu a ozvu se ti s doporučením, na co se zaměřit.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-uk">Tvé jméno</label>
+                        <input type="text" id="jmeno-uk" name="jmeno" required placeholder="např. Alexej Novák">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-uk">E-mail nebo telefon</label>
+                        <input type="text" id="kontakt-uk" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                    </div>
+                    <div class="form-group">
+                        <label for="fakulta-uk">Na jakou fakultu se hlásíš?</label>
+                        <select id="fakulta-uk" name="fakulta">
+                            <option value="Matfyz">Matfyz (MFF)</option>
+                            <option value="PedF">Pedagogická fakulta</option>
+                            <option value="PrF">Přírodovědecká fakulta</option>
+                            <option value="jina">Jiná / nevím ještě</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="UK">
+                    <button type="submit" class="btn-submit">ODESLAT ANKETU</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/karolinum.jpg" alt="Univerzita Karlova">
+            </div>
+        </div>
+    </section>
 
  <footer class="main-footer">
     <div class="container footer-grid">

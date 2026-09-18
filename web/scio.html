@@ -83,12 +83,19 @@
     </div>
 </nav>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Příprava na <span class="highlight">SCIO testy</span> z matematiky</h1>
-            <p>Nabízím přípravu na SCIO testy z matematiky — obecné studijní předpoklady, NSZ i přijímačky na gymnázia. Naučím tě přemýšlet tak, jak to SCIO testy vyžadují.</p>
-            <div class="hero-btns">
-                <a href="index.html#kontakt" class="btn-primary">DOMLUVIT KONZULTACI</a>
+    <header class="hero-split">
+        <div class="container hero-split-grid">
+            <div class="hero-left">
+                <span class="hero-eyebrow">Podrobná znalost struktury SCIO testů</span>
+                <h1 class="hero-split-title">Příprava na <span class="highlight-alt">SCIO testy</span> z matematiky</h1>
+                <p class="hero-split-text">Nabízím přípravu na SCIO testy z matematiky — obecné studijní předpoklady, NSZ i přijímačky na gymnázia. Naučím tě přemýšlet tak, jak to SCIO testy vyžadují.</p>
+                <div class="hero-split-btns">
+                    <a href="#anketa" class="btn-primary">DOMLUVIT KONZULTACI</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="images/scio-osp.jpg" alt="Příprava na SCIO testy">
+                <div class="hero-visual-caption">OSP i NSZ testy</div>
             </div>
         </div>
     </header>
@@ -100,7 +107,7 @@
         </div>
         <div class="about-text">
             <h2 class="section-title">Čím se SCIO liší od CERMATu</h2>
-            <p>SCIO testy nezkoumají jen to, co umíš spočítat, ale hlavně jak rychle a přesně umíš uvažovat. Místo dlouhých výpočtů tě čeká spousta kratších úloh na čas, kde rozhoduje logika, ne biflování vzorců.</p>
+            <p class="lead-text">SCIO testy nezkoumají jen to, co umíš spočítat, ale hlavně jak rychle a přesně umíš uvažovat. Místo dlouhých výpočtů tě čeká spousta kratších úloh na čas, kde rozhoduje logika, ne biflování vzorců.</p>
             <p class="lead-text">
                 Testy Obecných studijních předpokladů (OSP) používá řada víceletých gymnázií i středních škol, Národní srovnávací zkoušky (NSZ) zase přijímá desítky vysokých škol místo vlastních přijímaček – hlavně ekonomické, právnické a sociální obory. Ukážu ti, jak na oba typy testů a jak si efektivně rozvrhnout čas.
             </p>
@@ -143,7 +150,7 @@
             </ul>
 
             <div class="about-cta">
-                <a href="index.html#kontakt" class="btn-primary">CHCI SE PŘIPRAVIT</a>
+                <a href="#anketa" class="btn-primary">CHCI SE PŘIPRAVIT</a>
             </div>
         </div>
     </div>
@@ -157,7 +164,7 @@
                 <div class="card-body">
                     <h3>OSP pro střední školy</h3>
                     <p>Obecné studijní předpoklady pro přijímačky na víceletá gymnázia, střední i vysoké školy. Pomáhám jen s analytickou částí testu.</p>
-                    <a href="index.html#kontakt" class="btn-detail btn-osp">Domluvit přípravu</a>
+                    <a href="#anketa" class="btn-detail btn-osp">Domluvit přípravu</a>
                 </div>
             </div>
 
@@ -166,13 +173,67 @@
                 <div class="card-body">
                     <h3>NSZ pro vysoké školy</h3>
                     <p>Národní srovnávací zkoušky přijímané místo vlastních přijímaček na desítkách VŠ oborů.</p>
-                    <a href="index.html#kontakt" class="btn-detail btn-nsz">Domluvit přípravu</a>
+                    <a href="#anketa" class="btn-detail btn-nsz">Domluvit přípravu</a>
                 </div>
             </div>
 
         </div>
     </section>
+
+    <section class="faq-section">
+        <h2 class="section-title">Časté otázky</h2>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Je rozdíl mezi přípravou na OSP a NSZ?</summary>
+                <p>Ano, OSP se používá hlavně pro gymnázia a SŠ, NSZ nahrazuje přijímačky na řadě VŠ. Zaměříme se na typ testu, který právě skládáš.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Pomůžete i s verbální a analytickou částí, nebo jen s matematikou?</summary>
+                <p>Specializuji se hlavně na kvantitativní část, ale probereme i strategii pro zbylé části testu.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Jak se boduje za špatnou odpověď?</summary>
+                <p>Vysvětlím ti přesně systém bodování SCIO testů, ať víš, kdy se vyplatí hádat a kdy ne.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Kde probíhají lekce?</summary>
+                <p>Osobně v Praze nebo online, podle toho, co ti víc vyhovuje.</p>
+            </details>
+        </div>
+    </section>
 </main>
+
+    <section id="anketa" class="anketa-section">
+        <div class="container anketa-grid">
+            <div class="anketa-form-wrap">
+                <h2>Zjisti, jak jsi na tom s přípravou na SCIO testy</h2>
+                <p class="anketa-lead">Vyplň krátkou anketu a ozvu se ti s doporučením, na co se zaměřit.</p>
+                <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno-scio">Tvé jméno</label>
+                        <input type="text" id="jmeno-scio" name="jmeno" required placeholder="např. Alexej Novák">
+                    </div>
+                    <div class="form-group">
+                        <label for="kontakt-scio">E-mail nebo telefon</label>
+                        <input type="text" id="kontakt-scio" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                    </div>
+                    <div class="form-group">
+                        <label for="test-scio">Na jaký SCIO test se připravuješ?</label>
+                        <select id="test-scio" name="test">
+                            <option value="OSP">OSP</option>
+                            <option value="NSZ">NSZ</option>
+                            <option value="nevim">Ještě nevím</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="typ_pripravy" value="SCIO">
+                    <button type="submit" class="btn-submit">ODESLAT ANKETU</button>
+                </form>
+            </div>
+            <div class="anketa-image">
+                <img src="images/scio-priprava.jpg" alt="Příprava na SCIO testy">
+            </div>
+        </div>
+    </section>
 
  <footer class="main-footer">
     <div class="container footer-grid">
