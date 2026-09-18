@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <script src="menu.js" defer></script>
+    <script src="hero-carousel.js" defer></script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
@@ -137,15 +138,80 @@
     </div>
 </nav>
 
-<header class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <span class="hero-badge">Индивидуальный подход и опыт учёбы в ČVUT</span>
-            <h1>Репетиторство по математике, которое наконец <span class="highlight">начнёт обретать смысл</span></h1>
-            <p>Предлагаю репетиторство по математике в Праге и онлайн. Подготовлю тебя к поступлению (CERMAT, ČVUT, UK, SCIO) или помогу со сложным материалом в вузе. Никакой зубрёжки — только чистое понимание.</p>
-            <div class="hero-btns">
+<header class="hero-split">
+    <div class="container hero-split-grid">
+        <div class="hero-left">
+            <span class="hero-eyebrow">Индивидуальный подход и опыт учёбы в ČVUT</span>
+            <h1 class="hero-split-title">Репетиторство по математике, которое наконец <span class="highlight-alt">начнёт обретать смысл</span></h1>
+            <p class="hero-split-text">Подготовлю тебя к поступлению (CERMAT, ČVUT, UK, SCIO) или помогу со сложным материалом в вузе. Никакой зубрёжки — только чистое понимание.</p>
+
+            <div class="mode-picker">
+                <h3>Занимаюсь очно и онлайн</h3>
+                <p>Выбери, что тебе удобнее — оба формата работают с одинаковым вниманием и результатом.</p>
+
+                <label class="mode-option">
+                    <input type="radio" name="vyuka-forma" checked>
+                    <span class="mode-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="mode-text">
+                        <strong>Очно в Праге</strong>
+                        Занятия у меня, по договорённости возможно и у тебя дома.
+                    </span>
+                </label>
+
+                <label class="mode-option">
+                    <input type="radio" name="vyuka-forma">
+                    <span class="mode-icon"><i class="fa-solid fa-laptop"></i></span>
+                    <span class="mode-text">
+                        <strong>Онлайн откуда угодно</strong>
+                        По видеосвязи с общим экраном, без разъездов.
+                    </span>
+                </label>
+            </div>
+
+            <div class="hero-split-btns">
                 <a href="#kontakt" class="btn-primary">ХОЧУ ЗАНЯТИЯ</a>
-                <a href="#sluzby" class="btn-secondary">МОИ УСЛУГИ</a>
+                <a href="#sluzby" class="btn-secondary-outline-dark">МОИ УСЛУГИ</a>
+            </div>
+        </div>
+
+        <div class="hero-carousel" id="hero-carousel">
+            <div class="carousel-slide active" style="background-image:url('images/cermat-gymnazia.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <div class="carousel-caption">
+                    <h3>Подготовка к CERMAT</h3>
+                    <p>Для девятиклассников и выпускников. Разберём тесты прошлых лет и найдём все подвохи.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/cvut-budova.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-microchip"></i></span>
+                <div class="carousel-caption">
+                    <h3>Поступление в ČVUT</h3>
+                    <p>Подготовка на FIT, FEL и другие факультеты от человека, который сам там успешно учится.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/mff.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-book-open"></i></span>
+                <div class="carousel-caption">
+                    <h3>Математика для UK</h3>
+                    <p>Подготовка для будущих учителей и учёных. Упор на глубокое понимание теории.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/scio-priprava.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-file-lines"></i></span>
+                <div class="carousel-caption">
+                    <h3>Тесты SCIO</h3>
+                    <p>OSP, NSZ и поступление в гимназии. Научу тебя мыслить так, как этого требуют тесты.</p>
+                </div>
+            </div>
+
+            <button type="button" class="carousel-arrow prev" aria-label="Предыдущее предложение"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="carousel-arrow next" aria-label="Следующее предложение"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="carousel-dots">
+                <button type="button" class="dot active" aria-label="Слайд 1"></button>
+                <button type="button" class="dot" aria-label="Слайд 2"></button>
+                <button type="button" class="dot" aria-label="Слайд 3"></button>
+                <button type="button" class="dot" aria-label="Слайд 4"></button>
             </div>
         </div>
     </div>

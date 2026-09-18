@@ -24,6 +24,7 @@
 </script>
 
     <script src="menu.js" defer></script>
+    <script src="hero-carousel.js" defer></script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
@@ -156,15 +157,80 @@
     </div>
 </nav>
 
-<header class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <span class="hero-badge">Individuální přístup & Zkušenosti z ČVUT</span>
-            <h1>Doučování matematiky, které ti konečně <span class="highlight">začne dávat smysl</span></h1>
-            <p>Nabízím doučování matematiky v Praze i online. Připravím tě na přijímačky z matematiky (CERMAT, ČVUT, UK, SCIO) nebo pomůžu s náročnou látkou na vysoké škole. Žádné biflování, jen čisté pochopení.</p>
-            <div class="hero-btns">
+<header class="hero-split">
+    <div class="container hero-split-grid">
+        <div class="hero-left">
+            <span class="hero-eyebrow">Individuální přístup & Zkušenosti z ČVUT</span>
+            <h1 class="hero-split-title">Doučování matematiky, které ti konečně <span class="highlight-alt">začne dávat smysl</span></h1>
+            <p class="hero-split-text">Připravím tě na přijímačky z matematiky (CERMAT, ČVUT, UK, SCIO) nebo pomůžu s náročnou látkou na vysoké škole. Žádné biflování, jen čisté pochopení.</p>
+
+            <div class="mode-picker">
+                <h3>Učím osobně i online</h3>
+                <p>Vyber si, co ti vyhovuje víc – oba formáty fungují se stejnou péčí a výsledky.</p>
+
+                <label class="mode-option">
+                    <input type="radio" name="vyuka-forma" checked>
+                    <span class="mode-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="mode-text">
+                        <strong>Osobně v Praze</strong>
+                        Lekce u mě, po domluvě i u tebe doma.
+                    </span>
+                </label>
+
+                <label class="mode-option">
+                    <input type="radio" name="vyuka-forma">
+                    <span class="mode-icon"><i class="fa-solid fa-laptop"></i></span>
+                    <span class="mode-text">
+                        <strong>Online odkudkoliv</strong>
+                        Přes videohovor se sdílenou obrazovkou, bez cestování.
+                    </span>
+                </label>
+            </div>
+
+            <div class="hero-split-btns">
                 <a href="#kontakt" class="btn-primary">CHCI DOUČOVÁNÍ</a>
-                <a href="#sluzby" class="btn-secondary">MOJE SLUŽBY</a>
+                <a href="#sluzby" class="btn-secondary-outline-dark">MOJE SLUŽBY</a>
+            </div>
+        </div>
+
+        <div class="hero-carousel" id="hero-carousel">
+            <div class="carousel-slide active" style="background-image:url('images/cermat-gymnazia.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <div class="carousel-caption">
+                    <h3>Příprava na CERMAT</h3>
+                    <p>Pro deváťáky i maturanty. Projdeme testy z minulých let a odhalíme chytáky.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/cvut-budova.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-microchip"></i></span>
+                <div class="carousel-caption">
+                    <h3>Přijímačky na ČVUT</h3>
+                    <p>Příprava na FIT, FEL a další fakulty od někoho, kdo tam úspěšně studuje.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/mff.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-book-open"></i></span>
+                <div class="carousel-caption">
+                    <h3>Matematika na UK</h3>
+                    <p>Příprava pro budoucí učitele i vědce. Zaměřeno na hluboké porozumění teorii.</p>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image:url('images/scio-priprava.jpg')">
+                <span class="carousel-icon"><i class="fa-solid fa-file-lines"></i></span>
+                <div class="carousel-caption">
+                    <h3>SCIO testy</h3>
+                    <p>OSP, NSZ i přijímačky na gymnázia. Naučím tě přemýšlet tak, jak to testy vyžadují.</p>
+                </div>
+            </div>
+
+            <button type="button" class="carousel-arrow prev" aria-label="Předchozí nabídka"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="carousel-arrow next" aria-label="Další nabídka"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="carousel-dots">
+                <button type="button" class="dot active" aria-label="Nabídka 1"></button>
+                <button type="button" class="dot" aria-label="Nabídka 2"></button>
+                <button type="button" class="dot" aria-label="Nabídka 3"></button>
+                <button type="button" class="dot" aria-label="Nabídka 4"></button>
             </div>
         </div>
     </div>
