@@ -162,9 +162,52 @@
                 <a href="#kontakt" class="btn-primary">CHCI DOUČOVÁNÍ</a>
                 <a href="#sluzby" class="btn-secondary">MOJE SLUŽBY</a>
             </div>
+            <div class="hero-trust">
+                <span><i class="fa-solid fa-graduation-cap"></i> Student ČVUT & PedF UK</span>
+                <span><i class="fa-solid fa-laptop"></i> Osobně v Praze i online</span>
+                <span><i class="fa-solid fa-comments"></i> Bez biflování, jen pochopení</span>
+            </div>
         </div>
     </div>
 </header>
+
+<section class="container" id="lektor">
+    <div class="about-hero">
+        <div class="about-image">
+            <img src="images/profil.jpg" alt="Lektor matematiky - student ČVUT a PedF UK">
+        </div>
+        <div class="about-text">
+            <h2>Kdo tě bude učit?</h2>
+            <p class="lead-text">
+                Jsem student Pedagogické fakulty Univerzity Karlovy se zkušeností z ČVUT. Vím, co obě zkoušky i studium vyžadují – a naučím tě, jak na to jít krok za krokem, ne nazpaměť.
+            </p>
+            <ul class="focus-list">
+                <li>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>Aktuální znalosti</strong>
+                        Znám požadavky CERMATu, ČVUT, UK i SCIO z první ruky.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-comments"></i>
+                    <div>
+                        <strong>Lidské vysvětlování</strong>
+                        Mluvím jazykem studentů, ne učebnic.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <div>
+                        <strong>Individuální tempo</strong>
+                        Žádný spěch – probíráme látku, dokud ji opravdu nepochopíš.
+                    </div>
+                </li>
+            </ul>
+            <a href="omne.html" class="btn-nav">CELÝ MŮJ PŘÍBĚH</a>
+        </div>
+    </div>
+</section>
 
     <section class="container" id="prijimacky-nav">
         <h2 class="section-title">Vyber si své přijímačky</h2>
@@ -233,33 +276,44 @@
 
 <section id="cenik-pro" class="container py-10">
 
-    <div class="pricing-flow">
+    <div class="pricing-cards">
         <!-- 1. Konzultace -->
-        <div class="bubble side">
-            <div class="bubble-content">
-                <span class="bubble-tag">START</span>
-                <div class="bubble-price">Zdarma</div>
-                <p>Konzultace</p>
-            </div>
+        <div class="price-card">
+            <span class="price-tag">START</span>
+            <div class="price-value">Zdarma</div>
+            <p class="price-desc">Úvodní konzultace</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Probereme, co potřebuješ</li>
+                <li><i class="fa-solid fa-check"></i> Bez závazků</li>
+                <li><i class="fa-solid fa-check"></i> Přes WhatsApp / Telegram</li>
+            </ul>
+            <a href="#kontakt" class="btn-secondary-outline">DOMLUVIT SE</a>
         </div>
 
         <!-- 2. Hlavní nabídka (Zvýrazněná) -->
-        <div class="bubble main">
-            <div class="bubble-content">
-                <span class="bubble-tag highlight">NEJLEPŠÍ VOLBA</span>
-                <div class="bubble-price">180 Kč</div>
-                <p>Doučování / hod</p>
-                <a href="#kontakt" class="bubble-action">MÁM ZÁJEM</a>
-            </div>
+        <div class="price-card featured">
+            <span class="price-tag highlight">NEJOBLÍBENĚJŠÍ</span>
+            <div class="price-value">180 Kč <span>/ hod</span></div>
+            <p class="price-desc">Pravidelné doučování</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Individuální plán lekcí</li>
+                <li><i class="fa-solid fa-check"></i> Vlastní materiály a příklady</li>
+                <li><i class="fa-solid fa-check"></i> Osobně v Praze i online</li>
+            </ul>
+            <a href="#kontakt" class="btn-cta-featured">MÁM ZÁJEM</a>
         </div>
 
         <!-- 3. Přijímačky -->
-        <div class="bubble side">
-            <div class="bubble-content">
-                <span class="bubble-tag">EXPERT</span>
-                <div class="bubble-price">200+ Kč</div>
-                <p>Přijímačky / hod</p>
-            </div>
+        <div class="price-card">
+            <span class="price-tag">EXPERT</span>
+            <div class="price-value">200+ Kč <span>/ hod</span></div>
+            <p class="price-desc">Příprava na přijímačky</p>
+            <ul class="price-features">
+                <li><i class="fa-solid fa-check"></i> Testy z minulých let</li>
+                <li><i class="fa-solid fa-check"></i> Zaměření na CERMAT / ČVUT / UK / SCIO</li>
+                <li><i class="fa-solid fa-check"></i> Strategie na zkoušku</li>
+            </ul>
+            <a href="#kontakt" class="btn-secondary-outline">DOMLUVIT SE</a>
         </div>
     </div>
 </section>
@@ -319,6 +373,32 @@
                 <p>Specialisté na doučování "na poslední chvíli" a přípravu k reparátům a maturitám.</p>
                 <span class="partner-card-link">Zjistit více →</span>
             </a>
+    </div>
+</section>
+
+<section class="container faq-section">
+    <h2 class="section-title">Časté otázky</h2>
+    <div class="faq-list">
+        <details class="faq-item">
+            <summary>Jak probíhá první lekce?</summary>
+            <p>Napíšeš mi přes WhatsApp nebo Telegram, domluvíme termín a probereme, s čím přesně potřebuješ pomoct. První konzultace je zdarma a nezávazná.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Učíte i online, nebo jen osobně v Praze?</summary>
+            <p>Obojí. Osobní lekce probíhají v Praze, online lekce kdekoli přes videohovor – funguje to stejně dobře, jen si k tomu připravíme sdílenou tabuli nebo materiály na obrazovce.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Co když mi lekce nebude vyhovovat?</summary>
+            <p>Žádný problém. Nejsi ničím vázaný/á – pokračujeme, jen pokud ti to dává smysl a vidíš výsledky.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Kolik lekcí budu potřebovat?</summary>
+            <p>Záleží na tvém cíli a aktuální úrovni. Na první konzultaci probereme, kde jsi teď, a domluvíme si reálný plán – bez zbytečných hodin navíc.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Jak se domluvím na termínu?</summary>
+            <p>Nejrychleji přes WhatsApp nebo Telegram (odkazy v patičce), nebo vyplň formulář níže a ozvu se ti zpět.</p>
+        </details>
     </div>
 </section>
 

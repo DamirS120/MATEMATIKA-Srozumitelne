@@ -352,6 +352,38 @@ h3 {
     justify-content: center;
 }
 
+/* Důvěryhodnostní odznaky pod tlačítky v hero */
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 32px;
+    justify-content: center;
+    margin-top: 36px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-trust span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.hero-trust i {
+    color: #fca311;
+}
+
+@media (max-width: 600px) {
+    .hero-trust {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
 .btn-primary {
     background-color: var(--accent);
     color: white;
@@ -912,6 +944,203 @@ h3 {
     border-radius: 20px;
     margin-top: 8px;
     font-weight: bold;
+}
+
+/* --- CENOVÉ KARTY (nová verze ceníku na indexu) --- */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+    padding: 20px 0 10px;
+}
+
+.price-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.price-card.featured {
+    border: 2px solid var(--primary);
+    background: var(--bg-light);
+    transform: scale(1.05);
+    position: relative;
+    z-index: 2;
+}
+
+.price-card.featured:hover {
+    transform: scale(1.05) translateY(-6px);
+}
+
+.price-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.price-tag.highlight {
+    color: var(--accent);
+}
+
+.price-value {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.price-value span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.price-desc {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: left;
+    flex: 1;
+}
+
+.price-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.price-features li i {
+    color: var(--accent);
+    margin-top: 4px;
+}
+
+.btn-secondary-outline {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 26px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    transition: 0.3s;
+    margin-top: auto;
+}
+
+.btn-secondary-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-cta-featured {
+    display: inline-block;
+    margin-top: auto;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 26px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-cta-featured:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.92);
+}
+
+@media (max-width: 900px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .price-card.featured {
+        transform: none;
+        order: -1;
+    }
+
+    .price-card.featured:hover {
+        transform: translateY(-6px);
+    }
+}
+
+/* --- FAQ SEKCE (ČASTÉ OTÁZKY) --- */
+.faq-section {
+    padding-bottom: 20px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.faq-item {
+    background: var(--bg-light);
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px 22px;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: var(--font-display);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    margin-top: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 
