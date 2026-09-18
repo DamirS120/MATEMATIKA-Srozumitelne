@@ -214,6 +214,15 @@ h3 {
     color: var(--primary);
     text-decoration: none;
     letter-spacing: -0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-img {
+    height: 34px;
+    width: auto;
+    display: block;
 }
 
 .logo span {
@@ -830,6 +839,27 @@ h3 {
 
 .prijimacky-track .card-body p {
     opacity: 0.9;
+}
+
+.prijimacky-track .card-logo {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.prijimacky-track .card-logo img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .carousel-arrow {
