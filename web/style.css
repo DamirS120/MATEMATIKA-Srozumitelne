@@ -610,6 +610,189 @@ h3 {
     border-radius: 4px;
 }
 
+/* --- ČASOVÁ OSA STUDIA (hero na stránce O mně) --- */
+.timeline {
+    position: relative;
+    margin: 28px 0;
+    padding-left: 26px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--accent);
+    opacity: 0.4;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg-light);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -26px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px #fff;
+}
+
+.timeline-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.timeline-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 24px;
+    flex: 1;
+    min-width: 0;
+}
+
+.timeline-heading {
+    min-width: 140px;
+}
+
+.timeline-heading strong {
+    display: block;
+    color: var(--primary);
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+}
+
+.timeline-date {
+    color: var(--text-light);
+    font-size: 0.82rem;
+}
+
+.timeline-body p {
+    flex: 1;
+    min-width: 160px;
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- ŘÁDEK RYCHLÝCH FAKTŮ POD ČASOVOU OSOU --- */
+.hero-stats-row {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 22px;
+    margin-bottom: 26px;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+    padding: 0 8px;
+}
+
+.hero-stat:not(:first-child) {
+    border-left: 1px solid #e2e8f0;
+}
+
+.hero-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+}
+
+.hero-stat strong {
+    color: var(--text-dark);
+    font-size: 0.92rem;
+}
+
+.hero-stat span {
+    color: var(--text-light);
+    font-size: 0.78rem;
+}
+
+/* Fotka s ručně psaným citátem (hero na stránce O mně) */
+.hero-visual-quote-text {
+    position: absolute;
+    left: 26px;
+    right: 26px;
+    bottom: 34px;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Caveat', cursive;
+    font-size: 1.7rem;
+    line-height: 1.25;
+    transform: rotate(-2deg);
+}
+
+.hero-visual-quote-text::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: 10px;
+    background: #fca311;
+    border-radius: 2px;
+    transform: rotate(-4deg);
+}
+
+.hero-visual-quote img {
+    object-position: center 15%;
+}
+
+@media (max-width: 1024px) {
+    .hero-visual-quote {
+        order: -1;
+        aspect-ratio: 4 / 5;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-item {
+        align-items: flex-start;
+    }
+
+    .hero-stat span {
+        display: none;
+    }
+}
+
 /* Statický obrázek v hero (podstránky přijímaček - CERMAT, ČVUT, UK, SCIO) */
 .hero-visual {
     position: relative;
