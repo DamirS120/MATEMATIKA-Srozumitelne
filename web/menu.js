@@ -18,6 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Carousel "Vyber si své přijímačky" na indexu - šipky posouvají o jednu kartu
+  document.querySelectorAll(".prijimacky-carousel").forEach(function (carousel) {
+    var track = carousel.querySelector(".prijimacky-track");
+    var prevBtn = carousel.querySelector(".carousel-prev");
+    var nextBtn = carousel.querySelector(".carousel-next");
+    if (!track || !prevBtn || !nextBtn) return;
+
+    function step() {
+      var card = track.querySelector(".card");
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+      return card ? card.getBoundingClientRect().width + gap : 280;
+    }
+
+    prevBtn.addEventListener("click", function () {
+      track.scrollBy({ left: -step(), behavior: "smooth" });
+    });
+    nextBtn.addEventListener("click", function () {
+      track.scrollBy({ left: step(), behavior: "smooth" });
+    });
+  });
+
   // Zapamatování ruční volby jazyka (CZ/RU), aby ji pak nepřebilo automatické přesměrování
   document.querySelectorAll(".lang-link").forEach(function (link) {
     link.addEventListener("click", function () {

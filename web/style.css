@@ -624,20 +624,141 @@ h3 {
     }
 }
 
-/* "Vyber si své přijímačky" na indexu - vždy 2 sloupce na širších obrazovkách */
+/* "Vyber si své přijímačky" na indexu - popis vlevo, kartičky vpravo jako carousel se šipkami */
 #prijimacky-nav {
     max-width: 1400px;
 }
 
-#prijimacky-nav .detail-grid {
+.prijimacky-split {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 0.85fr 1.35fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.prijimacky-intro h3 {
+    text-align: left;
+    padding-bottom: 0;
+    margin-bottom: 12px;
+}
+
+.prijimacky-intro>p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.mode-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mode-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.mode-item i {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.mode-item strong {
+    display: block;
+    color: var(--primary);
+    margin-bottom: 2px;
+}
+
+.prijimacky-carousel {
+    position: relative;
+    min-width: 0;
+}
+
+.prijimacky-track {
+    display: flex;
     gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 4px 4px 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.prijimacky-track::-webkit-scrollbar {
+    display: none;
+}
+
+.prijimacky-track .card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+}
+
+.prijimacky-track .card-img {
+    height: 200px;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.2s;
+    padding: 0;
+}
+
+.carousel-arrow:hover {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.carousel-prev {
+    left: -18px;
+}
+
+.carousel-next {
+    right: -18px;
+}
+
+@media (max-width: 1024px) {
+    .prijimacky-split {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .carousel-prev {
+        left: 4px;
+    }
+
+    .carousel-next {
+        right: 4px;
+    }
 }
 
 @media (max-width: 600px) {
-    #prijimacky-nav .detail-grid {
-        grid-template-columns: 1fr;
+    .prijimacky-track .card {
+        flex-basis: 220px;
     }
 }
 
