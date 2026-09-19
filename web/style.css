@@ -2580,11 +2580,6 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         grid-template-columns: 1fr;
     }
 
-    .hero-visual-frame,
-    .hero-visual {
-        order: -1;
-    }
-
     #hero-carousel,
     .hero-visual {
         aspect-ratio: 16 / 10;
@@ -2600,27 +2595,31 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     }
 
     .hero-visual-quote {
-        order: -1;
         aspect-ratio: 4 / 5;
     }
 
-    /* Na homepage ať karusel na mobilu sedí hned pod nadpisem, ne před ním ani úplně na konci */
-    .page-index .hero-left {
+    /* Na mobilu ať je obrázek/karusel hned pod nadpisem, ne před ním ani úplně na konci */
+    .hero-left {
         display: contents;
     }
 
-    .page-index .hero-eyebrow,
-    .page-index .hero-split-title,
-    .page-index .hero-split-text {
+    .hero-eyebrow,
+    .hero-split-title,
+    .hero-split-text {
         order: 1;
     }
 
-    #hero-carousel {
+    #hero-carousel,
+    .hero-visual-frame,
+    .hero-visual {
         order: 2;
     }
 
-    .page-index .mode-picker,
-    .page-index .hero-split-btns {
+    .mode-picker,
+    .hero-split-btns,
+    .hero-facts,
+    .timeline,
+    .hero-stats-row {
         order: 3;
     }
 
