@@ -2790,3 +2790,244 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
 .page-individual .timeline-heading {
     min-width: 0;
 }
+
+/* ============================================================
+STŘÍDÁNÍ POZADÍ SEKCÍ (jasné oddělení jednotlivých částí stránky)
+============================================================ */
+.section-alt {
+    background: var(--bg-light);
+}
+
+.section-alt .faq-item,
+.section-alt .card {
+    background: #ffffff;
+}
+
+.section-dark {
+    background-color: #0e1a40;
+    color: #b6c3e3;
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+    color: #ffffff;
+}
+
+.section-dark p {
+    color: #b6c3e3;
+}
+
+/* Nadpis formuláře sedí na bílé kartě, ne přímo na tmavém pozadí sekce */
+.section-dark .contact-form-container h2 {
+    color: var(--primary);
+}
+
+/* --- Nadpis + podtitul na střed (nová sekce "Nechápu, proč to tak je") --- */
+.section-head-block {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section-sub {
+    margin-top: 14px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.section-dark .section-sub {
+    color: #b6c3e3;
+}
+
+/* ============================================================
+SEKCE „NECHÁPU, PROČ TO TAK JE“
+============================================================ */
+.pain-fix-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.pain-fix-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.pain-text {
+    padding: 30px 24px 38px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.25;
+    color: var(--text-dark);
+}
+
+.fix-text {
+    position: relative;
+    flex: 1;
+    padding: 38px 24px 30px;
+    background: rgba(59, 130, 246, 0.08);
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.fix-text::before {
+    content: '\2193';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--primary);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ============================================================
+SEKCE „NEJDE JEN O VÝSLEDEK. JDE O POCHOPENÍ.“ (tmavá)
+============================================================ */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    gap: 56px;
+    align-items: center;
+}
+
+.philosophy-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    color: #b6c3e3;
+}
+
+.philosophy-eyebrow::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.philosophy-list {
+    display: grid;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.philosophy-list li {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 16px;
+}
+
+.philosophy-ico {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.philosophy-list strong {
+    display: block;
+    margin-bottom: 2px;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.philosophy-list span {
+    color: #b6c3e3;
+}
+
+.philosophy-diagram {
+    width: 100%;
+    max-width: 420px;
+    justify-self: center;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.philosophy-diagram svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.pd-line {
+    fill: none;
+    stroke: #e8eefc;
+    stroke-opacity: 0.75;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pd-node {
+    fill: rgba(255, 255, 255, 0.06);
+    stroke: #e8eefc;
+    stroke-width: 2.5;
+}
+
+.pd-result {
+    fill: var(--accent);
+}
+
+.pd-txt {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-anchor: middle;
+    fill: #ffffff;
+}
+
+.pd-txt-navy {
+    fill: #0e1a40;
+}
+
+@media (max-width: 900px) {
+    .pain-fix-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .philosophy-diagram {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .pain-fix-card {
+        text-align: left;
+    }
+
+    .fix-text::before {
+        left: 24px;
+        transform: translate(0, -50%);
+    }
+}
