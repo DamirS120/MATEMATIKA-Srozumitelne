@@ -2581,12 +2581,6 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     }
 
     #hero-carousel,
-    .hero-visual-frame,
-    .hero-visual {
-        order: -1;
-    }
-
-    #hero-carousel,
     .hero-visual {
         aspect-ratio: 16 / 10;
     }
@@ -2601,8 +2595,57 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     }
 
     .hero-visual-quote {
-        order: -1;
         aspect-ratio: 4 / 5;
+    }
+
+    /* Na mobilu ať je obrázek/karusel hned pod nadpisem, ne před ním ani úplně na konci */
+    .hero-left {
+        display: contents;
+    }
+
+    .hero-eyebrow,
+    .hero-split-title,
+    .hero-split-text {
+        order: 1;
+    }
+
+    #hero-carousel,
+    .hero-visual-frame,
+    .hero-visual {
+        order: 2;
+    }
+
+    .mode-picker,
+    .hero-split-btns,
+    .hero-facts,
+    .timeline,
+    .hero-stats-row {
+        order: 3;
+    }
+
+    /* Karusel na mobilu bez šipek, posouvá se přejetím prstem */
+    #hero-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    #hero-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    #hero-carousel .carousel-slide {
+        position: relative;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #hero-carousel .carousel-arrow {
+        display: none;
     }
 }
 
@@ -3029,5 +3072,33 @@ SEKCE „NEJDE JEN O VÝSLEDEK. JDE O POCHOPENÍ.“ (tmavá)
     .fix-text::before {
         left: 24px;
         transform: translate(0, -50%);
+    }
+}
+
+/* ============================================================
+JEDNOTNÉ SVISLÉ ODSAZENÍ SEKCÍ NA HOMEPAGE
+(aby byl na první pohled vidět přechod na novou část stránky)
+============================================================ */
+#lektor,
+.partner-section,
+.section-alt,
+.section-dark,
+.py-10 {
+    padding: 70px 0;
+}
+
+.contact-section {
+    padding: 70px 20px;
+}
+
+@media (max-width: 600px) {
+    #lektor,
+    .partner-section,
+    .section-alt,
+    .section-dark,
+    .py-10,
+    .contact-section {
+        padding-top: 52px;
+        padding-bottom: 52px;
     }
 }
