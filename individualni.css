@@ -735,9 +735,50 @@ body.page-individual main.ix-main {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* --- 7) Anketa (formulář) - používá sdílené .mini-poll ze style.css ------ */
+/* --- 6) Anketa + výzva k akci - anketa vlevo, text s odkazy vpravo ------- */
 .ix-anketa {
     padding-top: 0;
+}
+
+.ix-cta-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px 40px;
+    color: #ffffff;
+}
+
+.ix-cta-side .ix-eyebrow {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.ix-cta-side .ix-eyebrow::before {
+    background: #ffffff;
+}
+
+.ix-main .ix-cta-side h2 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+.ix-cta-side .ix-sub {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 26px;
+    font-size: 1rem;
+}
+
+.ix-cta-side .ix-cta-actions {
+    justify-content: flex-start;
+    margin-bottom: 28px;
+}
+
+.ix-cta-side .ix-others {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================

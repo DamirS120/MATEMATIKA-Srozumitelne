@@ -562,11 +562,25 @@ body.page-scio main.sc-main {
 .sc-test {
     display: flex;
     flex-direction: column;
-    padding: 32px 28px 28px;
+    overflow: hidden;
     border: 1px solid var(--sc-line);
     border-top: 6px solid var(--t);
     border-radius: 24px;
     background: #ffffff;
+}
+
+.sc-test-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.sc-test-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 28px 28px;
 }
 
 .sc-test-tag {
@@ -759,9 +773,50 @@ body.page-scio main.sc-main {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* --- 7) Anketa (formulář) - používá sdílené .mini-poll ze style.css ------ */
+/* --- 6) Anketa + výzva k akci - anketa vlevo, text s odkazy vpravo ------- */
 .sc-anketa {
     padding-top: 0;
+}
+
+.sc-cta-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px 40px;
+    color: #ffffff;
+}
+
+.sc-cta-side .sc-eyebrow {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.sc-cta-side .sc-eyebrow::before {
+    background: #ffffff;
+}
+
+.sc-main .sc-cta-side h2 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+.sc-cta-side .sc-sub {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 26px;
+    font-size: 1rem;
+}
+
+.sc-cta-side .sc-cta-actions {
+    justify-content: flex-start;
+    margin-bottom: 28px;
+}
+
+.sc-cta-side .sc-others {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================
@@ -846,9 +901,12 @@ body.page-scio main.sc-main {
         padding: 14px 14px;
     }
 
-    .sc-area,
-    .sc-test {
+    .sc-area {
         padding: 26px 22px 24px;
+    }
+
+    .sc-test-body {
+        padding: 24px 22px;
     }
 
     .sc-quote {
