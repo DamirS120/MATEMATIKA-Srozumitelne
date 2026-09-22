@@ -1,0 +1,848 @@
+/* ==========================================================================
+   INDIVIDUÁLNÍ DOUČOVÁNÍ – styly pro individualni.html (a individualni_ru.html)
+   Načítat AŽ PO style.css. Všechny třídy mají prefix .ix- a jsou omezené na
+   .page-individual, ostatní stránky se nemění.
+
+   Stejný jazyk jako domovská stránka a ostatní přípravné stránky (tabule +
+   světlý sešit), v zelených barvách osobního doučování. Oranžová zůstává
+   barvou hlavní akce napříč celým webem.
+   ========================================================================== */
+
+.page-individual {
+    --ix-board: #06251d;
+    --ix-board-line: rgba(255, 255, 255, 0.07);
+    --ix-chalk: #e7fbf3;
+    --ix-chalk-muted: #a6cfc0;
+    --ix-soft: #67d0ad;
+    --ix-primary: #017550;
+    --ix-tint: #e6f7f0;
+    --ix-tint-2: #cdeee1;
+    --ix-amber: #f98a0c;
+    --ix-ink: #1e293b;
+    --ix-muted: #55657a;
+    --ix-line: #e2e8f0;
+    --ix-paper: #f6fbf9;
+}
+
+/* --- Reset globálních pravidel ze style.css ------------------------------ */
+body.page-individual main.ix-main {
+    display: block;
+    padding: 0;
+    min-height: 0;
+}
+
+.ix-main section {
+    scroll-margin-top: 72px;
+}
+
+.ix-main h1,
+.ix-main h2,
+.ix-main h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--ix-primary);
+}
+
+.ix-main h2 {
+    text-align: inherit;
+}
+
+.ix-main h2::after {
+    display: none;
+}
+
+.ix-main ul,
+.ix-main ol {
+    list-style: none;
+}
+
+/* ==========================================================================
+   Společné komponenty
+   ========================================================================== */
+.ix-sec {
+    padding: clamp(64px, 9vw, 112px) 0;
+}
+
+.ix-alt {
+    background: var(--ix-paper);
+}
+
+.ix-dark {
+    background-color: var(--ix-board);
+    background-image:
+        linear-gradient(var(--ix-board-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--ix-board-line) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ix-chalk);
+}
+
+.ix-main .ix-dark h1,
+.ix-main .ix-dark h2,
+.ix-main .ix-dark h3 {
+    color: #ffffff;
+}
+
+.ix-head {
+    max-width: 720px;
+    margin: 0 auto clamp(40px, 6vw, 64px);
+    text-align: center;
+}
+
+.ix-main .ix-h2 {
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+}
+
+.ix-sub {
+    margin-top: 16px;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--ix-muted);
+}
+
+.ix-dark .ix-sub {
+    color: var(--ix-chalk-muted);
+}
+
+.ix-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ix-primary);
+}
+
+.ix-eyebrow::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--ix-soft);
+}
+
+.ix-dark .ix-eyebrow {
+    color: var(--ix-chalk-muted);
+}
+
+.ix-dark .ix-eyebrow::before {
+    background: var(--ix-amber);
+}
+
+/* --- Tlačítka ------------------------------------------------------------ */
+.ix-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55em;
+    padding: 15px 30px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.ix-btn-amber {
+    background: var(--ix-amber);
+    color: var(--ix-board);
+}
+
+.ix-btn-amber:hover {
+    background: #ffa03a;
+}
+
+.ix-btn-ghost {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+}
+
+.ix-btn-ghost:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ix-btn-outline {
+    border-color: var(--ix-primary);
+    color: var(--ix-primary);
+}
+
+.ix-btn-outline:hover {
+    background: var(--ix-primary);
+    color: #ffffff;
+}
+
+.ix-btn:focus-visible,
+.ix-chip:focus-visible,
+.ix-channel:focus-visible {
+    outline: 3px solid var(--ix-primary);
+    outline-offset: 3px;
+}
+
+.ix-dark .ix-btn:focus-visible,
+.ix-dark .ix-chip:focus-visible,
+.ix-dark .ix-channel:focus-visible {
+    outline-color: #ffffff;
+}
+
+/* --- Panel s křídovou kresbou ------------------------------------------- */
+.ix-panel {
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.ix-panel svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   1) ÚVOD
+   ========================================================================== */
+.ix-hero {
+    padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 8vw, 104px);
+}
+
+.ix-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 56px;
+    align-items: center;
+}
+
+.ix-main .ix-hero h1 {
+    max-width: 12em;
+    margin-bottom: 24px;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+.ix-lead {
+    max-width: 34em;
+    margin-bottom: 36px;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--ix-chalk-muted);
+}
+
+.ix-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.ix-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 26px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 0.95rem;
+    color: var(--ix-chalk);
+}
+
+.ix-trust li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ix-trust i {
+    font-size: 0.85rem;
+    color: var(--ix-amber);
+}
+
+/* --- Kresba: rovnice řešená spolu ---------------------------------------- */
+.ix-d-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 24px;
+    text-anchor: middle;
+    fill: #ffffff;
+}
+
+.ix-d-eq {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 36px;
+    fill: #ffffff;
+}
+
+.ix-d-eq-final {
+    font-size: 44px;
+    fill: var(--ix-amber);
+}
+
+.ix-d-op {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 24px;
+    fill: var(--ix-soft);
+}
+
+.ix-d-arrow {
+    fill: none;
+    stroke: var(--ix-chalk);
+    stroke-opacity: 0.55;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ix-d-ring {
+    fill: none;
+    stroke: var(--ix-amber);
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+.ix-d-b {
+    fill: none;
+    stroke: var(--ix-chalk);
+    stroke-width: 2.5;
+}
+
+.ix-d-b-tutor {
+    fill: var(--ix-amber);
+    stroke: none;
+}
+
+.ix-d-btxt {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 16px;
+    text-anchor: middle;
+    fill: #ffffff;
+}
+
+.ix-d-btxt-tutor {
+    fill: var(--ix-board);
+}
+
+@keyframes ix-draw {
+    from { stroke-dashoffset: 1; }
+    to   { stroke-dashoffset: 0; }
+}
+
+@keyframes ix-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Jediný animovaný okamžik stránky: rovnice se řeší řádek po řádku */
+@media (prefers-reduced-motion: no-preference) {
+    .ix-r1 { animation: ix-fade 0.5s ease-out 0.3s both; }
+    .ix-r2 { animation: ix-fade 0.5s ease-out 1s both; }
+    .ix-r3 { animation: ix-fade 0.5s ease-out 1.7s both; }
+
+    .ix-ring {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        animation: ix-draw 0.7s ease-out 2.2s forwards;
+    }
+
+    .ix-b1 { animation: ix-fade 0.4s ease-out 2.7s both; }
+    .ix-b2 { animation: ix-fade 0.4s ease-out 3.2s both; }
+}
+
+/* ==========================================================================
+   2) PROČ INDIVIDUÁLNÍ LEKCE – tři sliby z úvodu
+   ========================================================================== */
+.ix-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ix-pillar {
+    padding: 32px 28px;
+    border: 1px solid var(--ix-line);
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+.ix-pillar-ico {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 22px;
+    border-radius: 50%;
+    background: var(--ix-tint);
+    font-size: 1.35rem;
+    color: var(--ix-primary);
+}
+
+.ix-main .ix-pillar h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.ix-pillar p {
+    color: var(--ix-muted);
+    line-height: 1.65;
+}
+
+/* ==========================================================================
+   3) NA CO SE ZAMĚŘÍME – tři úrovně a společný postup
+   ========================================================================== */
+.ix-levels {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ix-level {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 28px 28px;
+    border: 1px solid var(--ix-line);
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+.ix-level-n {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: var(--ix-soft);
+}
+
+.ix-main .ix-level h3 {
+    margin: 20px 0 10px;
+    font-size: 1.45rem;
+}
+
+.ix-level p {
+    color: var(--ix-muted);
+    line-height: 1.65;
+}
+
+.ix-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 22px;
+}
+
+.ix-tags li {
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--ix-tint);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--ix-primary);
+}
+
+.ix-method {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    margin-top: 24px;
+    padding: 28px 32px;
+    border-radius: 24px;
+    background-color: var(--ix-board);
+    background-image:
+        linear-gradient(var(--ix-board-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--ix-board-line) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.ix-method-ico {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(249, 138, 12, 0.16);
+    font-size: 1.35rem;
+    color: var(--ix-amber);
+}
+
+.ix-main .ix-method h3 {
+    margin-bottom: 4px;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.ix-method p {
+    color: var(--ix-chalk-muted);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   5) CENÍK
+   ========================================================================== */
+.ix-prices {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.ix-price {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 32px;
+    border: 1px solid var(--ix-line);
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+.ix-price-tag {
+    align-self: flex-start;
+    margin-bottom: 20px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--ix-tint);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--ix-primary);
+}
+
+.ix-price-amount {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    line-height: 1;
+    color: var(--ix-primary);
+}
+
+.ix-price-unit {
+    margin: 6px 0 22px;
+    color: var(--ix-muted);
+}
+
+.ix-price ul {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.ix-price li {
+    position: relative;
+    padding-left: 28px;
+}
+
+.ix-price li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.5em;
+    width: 12px;
+    height: 7px;
+    transform: rotate(-45deg);
+    border-left: 2.5px solid var(--ix-primary);
+    border-bottom: 2.5px solid var(--ix-primary);
+}
+
+.ix-price .ix-btn {
+    margin-top: auto;
+}
+
+.ix-price-main {
+    margin: -14px 0;
+    padding: 50px 32px;
+    border-color: var(--ix-primary);
+    background: var(--ix-primary);
+    color: #ffffff;
+}
+
+.ix-price-main .ix-price-tag {
+    background: var(--ix-amber);
+    color: var(--ix-board);
+}
+
+.ix-price-main .ix-price-amount {
+    color: #ffffff;
+}
+
+.ix-price-main .ix-price-unit {
+    color: #d6f1e6;
+}
+
+.ix-price-main li::before {
+    border-color: var(--ix-amber);
+}
+
+/* ==========================================================================
+   4) JAK PROBÍHÁ LEKCE
+   ========================================================================== */
+.ix-steps {
+    --g: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 var(--g);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ix-steps li {
+    position: relative;
+    padding-top: 48px;
+}
+
+.ix-steps li::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    right: calc(var(--g) * -1);
+    height: 2px;
+    background: #cbd5e1;
+}
+
+.ix-steps li:last-child::before {
+    display: none;
+}
+
+.ix-steps li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--ix-primary);
+    box-shadow: 0 0 0 5px var(--ix-paper);
+}
+
+.ix-step-n {
+    display: block;
+    margin-bottom: 12px;
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 1;
+    color: var(--ix-soft);
+}
+
+.ix-main .ix-steps h3 {
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.ix-steps p {
+    max-width: 32ch;
+    color: var(--ix-muted);
+}
+
+/* ==========================================================================
+   6) VÝZVA K AKCI
+   ========================================================================== */
+.ix-cta {
+    text-align: center;
+}
+
+.ix-cta-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.ix-main .ix-cta h2 {
+    font-size: clamp(2rem, 4.6vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.ix-cta .ix-sub {
+    margin: 20px auto 36px;
+    max-width: 30em;
+}
+
+.ix-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.ix-channel {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ix-channel:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ix-others {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px 14px;
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.ix-others-label {
+    margin-right: 6px;
+    font-weight: 600;
+    color: var(--ix-chalk-muted);
+}
+
+.ix-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: #ffffff;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.ix-chip::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--c);
+}
+
+.ix-chip:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* --- 7) Anketa (formulář) - používá sdílené .mini-poll ze style.css ------ */
+.ix-anketa {
+    padding-top: 0;
+}
+
+/* ==========================================================================
+   RESPONZIVITA
+   ========================================================================== */
+@media (max-width: 1000px) {
+    .ix-price-main {
+        margin: 0;
+        padding: 36px 32px;
+    }
+}
+
+@media (max-width: 900px) {
+    .ix-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .ix-panel {
+        max-width: 440px;
+    }
+
+    .ix-pillars,
+    .ix-levels,
+    .ix-prices {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ix-price-main {
+        order: -1;
+    }
+}
+
+@media (max-width: 720px) {
+    .ix-head {
+        text-align: left;
+    }
+
+    .ix-steps {
+        --g: 0px;
+        grid-template-columns: 1fr;
+        gap: 40px 0;
+    }
+
+    .ix-steps li {
+        padding: 0 0 0 48px;
+    }
+
+    .ix-steps li::before {
+        top: 12px;
+        left: 9px;
+        right: auto;
+        width: 2px;
+        height: calc(100% + 40px);
+    }
+
+    .ix-cta {
+        text-align: left;
+    }
+
+    .ix-cta .ix-sub {
+        margin-left: 0;
+    }
+
+    .ix-cta-actions,
+    .ix-others {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .ix-trust {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ix-pillar,
+    .ix-level {
+        padding: 26px 22px 24px;
+    }
+
+    .ix-price,
+    .ix-price-main {
+        padding: 30px 24px;
+    }
+
+    .ix-method {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 16px;
+        padding: 22px 20px;
+    }
+
+    .ix-method-ico {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ix-cta-row .ix-btn,
+    .ix-cta-actions .ix-btn {
+        width: 100%;
+    }
+}

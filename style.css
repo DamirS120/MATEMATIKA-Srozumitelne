@@ -2976,6 +2976,16 @@ SEKCE „NECHÁPU, PROČ TO TAK JE“
 /* ============================================================
 SEKCE „NEJDE JEN O VÝSLEDEK. JDE O POCHOPENÍ.“ (tmavá)
 ============================================================ */
+.philosophy-board {
+    position: relative;
+    background-image:
+        linear-gradient(180deg, rgba(14, 26, 64, 0.94) 0%, rgba(14, 26, 64, 0.88) 55%, rgba(14, 26, 64, 0.97) 100%),
+        url('images/formulas-board.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .philosophy-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);

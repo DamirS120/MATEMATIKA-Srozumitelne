@@ -20,10 +20,11 @@
     <meta property="og:image" content="https://matematika-srozumitelne.cz/images/og-image.jpg">
     <meta property="og:locale" content="cs_CZ">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="individualni.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script type="application/ld+json">
@@ -47,19 +48,19 @@
     }
     </script>
 </head>
-<!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script> 
- <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18450634718');    
- </script> 
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script>
+ <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18450634718');
+ </script>
 <body class="page-individual">
 
   <nav class="navbar">
     <div class="container nav-flex">
         <a href="index.html" class="logo">MATEMATIKA <span>Srozumitelně</span></a>
-        
+
         <input type="checkbox" id="menu-toggle" class="dropdown-check">
         <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-        
+
         <ul class="nav-links">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle">PŘIJÍMAČKY <span class="dd-caret"></span></a>
@@ -74,7 +75,7 @@
             <li><a href="omne.html">O MNĚ</a></li>
             <li><a href="spoluprace.html">SPOLUPRÁCE</a></li>
             <li><a href="index.html#kontakt" class="btn-nav">KONTAKT</a></li>
-            
+
             <div class="lang-switch">
                 <a href="individualni.html" class="lang-link active">CZ</a>
                 <span>|</span>
@@ -83,115 +84,286 @@
         </ul>
     </div>
 </nav>
-    
-    <header class="hero-split">
-        <div class="container hero-split-grid">
-            <div class="hero-left">
-                <span class="hero-eyebrow">Individuální tempo & osobní přístup</span>
-                <h1 class="hero-split-title">Individuální doučování <span class="highlight-alt">matematiky</span></h1>
-                <p class="hero-split-text">Nabízím individuální doučování matematiky v Praze i online. Tempo, které ti vyhovuje. Jazyk, kterému rozumíš. Výsledky, které uvidíš.</p>
-                <div class="hero-split-btns">
-                    <a href="#anketa" class="btn-primary">DOMLUVIT TERMÍN</a>
+
+<main class="ix-main">
+
+    <!-- 1) ÚVOD -->
+    <section class="ix-dark ix-hero">
+        <div class="container ix-hero-grid">
+
+            <div class="ix-hero-text">
+                <p class="ix-eyebrow">Individuální doučování</p>
+                <h1>Osobní doučování</h1>
+                <p class="ix-lead">Tempo, které ti vyhovuje. Jazyk, kterému rozumíš. Výsledky, které uvidíš.</p>
+
+                <div class="ix-cta-row">
+                    <a href="#anketa" class="ix-btn ix-btn-amber">Domluvit termín</a>
+                    <a href="#zamereni" class="ix-btn ix-btn-ghost">Na co se zaměříme <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
                 </div>
+
+                <ul class="ix-trust">
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Česky i rusky</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Online nebo v Praze</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>První konzultace zdarma</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Od 180 Kč / hod</li>
+                </ul>
             </div>
-            <div class="hero-visual-frame">
-                <div class="hero-visual hero-visual-tilted">
-                    <img src="images/individual.jpg" alt="Lekce matematiky">
+
+            <!-- Rovnice řešená spolu, včetně otázky studenta a odpovědi lektora -->
+            <div class="ix-panel" role="img" aria-label="Křídová kresba: rovnice 2x + 6 = 14 se řeší po krocích, odečtením šestky a dělením dvěma, až vyjde x rovno 4. Student se ptá, proč odečítat šestku, a lektor odpovídá, že chceme x samotné.">
+                <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <text class="ix-d-title" x="220" y="40">Řešíme spolu</text>
+
+                    <g class="ix-r1">
+                        <text class="ix-d-eq" x="40" y="112">2x + 6 = 14</text>
+                        <text class="ix-d-op" x="292" y="112">| − 6</text>
+                    </g>
+
+                    <g class="ix-r2">
+                        <path class="ix-d-arrow" d="M64 136V172 M56 164L64 174L72 164"/>
+                        <text class="ix-d-eq" x="40" y="212">2x = 8</text>
+                        <text class="ix-d-op" x="292" y="212">| ÷ 2</text>
+                    </g>
+
+                    <g class="ix-r3">
+                        <path class="ix-d-arrow" d="M64 236V270 M56 262L64 272L72 262"/>
+                        <text class="ix-d-eq ix-d-eq-final" x="40" y="316">x = 4</text>
+                    </g>
+                    <ellipse class="ix-d-ring ix-ring" pathLength="1" cx="98" cy="302" rx="78" ry="36" transform="rotate(-3 98 302)"/>
+
+                    <g class="ix-b1">
+                        <rect class="ix-d-b" x="230" y="252" width="180" height="36" rx="18"/>
+                        <text class="ix-d-btxt" x="320" y="270" dy="0.35em">Proč − 6?</text>
+                    </g>
+                    <g class="ix-b2">
+                        <rect class="ix-d-b-tutor" x="230" y="298" width="200" height="38" rx="19"/>
+                        <text class="ix-d-btxt ix-d-btxt-tutor" x="330" y="317" dy="0.35em">Chceme x samotné.</text>
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2) PROČ INDIVIDUÁLNÍ LEKCE -->
+    <section class="ix-sec" aria-labelledby="ix-h-proc">
+        <div class="container">
+            <div class="ix-head">
+                <h2 class="ix-h2" id="ix-h-proc">Proč zvolit individuální lekce?</h2>
+                <p class="ix-sub">Jedna lekce, jeden student. Všechno se přizpůsobí tobě.</p>
+            </div>
+
+            <div class="ix-pillars">
+                <article class="ix-pillar">
+                    <span class="ix-pillar-ico" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+                    <h3>Tempo</h3>
+                    <p>Nikam nespěcháme. Postupujeme rychlostí, která vyhovuje tobě, dokud to nedává smysl.</p>
+                </article>
+
+                <article class="ix-pillar">
+                    <span class="ix-pillar-ico" aria-hidden="true"><i class="fa-solid fa-language"></i></span>
+                    <h3>Jazyk</h3>
+                    <p>Vysvětlím ti to česky nebo rusky, podle toho, v čem ti to dává větší smysl.</p>
+                </article>
+
+                <article class="ix-pillar">
+                    <span class="ix-pillar-ico" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
+                    <h3>Výsledky</h3>
+                    <p>Naučíš se postupy, které u zkoušek fungují, a uvidíš, jak se zlepšuješ.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3) NA CO SE ZAMĚŘÍME -->
+    <section class="ix-sec ix-alt" id="zamereni" aria-labelledby="ix-h-zamereni">
+        <div class="container">
+            <div class="ix-head">
+                <h2 class="ix-h2" id="ix-h-zamereni">Na co se zaměříme</h2>
+                <p class="ix-sub">Vyber úroveň, na které jsi. Pomůžu ti od základů až po vysokou školu.</p>
+            </div>
+
+            <div class="ix-levels">
+                <article class="ix-level">
+                    <span class="ix-level-n" aria-hidden="true">01</span>
+                    <h3>Základy</h3>
+                    <p>Doplníme to, co chybí, aby se na tom dalo stavět dál.</p>
+                </article>
+
+                <article class="ix-level">
+                    <span class="ix-level-n" aria-hidden="true">02</span>
+                    <h3>Státní maturita a SŠ</h3>
+                    <p>Intenzivní příprava na maturitní zkoušky a pomoc s průběžnou látkou na gymnáziích i odborných školách.</p>
+                    <ul class="ix-tags">
+                        <li>Maturita</li>
+                        <li>Gymnázia</li>
+                        <li>Odborné školy</li>
+                    </ul>
+                </article>
+
+                <article class="ix-level">
+                    <span class="ix-level-n" aria-hidden="true">03</span>
+                    <h3>Vysokoškolská matematika</h3>
+                    <p>Analýza, lineární algebra nebo statistika. Vysvětlím ti koncepty, které v přednáškách působí až příliš složitě.</p>
+                    <ul class="ix-tags">
+                        <li>Analýza</li>
+                        <li>Lineární algebra</li>
+                        <li>Statistika</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="ix-method">
+                <span class="ix-method-ico" aria-hidden="true"><i class="fa-solid fa-brain"></i></span>
+                <div>
+                    <h3>Efektivní postup</h3>
+                    <p>Naučím tě postupy, jak řešit typové příklady u zkoušek efektivně a bez zbytečných chyb.</p>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="container">
-        <section>
-            <h2 class="section-title">Proč zvolit individuální lekce?</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <div class="timeline-body">
-                        <div class="timeline-heading"><strong>Státní maturita a SŠ</strong></div>
-                        <p>Intenzivní příprava na maturitní zkoušky a pomoc s průběžnou látkou na gymnáziích i odborných školách.</p>
-                    </div>
+    <!-- 4) JAK PROBÍHÁ DOUČOVÁNÍ -->
+    <section class="ix-sec" aria-labelledby="ix-h-jak">
+        <div class="container">
+            <div class="ix-head">
+                <h2 class="ix-h2" id="ix-h-jak">Jak probíhá doučování?</h2>
+                <p class="ix-sub">Bez biflování. Nejdřív pochopíš, pak trénuješ.</p>
+            </div>
+
+            <ol class="ix-steps">
+                <li>
+                    <span class="ix-step-n" aria-hidden="true">01</span>
+                    <h3>Napíšeš mi</h3>
+                    <p>Přes WhatsApp, Telegram nebo formulář. Domluvíme krátkou konzultaci zdarma.</p>
+                </li>
+                <li>
+                    <span class="ix-step-n" aria-hidden="true">02</span>
+                    <h3>Domluvíme plán</h3>
+                    <p>Zjistíme, kde jsi, co potřebuješ a v jakém jazyce ti to bude vyhovovat.</p>
+                </li>
+                <li>
+                    <span class="ix-step-n" aria-hidden="true">03</span>
+                    <h3>Začneme</h3>
+                    <p>Lekce online nebo v Praze, tempem podle tebe.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- 5) CENÍK -->
+    <section class="ix-sec ix-alt" id="cenik" aria-labelledby="ix-h-cenik">
+        <div class="container">
+            <div class="ix-head">
+                <h2 class="ix-h2" id="ix-h-cenik">Kolik to stojí?</h2>
+                <p class="ix-sub">Ceny jasně a předem. Začni konzultací zdarma.</p>
+            </div>
+
+            <div class="ix-prices">
+                <article class="ix-price">
+                    <span class="ix-price-tag">Start</span>
+                    <p class="ix-price-amount">Zdarma</p>
+                    <p class="ix-price-unit">konzultace</p>
+                    <ul>
+                        <li>Zjistíme, kde jsi a co potřebuješ</li>
+                        <li>Domluvíme plán a termíny</li>
+                    </ul>
+                    <a href="#anketa" class="ix-btn ix-btn-outline">Domluvit konzultaci</a>
+                </article>
+
+                <article class="ix-price ix-price-main">
+                    <span class="ix-price-tag">Nejlepší volba</span>
+                    <p class="ix-price-amount">180 Kč</p>
+                    <p class="ix-price-unit">doučování / hod</p>
+                    <ul>
+                        <li>Základy, střední škola i vysoká škola</li>
+                        <li>Česky nebo rusky</li>
+                        <li>Online nebo v Praze</li>
+                    </ul>
+                    <a href="#anketa" class="ix-btn ix-btn-amber">Mám zájem</a>
+                </article>
+
+                <article class="ix-price">
+                    <span class="ix-price-tag">Expert</span>
+                    <p class="ix-price-amount">200+ Kč</p>
+                    <p class="ix-price-unit">přijímačky / hod</p>
+                    <ul>
+                        <li>CERMAT, ČVUT, UK a SCIO</li>
+                        <li>Typové úlohy z minulých let</li>
+                        <li>Strategie na den zkoušky</li>
+                    </ul>
+                    <a href="#anketa" class="ix-btn ix-btn-outline">Mám zájem</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6) VÝZVA K AKCI -->
+    <section class="ix-sec ix-dark ix-cta" aria-labelledby="ix-h-cta">
+        <div class="container">
+            <div class="ix-cta-inner">
+                <p class="ix-eyebrow">Domluv si termín</p>
+                <h2 id="ix-h-cta">Domluvme si první lekci.</h2>
+                <p class="ix-sub">Napiš mi, s čím potřebuješ pomoct, a domluvíme termín i jazyk lekce.</p>
+
+                <div class="ix-cta-actions">
+                    <a href="#anketa" class="ix-btn ix-btn-amber">Domluvit termín &rarr;</a>
+                    <a class="ix-channel" href="https://wa.me/420777209320" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</a>
+                    <a class="ix-channel" href="https://t.me/damir_121" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" aria-hidden="true"></i>Telegram</a>
                 </div>
-                <div class="timeline-item">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-icon"><i class="fa-solid fa-university"></i></div>
-                    <div class="timeline-body">
-                        <div class="timeline-heading"><strong>Vysokoškolská matematika</strong></div>
-                        <p>Analýza, lineární algebra nebo statistika. Vysvětlím ti koncepty, které v přednáškách působí až příliš složitě.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-icon"><i class="fa-solid fa-brain"></i></div>
-                    <div class="timeline-body">
-                        <div class="timeline-heading"><strong>Efektivní postup</strong></div>
-                        <p>Naučím tě postupy, jak řešit typové příklady u zkoušek efektivně a bez zbytečných chyb.</p>
-                    </div>
+
+                <div class="ix-others">
+                    <span class="ix-others-label">Míříš na přijímačky?</span>
+                    <a class="ix-chip" style="--c:#a5aefc" href="cermat.html">CERMAT</a>
+                    <a class="ix-chip" style="--c:#8ec8ff" href="cvut.html">ČVUT</a>
+                    <a class="ix-chip" style="--c:#ff8a8a" href="uk.html">UK</a>
+                    <a class="ix-chip" style="--c:#fbbf24" href="scio.html">SCIO</a>
                 </div>
             </div>
-        </section>
-
-<section class="container">
-    <h2 class="section-title">Časté otázky</h2>
-    <div class="faq-list">
-        <details class="faq-item">
-            <summary>Pro koho jsou individuální lekce vhodné? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Pro žáky ZŠ, SŠ i studenty VŠ – lekce přizpůsobím tvému ročníku, škole a tempu.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Musím vědět přesně, co potřebuju probrat? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Ne, stačí říct, s čím máš problém nebo jaké téma zrovna probíráte ve škole – zbytek vymyslíme společně.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Jak často se lekce obvykle konají? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Podle potřeby – od jedné lekce týdně po intenzivní bloky před testy nebo zkouškami.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Probíhá výuka i online? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Ano, osobně v Praze i online, podle toho, co je pro tebe pohodlnější.</p>
-        </details>
-    </div>
-</section>
-
-<section class="mini-poll" id="anketa">
-    <div class="mini-poll-grid">
-        <div class="mini-poll-form">
-            <span class="mini-poll-tag">RYCHLÁ ANKETA</span>
-            <h2>Zajímá tě individuální doučování?</h2>
-            <p>Napiš mi pár údajů a domluvíme si první lekci na míru.</p>
-            <form action="https://formspree.io/f/mdaprpqk" method="POST">
-                <div class="form-group">
-                    <label for="mp-jmeno">Tvé jméno</label>
-                    <input type="text" id="mp-jmeno" name="jmeno" required placeholder="např. Jan Novák">
-                </div>
-                <div class="form-group">
-                    <label for="mp-kontakt">E-mail nebo telefon</label>
-                    <input type="text" id="mp-kontakt" name="kontakt" required placeholder="abych se mohl ozvat zpět">
-                </div>
-                <div class="form-group">
-                    <label for="mp-jazyk">Jazyk konzultace</label>
-                    <select id="mp-jazyk" name="jazyk">
-                        <option value="CZ">Čeština</option>
-                        <option value="RU">Ruština</option>
-                    </select>
-                </div>
-                <input type="hidden" name="typ_pripravy" value="INDIVIDUALNI">
-                <div class="mini-poll-topic"><i class="fa-solid fa-user-group"></i> Zájem: Individuální doučování</div>
-                <button type="submit" class="btn-submit">DOMLUVIT TERMÍN</button>
-            </form>
         </div>
-        <div class="mini-poll-image">
-            <img src="images/individualni-anketa.jpg" alt="Individuální doučování">
+    </section>
+
+    <!-- 7) ANKETA / FORMULÁŘ -->
+    <section class="ix-sec ix-anketa mini-poll" id="anketa">
+        <div class="container">
+            <div class="mini-poll-grid">
+                <div class="mini-poll-form">
+                    <span class="mini-poll-tag">RYCHLÁ ANKETA</span>
+                    <h2>Zajímá tě individuální doučování?</h2>
+                    <p>Napiš mi pár údajů a domluvíme si první lekci na míru.</p>
+                    <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                        <div class="form-group">
+                            <label for="mp-jmeno">Tvé jméno</label>
+                            <input type="text" id="mp-jmeno" name="jmeno" required placeholder="např. Jan Novák">
+                        </div>
+                        <div class="form-group">
+                            <label for="mp-kontakt">E-mail nebo telefon</label>
+                            <input type="text" id="mp-kontakt" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                        </div>
+                        <div class="form-group">
+                            <label for="mp-jazyk">Jazyk konzultace</label>
+                            <select id="mp-jazyk" name="jazyk">
+                                <option value="CZ">Čeština</option>
+                                <option value="RU">Ruština</option>
+                            </select>
+                        </div>
+                        <input type="hidden" name="typ_pripravy" value="INDIVIDUALNI">
+                        <div class="mini-poll-topic"><i class="fa-solid fa-user-group"></i> Zájem: Individuální doučování</div>
+                        <button type="submit" class="btn-submit">DOMLUVIT TERMÍN</button>
+                    </form>
+                </div>
+                <div class="mini-poll-image">
+                    <img src="images/individualni-anketa.jpg" alt="Individuální doučování">
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-    </main>
+    </section>
+
+</main>
 
  <footer class="main-footer">
     <div class="container footer-grid">
-        
+
         <div class="footer-column">
             <h3>Kontakty</h3>
             <ul class="footer-list">

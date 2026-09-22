@@ -20,10 +20,11 @@
     <meta property="og:image" content="https://matematika-srozumitelne.cz/images/og-image.jpg">
     <meta property="og:locale" content="ru_RU">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="individualni.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script type="application/ld+json">
@@ -47,19 +48,19 @@
     }
     </script>
 </head>
-<!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script> 
- <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18450634718');    
- </script> 
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script>
+ <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18450634718');
+ </script>
 <body class="page-individual">
 
   <nav class="navbar">
     <div class="container nav-flex">
         <a href="index_ru.html" class="logo">MATEMATIKA <span>Srozumitelně</span></a>
-        
+
         <input type="checkbox" id="menu-toggle" class="dropdown-check">
         <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-        
+
         <ul class="nav-links">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle">ПОСТУПЛЕНИЕ <span class="dd-caret"></span></a>
@@ -74,7 +75,7 @@
             <li><a href="omne_ru.html">ОБО МНЕ</a></li>
             <li><a href="spoluprace_ru.html">СОТРУДНИЧЕСТВО</a></li>
             <li><a href="index_ru.html#kontakt" class="btn-nav">КОНТАКТЫ</a></li>
-            
+
             <div class="lang-switch">
                 <a href="individualni.html" class="lang-link">CZ</a>
                 <span>|</span>
@@ -83,115 +84,286 @@
         </ul>
     </div>
 </nav>
-    
-    <header class="hero-split">
-        <div class="container hero-split-grid">
-            <div class="hero-left">
-                <span class="hero-eyebrow">Индивидуальный темп & личный подход</span>
-                <h1 class="hero-split-title">Индивидуальные занятия <span class="highlight-alt">по математике</span></h1>
-                <p class="hero-split-text">Предлагаю индивидуальные занятия по математике в Праге и онлайн. Темп, который тебе подходит. Язык, который ты понимаешь. Результаты, которые ты увидишь.</p>
-                <div class="hero-split-btns">
-                    <a href="#anketa" class="btn-primary">ЗАПИСАТЬСЯ НА ЗАНЯТИЕ</a>
+
+<main class="ix-main">
+
+    <!-- 1) ВВЕДЕНИЕ -->
+    <section class="ix-dark ix-hero">
+        <div class="container ix-hero-grid">
+
+            <div class="ix-hero-text">
+                <p class="ix-eyebrow">Индивидуальные занятия</p>
+                <h1>Персональные занятия</h1>
+                <p class="ix-lead">Темп, который тебе подходит. Язык, который ты понимаешь. Результаты, которые ты увидишь.</p>
+
+                <div class="ix-cta-row">
+                    <a href="#anketa" class="ix-btn ix-btn-amber">Записаться на занятие</a>
+                    <a href="#zamereni" class="ix-btn ix-btn-ghost">На чём сосредоточимся <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
                 </div>
+
+                <ul class="ix-trust">
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>По-чешски и по-русски</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Онлайн или в Праге</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Первая консультация бесплатно</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>От 180 крон / час</li>
+                </ul>
             </div>
-            <div class="hero-visual-frame">
-                <div class="hero-visual hero-visual-tilted">
-                    <img src="images/individual.jpg" alt="Урок математики">
+
+            <!-- Уравнение, решаемое вместе, включая вопрос ученика и ответ репетитора -->
+            <div class="ix-panel" role="img" aria-label="Меловой рисунок: уравнение 2x + 6 = 14 решается по шагам — вычитанием шести и делением на два, пока не получится x равно 4. Ученик спрашивает, почему нужно вычитать шесть, а репетитор отвечает, что нужно оставить x одно.">
+                <svg viewBox="0 0 440 344" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <text class="ix-d-title" x="220" y="40">Решаем вместе</text>
+
+                    <g class="ix-r1">
+                        <text class="ix-d-eq" x="40" y="112">2x + 6 = 14</text>
+                        <text class="ix-d-op" x="292" y="112">| − 6</text>
+                    </g>
+
+                    <g class="ix-r2">
+                        <path class="ix-d-arrow" d="M64 136V172 M56 164L64 174L72 164"/>
+                        <text class="ix-d-eq" x="40" y="212">2x = 8</text>
+                        <text class="ix-d-op" x="292" y="212">| ÷ 2</text>
+                    </g>
+
+                    <g class="ix-r3">
+                        <path class="ix-d-arrow" d="M64 236V270 M56 262L64 272L72 262"/>
+                        <text class="ix-d-eq ix-d-eq-final" x="40" y="316">x = 4</text>
+                    </g>
+                    <ellipse class="ix-d-ring ix-ring" pathLength="1" cx="98" cy="302" rx="78" ry="36" transform="rotate(-3 98 302)"/>
+
+                    <g class="ix-b1">
+                        <rect class="ix-d-b" x="230" y="252" width="180" height="36" rx="18"/>
+                        <text class="ix-d-btxt" x="320" y="270" dy="0.35em">Почему − 6?</text>
+                    </g>
+                    <g class="ix-b2">
+                        <rect class="ix-d-b-tutor" x="230" y="298" width="200" height="38" rx="19"/>
+                        <text class="ix-d-btxt ix-d-btxt-tutor" x="330" y="317" dy="0.35em">Хотим x отдельно.</text>
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2) ПОЧЕМУ ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ -->
+    <section class="ix-sec" aria-labelledby="ix-h-proc">
+        <div class="container">
+            <div class="ix-head">
+                <h2 class="ix-h2" id="ix-h-proc">Почему выбрать индивидуальные занятия?</h2>
+                <p class="ix-sub">Одно занятие, один ученик. Всё подстраивается под тебя.</p>
+            </div>
+
+            <div class="ix-pillars">
+                <article class="ix-pillar">
+                    <span class="ix-pillar-ico" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></span>
+                    <h3>Темп</h3>
+                    <p>Никуда не спешим. Двигаемся со скоростью, которая подходит тебе, пока всё не станет понятно.</p>
+                </article>
+
+                <article class="ix-pillar">
+                    <span class="ix-pillar-ico" aria-hidden="true"><i class="fa-solid fa-language"></i></span>
+                    <h3>Язык</h3>
+                    <p>Объясню по-чешски или по-русски — в зависимости от того, на каком языке тебе понятнее.</p>
+                </article>
+
+                <article class="ix-pillar">
+                    <span class="ix-pillar-ico" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
+                    <h3>Результаты</h3>
+                    <p>Освоишь приёмы, которые работают на экзаменах, и увидишь, как улучшаются твои результаты.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3) НА ЧЁМ СОСРЕДОТОЧИМСЯ -->
+    <section class="ix-sec ix-alt" id="zamereni" aria-labelledby="ix-h-zamereni">
+        <div class="container">
+            <div class="ix-head">
+                <h2 class="ix-h2" id="ix-h-zamereni">На чём сосредоточимся</h2>
+                <p class="ix-sub">Выбери свой уровень. Помогу от основ до университетской математики.</p>
+            </div>
+
+            <div class="ix-levels">
+                <article class="ix-level">
+                    <span class="ix-level-n" aria-hidden="true">01</span>
+                    <h3>Основы</h3>
+                    <p>Восполним пробелы, чтобы на этом можно было строить дальше.</p>
+                </article>
+
+                <article class="ix-level">
+                    <span class="ix-level-n" aria-hidden="true">02</span>
+                    <h3>Выпускной экзамен и средняя школа</h3>
+                    <p>Интенсивная подготовка к выпускным экзаменам и помощь с текущим материалом в гимназиях и профильных школах.</p>
+                    <ul class="ix-tags">
+                        <li>Выпускной экзамен</li>
+                        <li>Гимназии</li>
+                        <li>Профильные школы</li>
+                    </ul>
+                </article>
+
+                <article class="ix-level">
+                    <span class="ix-level-n" aria-hidden="true">03</span>
+                    <h3>Высшая математика</h3>
+                    <p>Анализ, линейная алгебра или статистика. Объясню концепции, которые на лекциях кажутся слишком сложными.</p>
+                    <ul class="ix-tags">
+                        <li>Анализ</li>
+                        <li>Линейная алгебра</li>
+                        <li>Статистика</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="ix-method">
+                <span class="ix-method-ico" aria-hidden="true"><i class="fa-solid fa-brain"></i></span>
+                <div>
+                    <h3>Эффективный подход</h3>
+                    <p>Научу тебя приёмам, как эффективно и без лишних ошибок решать типовые задачи на экзаменах.</p>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="container">
-        <section>
-            <h2 class="section-title">Почему выбрать индивидуальные занятия?</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <div class="timeline-body">
-                        <div class="timeline-heading"><strong>Выпускной экзамен и средняя школа</strong></div>
-                        <p>Интенсивная подготовка к выпускным экзаменам и помощь с текущим материалом в гимназиях и профильных школах.</p>
-                    </div>
+    <!-- 4) КАК ПРОХОДЯТ ЗАНЯТИЯ -->
+    <section class="ix-sec" aria-labelledby="ix-h-jak">
+        <div class="container">
+            <div class="ix-head">
+                <h2 class="ix-h2" id="ix-h-jak">Как проходят занятия?</h2>
+                <p class="ix-sub">Без зубрёжки. Сначала понимание, потом практика.</p>
+            </div>
+
+            <ol class="ix-steps">
+                <li>
+                    <span class="ix-step-n" aria-hidden="true">01</span>
+                    <h3>Напишешь мне</h3>
+                    <p>Через WhatsApp, Telegram или форму. Договоримся о короткой бесплатной консультации.</p>
+                </li>
+                <li>
+                    <span class="ix-step-n" aria-hidden="true">02</span>
+                    <h3>Составим план</h3>
+                    <p>Узнаем, на каком ты уровне, что тебе нужно и на каком языке тебе будет удобнее.</p>
+                </li>
+                <li>
+                    <span class="ix-step-n" aria-hidden="true">03</span>
+                    <h3>Начнём</h3>
+                    <p>Занятия онлайн или в Праге, в твоём темпе.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- 5) ЦЕНЫ -->
+    <section class="ix-sec ix-alt" id="cenik" aria-labelledby="ix-h-cenik">
+        <div class="container">
+            <div class="ix-head">
+                <h2 class="ix-h2" id="ix-h-cenik">Сколько это стоит?</h2>
+                <p class="ix-sub">Цены ясно и заранее. Начни с бесплатной консультации.</p>
+            </div>
+
+            <div class="ix-prices">
+                <article class="ix-price">
+                    <span class="ix-price-tag">Старт</span>
+                    <p class="ix-price-amount">Бесплатно</p>
+                    <p class="ix-price-unit">консультация</p>
+                    <ul>
+                        <li>Узнаем, на каком ты уровне и что нужно</li>
+                        <li>Составим план и договоримся о времени</li>
+                    </ul>
+                    <a href="#anketa" class="ix-btn ix-btn-outline">Записаться на консультацию</a>
+                </article>
+
+                <article class="ix-price ix-price-main">
+                    <span class="ix-price-tag">Лучший выбор</span>
+                    <p class="ix-price-amount">180 крон</p>
+                    <p class="ix-price-unit">занятие / час</p>
+                    <ul>
+                        <li>Основы, средняя и высшая школа</li>
+                        <li>По-чешски или по-русски</li>
+                        <li>Онлайн или в Праге</li>
+                    </ul>
+                    <a href="#anketa" class="ix-btn ix-btn-amber">Мне интересно</a>
+                </article>
+
+                <article class="ix-price">
+                    <span class="ix-price-tag">Экзамены</span>
+                    <p class="ix-price-amount">200+ крон</p>
+                    <p class="ix-price-unit">поступление / час</p>
+                    <ul>
+                        <li>CERMAT, ČVUT, UK и SCIO</li>
+                        <li>Типовые задания прошлых лет</li>
+                        <li>Стратегия на день экзамена</li>
+                    </ul>
+                    <a href="#anketa" class="ix-btn ix-btn-outline">Мне интересно</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6) ПРИЗЫВ К ДЕЙСТВИЮ -->
+    <section class="ix-sec ix-dark ix-cta" aria-labelledby="ix-h-cta">
+        <div class="container">
+            <div class="ix-cta-inner">
+                <p class="ix-eyebrow">Запишись на занятие</p>
+                <h2 id="ix-h-cta">Договоримся о первом занятии.</h2>
+                <p class="ix-sub">Напиши мне, с чем нужна помощь, и договоримся о времени и языке занятия.</p>
+
+                <div class="ix-cta-actions">
+                    <a href="#anketa" class="ix-btn ix-btn-amber">Записаться на занятие &rarr;</a>
+                    <a class="ix-channel" href="https://wa.me/420777209320" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</a>
+                    <a class="ix-channel" href="https://t.me/damir_121" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" aria-hidden="true"></i>Telegram</a>
                 </div>
-                <div class="timeline-item">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-icon"><i class="fa-solid fa-university"></i></div>
-                    <div class="timeline-body">
-                        <div class="timeline-heading"><strong>Высшая математика</strong></div>
-                        <p>Анализ, линейная алгебра или статистика. Объясню тебе концепции, которые на лекциях кажутся слишком сложными.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="timeline-dot"></span>
-                    <div class="timeline-icon"><i class="fa-solid fa-brain"></i></div>
-                    <div class="timeline-body">
-                        <div class="timeline-heading"><strong>Эффективный подход</strong></div>
-                        <p>Научу тебя приёмам, как эффективно и без лишних ошибок решать типовые задачи на экзаменах.</p>
-                    </div>
+
+                <div class="ix-others">
+                    <span class="ix-others-label">Готовишься к поступлению?</span>
+                    <a class="ix-chip" style="--c:#a5aefc" href="cermat_ru.html">CERMAT</a>
+                    <a class="ix-chip" style="--c:#8ec8ff" href="cvut_ru.html">ČVUT</a>
+                    <a class="ix-chip" style="--c:#ff8a8a" href="uk_ru.html">UK</a>
+                    <a class="ix-chip" style="--c:#fbbf24" href="scio_ru.html">SCIO</a>
                 </div>
             </div>
-        </section>
-
-<section class="container">
-    <h2 class="section-title">Частые вопросы</h2>
-    <div class="faq-list">
-        <details class="faq-item">
-            <summary>Кому подходят индивидуальные занятия? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Ученикам школ и студентам вузов — подстрою занятия под твой класс, школу и темп.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Нужно ли точно знать, что нужно разобрать? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Нет, достаточно сказать, с чем есть проблема или какую тему сейчас проходите в школе — остальное решим вместе.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Как часто обычно проходят занятия? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>По необходимости — от одного занятия в неделю до интенсивных блоков перед контрольными или экзаменами.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Занятия проходят онлайн? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Да, очно в Праге или онлайн — как тебе удобнее.</p>
-        </details>
-    </div>
-</section>
-
-<section class="mini-poll" id="anketa">
-    <div class="mini-poll-grid">
-        <div class="mini-poll-form">
-            <span class="mini-poll-tag">БЫСТРЫЙ ОПРОС</span>
-            <h2>Интересуют индивидуальные занятия?</h2>
-            <p>Напиши мне пару данных, и договоримся о первом занятии специально для тебя.</p>
-            <form action="https://formspree.io/f/mdaprpqk" method="POST">
-                <div class="form-group">
-                    <label for="mp-jmeno">Твоё имя</label>
-                    <input type="text" id="mp-jmeno" name="jmeno" required placeholder="напр. Алексей Новак">
-                </div>
-                <div class="form-group">
-                    <label for="mp-kontakt">E-mail или телефон</label>
-                    <input type="text" id="mp-kontakt" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
-                </div>
-                <div class="form-group">
-                    <label for="mp-jazyk">Язык консультации</label>
-                    <select id="mp-jazyk" name="jazyk">
-                        <option value="RU">Русский</option>
-                        <option value="CZ">Чешский</option>
-                    </select>
-                </div>
-                <input type="hidden" name="typ_pripravy" value="INDIVIDUALNI">
-                <div class="mini-poll-topic"><i class="fa-solid fa-user-group"></i> Интерес: Индивидуальные занятия</div>
-                <button type="submit" class="btn-submit">ЗАПИСАТЬСЯ НА ЗАНЯТИЕ</button>
-            </form>
         </div>
-        <div class="mini-poll-image">
-            <img src="images/individualni-anketa.jpg" alt="Индивидуальные занятия">
+    </section>
+
+    <!-- 7) ОПРОС / ФОРМА -->
+    <section class="ix-sec ix-anketa mini-poll" id="anketa">
+        <div class="container">
+            <div class="mini-poll-grid">
+                <div class="mini-poll-form">
+                    <span class="mini-poll-tag">БЫСТРЫЙ ОПРОС</span>
+                    <h2>Интересуют индивидуальные занятия?</h2>
+                    <p>Напиши мне пару данных, и договоримся о первом занятии специально для тебя.</p>
+                    <form action="https://formspree.io/f/mdaprpqk" method="POST">
+                        <div class="form-group">
+                            <label for="mp-jmeno">Твоё имя</label>
+                            <input type="text" id="mp-jmeno" name="jmeno" required placeholder="напр. Алексей Новак">
+                        </div>
+                        <div class="form-group">
+                            <label for="mp-kontakt">E-mail или телефон</label>
+                            <input type="text" id="mp-kontakt" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
+                        </div>
+                        <div class="form-group">
+                            <label for="mp-jazyk">Язык консультации</label>
+                            <select id="mp-jazyk" name="jazyk">
+                                <option value="RU">Русский</option>
+                                <option value="CZ">Чешский</option>
+                            </select>
+                        </div>
+                        <input type="hidden" name="typ_pripravy" value="INDIVIDUALNI">
+                        <div class="mini-poll-topic"><i class="fa-solid fa-user-group"></i> Интерес: Индивидуальные занятия</div>
+                        <button type="submit" class="btn-submit">ЗАПИСАТЬСЯ НА ЗАНЯТИЕ</button>
+                    </form>
+                </div>
+                <div class="mini-poll-image">
+                    <img src="images/individualni-anketa.jpg" alt="Индивидуальные занятия">
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-    </main>
+    </section>
+
+</main>
 
  <footer class="main-footer">
     <div class="container footer-grid">
-        
+
         <div class="footer-column">
             <h3>Контакты</h3>
             <ul class="footer-list">
