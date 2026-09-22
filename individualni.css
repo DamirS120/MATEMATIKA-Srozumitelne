@@ -735,12 +735,18 @@ body.page-individual main.ix-main {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* --- 6) Anketa + výzva k akci - anketa vlevo, text s odkazy vpravo ------- */
+/* --- 6) Anketa - text s výzvou vlevo, formulář vpravo -------------------- */
 .ix-anketa {
     padding-top: 0;
 }
 
-.ix-cta-side {
+@media (min-width: 769px) {
+    .ix-anketa .mini-poll-grid {
+        grid-template-columns: 0.85fr 1.15fr;
+    }
+}
+
+.ix-anketa-intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -748,37 +754,25 @@ body.page-individual main.ix-main {
     color: #ffffff;
 }
 
-.ix-cta-side .ix-eyebrow {
+.ix-anketa-intro .ix-eyebrow {
     color: rgba(255, 255, 255, 0.85);
 }
 
-.ix-cta-side .ix-eyebrow::before {
+.ix-anketa-intro .ix-eyebrow::before {
     background: #ffffff;
 }
 
-.ix-main .ix-cta-side h2 {
+.ix-main .ix-anketa-intro h2 {
     color: #ffffff;
     font-size: 1.6rem;
     line-height: 1.2;
     margin: 0 0 12px;
 }
 
-.ix-cta-side .ix-sub {
+.ix-anketa-intro .ix-sub {
     color: rgba(255, 255, 255, 0.85);
-    margin: 0 0 26px;
+    margin: 0;
     font-size: 1rem;
-}
-
-.ix-cta-side .ix-cta-actions {
-    justify-content: flex-start;
-    margin-bottom: 28px;
-}
-
-.ix-cta-side .ix-others {
-    justify-content: flex-start;
-    margin-top: 0;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================

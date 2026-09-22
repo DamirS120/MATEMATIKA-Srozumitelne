@@ -773,12 +773,18 @@ body.page-scio main.sc-main {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* --- 6) Anketa + výzva k akci - anketa vlevo, text s odkazy vpravo ------- */
+/* --- 6) Anketa - text s výzvou vlevo, formulář vpravo -------------------- */
 .sc-anketa {
     padding-top: 0;
 }
 
-.sc-cta-side {
+@media (min-width: 769px) {
+    .sc-anketa .mini-poll-grid {
+        grid-template-columns: 0.85fr 1.15fr;
+    }
+}
+
+.sc-anketa-intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -786,37 +792,25 @@ body.page-scio main.sc-main {
     color: #ffffff;
 }
 
-.sc-cta-side .sc-eyebrow {
+.sc-anketa-intro .sc-eyebrow {
     color: rgba(255, 255, 255, 0.85);
 }
 
-.sc-cta-side .sc-eyebrow::before {
+.sc-anketa-intro .sc-eyebrow::before {
     background: #ffffff;
 }
 
-.sc-main .sc-cta-side h2 {
+.sc-main .sc-anketa-intro h2 {
     color: #ffffff;
     font-size: 1.6rem;
     line-height: 1.2;
     margin: 0 0 12px;
 }
 
-.sc-cta-side .sc-sub {
+.sc-anketa-intro .sc-sub {
     color: rgba(255, 255, 255, 0.85);
-    margin: 0 0 26px;
+    margin: 0;
     font-size: 1rem;
-}
-
-.sc-cta-side .sc-cta-actions {
-    justify-content: flex-start;
-    margin-bottom: 28px;
-}
-
-.sc-cta-side .sc-others {
-    justify-content: flex-start;
-    margin-top: 0;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================
