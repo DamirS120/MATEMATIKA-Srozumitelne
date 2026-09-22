@@ -24,6 +24,7 @@
 </script>
 
     <script src="menu.js" defer></script>
+    <script src="section-nav.js" defer></script>
     <script src="hero-carousel.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +34,7 @@
     <link rel="alternate" hreflang="ru" href="https://matematika-srozumitelne.cz/index_ru.html">
     <link rel="alternate" hreflang="cs" href="https://matematika-srozumitelne.cz/index.html">
     <link rel="alternate" hreflang="x-default" href="https://matematika-srozumitelne.cz/index_ru.html">
+    <link rel="canonical" href="https://matematika-srozumitelne.cz/index_ru.html">
 
     <meta property="og:title" content="Matematika Srozumitelně | Репетитор из ČVUT">
     <meta property="og:description" content="Репетиторство по математике в Праге и онлайн. Подготовка к экзаменам CERMAT, ČVUT, UK и SCIO, а также помощь с вузовской программой.">
@@ -194,28 +196,28 @@
         </div>
 
         <div class="hero-carousel" id="hero-carousel">
-            <div class="carousel-slide active" style="background-image:url('images/cermat-gymnazia.jpg')">
+            <div class="carousel-slide slide-cermat active" style="background-image:url('images/cermat-gymnazia.jpg')">
                 <span class="carousel-icon"><i class="fa-solid fa-graduation-cap"></i></span>
                 <div class="carousel-caption">
                     <h3>Подготовка к CERMAT</h3>
                     <p>Для девятиклассников и выпускников. Разберём тесты прошлых лет и найдём все подвохи.</p>
                 </div>
             </div>
-            <div class="carousel-slide" style="background-image:url('images/cvut-budova.jpg')">
+            <div class="carousel-slide slide-cvut" style="background-image:url('images/cvut-budova.jpg')">
                 <span class="carousel-icon"><i class="fa-solid fa-microchip"></i></span>
                 <div class="carousel-caption">
                     <h3>Поступление в ČVUT</h3>
                     <p>Подготовка на FIT, FEL и другие факультеты от человека, который сам там успешно учится.</p>
                 </div>
             </div>
-            <div class="carousel-slide" style="background-image:url('images/mff.jpg')">
+            <div class="carousel-slide slide-uk" style="background-image:url('images/mff.jpg')">
                 <span class="carousel-icon"><i class="fa-solid fa-book-open"></i></span>
                 <div class="carousel-caption">
                     <h3>Математика для UK</h3>
                     <p>Подготовка для будущих учителей и учёных. Упор на глубокое понимание теории.</p>
                 </div>
             </div>
-            <div class="carousel-slide" style="background-image:url('images/scio-priprava.jpg')">
+            <div class="carousel-slide slide-scio" style="background-image:url('images/scio-priprava.jpg')">
                 <span class="carousel-icon"><i class="fa-solid fa-file-lines"></i></span>
                 <div class="carousel-caption">
                     <h3>Тесты SCIO</h3>
@@ -235,6 +237,29 @@
         </div>
     </div>
 </header>
+
+<section class="section-alt">
+    <div class="container">
+        <div class="section-head-block">
+            <h2 class="section-title">«Не понимаю, почему это так.»</h2>
+            <p class="section-sub">Именно здесь начинается настоящее понимание.</p>
+        </div>
+        <div class="pain-fix-grid">
+            <div class="pain-fix-card">
+                <p class="pain-text">Не разбираюсь в основах</p>
+                <p class="fix-text">Вместе восполним, чего не хватает.</p>
+            </div>
+            <div class="pain-fix-card">
+                <p class="pain-text">Не понимаю материал</p>
+                <p class="fix-text">Объясним по-другому, пока не станет ясно.</p>
+            </div>
+            <div class="pain-fix-card">
+                <p class="pain-text">Нужно подготовиться к экзамену</p>
+                <p class="fix-text">Составим план специально для тебя.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="container" id="lektor">
     <div class="about-hero">
@@ -274,7 +299,8 @@
     </div>
 </section>
 
-    <section class="container" id="prijimacky-nav">
+    <section class="section-alt" id="prijimacky-nav">
+      <div class="container">
         <h2 class="section-title">Выбери свои вступительные экзамены</h2>
         <div class="detail-grid detail-grid-4">
             <a href="cermat_ru.html" class="card" style="border-top: 5px solid var(--primary); box-shadow: 0 10px 25px rgba(30, 58, 138, 0.18);">
@@ -306,7 +332,8 @@
                     </div>
                 </a>
             </div>
-        </section>
+      </div>
+    </section>
 
 <section class="steps-wrapper container">
     <h2 class="section-title">Как проходят занятия?</h2>
@@ -344,6 +371,43 @@
             </div>
         </div>
 
+    </div>
+</section>
+
+<section class="section-dark">
+    <div class="container philosophy-grid">
+        <div class="philosophy-text">
+            <span class="philosophy-eyebrow">Мой подход</span>
+            <h2 class="section-title section-title-left">Дело не только в результате. Дело в понимании.</h2>
+            <ul class="philosophy-list">
+                <li>
+                    <span class="philosophy-ico"><i class="fa-solid fa-lightbulb"></i></span>
+                    <div><strong>Объяснение вместо зубрёжки</strong><span>Сначала поймёшь принцип, потом уже считаешь.</span></div>
+                </li>
+                <li>
+                    <span class="philosophy-ico"><i class="fa-solid fa-shoe-prints"></i></span>
+                    <div><strong>Шаг за шагом</strong><span>Каждый пример разложим на простые шаги.</span></div>
+                </li>
+                <li>
+                    <span class="philosophy-ico"><i class="fa-solid fa-gauge-high"></i></span>
+                    <div><strong>Темп по студенту</strong><span>Считаем столько, сколько нужно, пока не станет понятно.</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="philosophy-diagram" role="img" aria-label="Схема: от функции f(x) идут два вопроса, ПОЧЕМУ и КАК, и оба ведут к фразе «Теперь понятно.»">
+            <svg viewBox="0 0 360 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path class="pd-line" d="M180 70V104 M180 104H90V140 M180 104H270V140 M90 192V240H180 M270 192V240H180 M180 240V286 M172 277L180 287L188 277"/>
+                <rect class="pd-node" x="125" y="18" width="110" height="52" rx="14"/>
+                <text class="pd-txt" x="180" y="44" dy="0.35em" font-size="24" font-style="italic">f(x)</text>
+                <rect class="pd-node" x="30" y="140" width="120" height="52" rx="26"/>
+                <text class="pd-txt" x="90" y="166" dy="0.35em" font-size="18">ПОЧЕМУ?</text>
+                <rect class="pd-node" x="210" y="140" width="120" height="52" rx="26"/>
+                <text class="pd-txt" x="270" y="166" dy="0.35em" font-size="20">КАК?</text>
+                <rect class="pd-result" x="70" y="292" width="220" height="64" rx="32"/>
+                <text class="pd-txt pd-txt-navy" x="180" y="324" dy="0.35em" font-size="18">«Теперь понятно.»</text>
+            </svg>
+        </div>
     </div>
 </section>
 
@@ -393,7 +457,7 @@
 
 
 
-    <section id="sluzby" class="services-section">
+    <section id="sluzby" class="services-section section-alt">
     <div class="container">
         <h2 class="section-title">В чём я могу помочь</h2>
         <div class="services-grid">
@@ -433,7 +497,7 @@
 
 
 
-<section class="container">
+<section class="container partner-section">
     <h2 class="section-title">Сотрудничаю с лучшими</h2>
     <div class="partner-grid">
             <a class="partner-card" href="spoluprace_ru.html#edujoy">
@@ -449,7 +513,8 @@
     </div>
 </section>
 
-<section class="container faq-section">
+<section class="section-alt faq-section">
+  <div class="container">
     <h2 class="section-title">Частые вопросы</h2>
     <div class="faq-list">
         <details class="faq-item">
@@ -473,9 +538,10 @@
             <p>Быстрее всего через WhatsApp или Telegram (ссылки в подвале сайта), либо заполни форму ниже — я свяжусь с тобой.</p>
         </details>
     </div>
+  </div>
 </section>
 
-<section id="kontakt" class="contact-section">
+<section id="kontakt" class="contact-section section-dark">
     <div class="contact-form-container">
         <h2 class="section-title">Запишись на вводное занятие</h2>
 

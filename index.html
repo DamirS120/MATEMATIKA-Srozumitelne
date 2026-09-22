@@ -24,6 +24,7 @@
 </script>
 
     <script src="menu.js" defer></script>
+    <script src="section-nav.js" defer></script>
     <script src="hero-carousel.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +34,7 @@
     <link rel="alternate" hreflang="cs" href="https://matematika-srozumitelne.cz/index.html">
     <link rel="alternate" hreflang="ru" href="https://matematika-srozumitelne.cz/index_ru.html">
     <link rel="alternate" hreflang="x-default" href="https://matematika-srozumitelne.cz/index.html">
+    <link rel="canonical" href="https://matematika-srozumitelne.cz/index.html">
 
     <meta property="og:title" content="Matematika Srozumitelně | Lektor z ČVUT">
     <meta property="og:description" content="Doučování matematiky v Praze i online. Příprava na přijímačky CERMAT, ČVUT, UK i SCIO nebo pomoc s látkou na vysoké škole. Žádné biflování, jen pochopení.">
@@ -191,28 +193,28 @@
         </div>
 
         <div class="hero-carousel" id="hero-carousel">
-            <div class="carousel-slide active" style="background-image:url('images/cermat-gymnazia.jpg')">
+            <div class="carousel-slide slide-cermat active" style="background-image:url('images/cermat-gymnazia.jpg')">
                 <span class="carousel-icon"><i class="fa-solid fa-graduation-cap"></i></span>
                 <div class="carousel-caption">
                     <h3>Příprava na CERMAT</h3>
                     <p>Pro deváťáky i maturanty. Projdeme testy z minulých let a odhalíme chytáky.</p>
                 </div>
             </div>
-            <div class="carousel-slide" style="background-image:url('images/cvut-budova.jpg')">
+            <div class="carousel-slide slide-cvut" style="background-image:url('images/cvut-budova.jpg')">
                 <span class="carousel-icon"><i class="fa-solid fa-microchip"></i></span>
                 <div class="carousel-caption">
                     <h3>Přijímačky na ČVUT</h3>
                     <p>Příprava na FIT, FEL a další fakulty od někoho, kdo tam úspěšně studuje.</p>
                 </div>
             </div>
-            <div class="carousel-slide" style="background-image:url('images/mff.jpg')">
+            <div class="carousel-slide slide-uk" style="background-image:url('images/mff.jpg')">
                 <span class="carousel-icon"><i class="fa-solid fa-book-open"></i></span>
                 <div class="carousel-caption">
                     <h3>Matematika na UK</h3>
                     <p>Příprava pro budoucí učitele i vědce. Zaměřeno na hluboké porozumění teorii.</p>
                 </div>
             </div>
-            <div class="carousel-slide" style="background-image:url('images/scio-priprava.jpg')">
+            <div class="carousel-slide slide-scio" style="background-image:url('images/scio-priprava.jpg')">
                 <span class="carousel-icon"><i class="fa-solid fa-file-lines"></i></span>
                 <div class="carousel-caption">
                     <h3>SCIO testy</h3>
@@ -232,6 +234,29 @@
         </div>
     </div>
 </header>
+
+<section class="section-alt">
+    <div class="container">
+        <div class="section-head-block">
+            <h2 class="section-title">„Nechápu, proč to tak je.“</h2>
+            <p class="section-sub">A přesně tady začíná skutečné pochopení.</p>
+        </div>
+        <div class="pain-fix-grid">
+            <div class="pain-fix-card">
+                <p class="pain-text">Nevyznám se v základech</p>
+                <p class="fix-text">Společně doplníme, co chybí.</p>
+            </div>
+            <div class="pain-fix-card">
+                <p class="pain-text">Nerozumím látce</p>
+                <p class="fix-text">Vysvětlíme ji jinak, dokud nedává smysl.</p>
+            </div>
+            <div class="pain-fix-card">
+                <p class="pain-text">Potřebuji se připravit na zkoušku</p>
+                <p class="fix-text">Připravíme plán na míru.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="container" id="lektor">
     <div class="about-hero">
@@ -271,7 +296,8 @@
     </div>
 </section>
 
-    <section class="container" id="prijimacky-nav">
+    <section class="section-alt" id="prijimacky-nav">
+      <div class="container">
         <h2 class="section-title">Vyber si své přijímačky</h2>
         <div class="detail-grid detail-grid-4">
             <a href="cermat.html" class="card" style="border-top: 5px solid var(--primary); box-shadow: 0 10px 25px rgba(30, 58, 138, 0.18);">
@@ -303,7 +329,8 @@
                     </div>
                 </a>
             </div>
-        </section>
+      </div>
+    </section>
 
 <section class="steps-wrapper container">
     <h2 class="section-title">Jak probíhá doučování?</h2>
@@ -341,6 +368,43 @@
             </div>
         </div>
 
+    </div>
+</section>
+
+<section class="section-dark">
+    <div class="container philosophy-grid">
+        <div class="philosophy-text">
+            <span class="philosophy-eyebrow">Můj přístup</span>
+            <h2 class="section-title section-title-left">Nejde jen o výsledek. Jde o pochopení.</h2>
+            <ul class="philosophy-list">
+                <li>
+                    <span class="philosophy-ico"><i class="fa-solid fa-lightbulb"></i></span>
+                    <div><strong>Vysvětlení místo memorování</strong><span>Nejdřív pochopíš princip, pak teprve počítáš.</span></div>
+                </li>
+                <li>
+                    <span class="philosophy-ico"><i class="fa-solid fa-shoe-prints"></i></span>
+                    <div><strong>Postup krok za krokem</strong><span>Každý příklad rozložíme na jednoduché kroky.</span></div>
+                </li>
+                <li>
+                    <span class="philosophy-ico"><i class="fa-solid fa-gauge-high"></i></span>
+                    <div><strong>Tempo podle studenta</strong><span>Počítáme tak dlouho, dokud to nedává smysl.</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="philosophy-diagram" role="img" aria-label="Schéma: z funkce f(x) vedou dvě otázky, PROČ a JAK, a obě končí větou „Už to chápu.“">
+            <svg viewBox="0 0 360 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path class="pd-line" d="M180 70V104 M180 104H90V140 M180 104H270V140 M90 192V240H180 M270 192V240H180 M180 240V286 M172 277L180 287L188 277"/>
+                <rect class="pd-node" x="125" y="18" width="110" height="52" rx="14"/>
+                <text class="pd-txt" x="180" y="44" dy="0.35em" font-size="24" font-style="italic">f(x)</text>
+                <rect class="pd-node" x="30" y="140" width="120" height="52" rx="26"/>
+                <text class="pd-txt" x="90" y="166" dy="0.35em" font-size="20">PROČ?</text>
+                <rect class="pd-node" x="210" y="140" width="120" height="52" rx="26"/>
+                <text class="pd-txt" x="270" y="166" dy="0.35em" font-size="20">JAK?</text>
+                <rect class="pd-result" x="70" y="292" width="220" height="64" rx="32"/>
+                <text class="pd-txt pd-txt-navy" x="180" y="324" dy="0.35em" font-size="20">„Už to chápu.“</text>
+            </svg>
+        </div>
     </div>
 </section>
 
@@ -390,7 +454,7 @@
 
 
 
-    <section id="sluzby" class="services-section">
+    <section id="sluzby" class="services-section section-alt">
     <div class="container">
         <h2 class="section-title">S čím ti pomohu</h2>
         <div class="services-grid">
@@ -430,7 +494,7 @@
 
 
 
-<section class="container">
+<section class="container partner-section">
     <h2 class="section-title">Spolupracuji s nejlepšími</h2>
     <div class="partner-grid">
             <a class="partner-card" href="spoluprace.html#edujoy">
@@ -446,7 +510,8 @@
     </div>
 </section>
 
-<section class="container faq-section">
+<section class="section-alt faq-section">
+  <div class="container">
     <h2 class="section-title">Časté otázky</h2>
     <div class="faq-list">
         <details class="faq-item">
@@ -470,9 +535,10 @@
             <p>Nejrychleji přes WhatsApp nebo Telegram (odkazy v patičce), nebo vyplň formulář níže a ozvu se ti zpět.</p>
         </details>
     </div>
+  </div>
 </section>
 
-<section id="kontakt" class="contact-section">
+<section id="kontakt" class="contact-section section-dark">
     <div class="contact-form-container">
         <h2 class="section-title">Domluv si úvodní lekci</h2>
 
