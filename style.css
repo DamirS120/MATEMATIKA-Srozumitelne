@@ -3147,3 +3147,79 @@ JEDNOTNÉ SVISLÉ ODSAZENÍ SEKCÍ NA HOMEPAGE
         padding-bottom: 52px;
     }
 }
+
+/* ============================================================
+PLNOOBRAZOVKOVÉ HERO S TABULOVÝM POZADÍM (ČVUT, CERMAT, UK)
+Stejný "tabulový" jazyk jako u SCIO a individuálního doučování
+(tmavé pozadí s jemnou mřížkou), ale se skutečnou fotkou místo
+kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
+============================================================ */
+.page-cvut .hero-split,
+.page-cermat .hero-split,
+.page-uk .hero-split {
+    min-height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 110px 0 60px;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.page-cvut .hero-split { background-color: #071c33; }
+.page-cermat .hero-split { background-color: #17123a; }
+.page-uk .hero-split { background-color: #2a0a0a; }
+
+.page-cvut .hero-split .hero-eyebrow,
+.page-cermat .hero-split .hero-eyebrow,
+.page-uk .hero-split .hero-eyebrow {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+.page-cvut .hero-split .hero-split-title,
+.page-cermat .hero-split .hero-split-title,
+.page-uk .hero-split .hero-split-title {
+    color: #ffffff !important;
+}
+
+.page-cvut .hero-split .hero-split-text,
+.page-cermat .hero-split .hero-split-text,
+.page-uk .hero-split .hero-split-text {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.page-cvut .hero-split .hero-facts,
+.page-cermat .hero-split .hero-facts,
+.page-uk .hero-split .hero-facts {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.page-cvut .hero-split .hero-fact:not(:first-child),
+.page-cermat .hero-split .hero-fact:not(:first-child),
+.page-uk .hero-split .hero-fact:not(:first-child) {
+    border-left-color: rgba(255, 255, 255, 0.16);
+}
+
+.page-cvut .hero-split .hero-fact strong,
+.page-cermat .hero-split .hero-fact strong,
+.page-uk .hero-split .hero-fact strong {
+    color: #ffffff;
+}
+
+.page-cvut .hero-split .hero-fact span,
+.page-cermat .hero-split .hero-fact span,
+.page-uk .hero-split .hero-fact span {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 600px) {
+    .page-cvut .hero-split,
+    .page-cermat .hero-split,
+    .page-uk .hero-split {
+        padding: 90px 0 40px;
+    }
+}

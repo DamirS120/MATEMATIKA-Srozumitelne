@@ -29,6 +29,7 @@ body.page-individual main.ix-main {
     display: block;
     padding: 0;
     min-height: 0;
+    flex-shrink: 0;
 }
 
 .ix-main section {
@@ -210,6 +211,10 @@ body.page-individual main.ix-main {
    1) ÚVOD
    ========================================================================== */
 .ix-hero {
+    min-height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
     padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 8vw, 104px);
 }
 
