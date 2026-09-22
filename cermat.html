@@ -21,6 +21,7 @@
     <meta property="og:image" content="https://matematika-srozumitelne.cz/images/og-image.jpg">
     <meta property="og:locale" content="cs_CZ">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cermat.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,104 +135,106 @@
     </header>
 
     <main class="container">
-        <h2 class="section-title">Průvodce zkouškami podle ročníků</h2>
-        <div class="card card-featured">
+        <section class="cm-guide">
+            <h2 class="section-title">Průvodce zkouškami podle ročníků</h2>
 
-            <div class="card-body">
-                <img src="images/cermat-gymnazia.jpg" alt="Příprava na gymnázia" class="card-img-wide">
-                <h3>5. a 7. třída</h3>
-                <p>Zaměřujeme se na logické řady, slovní úlohy a porozumění textu. U dětí budujeme sebevědomí, aby se
-                    zkoušek nebály.</p>
-                <ul class="focus-list">
-                    <li>
-                        <i class="fa-solid fa-calculator"></i>
-                        <div>
-                            <strong>Aritmetika</strong> Počítání bez kalkulačky hravě a rychle.
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-brain"></i>
-                        <div>
-                            <strong>Logika</strong> Řešení číselných řad a doplňovaček.
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-shapes"></i>
-                        <div>
-                            <strong>Rovinné obrazce</strong> Porozumění čtvercům, obdélníkům a trojúhelníkům.
-                        </div>
-                    </li>
-                </ul>
+            <div class="cm-guide-intro">
+                <div class="cm-guide-point"><span class="cm-guide-ico" aria-hidden="true"><i class="fa-solid fa-list-check"></i></span>Přehledně uspořádaná témata</div>
+                <div class="cm-guide-point"><span class="cm-guide-ico" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>Praktické příklady a cvičení</div>
+                <div class="cm-guide-point"><span class="cm-guide-ico" aria-hidden="true"><i class="fa-solid fa-arrow-trend-up"></i></span>Postupné zlepšování výsledků</div>
             </div>
-        </div>
 
-        <div class="card card-featured">
-            <div class="card-body">
-                <img src="images/cermat-9.jpg" alt="Příprava na 9. třídu" class="card-img-wide">
-                <h3 style="color: var(--primary)">9. třída – přijímačky na SŠ</h3>
-                <p>Komplexní příprava na jednotné přijímací zkoušky. Projdeme si typové úlohy, na kterých CERMAT staví,
-                    a naučíme se je řešit efektivně.</p>
-                    <ul class="focus-list">
-                        <li>
-                            <i class="fa-solid fa-square-root-variable"></i>
-                            <div>
-                                <strong>Výrazy a rovnice</strong> Úpravy mnohočlenů a řešení rovnic, které tvoří základ bodového
-                                zisku.
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-draw-polygon"></i>
-                            <div>
-                                <strong>Geometrie</strong> Konstrukční úlohy a výpočty v rovině i prostoru (Pythagorova věta,
-                                Thaletova kružnice).
+            <div class="cm-guide-cards">
+
+                <article class="cm-guide-card">
+                    <div class="cm-guide-body">
+                        <span class="cm-guide-icon" aria-hidden="true"><i class="fa-solid fa-child-reaching"></i></span>
+                        <h3>5. a 7. třída</h3>
+                        <p>Zaměřujeme se na logické řady, slovní úlohy a porozumění textu. U dětí budujeme sebevědomí, aby se zkoušek nebály.</p>
+                        <ul class="cm-guide-checklist">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Aritmetika – počítání bez kalkulačky hravě a rychle</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Logika – řešení číselných řad a doplňovaček</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Rovinné obrazce – čtverce, obdélníky, trojúhelníky</span></li>
+                        </ul>
+                        <a href="#anketa" class="cm-guide-btn">Více o přípravě <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-percent"></i>
-                    <div>
-                        <strong>Aplikační úlohy</strong> Procenta, trojčlenka a slovní úlohy, které vyžadují správnou
-                        interpretaci textu.
+                    <div class="cm-guide-photo">
+                        <img src="images/cermat-gymnazia.jpg" alt="Příprava na 5. a 7. třídu">
                     </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-stopwatch"></i>
-                    <div>
-                        <strong>Testová strategie</strong> Jak pracovat s časem, abys v klidu stihl/a projít celý test.
+                    <div class="cm-guide-side">
+                        <p class="cm-guide-side-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Vybraná témata</p>
+                        <ul>
+                            <li>Aritmetika <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Logika <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Rovinné obrazce <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                        </ul>
                     </div>
-                </li>
+                </article>
+
+                <article class="cm-guide-card cm-green">
+                    <div class="cm-guide-body">
+                        <span class="cm-guide-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <h3>9. třída – přijímačky na SŠ</h3>
+                        <p>Komplexní příprava na jednotné přijímací zkoušky. Projdeme si typové úlohy, na kterých CERMAT staví, a naučíme se je řešit efektivně.</p>
+                        <ul class="cm-guide-checklist">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Výrazy a rovnice – úpravy mnohočlenů, základ bodového zisku</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Geometrie – Pythagorova věta, Thaletova kružnice</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Aplikační úlohy – procenta, trojčlenka a slovní úlohy</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Testová strategie – práce s časem u testu</span></li>
+                        </ul>
+                        <a href="#anketa" class="cm-guide-btn">Více o přípravě <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="cm-guide-photo">
+                        <img src="images/cermat-9.jpg" alt="Příprava na 9. třídu">
+                    </div>
+                    <div class="cm-guide-side">
+                        <p class="cm-guide-side-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Vybraná témata</p>
+                        <ul>
+                            <li>Výrazy a rovnice <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Geometrie <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Aplikační úlohy <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Testová strategie <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cm-guide-card cm-amber">
+                    <div class="cm-guide-body">
+                        <span class="cm-guide-icon" aria-hidden="true"><i class="fa-solid fa-scroll"></i></span>
+                        <h3>Maturita</h3>
+                        <p>Kompletní zopakování SŠ látky. Od funkcí až po statistiku a pravděpodobnost. Strategie pro maximum bodů v časovém limitu.</p>
+                        <ul class="cm-guide-checklist">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Funkce – lineární, kvadratické, goniometrické i logaritmické</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Komplexní čísla a vektory srozumitelně</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Kombinatorika – variace, permutace, pravděpodobnost</span></li>
+                        </ul>
+                        <a href="#anketa" class="cm-guide-btn">Více o přípravě <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="cm-guide-photo">
+                        <img src="images/maturita.jpg" alt="Maturita z matematiky">
+                    </div>
+                    <div class="cm-guide-side">
+                        <p class="cm-guide-side-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Vybraná témata</p>
+                        <ul>
+                            <li>Funkce <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Komplexní čísla a vektory <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Kombinatorika <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </article>
+
             </div>
-            </ul>
 
-        </div>
-
-        <div class="card card-featured">
-            <div class="card-body">
-                <img src="images/maturita.jpg" alt="Maturita z matematiky" class="card-img-wide">
-                <h3 style="color: var(--primary)">Maturita</h3>
-                <p>Kompletní zopakování SŠ látky. Od funkcí až po statistiku a pravděpodobnost. Strategie pro maximum
-                    bodů v časovém limitu.</p>
-                <ul class="focus-list">
-                    <li>
-                        <i class="fa-solid fa-chart-area"></i>
-                        <div>
-                            <strong>Funkce</strong> Lineární, kvadratické, goniometrické i logaritmické.
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-square-root-variable"></i>
-                        <div>
-                            <strong>Komplexní čísla a vektory</strong> Vyšší matematika srozumitelně.
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-dice"></i>
-                        <div>
-                            <strong>Kombinatorika</strong> Variace, permutace a pravděpodobnost bez vzorců.
-                        </div>
-                    </li>
-                </ul>
+            <div class="cm-guide-cta">
+                <p class="cm-guide-cta-title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Společně k tvému cíli</p>
+                <div class="cm-guide-cta-facts">
+                    <span class="cm-guide-cta-fact"><i class="fa-solid fa-user" aria-hidden="true"></i>Individuální přístup</span>
+                    <span class="cm-guide-cta-fact"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>Pravidelné vyhodnocení pokroku</span>
+                    <span class="cm-guide-cta-fact"><i class="fa-solid fa-heart" aria-hidden="true"></i>Podpora a motivace</span>
+                </div>
+                <a href="#anketa" class="cm-guide-btn">Začít s přípravou <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-        </div>
+        </section>
 
 
         <section>

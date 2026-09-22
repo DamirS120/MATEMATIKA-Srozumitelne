@@ -21,6 +21,7 @@
     <meta property="og:image" content="https://matematika-srozumitelne.cz/images/og-image.jpg">
     <meta property="og:locale" content="ru_RU">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cermat.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,104 +135,106 @@
     </header>
 
     <main class="container">
-        <h2 class="section-title">Путеводитель по экзаменам по классам</h2>
-        <div class="card card-featured">
+        <section class="cm-guide">
+            <h2 class="section-title">Путеводитель по экзаменам по классам</h2>
 
-            <div class="card-body">
-                <img src="images/cermat-gymnazia.jpg" alt="Подготовка в гимназии" class="card-img-wide">
-                <h3>5 и 7 класс</h3>
-                <p>Сосредоточимся на логических рядах, текстовых задачах и понимании текста. У детей формируем уверенность, чтобы они
-                    не боялись экзаменов.</p>
-                <ul class="focus-list">
-                    <li>
-                        <i class="fa-solid fa-calculator"></i>
-                        <div>
-                            <strong>Арифметика</strong> Счёт без калькулятора — легко и быстро.
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-brain"></i>
-                        <div>
-                            <strong>Логика</strong> Решение числовых рядов и головоломок.
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-shapes"></i>
-                        <div>
-                            <strong>Плоские фигуры</strong> Понимание квадратов, прямоугольников и треугольников.
-                        </div>
-                    </li>
-                </ul>
+            <div class="cm-guide-intro">
+                <div class="cm-guide-point"><span class="cm-guide-ico" aria-hidden="true"><i class="fa-solid fa-list-check"></i></span>Понятно структурированные темы</div>
+                <div class="cm-guide-point"><span class="cm-guide-ico" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>Практические примеры и упражнения</div>
+                <div class="cm-guide-point"><span class="cm-guide-ico" aria-hidden="true"><i class="fa-solid fa-arrow-trend-up"></i></span>Постепенное улучшение результатов</div>
             </div>
-        </div>
 
-        <div class="card card-featured">
-            <div class="card-body">
-                <img src="images/cermat-9.jpg" alt="Подготовка к 9 классу" class="card-img-wide">
-                <h3 style="color: var(--primary)">9 класс — поступление в среднюю школу</h3>
-                <p>Комплексная подготовка к единым вступительным экзаменам. Разберём типовые задания, на которых строится CERMAT,
-                    и научимся решать их эффективно.</p>
-                    <ul class="focus-list">
-                        <li>
-                            <i class="fa-solid fa-square-root-variable"></i>
-                            <div>
-                                <strong>Выражения и уравнения</strong> Преобразование многочленов и решение уравнений, которые формируют основу
-                                баллов за тест.
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-draw-polygon"></i>
-                            <div>
-                                <strong>Геометрия</strong> Построения и вычисления на плоскости и в пространстве (теорема Пифагора,
-                                теорема Фалеса).
+            <div class="cm-guide-cards">
+
+                <article class="cm-guide-card">
+                    <div class="cm-guide-body">
+                        <span class="cm-guide-icon" aria-hidden="true"><i class="fa-solid fa-child-reaching"></i></span>
+                        <h3>5 и 7 класс</h3>
+                        <p>Сосредоточимся на логических рядах, текстовых задачах и понимании текста. У детей формируем уверенность, чтобы они не боялись экзаменов.</p>
+                        <ul class="cm-guide-checklist">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Арифметика — счёт без калькулятора, легко и быстро</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Логика — решение числовых рядов и головоломок</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Плоские фигуры — квадраты, прямоугольники, треугольники</span></li>
+                        </ul>
+                        <a href="#anketa" class="cm-guide-btn">Подробнее о подготовке <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-percent"></i>
-                    <div>
-                        <strong>Прикладные задачи</strong> Проценты, пропорции и текстовые задачи, требующие правильной
-                        интерпретации текста.
+                    <div class="cm-guide-photo">
+                        <img src="images/cermat-gymnazia.jpg" alt="Подготовка к 5 и 7 классу">
                     </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-stopwatch"></i>
-                    <div>
-                        <strong>Стратегия на тесте</strong> Как распределить время, чтобы спокойно успеть пройти весь тест.
+                    <div class="cm-guide-side">
+                        <p class="cm-guide-side-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Выбранные темы</p>
+                        <ul>
+                            <li>Арифметика <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Логика <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Плоские фигуры <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                        </ul>
                     </div>
-                </li>
+                </article>
+
+                <article class="cm-guide-card cm-green">
+                    <div class="cm-guide-body">
+                        <span class="cm-guide-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <h3>9 класс — поступление в среднюю школу</h3>
+                        <p>Комплексная подготовка к единым вступительным экзаменам. Разберём типовые задания, на которых строится CERMAT, и научимся решать их эффективно.</p>
+                        <ul class="cm-guide-checklist">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Выражения и уравнения — основа баллов за тест</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Геометрия — теорема Пифагора, теорема Фалеса</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Прикладные задачи — проценты и пропорции</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Стратегия на тесте — распределение времени</span></li>
+                        </ul>
+                        <a href="#anketa" class="cm-guide-btn">Подробнее о подготовке <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="cm-guide-photo">
+                        <img src="images/cermat-9.jpg" alt="Подготовка к 9 классу">
+                    </div>
+                    <div class="cm-guide-side">
+                        <p class="cm-guide-side-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Выбранные темы</p>
+                        <ul>
+                            <li>Выражения и уравнения <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Геометрия <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Прикладные задачи <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Стратегия на тесте <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="cm-guide-card cm-amber">
+                    <div class="cm-guide-body">
+                        <span class="cm-guide-icon" aria-hidden="true"><i class="fa-solid fa-scroll"></i></span>
+                        <h3>Выпускной экзамен</h3>
+                        <p>Полное повторение материала средней школы. От функций до статистики и вероятности. Стратегия для максимума баллов в условиях ограниченного времени.</p>
+                        <ul class="cm-guide-checklist">
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Функции — линейные, квадратичные, тригонометрические и логарифмические</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Комплексные числа и векторы понятным языком</span></li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Комбинаторика — вариации, перестановки, вероятность</span></li>
+                        </ul>
+                        <a href="#anketa" class="cm-guide-btn">Подробнее о подготовке <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="cm-guide-photo">
+                        <img src="images/maturita.jpg" alt="Выпускной экзамен по математике">
+                    </div>
+                    <div class="cm-guide-side">
+                        <p class="cm-guide-side-title"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Выбранные темы</p>
+                        <ul>
+                            <li>Функции <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Комплексные числа и векторы <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                            <li>Комбинаторика <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </article>
+
             </div>
-            </ul>
 
-        </div>
-
-        <div class="card card-featured">
-            <div class="card-body">
-                <img src="images/maturita.jpg" alt="Выпускной экзамен по математике" class="card-img-wide">
-                <h3 style="color: var(--primary)">Выпускной экзамен</h3>
-                <p>Полное повторение материала средней школы. От функций до статистики и вероятности. Стратегия для максимума
-                    баллов в условиях ограниченного времени.</p>
-                <ul class="focus-list">
-                    <li>
-                        <i class="fa-solid fa-chart-area"></i>
-                        <div>
-                            <strong>Функции</strong> Линейные, квадратичные, тригонометрические и логарифмические.
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-square-root-variable"></i>
-                        <div>
-                            <strong>Комплексные числа и векторы</strong> Высшая математика понятным языком.
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-dice"></i>
-                        <div>
-                            <strong>Комбинаторика</strong> Вариации, перестановки и вероятность без зубрёжки формул.
-                        </div>
-                    </li>
-                </ul>
+            <div class="cm-guide-cta">
+                <p class="cm-guide-cta-title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Вместе к твоей цели</p>
+                <div class="cm-guide-cta-facts">
+                    <span class="cm-guide-cta-fact"><i class="fa-solid fa-user" aria-hidden="true"></i>Индивидуальный подход</span>
+                    <span class="cm-guide-cta-fact"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>Регулярная оценка прогресса</span>
+                    <span class="cm-guide-cta-fact"><i class="fa-solid fa-heart" aria-hidden="true"></i>Поддержка и мотивация</span>
+                </div>
+                <a href="#anketa" class="cm-guide-btn">Начать подготовку <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-        </div>
+        </section>
 
 
         <section>

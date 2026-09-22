@@ -211,7 +211,8 @@ body.page-individual main.ix-main {
    1) ÚVOD
    ========================================================================== */
 .ix-hero {
-    min-height: 100vh;
+    /* clamp misto čistého 100vh - viz vysvětlení u .hero-split ve style.css */
+    min-height: clamp(560px, 100vh, 900px);
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -747,6 +748,12 @@ body.page-individual main.ix-main {
         linear-gradient(var(--ix-board-line) 1px, transparent 1px),
         linear-gradient(90deg, var(--ix-board-line) 1px, transparent 1px);
     background-size: 32px 32px;
+}
+
+/* .main-footer má sitewide margin-top: 10px - na tmavé anketě by pod ní
+   probleskl bílý pruh, tady ho proto vypínáme */
+body.page-individual .main-footer {
+    margin-top: 0;
 }
 
 @media (min-width: 769px) {

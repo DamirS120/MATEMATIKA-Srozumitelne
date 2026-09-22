@@ -211,7 +211,8 @@ body.page-scio main.sc-main {
    1) ÚVOD
    ========================================================================== */
 .sc-hero {
-    min-height: 100vh;
+    /* clamp misto čistého 100vh - viz vysvětlení u .hero-split ve style.css */
+    min-height: clamp(560px, 100vh, 900px);
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -639,6 +640,7 @@ body.page-scio main.sc-main {
 .sc-steps li {
     position: relative;
     padding-top: 48px;
+    text-align: center;
 }
 
 .sc-steps li::before {
@@ -684,6 +686,7 @@ body.page-scio main.sc-main {
 
 .sc-steps p {
     max-width: 32ch;
+    margin: 0 auto;
     color: var(--sc-muted);
 }
 
@@ -785,6 +788,12 @@ body.page-scio main.sc-main {
         linear-gradient(var(--sc-board-line) 1px, transparent 1px),
         linear-gradient(90deg, var(--sc-board-line) 1px, transparent 1px);
     background-size: 32px 32px;
+}
+
+/* .main-footer má sitewide margin-top: 10px - na tmavé anketě by pod ní
+   probleskl bílý pruh, tady ho proto vypínáme */
+body.page-scio .main-footer {
+    margin-top: 0;
 }
 
 @media (min-width: 769px) {

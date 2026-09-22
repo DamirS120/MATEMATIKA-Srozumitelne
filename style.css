@@ -3157,7 +3157,11 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
 .page-cvut .hero-split,
 .page-cermat .hero-split,
 .page-uk .hero-split {
-    min-height: 100vh;
+    /* clamp misto čistého 100vh: při vysokém zoomu (nebo velmi vysoké/nízké
+       liště prohlížeče) by section jinak rostla neomezeně, zatímco obsah
+       má díky clamp()/max-width pevný strop, a zůstal by uprostřed obří
+       prázdné plochy */
+    min-height: clamp(560px, 100vh, 900px);
     flex-shrink: 0;
     display: flex;
     align-items: center;

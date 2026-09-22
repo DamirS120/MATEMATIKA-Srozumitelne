@@ -1,0 +1,242 @@
+/* ==========================================================================
+   CERMAT – doplňkové styly pro cermat.html (a cermat_ru.html)
+   Načítat AŽ PO style.css. Zasahuje jen do sekce "Průvodce zkouškami podle
+   ročníků" (třída .cm-guide), zbytek stránky zůstává beze změny.
+   ========================================================================== */
+
+.cm-guide-intro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px 40px;
+    margin: 8px 0 48px;
+}
+
+.cm-guide-point {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.cm-guide-ico {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eef2ff;
+    color: var(--primary);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.cm-guide-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.cm-guide-card {
+    --gc: #2563eb;
+    --gc-tint: #eff6ff;
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr) minmax(0, 0.8fr);
+    gap: 28px;
+    align-items: stretch;
+    background: var(--gc-tint);
+    border-radius: 24px;
+    padding: 32px;
+}
+
+.cm-guide-card.cm-green { --gc: #059669; --gc-tint: #ecfdf5; }
+.cm-guide-card.cm-amber { --gc: #d97706; --gc-tint: #fff7ed; }
+
+.cm-guide-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.cm-guide-icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--gc);
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+
+.cm-guide-card h3 {
+    color: var(--gc);
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.cm-guide-body > p {
+    color: var(--text-light);
+    margin: 0 0 18px;
+}
+
+.cm-guide-checklist {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.cm-guide-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cm-guide-checklist i {
+    color: var(--gc);
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.cm-guide-btn {
+    align-self: flex-start;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--gc);
+    color: #ffffff;
+    font-weight: 700;
+    transition: filter 0.2s ease;
+}
+
+.cm-guide-btn:hover {
+    filter: brightness(0.92);
+}
+
+.cm-guide-photo {
+    border-radius: 18px;
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.cm-guide-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cm-guide-side {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+}
+
+.cm-guide-side-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--gc);
+    margin: 0 0 14px;
+}
+
+.cm-guide-side ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.cm-guide-side li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.cm-guide-side li i {
+    color: var(--gc);
+    font-size: 0.8rem;
+}
+
+.cm-guide-cta {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #eef2ff;
+    border-radius: 20px;
+    padding: 26px 32px;
+}
+
+.cm-guide-cta-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.cm-guide-cta-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+}
+
+.cm-guide-cta-fact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    font-size: 0.92rem;
+}
+
+.cm-guide-cta-fact i {
+    color: var(--primary);
+}
+
+.cm-guide-cta .cm-guide-btn {
+    background: var(--primary);
+}
+
+@media (max-width: 1000px) {
+    .cm-guide-card {
+        grid-template-columns: 1fr;
+    }
+
+    .cm-guide-photo {
+        order: -1;
+        max-height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cm-guide-intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .cm-guide-card {
+        padding: 24px 20px;
+    }
+
+    .cm-guide-cta {
+        padding: 22px;
+    }
+}
