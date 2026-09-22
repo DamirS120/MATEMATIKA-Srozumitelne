@@ -20,26 +20,27 @@
     <meta property="og:image" content="https://matematika-srozumitelne.cz/images/og-image.jpg">
     <meta property="og:locale" content="ru_RU">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="spoluprace.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
-<!-- Google tag (gtag.js) --> 
- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script> 
- <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18450634718');    
- </script> 
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450634718"></script>
+ <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18450634718');
+ </script>
 <body class="page-spoluprace">
 
   <nav class="navbar">
     <div class="container nav-flex">
         <a href="index_ru.html" class="logo">MATEMATIKA <span>Srozumitelně</span></a>
-        
+
         <input type="checkbox" id="menu-toggle" class="dropdown-check">
         <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-        
+
         <ul class="nav-links">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle">ПОСТУПЛЕНИЕ <span class="dd-caret"></span></a>
@@ -54,7 +55,7 @@
             <li><a href="omne_ru.html">ОБО МНЕ</a></li>
             <li><a href="spoluprace_ru.html">СОТРУДНИЧЕСТВО</a></li>
             <li><a href="index_ru.html#kontakt" class="btn-nav">КОНТАКТЫ</a></li>
-            
+
             <div class="lang-switch">
                 <a href="spoluprace.html" class="lang-link">CZ</a>
                 <span>|</span>
@@ -64,57 +65,168 @@
     </div>
 </nav>
 
+<main class="sp-main">
 
-    <header class="hero">
+    <!-- 1) HERO -->
+    <section class="sp-hero">
+        <div class="container sp-hero-grid">
+
+            <div class="sp-hero-text">
+                <p class="sp-kicker">Сотрудничество</p>
+                <h1>Математика обретает больше смысла, когда мы работаем вместе.</h1>
+                <a href="mailto:rimad.1203@seznam.cz?subject=%D0%A1%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE" class="sp-btn">Хочу сотрудничать</a>
+            </div>
+
+            <!-- Граф: я в центре, партнёры и свободное место для вашей идеи. Узлы ведут к секциям ниже. -->
+            <div class="sp-graph" role="group" aria-label="Схема сотрудничества: я, EduJoy, NEWLIFE и свободное место для вашей идеи">
+                <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                    <g aria-hidden="true">
+                        <path class="sp-edge sp-edge-blue sp-edge-draw sp-e1" pathLength="1" d="M195 175 L70 72"/>
+                        <path class="sp-edge sp-edge-pink sp-edge-draw sp-e2" pathLength="1" d="M195 175 L335 88"/>
+                        <path class="sp-edge sp-edge-open" d="M195 175 L285 310"/>
+                    </g>
+
+                    <g class="sp-node sp-node-me" aria-hidden="true">
+                        <circle class="sp-fill" cx="195" cy="175" r="56"/>
+                        <text x="195" y="175" dy="0.35em">я</text>
+                    </g>
+
+                    <a class="sp-node sp-node-blue" href="#edujoy" aria-label="EduJoy – перейти к партнёру">
+                        <circle class="sp-fill" cx="70" cy="72" r="50"/>
+                        <circle class="sp-ring" cx="70" cy="72" r="57"/>
+                        <text x="70" y="72" dy="0.35em">EduJoy</text>
+                    </a>
+
+                    <a class="sp-node sp-node-pink" href="#newlife" aria-label="NEWLIFE Doučování – перейти к партнёру">
+                        <circle class="sp-fill" cx="335" cy="88" r="52"/>
+                        <circle class="sp-ring" cx="335" cy="88" r="59"/>
+                        <text x="335" y="88" dy="0.35em">NEWLIFE</text>
+                    </a>
+
+                    <a class="sp-node sp-node-open" href="#napsat" aria-label="Свободное место для вашей идеи – написать мне">
+                        <circle class="sp-fill" cx="285" cy="310" r="44"/>
+                        <circle class="sp-ring" cx="285" cy="310" r="51"/>
+                        <text x="285" y="310" dy="0.35em">вы?</text>
+                    </a>
+                </svg>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2) ЧТО МЫ МОЖЕМ СОЗДАТЬ -->
+    <section class="sp-section" aria-labelledby="sp-h-create">
         <div class="container">
-            <h1>Наши <span class="highlight">партнёры</span></h1>
-            <p>Объединяем экспертные знания, чтобы предложить студентам лучшее образование.</p>
-            <div class="hero-btns">
-                <a href="#spolupracovat" class="btn-primary">ХОЧУ СОТРУДНИЧАТЬ</a>
-            </div>
-        </div>
-    </header>
+            <h2 class="sp-title" id="sp-h-create">Что мы можем создать</h2>
 
-    <main class="container">       
-        <div id="edujoy" class="about-hero">
-            <div class="about-image">
-                <img src="images/EduJoy.jpg" alt="EduJoy">
-            </div>
-            <div class="about-text">
-                <h2 class="section-title">EduJoy</h2>
-                <div class="scroll-box">
-                    <p>EduJoy — инновационная образовательная платформа, которая меняет взгляд на классическое обучение. Вместе работаем над методикой, которая сочетает игровой подход с математической точностью.</p>
-                    <p>Наше сотрудничество сосредоточено на разработке интерактивных материалов для начальных школ и организации летних образовательных лагерей.</p>
-                </div>
-                <a href="https://edujoy.cz" target="_blank" rel="noopener noreferrer" class="partner-link">Сайт EduJoy &rarr;</a>
-            </div>
+            <ul class="sp-create">
+                <li>
+                    <span class="sp-ico" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <h3>Образование</h3>
+                    <p>Курсы, воркшопы и подготовка к экзаменам для школ и образовательных организаций.</p>
+                </li>
+                <li>
+                    <span class="sp-ico" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+                    <h3>Материалы</h3>
+                    <p>Рабочие листы, сборники задач и объяснения, с которыми студент справится сам.</p>
+                </li>
+                <li>
+                    <span class="sp-ico" aria-hidden="true"><i class="fa-solid fa-laptop"></i></span>
+                    <h3>Онлайн</h3>
+                    <p>Видеоуроки, интерактивные упражнения и курсы, доступные откуда угодно.</p>
+                </li>
+                <li>
+                    <span class="sp-ico" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></span>
+                    <h3>Проекты</h3>
+                    <p>Летние лагеря, конкурсы и идеи, которые не вписываются ни в одну категорию.</p>
+                </li>
+            </ul>
         </div>
+    </section>
 
-        <div id="newlife" class="about-hero">
-            <div class="about-text">
-                <h2 class="section-title">NEWLIFE Doučování</h2>
-                <div class="scroll-box">
-                    <p>Агентство NEWLIFE специализируется на интенсивной помощи студентам в кризисных ситуациях — пересдачи, угроза отчисления или сложные выпускные экзамены.</p>
-                    <p>Здесь я работаю внешним преподавателем по техническим направлениям и математике для вузов. Вместе следим за тем, чтобы каждый студент вернулся в нужный темп.</p>
-                </div>
-                <a href="https://newlife-doucovani.cz" target="_blank" rel="noopener noreferrer" class="partner-link">Сайт NEWLIFE &rarr;</a>
-            </div>
-            <div class="about-image">
-                <img src="images/newlife.jpg" alt="Команда NEWLIFE">
+    <!-- 3) С КЕМ Я СОТРУДНИЧАЮ -->
+    <section class="sp-section sp-section-alt" aria-labelledby="sp-h-partners">
+        <div class="container">
+            <h2 class="sp-title" id="sp-h-partners">С кем я сотрудничаю</h2>
+
+            <div class="sp-chain">
+
+                <article class="sp-partner" id="edujoy">
+                    <div class="sp-partner-head">
+                        <div>
+                            <h3>EduJoy</h3>
+                            <p class="sp-partner-role">Образование и репетиторство</p>
+                        </div>
+                        <div class="sp-logo" aria-hidden="true">EJ</div>
+                    </div>
+                    <p class="sp-partner-text">Образовательная платформа, которая сочетает игровой подход с математической точностью. Вместе разрабатываем интерактивные материалы для начальных школ и организуем летние образовательные лагеря.</p>
+                    <div class="sp-partner-foot">
+                        <a class="sp-more" href="https://edujoy.cz" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о проекте EduJoy (откроется в новом окне)">Подробнее о проекте</a>
+                    </div>
+                </article>
+
+                <div class="sp-link" aria-hidden="true"></div>
+
+                <article class="sp-partner sp-partner-pink" id="newlife">
+                    <div class="sp-partner-head">
+                        <div>
+                            <h3>NEWLIFE Doučování</h3>
+                            <p class="sp-partner-role">Индивидуальное образование</p>
+                        </div>
+                        <div class="sp-logo" aria-hidden="true">NL</div>
+                    </div>
+                    <p class="sp-partner-text">Агентство, которое помогает студентам в кризисных ситуациях: пересдачи, угроза отчисления или сложные выпускные экзамены. Здесь я работаю внешним преподавателем технических направлений и математики для вузов.</p>
+                    <div class="sp-partner-foot">
+                        <a class="sp-more" href="https://newlife-doucovani.cz" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о проекте NEWLIFE Doučování (откроется в новом окне)">Подробнее о проекте</a>
+                    </div>
+                </article>
+
             </div>
         </div>
-        <section id="spolupracovat">
-    <div class="collab-cta">
-        <h2>Хотите сотрудничать?</h2>
-        <p>Я открыт новым проектам в образовании, созданию материалов или репетиторству. Если у вас есть идея, напишите мне.</p>
-        <a class="collab-cta-btn" href="mailto:rimad.1203@seznam.cz">✉ rimad.1203@seznam.cz</a>
-    </div>
-</section>
-    </main>
+    </section>
+
+    <!-- 4) КАК ПРОХОДИТ СОТРУДНИЧЕСТВО -->
+    <section class="sp-section" aria-labelledby="sp-h-steps">
+        <div class="container">
+            <h2 class="sp-title" id="sp-h-steps">Как проходит сотрудничество</h2>
+
+            <ol class="sp-steps">
+                <li>
+                    <span class="sp-num" aria-hidden="true">01</span>
+                    <h3>Идея</h3>
+                    <p>Вы напишете мне, что у вас в планах. Разберёмся, есть ли в этом смысл и что для этого нужно.</p>
+                </li>
+                <li>
+                    <span class="sp-num" aria-hidden="true">02</span>
+                    <h3>Сотрудничество</h3>
+                    <p>Договоримся о ролях, сроках и объёме. Работаем постепенно и открыто.</p>
+                </li>
+                <li>
+                    <span class="sp-num" aria-hidden="true">03</span>
+                    <h3>Результат</h3>
+                    <p>Появится курс, материал или проект, за который не стыдно нам обоим.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- 5) ПРИЗЫВ К ДЕЙСТВИЮ -->
+    <section class="sp-cta-wrap" id="napsat">
+        <div class="container">
+            <div class="sp-cta">
+                <h2 class="sp-cta-title">Есть идея для совместного проекта?</h2>
+                <p class="sp-cta-text">Достаточно пары предложений о том, что у вас в планах.</p>
+                <a href="mailto:rimad.1203@seznam.cz?subject=%D0%A1%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE" class="sp-btn">Напишите мне &rarr;</a>
+                <p class="sp-cta-mail"><a href="mailto:rimad.1203@seznam.cz">rimad.1203@seznam.cz</a></p>
+            </div>
+        </div>
+    </section>
+
+</main>
 
  <footer class="main-footer">
     <div class="container footer-grid">
-        
+
         <div class="footer-column">
             <h3>Контакты</h3>
             <ul class="footer-list">

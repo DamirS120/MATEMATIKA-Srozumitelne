@@ -778,9 +778,13 @@ body.page-scio main.sc-main {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* --- 6) Anketa - text s výzvou vlevo, formulář vpravo -------------------- */
+/* --- 6) Anketa - stejné tabulové pozadí jako hero, ať je vidět nová sekce */
 .sc-anketa {
-    padding-top: 0;
+    background-color: var(--sc-board);
+    background-image:
+        linear-gradient(var(--sc-board-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--sc-board-line) 1px, transparent 1px);
+    background-size: 32px 32px;
 }
 
 @media (min-width: 769px) {
@@ -814,8 +818,20 @@ body.page-scio main.sc-main {
 
 .sc-anketa-intro .sc-sub {
     color: rgba(255, 255, 255, 0.85);
-    margin: 0;
+    margin: 0 0 28px;
     font-size: 1rem;
+}
+
+.sc-anketa-intro .sc-cta-actions {
+    justify-content: flex-start;
+    margin-bottom: 28px;
+}
+
+.sc-anketa-intro .sc-others {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* ==========================================================================

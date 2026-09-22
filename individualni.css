@@ -740,9 +740,13 @@ body.page-individual main.ix-main {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* --- 6) Anketa - text s výzvou vlevo, formulář vpravo -------------------- */
+/* --- 6) Anketa - stejné tabulové pozadí jako hero, ať je vidět nová sekce */
 .ix-anketa {
-    padding-top: 0;
+    background-color: var(--ix-board);
+    background-image:
+        linear-gradient(var(--ix-board-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--ix-board-line) 1px, transparent 1px);
+    background-size: 32px 32px;
 }
 
 @media (min-width: 769px) {
@@ -776,8 +780,20 @@ body.page-individual main.ix-main {
 
 .ix-anketa-intro .ix-sub {
     color: rgba(255, 255, 255, 0.85);
-    margin: 0;
+    margin: 0 0 28px;
     font-size: 1rem;
+}
+
+.ix-anketa-intro .ix-cta-actions {
+    justify-content: flex-start;
+    margin-bottom: 28px;
+}
+
+.ix-anketa-intro .ix-others {
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* ==========================================================================
