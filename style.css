@@ -354,74 +354,8 @@ h3 {
     font-size: 0.9rem;
 }
 
-.service-card {
-    text-align: center;
-    padding: 50px 30px;
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid #f1f5f9;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    border-color: var(--accent);
-}
-
-.service-card i {
-    font-size: 3.5rem;
-    color: #ef4444;
-    /* Červená barva ikon */
-    margin-bottom: 25px;
-    display: inline-block;
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #1e293b;
-}
-
-.service-card p {
-    color: #64748b;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-.icon-box {
-    width: 80px;
-    height: 80px;
-    background: #ffffff;
-    border: 2px solid var(--accent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-    transition: background 0.3s ease;
-}
-
-.service-card:hover .icon-box {
-    background: var(--accent);
-}
-
-.service-card:hover .icon-box i {
-    color: #ffffff !important;
-}
-
-.icon-box i {
-    font-size: 2.5rem;
-    color: var(--accent);
-    margin: 0;
-}
-
-.service-card i,
-.focus-list li i,
-.icon-box i {
+.focus-list li i {
     color: var(--accent) !important;
-    /* */
 }
 
 .mission-statement {
@@ -1710,6 +1644,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 #hero-carousel .carousel-icon {
     position: relative;
     z-index: 2;
+    flex-shrink: 0;
     width: 68px;
     height: 68px;
     background: #fff;
@@ -2220,11 +2155,11 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
 .price-card {
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 20px;
-    padding: 35px 30px;
+    border-radius: 24px;
+    padding: 36px 32px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
     transition: 0.3s;
 }
@@ -2235,36 +2170,52 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
 }
 
 .price-card.featured {
+    margin: -14px 0;
+    padding: 50px 32px;
     border: 2px solid var(--primary);
-    background: var(--bg-light);
-    transform: scale(1.05);
+    background: var(--primary);
+    color: #ffffff;
     position: relative;
     z-index: 2;
 }
 
 .price-card.featured:hover {
-    transform: scale(1.05) translateY(-6px);
+    transform: translateY(-6px);
 }
 
 .price-tag {
-    font-size: 0.8rem;
+    align-self: flex-start;
+    display: inline-block;
+    background: rgba(30, 58, 138, 0.08);
+    color: var(--primary);
     font-weight: 700;
-    letter-spacing: 0.5px;
-    color: var(--text-light);
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+.price-card.featured .price-tag {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
 }
 
 .price-tag.highlight {
-    color: var(--accent);
+    background: var(--accent);
+    color: #ffffff;
 }
 
 .price-value {
     font-family: var(--font-display);
-    font-size: 2.4rem;
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
     font-weight: 700;
+    line-height: 1;
     color: var(--primary);
     margin-bottom: 6px;
+}
+
+.price-card.featured .price-value {
+    color: #ffffff;
 }
 
 .price-value span {
@@ -2273,15 +2224,23 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
     color: var(--text-light);
 }
 
+.price-card.featured .price-value span {
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .price-desc {
     color: var(--text-light);
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+}
+
+.price-card.featured .price-desc {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .price-features {
     list-style: none;
     padding: 0;
-    margin: 0 0 25px;
+    margin: 0 0 28px;
     text-align: left;
     flex: 1;
 }
@@ -2295,16 +2254,24 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
     color: var(--text-dark);
 }
 
+.price-card.featured .price-features li {
+    color: #ffffff;
+}
+
 .price-features li i {
     color: var(--accent);
     margin-top: 4px;
 }
 
+.price-card.featured .price-features li i {
+    color: rgba(255, 255, 255, 0.85);
+}
+
 .btn-secondary-outline {
     display: inline-block;
     text-align: center;
-    padding: 12px 26px;
-    border-radius: 50px;
+    padding: 15px 30px;
+    border-radius: 999px;
     font-weight: 700;
     border: 2px solid var(--primary);
     color: var(--primary);
@@ -2319,12 +2286,13 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
 
 .btn-cta-featured {
     display: inline-block;
+    text-align: center;
     margin-top: auto;
     background: var(--accent);
     color: #fff;
     font-weight: 700;
-    padding: 12px 26px;
-    border-radius: 50px;
+    padding: 15px 30px;
+    border-radius: 999px;
     transition: 0.3s;
 }
 
@@ -2337,6 +2305,13 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
     padding-bottom: 20px;
 }
 
+@media (max-width: 1000px) {
+    .price-card.featured {
+        margin: 0;
+        padding: 36px 32px;
+    }
+}
+
 @media (max-width: 900px) {
     .pricing-cards {
         grid-template-columns: 1fr;
@@ -2345,12 +2320,7 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
     }
 
     .price-card.featured {
-        transform: none;
         order: -1;
-    }
-
-    .price-card.featured:hover {
-        transform: translateY(-6px);
     }
 }
 

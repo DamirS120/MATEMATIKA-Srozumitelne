@@ -84,4 +84,19 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("lang_choice", lang);
     });
   });
+
+  // Volba "osobně / online" v hero (mode-picker) se promítne do výběru
+  // formy výuky v anketě dole na stránce, ať se v ní odráží, co si zákazník vybral.
+  var modeRadios = document.querySelectorAll('input[name="vyuka-forma"]');
+  var formaVyuky = document.getElementById("forma_vyuky");
+  if (modeRadios.length && formaVyuky) {
+    modeRadios.forEach(function (radio) {
+      if (radio.checked) {
+        formaVyuky.value = radio.value;
+      }
+      radio.addEventListener("change", function () {
+        formaVyuky.value = this.value;
+      });
+    });
+  }
 });

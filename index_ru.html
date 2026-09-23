@@ -171,7 +171,7 @@
                 <p>Выбери, что тебе удобнее — оба формата работают с одинаковым вниманием и результатом.</p>
 
                 <label class="mode-option">
-                    <input type="radio" name="vyuka-forma" checked>
+                    <input type="radio" name="vyuka-forma" value="osobne" checked>
                     <span class="mode-icon"><i class="fa-solid fa-location-dot"></i></span>
                     <span class="mode-text">
                         <strong>Очно в Праге</strong>
@@ -180,7 +180,7 @@
                 </label>
 
                 <label class="mode-option">
-                    <input type="radio" name="vyuka-forma">
+                    <input type="radio" name="vyuka-forma" value="online">
                     <span class="mode-icon"><i class="fa-solid fa-laptop"></i></span>
                     <span class="mode-text">
                         <strong>Онлайн откуда угодно</strong>
@@ -191,7 +191,7 @@
 
             <div class="hero-split-btns">
                 <a href="#kontakt" class="btn-primary">ХОЧУ ЗАНЯТИЯ</a>
-                <a href="#sluzby" class="btn-secondary-outline-dark">МОИ УСЛУГИ</a>
+                <a href="#prijimacky-nav" class="btn-secondary-outline-dark">МОИ УСЛУГИ</a>
             </div>
         </div>
 
@@ -459,46 +459,6 @@
 
 
 
-    <section id="sluzby" class="services-section section-alt">
-    <div class="container">
-        <h2 class="section-title">В чём я могу помочь</h2>
-        <div class="services-grid">
-            <a class="service-card" href="cermat_ru.html">
-                <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h3>CERMAT</h3>
-                <p>Полная подготовка к государственным вступительным экзаменам в среднюю школу и гимназии.</p>
-            </a>
-            <a class="service-card" href="cvut_ru.html">
-                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
-                <h3>ČVUT</h3>
-                <p>Математика для технических факультетов. Подготовка к поступлению и первому семестру.</p>
-            </a>
-            <a class="service-card" href="uk_ru.html">
-                <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
-                <h3>UK</h3>
-                <p>Логические тесты и математика для PedF и других факультетов Карлова университета.</p>
-            </a>
-            <a class="service-card" href="scio_ru.html">
-                <div class="icon-box"><i class="fa-solid fa-file-lines"></i></div>
-                <h3>SCIO</h3>
-                <p>Общие учебные предпосылки (OSP), NSZ и поступление в гимназии.</p>
-            </a>
-            <a class="service-card" href="individualni_ru.html">
-                <div class="icon-box"><i class="fa-solid fa-user-group"></i></div>
-                <h3>Индивидуальные занятия</h3>
-                <p>Занятия, ориентированные на твои конкретные потребности и школьную программу.</p>
-            </a>
-            <div class="service-card">
-                <div class="icon-box"><i class="fa-solid fa-pen-to-square"></i></div>
-                <h3>Подготовка к тестам</h3>
-                <p>Интенсивные блоки перед контрольными, выпускными экзаменами или сессией.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
 <section class="container partner-section">
     <h2 class="section-title">Сотрудничаю с лучшими</h2>
     <div class="partner-grid">
@@ -564,6 +524,14 @@
                 <select id="jazyk" name="jazyk">
                     <option value="RU">Русский</option>
                     <option value="CZ">Чешский</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="forma_vyuky">Какой формат занятий тебе удобнее?</label>
+                <select id="forma_vyuky" name="forma_vyuky">
+                    <option value="osobne">Очно в Праге</option>
+                    <option value="online">Онлайн откуда угодно</option>
                 </select>
             </div>
 

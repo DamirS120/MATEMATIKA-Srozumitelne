@@ -168,7 +168,7 @@
                 <p>Vyber si, co ti vyhovuje víc – oba formáty fungují se stejnou péčí a výsledky.</p>
 
                 <label class="mode-option">
-                    <input type="radio" name="vyuka-forma" checked>
+                    <input type="radio" name="vyuka-forma" value="osobne" checked>
                     <span class="mode-icon"><i class="fa-solid fa-location-dot"></i></span>
                     <span class="mode-text">
                         <strong>Osobně v Praze</strong>
@@ -177,7 +177,7 @@
                 </label>
 
                 <label class="mode-option">
-                    <input type="radio" name="vyuka-forma">
+                    <input type="radio" name="vyuka-forma" value="online">
                     <span class="mode-icon"><i class="fa-solid fa-laptop"></i></span>
                     <span class="mode-text">
                         <strong>Online odkudkoliv</strong>
@@ -188,7 +188,7 @@
 
             <div class="hero-split-btns">
                 <a href="#kontakt" class="btn-primary">CHCI DOUČOVÁNÍ</a>
-                <a href="#sluzby" class="btn-secondary-outline-dark">MOJE SLUŽBY</a>
+                <a href="#prijimacky-nav" class="btn-secondary-outline-dark">MOJE SLUŽBY</a>
             </div>
         </div>
 
@@ -456,46 +456,6 @@
 
 
 
-    <section id="sluzby" class="services-section section-alt">
-    <div class="container">
-        <h2 class="section-title">S čím ti pomohu</h2>
-        <div class="services-grid">
-            <a class="service-card" href="cermat.html">
-                <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h3>CERMAT</h3>
-                <p>Kompletní příprava na státní přijímací zkoušky na SŠ a víceletá gymnázia.</p>
-            </a>
-            <a class="service-card" href="cvut.html">
-                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
-                <h3>ČVUT</h3>
-                <p>Matematika pro technické fakulty. Příprava na přijímačky i první semestr.</p>
-            </a>
-            <a class="service-card" href="uk.html">
-                <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
-                <h3>UK</h3>
-                <p>Logické testy a matematika pro PedF a další fakulty Univerzity Karlovy.</p>
-            </a>
-            <a class="service-card" href="scio.html">
-                <div class="icon-box"><i class="fa-solid fa-file-lines"></i></div>
-                <h3>SCIO</h3>
-                <p>Obecné studijní předpoklady, NSZ i přijímačky na gymnázia.</p>
-            </a>
-            <a class="service-card" href="individualni.html">
-                <div class="icon-box"><i class="fa-solid fa-user-group"></i></div>
-                <h3>Osobní doučování</h3>
-                <p>Individuální lekce zaměřené na tvé konkrétní potřeby a školní látku.</p>
-            </a>
-            <div class="service-card">
-                <div class="icon-box"><i class="fa-solid fa-pen-to-square"></i></div>
-                <h3>Příprava na testy</h3>
-                <p>Intenzivní bloky před čtvrtletkami, maturitou nebo zkouškovým obdobím.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
 <section class="container partner-section">
     <h2 class="section-title">Spolupracuji s nejlepšími</h2>
     <div class="partner-grid">
@@ -561,6 +521,14 @@
                 <select id="jazyk" name="jazyk">
                     <option value="CZ">Čeština</option>
                     <option value="RU">Ruština</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="forma_vyuky">Jaká forma výuky ti vyhovuje?</label>
+                <select id="forma_vyuky" name="forma_vyuky">
+                    <option value="osobne">Osobně v Praze</option>
+                    <option value="online">Online odkudkoliv</option>
                 </select>
             </div>
 
