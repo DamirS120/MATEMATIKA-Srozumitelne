@@ -2198,6 +2198,10 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 }
 
 /* Karusel s přehledem nabídky v hero (homepage) */
+.hero-carousel-wrap {
+    position: relative;
+}
+
 #hero-carousel {
     position: relative;
     border-radius: 28px;
@@ -2300,7 +2304,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     right: 16px;
 }
 
-#hero-carousel .carousel-dots {
+.hero-carousel-wrap .carousel-dots {
     position: absolute;
     bottom: 18px;
     left: 50%;
@@ -2593,6 +2597,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         grid-template-columns: 1fr;
     }
 
+    .hero-carousel-wrap,
     #hero-carousel,
     .hero-visual {
         aspect-ratio: 16 / 10;
@@ -2622,6 +2627,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         order: 1;
     }
 
+    .hero-carousel-wrap,
     #hero-carousel,
     .hero-visual-frame,
     .hero-visual {
@@ -2659,6 +2665,17 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 
     #hero-carousel .carousel-arrow {
         display: none;
+    }
+
+    /* Tečky jsou teď mimo scrollovaný #hero-carousel (viz .hero-carousel-wrap
+       v HTML), takže se scrollem neodjíždí - jen je na mobilu zvětšíme. */
+    .hero-carousel-wrap .carousel-dots .dot {
+        width: 11px;
+        height: 11px;
+    }
+
+    .hero-carousel-wrap .carousel-dots .dot.active {
+        width: 32px;
     }
 }
 
@@ -3225,5 +3242,33 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
     .page-cermat .hero-split,
     .page-uk .hero-split {
         padding: 90px 0 40px;
+    }
+
+    /* .hero-left{display:contents} vytáhne nadpisy jako samostatné položky
+       grid kontejneru, který má gap: 60px pro desktopové dva sloupce - na
+       mobilu to mezi nadpisem, textem a obrázkem dělalo obří mezery. Text
+       navíc na mobilu schováváme (stejně jako u SCIO/individuálního
+       doučování), ať se nadpis, tlačítko a obrázek vejdou hned na obrazovku. */
+    .page-cvut .hero-split .hero-split-grid,
+    .page-cermat .hero-split .hero-split-grid,
+    .page-uk .hero-split .hero-split-grid {
+        gap: 14px;
+    }
+
+    .page-cvut .hero-split .hero-eyebrow,
+    .page-cermat .hero-split .hero-eyebrow {
+        margin-bottom: 10px;
+    }
+
+    .page-cvut .hero-split .hero-split-title,
+    .page-cermat .hero-split .hero-split-title,
+    .page-uk .hero-split .hero-split-title {
+        margin-bottom: 6px;
+    }
+
+    .page-cvut .hero-split .hero-split-text,
+    .page-cermat .hero-split .hero-split-text,
+    .page-uk .hero-split .hero-split-text {
+        display: none;
     }
 }

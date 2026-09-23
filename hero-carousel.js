@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!carousel) return;
 
   const slides = carousel.querySelectorAll(".carousel-slide");
-  const dots = carousel.querySelectorAll(".dot");
+  const dotsScope = carousel.closest(".hero-carousel-wrap") || carousel;
+  const dots = dotsScope.querySelectorAll(".dot");
   const isMobile = window.matchMedia("(max-width: 1024px)").matches;
   let current = 0;
   let timer;
