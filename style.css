@@ -1,3 +1,18 @@
+/* ================================================================
+OBSAH SOUBORU
+1. ZÁKLADY, TYPOGRAFIE A BAREVNÁ TÉMATA STRÁNEK
+2. NAVIGACE A HAMBURGER MENU
+3. SDÍLENÉ KOMPONENTY (karty, FAQ, formulář, patička, ...)
+4. RESPONZIVITA - OBECNÁ (mobily a tablety pro sdílené komponenty)
+5. HOMEPAGE: HERO-SPLIT A KARUSEL
+6. HOMEPAGE: DALŠÍ SEKCE (ceník, milníky, "nechápu proč", tmavá sekce)
+7. PODSTRÁNKY PŘIJÍMAČEK: PLNOOBRAZOVKOVÉ HERO (ČVUT, CERMAT, UK)
+   + mobilní doladění hero sekcí na jednotlivých stránkách
+================================================================ */
+
+/* ================================================================
+1. ZÁKLADY, TYPOGRAFIE A BAREVNÁ TÉMATA STRÁNEK
+================================================================ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -149,47 +164,9 @@ h3 {
     --accent: #f98a0c;
 }
 
-.page-index .hero {
-    background-image: linear-gradient(rgba(30, 58, 138, 0.75), rgba(15, 23, 42, 0.85)),
-        url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070');
-}
-
-.page-cermat .hero {
-    background-image: linear-gradient(rgba(86, 66, 215, 0.75), rgba(15, 23, 42, 0.85)),
-        url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070');
-}
-
-.page-cvut .hero {
-    background-image: linear-gradient(rgba(39, 84, 210, 0.75), rgba(15, 23, 42, 0.85)),
-        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070');
-}
-
-.page-uk .hero {
-    background-image: linear-gradient(rgba(153, 27, 27, 0.75), rgba(15, 23, 42, 0.85)),
-        url('https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1986');
-}
-
-.page-omne .hero {
-    background-image: linear-gradient(rgba(30, 58, 138, 0.75), rgba(15, 23, 42, 0.85)),
-        url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070');
-}
-
-.page-individual .hero {
-    background-image: linear-gradient(rgba(117, 197, 141, 0.75), rgba(15, 23, 42, 0.85)),
-        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070');
-}
-
-.page-spoluprace .hero {
-    background-image: linear-gradient(rgba(228, 59, 96, 0.75), rgba(15, 23, 42, 0.85)),
-        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071');
-}
-
-.page-scio .hero {
-    background-image: linear-gradient(rgba(180, 83, 9, 0.75), rgba(15, 23, 42, 0.85)),
-        url('images/scio-hero.jpg');
-}
-
-/* ---  NAVIGACE & HAMBURGER MENU --- */
+/* ================================================================
+2. NAVIGACE A HAMBURGER MENU
+================================================================ */
 .navbar {
     background: white;
     padding: 15px 0;
@@ -294,67 +271,7 @@ h3 {
 }
 
 
-/* --- HERO SEKCE --- */
-.hero {
-    min-height: 60vh;
-    flex-direction: column;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 100px 20px;
-    overflow: hidden;
-    z-index: 2;
-    margin-bottom: 40px;
-}
-
-.hero .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.hero h1,
-.hero h2 {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-}
-
-.hero .highlight {
-    color: #fca311;
-    display: block;
-}
-
-.hero p {
-    font-size: 1.3rem;
-    opacity: 0.9;
-    margin-bottom: 40px;
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.7);
-    font-weight: 500;
-}
-
 /* Tlačítka v Headeru */
-.hero-btns {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
 .btn-primary {
     background-color: var(--accent);
     color: white;
@@ -365,29 +282,17 @@ h3 {
     transition: 0.3s;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: white;
-    padding: 18px 36px;
-    border-radius: 50px;
-    font-weight: 700;
-    text-decoration: none;
-    border: 2px solid white;
-    transition: 0.3s;
-}
-
 .btn-primary:hover {
     transform: translateY(-3px);
     filter: brightness(0.88);
 }
 
-.btn-secondary:hover {
-    background: white;
-    color: #1e3a8a;
-}
 
+/* ================================================================
+3. SDÍLENÉ KOMPONENTY (karty, FAQ, formulář, patička, ...)
+================================================================ */
 
-/* ---  ROZCESTNÍK SLUŽEB --- */
+/* --- ROZCESTNÍK SLUŽEB --- */
 
 .section-title {
     text-align: center;
@@ -447,42 +352,6 @@ h3 {
     color: var(--accent);
     font-weight: 700;
     font-size: 0.9rem;
-}
-
-/* "Máte zájem o spolupráci?" - zvýrazněná CTA karta */
-.collab-cta {
-    background: var(--bg-light);
-    border-radius: 24px;
-    padding: 50px 40px;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.collab-cta h2 {
-    padding-bottom: 0;
-    margin-bottom: 15px;
-}
-
-.collab-cta p {
-    color: var(--text-light);
-    margin-bottom: 25px;
-}
-
-.collab-cta-btn {
-    display: inline-block;
-    background: var(--primary);
-    color: #fff !important;
-    font-weight: 700;
-    padding: 14px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.collab-cta-btn:hover {
-    background: var(--accent);
-    transform: translateY(-3px);
 }
 
 .service-card {
@@ -634,78 +503,6 @@ h3 {
     }
 }
 
-/* Stará šablona "Vyber si své přijímačky" (popis vlevo, karty vpravo jako carousel) - v HTML se už nepoužívá */
-.prijimacky-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
-    align-items: center;
-}
-
-.prijimacky-intro {
-    background: var(--bg-light);
-    border-radius: 28px;
-    padding: 45px 38px;
-}
-
-.prijimacky-intro h3 {
-    text-align: left;
-    padding-bottom: 0;
-    margin-bottom: 14px;
-    font-size: 1.7rem;
-}
-
-.prijimacky-intro>p {
-    color: var(--text-light);
-    margin-bottom: 30px;
-}
-
-.mode-list {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.mode-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    position: relative;
-    padding-left: 24px;
-}
-
-.mode-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6), 0 0 0 4px var(--accent);
-}
-
-.mode-item i {
-    flex-shrink: 0;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: #ffffff;
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.mode-item strong {
-    display: block;
-    color: var(--primary);
-    margin-bottom: 2px;
-}
-
 /* Nadpis zarovnaný doleva (varianta section-title pro dvousloupcové sekce) */
 .section-title-left {
     text-align: left;
@@ -714,33 +511,6 @@ h3 {
 .section-title-left::after {
     left: 0;
     transform: none;
-}
-
-/* --- Feature boxy v úvodním "O mně" teaseru --- */
-.about-teaser-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin: 26px 0 28px;
-}
-
-.about-teaser-item {
-    background: var(--bg-light);
-    border-left: 4px solid var(--accent);
-    border-radius: 0 12px 12px 0;
-    padding: 16px 20px;
-}
-
-.about-teaser-item strong {
-    display: block;
-    color: var(--primary);
-    margin-bottom: 4px;
-}
-
-.about-teaser-item p {
-    margin: 0;
-    color: var(--text-light);
-    font-size: 0.95rem;
 }
 
 /* --- FAQ (rozbalovací otázky) --- */
@@ -792,80 +562,6 @@ h3 {
     line-height: 1.6;
 }
 
-.prijimacky-carousel {
-    position: relative;
-    min-width: 0;
-}
-
-.prijimacky-track {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding: 4px 4px 12px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.prijimacky-track::-webkit-scrollbar {
-    display: none;
-}
-
-.prijimacky-track .card {
-    position: relative;
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    height: clamp(420px, 70vh, 620px);
-    justify-content: flex-end;
-}
-
-.prijimacky-track .card-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.prijimacky-track .card-body {
-    position: relative;
-    z-index: 2;
-    margin-top: 0;
-    background: linear-gradient(to top, rgba(10, 15, 30, 0.88) 0%, rgba(10, 15, 30, 0.55) 55%, rgba(10, 15, 30, 0) 100%);
-    padding: 60px 35px 30px;
-}
-
-.prijimacky-track .card-body h3,
-.prijimacky-track .card-body p {
-    color: #ffffff !important;
-}
-
-.prijimacky-track .card-body p {
-    opacity: 0.9;
-}
-
-.prijimacky-track .card-logo {
-    position: absolute;
-    top: 22px;
-    left: 22px;
-    z-index: 3;
-    width: 50px;
-    height: 50px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-}
-
-.prijimacky-track .card-logo img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-}
-
 .carousel-arrow {
     position: absolute;
     top: 40%;
@@ -892,14 +588,6 @@ h3 {
     color: #ffffff;
 }
 
-.carousel-prev {
-    left: -22px;
-}
-
-.carousel-next {
-    right: -22px;
-}
-
 .carousel-dots {
     display: flex;
     justify-content: center;
@@ -924,25 +612,6 @@ h3 {
     border-radius: 5px;
 }
 
-@media (max-width: 1024px) {
-    .prijimacky-split {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .prijimacky-intro {
-        padding: 35px 30px;
-    }
-
-    .carousel-prev {
-        left: 4px;
-    }
-
-    .carousel-next {
-        right: 4px;
-    }
-}
-
 .card {
     background: white;
     border-radius: 20px;
@@ -963,16 +632,6 @@ h3 {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    display: block;
-}
-
-/* Obrázek u širokých karet přes celou šířku kontejneru (5.-7. třída, 9. třída, Maturita) */
-.card-img-wide {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    object-fit: cover;
-    border-radius: 16px;
     display: block;
 }
 
@@ -1112,15 +771,6 @@ h3 {
     margin-bottom: 30px;
 }
 
-.experience-box {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 25px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
 .mission-statement {
     border-left: 5px solid var(--accent);
     padding: 20px 30px;
@@ -1142,131 +792,6 @@ h3 {
     padding: 30px 0 10px;
 }
 
-.pricing-card {
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 24px;
-    padding: 40px 32px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-}
-
-.pricing-card-featured {
-    background: var(--bg-light);
-    border: 2px solid var(--primary);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
-    z-index: 2;
-}
-
-.pricing-card-tag {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: var(--text-light);
-}
-
-.pricing-card-featured .pricing-card-tag {
-    color: var(--primary);
-}
-
-.pricing-card-price {
-    font-family: var(--font-display);
-    font-size: 2.4rem;
-    font-weight: 800;
-    color: var(--primary);
-    margin: 10px 0 2px;
-    line-height: 1;
-}
-
-.pricing-card-price span {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-light);
-}
-
-.pricing-card-sub {
-    color: var(--text-light);
-    margin-bottom: 26px;
-}
-
-.pricing-card-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    text-align: left;
-    flex: 1;
-}
-
-.pricing-card-list li {
-    position: relative;
-    padding-left: 26px;
-    color: #334155;
-    font-size: 0.95rem;
-}
-
-.pricing-card-list li::before {
-    content: '\2713';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--accent);
-    font-weight: 700;
-}
-
-.pricing-card-btn {
-    display: block;
-    text-align: center;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: 700;
-    border: 2px solid var(--primary);
-    color: var(--primary) !important;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.pricing-card-btn:hover {
-    background: var(--primary);
-    color: #ffffff !important;
-}
-
-.pricing-card-btn-filled {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #ffffff !important;
-}
-
-.pricing-card-btn-filled:hover {
-    filter: brightness(1.08);
-    background: var(--accent);
-    color: #ffffff !important;
-}
-
-.pricing-note-text {
-    text-align: center;
-    color: var(--text-light);
-    margin-top: 30px;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 900px) {
-    .pricing-cards {
-        grid-template-columns: 1fr;
-        max-width: 420px;
-        margin: 0 auto;
-    }
-
-    .pricing-card-featured {
-        order: -1;
-        transform: none;
-    }
-}
 
 /* --- MINI ANKETA (rychlý zájem o konzultaci na konci podstránek) --- */
 .mini-poll {
@@ -1579,23 +1104,6 @@ h3 {
 
 
 
-.partner-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.scroll-box p {
-    margin-bottom: 15px;
-    line-height: 1.7;
-}
-
-.scroll-box p:last-child {
-    margin-bottom: 0;
-}
-
 .card-fit {
     border-top: 5px solid #0059a3;
 }
@@ -1656,22 +1164,6 @@ h3 {
     color: #27ae60;
 }
 
-.card-scio-osp {
-    border-top: 6px solid #2563eb !important;
-}
-
-.card-scio-osp h3 {
-    color: #2563eb;
-}
-
-.card-scio-nsz {
-    border-top: 6px solid #7c3aed !important;
-}
-
-.card-scio-nsz h3 {
-    color: #7c3aed;
-}
-
 .btn-detail {
     display: inline-block;
     margin-top: 20px;
@@ -1711,14 +1203,6 @@ h3 {
 
 .btn-prf {
     background: #27ae60;
-}
-
-.btn-osp {
-    background: #2563eb;
-}
-
-.btn-nsz {
-    background: #7c3aed;
 }
 
 .btn-detail:hover {
@@ -1806,7 +1290,9 @@ h3 {
     }
 }
 
-/* ---  RESPONZIVITA (MOBILY A TABLETY) --- */
+/* ================================================================
+4. RESPONZIVITA - OBECNÁ (mobily a tablety pro sdílené komponenty)
+================================================================ */
 
 @media (max-width: 600px) {
     main {
@@ -1820,11 +1306,6 @@ h3 {
 
     .container {
         padding: 0 20px;
-    }
-
-    .page-index .hero p,
-    .page-index .btn-secondary {
-        display: none;
     }
 
     .services-grid {
@@ -1852,11 +1333,6 @@ h3 {
         grid-template-columns: 1fr;
     }
 
-    .hero-btns {
-        flex-direction: column;
-        padding-bottom: 15px;
-    }
-
     .milestone-grid {
         grid-template-columns: 1fr;
     }
@@ -1880,10 +1356,6 @@ h3 {
 }
 
 @media (max-width: 1024px) {
-    .hero {
-        background-attachment: scroll;
-    }
-
     .menu-icon {
         display: block;
     }
@@ -1947,10 +1419,6 @@ h3 {
 
     .dropdown:hover .dropdown-content {
         display: none;
-    }
-
-    .hero h1 {
-        font-size: clamp(2.2rem, 6vw, 3.2rem);
     }
 
     .about-hero {
@@ -2049,6 +1517,7 @@ ZVĚTŠENÍ IKONEK PRO VELKÁ ZAŘÍZENÍ (Desktop)
 }
 
 /* ============================================================
+5. HOMEPAGE: HERO-SPLIT A KARUSEL
 HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 ============================================================ */
 .hero-split {
@@ -2728,6 +2197,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 }
 
 /* ============================================================
+6. HOMEPAGE: DALŠÍ SEKCE (ceník, milníky, "nechápu proč", tmavá sekce)
 KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
 ============================================================ */
 .step-item-card {
@@ -3174,6 +2644,8 @@ JEDNOTNÉ SVISLÉ ODSAZENÍ SEKCÍ NA HOMEPAGE
 }
 
 /* ============================================================
+7. PODSTRÁNKY PŘIJÍMAČEK: PLNOOBRAZOVKOVÉ HERO (ČVUT, CERMAT, UK)
+   + mobilní doladění hero sekcí na jednotlivých stránkách
 PLNOOBRAZOVKOVÉ HERO S TABULOVÝM POZADÍM (ČVUT, CERMAT, UK)
 Stejný "tabulový" jazyk jako u SCIO a individuálního doučování
 (tmavé pozadí s jemnou mřížkou), ale se skutečnou fotkou místo
