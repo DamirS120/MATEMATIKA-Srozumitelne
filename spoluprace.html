@@ -69,11 +69,48 @@
 
     <!-- 1) HERO -->
     <section class="sp-hero">
-        <div class="container sp-hero-text">
-            <p class="sp-kicker">Spolupráce</p>
-            <h1>Spolupracujeme s odborníky</h1>
-            <p class="sp-hero-sub">Vzdělání, které dává smysl. Připravujeme děti na zkoušky a pomáháme jim dosáhnout jejich cílů.</p>
-            <a href="mailto:rimad.1203@seznam.cz?subject=Spolupr%C3%A1ce" class="sp-btn">Chci spolupracovat</a>
+        <div class="container sp-hero-grid">
+
+            <div class="sp-hero-text">
+                <p class="sp-kicker">Spolupráce</p>
+                <h1>Matematika dává větší smysl, když na ní pracujeme společně.</h1>
+                <a href="mailto:rimad.1203@seznam.cz?subject=Spolupr%C3%A1ce" class="sp-btn">Chci spolupracovat</a>
+            </div>
+
+            <!-- Graf: já uprostřed, partneři a volné místo pro vás. Uzly vedou na sekce níže. -->
+            <div class="sp-graph" role="group" aria-label="Schéma spolupráce: já, EduJoy, NEWLIFE a volné místo pro váš nápad">
+                <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                    <g aria-hidden="true">
+                        <path class="sp-edge sp-edge-blue sp-edge-draw sp-e1" pathLength="1" d="M195 175 L70 72"/>
+                        <path class="sp-edge sp-edge-pink sp-edge-draw sp-e2" pathLength="1" d="M195 175 L335 88"/>
+                        <path class="sp-edge sp-edge-open" d="M195 175 L285 310"/>
+                    </g>
+
+                    <g class="sp-node sp-node-me" aria-hidden="true">
+                        <circle class="sp-fill" cx="195" cy="175" r="56"/>
+                        <text x="195" y="175" dy="0.35em">já</text>
+                    </g>
+
+                    <a class="sp-node sp-node-blue" href="#edujoy" aria-label="EduJoy – přejít na partnera">
+                        <circle class="sp-fill" cx="70" cy="72" r="50"/>
+                        <circle class="sp-ring" cx="70" cy="72" r="57"/>
+                        <text x="70" y="72" dy="0.35em">EduJoy</text>
+                    </a>
+
+                    <a class="sp-node sp-node-pink" href="#newlife" aria-label="NEWLIFE Doučování – přejít na partnera">
+                        <circle class="sp-fill" cx="335" cy="88" r="52"/>
+                        <circle class="sp-ring" cx="335" cy="88" r="59"/>
+                        <text x="335" y="88" dy="0.35em">NEWLIFE</text>
+                    </a>
+
+                    <a class="sp-node sp-node-open" href="#napsat" aria-label="Volné místo pro váš nápad – napsat mi">
+                        <circle class="sp-fill" cx="285" cy="310" r="44"/>
+                        <circle class="sp-ring" cx="285" cy="310" r="51"/>
+                        <text x="285" y="310" dy="0.35em">vy?</text>
+                    </a>
+                </svg>
+            </div>
+
         </div>
     </section>
 
@@ -115,42 +152,32 @@
             <div class="sp-chain">
 
                 <article class="sp-partner" id="edujoy">
-                    <div class="sp-partner-main">
-                        <span class="sp-partner-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
-                        <h3>EduJoy</h3>
-                        <p class="sp-partner-text">Vzdělávací platforma, která propojuje hravost s matematickou přesností. Společně vyvíjíme interaktivní materiály pro základní školy a pořádáme letní vzdělávací kempy.</p>
-                        <a class="sp-more" href="https://edujoy.cz" target="_blank" rel="noopener noreferrer" aria-label="Více o projektu EduJoy (otevře se v novém okně)">Více o projektu</a>
-
-                        <ul class="sp-partner-features">
-                            <li><i class="fa-solid fa-lightbulb"></i><span>Moderní metodiky</span></li>
-                            <li><i class="fa-solid fa-users"></i><span>Zajímavé kroužky</span></li>
-                            <li><i class="fa-solid fa-star"></i><span>Rozvoj potenciálu</span></li>
-                        </ul>
+                    <div class="sp-partner-head">
+                        <div>
+                            <h3>EduJoy</h3>
+                            <p class="sp-partner-role">Vzdělávání a doučování</p>
+                        </div>
+                        <div class="sp-logo" aria-hidden="true">EJ</div>
                     </div>
-
-                    <div class="sp-partner-photo">
-                        <img src="images/EduJoy.jpg" alt="EduJoy - interaktivní vzdělávání pro děti">
+                    <p class="sp-partner-text">Vzdělávací platforma, která propojuje hravost s matematickou přesností. Společně vyvíjíme interaktivní materiály pro základní školy a pořádáme letní vzdělávací kempy.</p>
+                    <div class="sp-partner-foot">
+                        <a class="sp-more" href="https://edujoy.cz" target="_blank" rel="noopener noreferrer" aria-label="Více o projektu EduJoy (otevře se v novém okně)">Více o projektu</a>
                     </div>
                 </article>
 
+                <div class="sp-link" aria-hidden="true"></div>
+
                 <article class="sp-partner sp-partner-pink" id="newlife">
-                    <div class="sp-partner-main">
-                        <span class="sp-partner-icon" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
-                        <h3>NEWLIFE</h3>
-                        <p class="sp-partner-text">Agentura, která pomáhá studentům v krizových situacích: opravné zkoušky, hrozící propadnutí nebo náročné maturity. Působím tu jako externí lektor technických oborů a matematiky pro vysoké školy.</p>
-                        <a class="sp-more" href="https://newlife-doucovani.cz" target="_blank" rel="noopener noreferrer" aria-label="Více o projektu NEWLIFE Doučování (otevře se v novém okně)">Více o projektu</a>
-
-                        <ul class="sp-partner-features">
-                            <li><i class="fa-solid fa-bullseye"></i><span>Příprava na zkoušky</span></li>
-                            <li><i class="fa-solid fa-book-open"></i><span>Individuální přístup</span></li>
-                            <li><i class="fa-solid fa-chart-column"></i><span>Zkušení lektoři</span></li>
-                            <li><i class="fa-solid fa-circle-check"></i><span>Výsledek a jistota</span></li>
-                        </ul>
+                    <div class="sp-partner-head">
+                        <div>
+                            <h3>NEWLIFE Doučování</h3>
+                            <p class="sp-partner-role">Individuální vzdělávání</p>
+                        </div>
+                        <div class="sp-logo" aria-hidden="true">NL</div>
                     </div>
-
-                    <div class="sp-partner-photo">
-                        <img src="images/newlife.jpg" alt="NEWLIFE Doučování - příprava na zkoušky na poslední chvíli">
-                        <p class="sp-partner-quote">Příprava na<br>důležité zkoušky</p>
+                    <p class="sp-partner-text">Agentura, která pomáhá studentům v krizových situacích: opravné zkoušky, hrozící propadnutí nebo náročné maturity. Působím tu jako externí lektor technických oborů a matematiky pro vysoké školy.</p>
+                    <div class="sp-partner-foot">
+                        <a class="sp-more" href="https://newlife-doucovani.cz" target="_blank" rel="noopener noreferrer" aria-label="Více o projektu NEWLIFE Doučování (otevře se v novém okně)">Více o projektu</a>
                     </div>
                 </article>
 

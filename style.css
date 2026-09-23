@@ -307,51 +307,171 @@ h3 {
     padding: 20px 0;
 }
 
-/* "Spolupracuji s nejlepšími" - karty ve stylu citace */
+/* "Spolupracuji s nejlepšími" - karta s textem/funkcemi vlevo, fotkou vpravo */
 .partner-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 30px;
     padding: 20px 0;
 }
 
 .partner-card {
-    display: block;
-    text-decoration: none;
-    background: var(--bg-light);
-    border-left: 5px solid var(--accent);
-    border-radius: 0 20px 20px 0;
-    padding: 30px 35px;
-    transition: 0.3s;
+    --partner: var(--primary);
+    --partner-tint: rgba(30, 58, 138, 0.08);
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: stretch;
+    gap: 40px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 10px 30px rgba(30, 41, 59, 0.05);
 }
 
-.partner-card:hover {
-    transform: translateX(6px);
+.partner-card-accent {
+    --partner: var(--accent);
+    --partner-tint: rgba(59, 130, 246, 0.1);
 }
 
-.partner-card i {
-    font-size: 1.8rem;
-    color: var(--accent);
-    margin-bottom: 12px;
-    display: block;
+.partner-card-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.partner-card-icon {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: var(--partner-tint);
+    color: var(--partner);
+    font-size: 1.5rem;
 }
 
 .partner-card h3 {
     font-family: var(--font-display);
     color: var(--primary);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     padding-bottom: 0;
 }
 
 .partner-card p {
     color: var(--text-dark);
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .partner-card-link {
-    color: var(--accent);
+    align-self: flex-start;
+    color: var(--partner);
     font-weight: 700;
     font-size: 0.9rem;
+}
+
+.partner-card-features {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 28px;
+    margin: 28px 0 0;
+    padding: 22px 0 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.partner-card-features li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 140px;
+}
+
+.partner-card-features i {
+    color: var(--partner);
+    font-size: 1.2rem;
+}
+
+.partner-card-features span {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.88rem;
+    line-height: 1.3;
+}
+
+/* Fotka partnera: zaoblený rám + barevná skvrna vykukující za rohem */
+.partner-card-photo {
+    position: relative;
+    min-height: 220px;
+}
+
+.partner-card-photo::before {
+    content: "";
+    position: absolute;
+    inset: -10px -10px auto auto;
+    width: 65%;
+    height: 55%;
+    background: var(--partner-tint);
+    border-radius: 32px;
+    z-index: 0;
+}
+
+.partner-card-photo img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(30, 41, 59, 0.15);
+}
+
+.partner-card-quote {
+    position: absolute;
+    z-index: 2;
+    right: 14px;
+    bottom: 14px;
+    max-width: 12em;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 14px 14px 2px 14px;
+    box-shadow: 0 6px 16px rgba(30, 41, 59, 0.15);
+    color: var(--partner);
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: right;
+    transform: rotate(-2deg);
+}
+
+@media (max-width: 860px) {
+    .partner-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .partner-card-photo {
+        min-height: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    .partner-card {
+        padding: 24px 22px;
+    }
+
+    .partner-card-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.2rem;
+    }
+
+    .partner-card-photo {
+        min-height: 200px;
+    }
 }
 
 .focus-list li i {
@@ -1609,7 +1729,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     position: relative;
     border-radius: 28px;
     overflow: hidden;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 2 / 3;
     box-shadow: 0 25px 50px rgba(30, 58, 138, 0.18);
 }
 
@@ -2001,10 +2121,13 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         grid-template-columns: 1fr;
     }
 
-    .hero-carousel-wrap,
-    #hero-carousel,
     .hero-visual {
         aspect-ratio: 16 / 10;
+    }
+
+    .hero-carousel-wrap,
+    #hero-carousel {
+        aspect-ratio: 4 / 3;
     }
 
     .hero-split-title,
