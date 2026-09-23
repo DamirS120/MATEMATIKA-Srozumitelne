@@ -2634,6 +2634,14 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         order: 2;
     }
 
+    /* .hero-carousel-wrap je teď přímou grid položkou (viz display:contents
+       výše) a grid položky mají defaultně min-width:auto - bez tohoto by se
+       kvůli scrollovatelnému karuselu uvnitř roztáhla přes celou šířku
+       obsahu (2400px+) a rozbila by celou stránku na mobilu. */
+    .hero-carousel-wrap {
+        min-width: 0;
+    }
+
     .mode-picker,
     .hero-split-btns,
     .hero-facts,
@@ -3248,27 +3256,37 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
        grid kontejneru, který má gap: 60px pro desktopové dva sloupce - na
        mobilu to mezi nadpisem, textem a obrázkem dělalo obří mezery. Text
        navíc na mobilu schováváme (stejně jako u SCIO/individuálního
-       doučování), ať se nadpis, tlačítko a obrázek vejdou hned na obrazovku. */
+       doučování), ať se nadpis, tlačítko a obrázek vejdou hned na obrazovku.
+       Stejný problém měl i index (karusel) a omne (foto s citátem), tak
+       jsou zařazené do stejného pravidla. */
     .page-cvut .hero-split .hero-split-grid,
     .page-cermat .hero-split .hero-split-grid,
-    .page-uk .hero-split .hero-split-grid {
+    .page-uk .hero-split .hero-split-grid,
+    .page-index .hero-split .hero-split-grid,
+    .page-omne .hero-split .hero-split-grid {
         gap: 14px;
     }
 
     .page-cvut .hero-split .hero-eyebrow,
-    .page-cermat .hero-split .hero-eyebrow {
+    .page-cermat .hero-split .hero-eyebrow,
+    .page-index .hero-split .hero-eyebrow,
+    .page-omne .hero-split .hero-eyebrow {
         margin-bottom: 10px;
     }
 
     .page-cvut .hero-split .hero-split-title,
     .page-cermat .hero-split .hero-split-title,
-    .page-uk .hero-split .hero-split-title {
+    .page-uk .hero-split .hero-split-title,
+    .page-index .hero-split .hero-split-title,
+    .page-omne .hero-split .hero-split-title {
         margin-bottom: 6px;
     }
 
     .page-cvut .hero-split .hero-split-text,
     .page-cermat .hero-split .hero-split-text,
-    .page-uk .hero-split .hero-split-text {
+    .page-uk .hero-split .hero-split-text,
+    .page-index .hero-split .hero-split-text,
+    .page-omne .hero-split .hero-split-text {
         display: none;
     }
 }
