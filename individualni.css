@@ -875,9 +875,21 @@ body.page-individual .main-footer {
 }
 
 @media (max-width: 600px) {
+    /* Dost místa na to, aby nadpis nezajížděl pod fixní navigaci, a ať se
+       na mobilu vejde nadpis + tlačítko + obrázek na jednu obrazovku bez
+       scrollování - popisný text a checklist proto na mobilu schováme. */
+    .ix-hero {
+        padding-top: 100px;
+        padding-bottom: 32px;
+    }
+
+    .ix-hero-grid {
+        gap: 24px;
+    }
+
+    .ix-lead,
     .ix-trust {
-        flex-direction: column;
-        gap: 10px;
+        display: none;
     }
 
     .ix-pillar,

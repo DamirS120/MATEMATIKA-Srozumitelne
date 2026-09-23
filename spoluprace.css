@@ -575,6 +575,15 @@ body.page-spoluprace main.sp-main {
 }
 
 @media (max-width: 600px) {
+    /* Dost místa na to, aby nadpis nezajížděl pod fixní navigaci */
+    .sp-hero {
+        padding-top: 100px;
+    }
+
+    .sp-hero-grid {
+        gap: 24px;
+    }
+
     .sp-create {
         grid-template-columns: 1fr;
     }

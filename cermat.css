@@ -134,40 +134,34 @@
     display: block;
 }
 
-.cm-guide-side {
+.cm-guide-boost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
     background: #ffffff;
     border-radius: 18px;
-    padding: 22px;
+    padding: 26px 24px;
 }
 
-.cm-guide-side-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
+.cm-guide-boost i {
     color: var(--gc);
-    margin: 0 0 14px;
+    font-size: 1.3rem;
+    opacity: 0.5;
 }
 
-.cm-guide-side ul {
-    list-style: none;
-    display: grid;
-    gap: 10px;
+.cm-guide-boost p {
     margin: 0;
-    padding: 0;
-}
-
-.cm-guide-side li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     color: var(--text-dark);
-    font-size: 0.95rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.5;
 }
 
-.cm-guide-side li i {
+.cm-guide-boost em {
     color: var(--gc);
-    font-size: 0.8rem;
+    font-style: normal;
 }
 
 .cm-guide-cta {

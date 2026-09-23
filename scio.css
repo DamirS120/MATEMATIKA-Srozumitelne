@@ -915,9 +915,21 @@ body.page-scio .main-footer {
 }
 
 @media (max-width: 600px) {
+    /* Dost místa na to, aby nadpis nezajížděl pod fixní navigaci, a ať se
+       na mobilu vejde nadpis + tlačítko + obrázek na jednu obrazovku bez
+       scrollování - popisný text a checklist proto na mobilu schováme. */
+    .sc-hero {
+        padding-top: 100px;
+        padding-bottom: 32px;
+    }
+
+    .sc-hero-grid {
+        gap: 24px;
+    }
+
+    .sc-lead,
     .sc-trust {
-        flex-direction: column;
-        gap: 10px;
+        display: none;
     }
 
     .sc-vs th,
