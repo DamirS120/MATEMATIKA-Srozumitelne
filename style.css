@@ -979,6 +979,12 @@ h3 {
     transform: translateY(-10px);
 }
 
+/* Barevný proužek nahoře podle tématu karty (shodné s barvami použitými jinde na webu) */
+.milestone-card.card-cvut { border-top: 5px solid #0ea5e9; }
+.milestone-card.card-uk { border-top: 5px solid #b91c1c; }
+.milestone-card.card-foreigners { border-top: 5px solid #f98a0c; }
+.milestone-card.card-logic { border-top: 5px solid #017550; }
+
 .card-bg {
     position: absolute;
     top: 0;

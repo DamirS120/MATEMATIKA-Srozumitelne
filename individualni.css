@@ -653,26 +653,6 @@ body.page-individual main.ix-main {
 /* ==========================================================================
    6) VÝZVA K AKCI
    ========================================================================== */
-.ix-cta {
-    text-align: center;
-}
-
-.ix-cta-inner {
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.ix-main .ix-cta h2 {
-    font-size: clamp(2rem, 4.6vw, 3.2rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-}
-
-.ix-cta .ix-sub {
-    margin: 20px auto 36px;
-    max-width: 30em;
-}
-
 .ix-cta-actions {
     display: flex;
     flex-wrap: wrap;
@@ -858,14 +838,6 @@ body.page-individual .main-footer {
         right: auto;
         width: 2px;
         height: calc(100% + 40px);
-    }
-
-    .ix-cta {
-        text-align: left;
-    }
-
-    .ix-cta .ix-sub {
-        margin-left: 0;
     }
 
     .ix-cta-actions,
