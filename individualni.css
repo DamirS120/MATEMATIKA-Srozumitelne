@@ -492,14 +492,15 @@ body.page-individual main.ix-main {
 .ix-steps li {
     position: relative;
     padding-top: 48px;
+    text-align: center;
 }
 
 .ix-steps li::before {
     content: "";
     position: absolute;
     top: 9px;
-    left: 0;
-    right: calc(var(--g) * -1);
+    left: 50%;
+    width: calc(100% + var(--g));
     height: 2px;
     background: #cbd5e1;
 }
@@ -512,7 +513,8 @@ body.page-individual main.ix-main {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -537,6 +539,7 @@ body.page-individual main.ix-main {
 
 .ix-steps p {
     max-width: 32ch;
+    margin: 0 auto;
     color: var(--ix-muted);
 }
 

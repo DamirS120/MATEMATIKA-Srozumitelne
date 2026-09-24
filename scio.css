@@ -513,8 +513,8 @@ body.page-scio main.sc-main {
     content: "";
     position: absolute;
     top: 9px;
-    left: 0;
-    right: calc(var(--g) * -1);
+    left: 50%;
+    width: calc(100% + var(--g));
     height: 2px;
     background: #cbd5e1;
 }
@@ -527,7 +527,8 @@ body.page-scio main.sc-main {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 20px;
     height: 20px;
     border-radius: 50%;
