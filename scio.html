@@ -103,12 +103,36 @@
                     <a href="#lisi" class="sc-btn sc-btn-ghost">Čím se SCIO liší <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
                 </div>
 
-                <ul class="sc-trust">
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>OSP i NSZ</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Česky i rusky</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>První konzultace zdarma</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Od 200 Kč / hod</li>
-                </ul>
+                <div class="hero-facts">
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                        <div>
+                            <strong>OSP i NSZ</strong>
+                            <span>obecné i školní testy</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-user"></i>
+                        <div>
+                            <strong>Individuální tempo</strong>
+                            <span>přizpůsobím se tobě</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-comments"></i>
+                        <div>
+                            <strong>Konzultace zdarma</strong>
+                            <span>první schůzka nezávazně</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-tag"></i>
+                        <div>
+                            <strong>Od 200 Kč / hod</strong>
+                            <span>transparentní ceník</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="hero-visual-frame">
@@ -295,7 +319,7 @@
                     <p class="sc-price-unit">doučování / hod</p>
                     <ul>
                         <li>Doplnění základů</li>
-                        <li>Česky nebo rusky</li>
+                        <li>Individuální plán</li>
                         <li>Online nebo v Praze</li>
                     </ul>
                     <a href="#anketa" class="sc-btn sc-btn-outline">Mám zájem</a>
@@ -335,13 +359,7 @@
                             <label for="mp-kontakt">E-mail nebo telefon</label>
                             <input type="text" id="mp-kontakt" name="kontakt" required placeholder="abych se mohl ozvat zpět">
                         </div>
-                        <div class="form-group">
-                            <label for="mp-jazyk">Jazyk konzultace</label>
-                            <select id="mp-jazyk" name="jazyk">
-                                <option value="CZ">Čeština</option>
-                                <option value="RU">Ruština</option>
-                            </select>
-                        </div>
+                        <input type="hidden" name="jazyk" value="CZ">
                         <div class="form-group">
                             <label for="mp-forma">Forma výuky</label>
                             <select id="mp-forma" name="forma_vyuky">

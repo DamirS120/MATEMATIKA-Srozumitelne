@@ -234,26 +234,21 @@ body.page-scio main.sc-main {
     gap: 14px;
 }
 
-.sc-trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 26px;
-    margin-top: 36px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-    font-size: 0.95rem;
+.sc-hero .hero-facts {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.sc-hero .hero-fact:not(:first-child) {
+    border-left-color: rgba(255, 255, 255, 0.16);
+}
+
+.sc-hero .hero-fact strong {
     color: var(--sc-chalk);
 }
 
-.sc-trust li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.sc-trust i {
-    font-size: 0.85rem;
-    color: var(--sc-amber);
+.sc-hero .hero-fact span {
+    color: var(--sc-chalk-muted);
 }
 
 /* ==========================================================================
@@ -900,7 +895,7 @@ body.page-scio .main-footer {
     }
 
     .sc-lead,
-    .sc-trust {
+    .hero-facts {
         display: none;
     }
 

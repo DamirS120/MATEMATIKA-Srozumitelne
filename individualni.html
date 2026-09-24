@@ -95,19 +95,43 @@
             <div class="ix-hero-text">
                 <p class="ix-eyebrow">Individuální doučování</p>
                 <h1>Osobní doučování</h1>
-                <p class="ix-lead">Tempo, které ti vyhovuje. Jazyk, kterému rozumíš. Výsledky, které uvidíš.</p>
+                <p class="ix-lead">Tempo, které ti vyhovuje. Podpora, na kterou se spolehneš. Výsledky, které uvidíš.</p>
 
                 <div class="ix-cta-row">
                     <a href="#anketa" class="ix-btn ix-btn-amber">Domluvit termín</a>
                     <a href="#zamereni" class="ix-btn ix-btn-ghost">Na co se zaměříme <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
                 </div>
 
-                <ul class="ix-trust">
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Česky i rusky</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Online nebo v Praze</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>První konzultace zdarma</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Od 180 Kč / hod</li>
-                </ul>
+                <div class="hero-facts">
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-user"></i>
+                        <div>
+                            <strong>Individuální přístup</strong>
+                            <span>lekce jen pro tebe</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Online nebo v Praze</strong>
+                            <span>podle toho, co ti vyhovuje</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-comments"></i>
+                        <div>
+                            <strong>Konzultace zdarma</strong>
+                            <span>první schůzka nezávazně</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-tag"></i>
+                        <div>
+                            <strong>Od 180 Kč / hod</strong>
+                            <span>transparentní ceník</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="hero-visual-frame">
@@ -136,9 +160,9 @@
                 </article>
 
                 <article class="ix-pillar">
-                    <span class="ix-pillar-ico" aria-hidden="true"><i class="fa-solid fa-language"></i></span>
-                    <h3>Jazyk</h3>
-                    <p>Vysvětlím ti to česky nebo rusky, podle toho, v čem ti to dává větší smysl.</p>
+                    <span class="ix-pillar-ico" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                    <h3>Podpora</h3>
+                    <p>Jsem s tebou u každého kroku a povzbudím tě, i když to zrovna nejde.</p>
                 </article>
 
                 <article class="ix-pillar">
@@ -215,7 +239,7 @@
                 <li>
                     <span class="ix-step-n" aria-hidden="true">02</span>
                     <h3>Domluvíme plán</h3>
-                    <p>Zjistíme, kde jsi, co potřebuješ a v jakém jazyce ti to bude vyhovovat.</p>
+                    <p>Zjistíme, kde jsi, co potřebuješ a jaké tempo ti bude vyhovovat.</p>
                 </li>
                 <li>
                     <span class="ix-step-n" aria-hidden="true">03</span>
@@ -252,7 +276,7 @@
                     <p class="ix-price-unit">doučování / hod</p>
                     <ul>
                         <li>Základy, střední škola i vysoká škola</li>
-                        <li>Česky nebo rusky</li>
+                        <li>Individuální plán</li>
                         <li>Online nebo v Praze</li>
                     </ul>
                     <a href="#anketa" class="ix-btn ix-btn-amber">Mám zájem</a>
@@ -305,13 +329,7 @@
                             <label for="mp-kontakt">E-mail nebo telefon</label>
                             <input type="text" id="mp-kontakt" name="kontakt" required placeholder="abych se mohl ozvat zpět">
                         </div>
-                        <div class="form-group">
-                            <label for="mp-jazyk">Jazyk konzultace</label>
-                            <select id="mp-jazyk" name="jazyk">
-                                <option value="CZ">Čeština</option>
-                                <option value="RU">Ruština</option>
-                            </select>
-                        </div>
+                        <input type="hidden" name="jazyk" value="CZ">
                         <div class="form-group">
                             <label for="mp-forma">Forma výuky</label>
                             <select id="mp-forma" name="forma_vyuky">

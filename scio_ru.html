@@ -102,12 +102,36 @@
                     <a href="#lisi" class="sc-btn sc-btn-ghost">Чем SCIO отличается <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
                 </div>
 
-                <ul class="sc-trust">
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>OSP и NSZ</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>По-чешски и по-русски</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Первая консультация бесплатно</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>От 200 крон / час</li>
-                </ul>
+                <div class="hero-facts">
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                        <div>
+                            <strong>OSP и NSZ</strong>
+                            <span>общие и школьные тесты</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-user"></i>
+                        <div>
+                            <strong>Твой темп</strong>
+                            <span>подстроюсь под тебя</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-comments"></i>
+                        <div>
+                            <strong>Бесплатно</strong>
+                            <span>первая консультация</span>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <i class="fa-solid fa-tag"></i>
+                        <div>
+                            <strong>От 200 крон / час</strong>
+                            <span>прозрачные цены</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="hero-visual-frame">
@@ -294,7 +318,7 @@
                     <p class="sc-price-unit">занятие / час</p>
                     <ul>
                         <li>Разбор основ</li>
-                        <li>По-чешски или по-русски</li>
+                        <li>Индивидуальный план</li>
                         <li>Онлайн или в Праге</li>
                     </ul>
                     <a href="#anketa" class="sc-btn sc-btn-outline">Мне интересно</a>
@@ -334,13 +358,7 @@
                             <label for="mp-kontakt">E-mail или телефон</label>
                             <input type="text" id="mp-kontakt" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
                         </div>
-                        <div class="form-group">
-                            <label for="mp-jazyk">Язык консультации</label>
-                            <select id="mp-jazyk" name="jazyk">
-                                <option value="RU">Русский</option>
-                                <option value="CZ">Чешский</option>
-                            </select>
-                        </div>
+                        <input type="hidden" name="jazyk" value="RU">
                         <div class="form-group">
                             <label for="mp-forma">Формат занятий</label>
                             <select id="mp-forma" name="forma_vyuky">

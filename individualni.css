@@ -234,26 +234,21 @@ body.page-individual main.ix-main {
     gap: 14px;
 }
 
-.ix-trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 26px;
-    margin-top: 36px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-    font-size: 0.95rem;
+.ix-hero .hero-facts {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.ix-hero .hero-fact:not(:first-child) {
+    border-left-color: rgba(255, 255, 255, 0.16);
+}
+
+.ix-hero .hero-fact strong {
     color: var(--ix-chalk);
 }
 
-.ix-trust li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.ix-trust i {
-    font-size: 0.85rem;
-    color: var(--ix-amber);
+.ix-hero .hero-fact span {
+    color: var(--ix-chalk-muted);
 }
 
 /* ==========================================================================
@@ -771,7 +766,7 @@ body.page-individual .main-footer {
     }
 
     .ix-lead,
-    .ix-trust {
+    .hero-facts {
         display: none;
     }
 
