@@ -190,23 +190,6 @@ body.page-individual main.ix-main {
     outline-color: #ffffff;
 }
 
-/* --- Panel s křídovou kresbou ------------------------------------------- */
-.ix-panel {
-    width: 100%;
-    max-width: 500px;
-    justify-self: center;
-    padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.035);
-}
-
-.ix-panel svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 /* ==========================================================================
    1) ÚVOD
    ========================================================================== */
@@ -269,99 +252,6 @@ body.page-individual main.ix-main {
 .ix-trust i {
     font-size: 0.85rem;
     color: var(--ix-amber);
-}
-
-/* --- Kresba: rovnice řešená spolu ---------------------------------------- */
-.ix-d-title {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 24px;
-    text-anchor: middle;
-    fill: #ffffff;
-}
-
-.ix-d-eq {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 36px;
-    fill: #ffffff;
-}
-
-.ix-d-eq-final {
-    font-size: 44px;
-    fill: var(--ix-amber);
-}
-
-.ix-d-op {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 24px;
-    fill: var(--ix-soft);
-}
-
-.ix-d-arrow {
-    fill: none;
-    stroke: var(--ix-chalk);
-    stroke-opacity: 0.55;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.ix-d-ring {
-    fill: none;
-    stroke: var(--ix-amber);
-    stroke-width: 3;
-    stroke-linecap: round;
-}
-
-.ix-d-b {
-    fill: none;
-    stroke: var(--ix-chalk);
-    stroke-width: 2.5;
-}
-
-.ix-d-b-tutor {
-    fill: var(--ix-amber);
-    stroke: none;
-}
-
-.ix-d-btxt {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 16px;
-    text-anchor: middle;
-    fill: #ffffff;
-}
-
-.ix-d-btxt-tutor {
-    fill: var(--ix-board);
-}
-
-@keyframes ix-draw {
-    from { stroke-dashoffset: 1; }
-    to   { stroke-dashoffset: 0; }
-}
-
-@keyframes ix-fade {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Jediný animovaný okamžik stránky: rovnice se řeší řádek po řádku */
-@media (prefers-reduced-motion: no-preference) {
-    .ix-r1 { animation: ix-fade 0.5s ease-out 0.3s both; }
-    .ix-r2 { animation: ix-fade 0.5s ease-out 1s both; }
-    .ix-r3 { animation: ix-fade 0.5s ease-out 1.7s both; }
-
-    .ix-ring {
-        stroke-dasharray: 1;
-        stroke-dashoffset: 1;
-        animation: ix-draw 0.7s ease-out 2.2s forwards;
-    }
-
-    .ix-b1 { animation: ix-fade 0.4s ease-out 2.7s both; }
-    .ix-b2 { animation: ix-fade 0.4s ease-out 3.2s both; }
 }
 
 /* ==========================================================================
@@ -797,10 +687,6 @@ body.page-individual .main-footer {
     .ix-hero-grid {
         grid-template-columns: 1fr;
         gap: 48px;
-    }
-
-    .ix-panel {
-        max-width: 440px;
     }
 
     .ix-pillars,

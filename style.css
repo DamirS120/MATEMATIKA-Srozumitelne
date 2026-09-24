@@ -1280,6 +1280,12 @@ h3 {
     margin-top: 10px;
 }
 
+/* .main-footer má sitewide margin-top: 10px - na tmavé sekci #kontakt
+   (homepage) by pod ní probleskl bílý pruh, tady ho proto vypínáme */
+.page-index .main-footer {
+    margin-top: 0;
+}
+
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1731,12 +1737,62 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     position: relative;
 }
 
+/* Měkké barevné skvrny za karuselem */
+.hero-carousel-wrap::before,
+.hero-carousel-wrap::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.hero-carousel-wrap::before {
+    top: -30px;
+    right: -20px;
+    width: 160px;
+    height: 160px;
+    opacity: 0.16;
+}
+
+.hero-carousel-wrap::after {
+    bottom: 40px;
+    left: -36px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.12;
+}
+
 #hero-carousel {
     position: relative;
+    z-index: 1;
     border-radius: 28px;
     overflow: hidden;
     aspect-ratio: 2 / 3;
     box-shadow: 0 25px 50px rgba(30, 58, 138, 0.18);
+}
+
+/* Ručně psaná poznámka nad karuselem */
+.hero-carousel-note {
+    position: absolute;
+    z-index: 2;
+    top: -46px;
+    right: 6px;
+    max-width: 12em;
+    color: var(--primary);
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: right;
+    transform: rotate(-3deg);
+}
+
+.hero-carousel-note svg {
+    display: block;
+    width: 46px;
+    height: 38px;
+    margin: 4px 0 0 auto;
+    color: var(--primary);
 }
 
 #hero-carousel .carousel-slide {
@@ -1750,7 +1806,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     transition: opacity 0.6s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 #hero-carousel .carousel-slide::after {
@@ -1765,38 +1821,6 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     opacity: 1;
     visibility: visible;
     z-index: 1;
-}
-
-#hero-carousel .carousel-icon {
-    position: relative;
-    z-index: 2;
-    flex-shrink: 0;
-    width: 68px;
-    height: 68px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    font-size: 1.8rem;
-    margin: 26px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    transition: width 0.2s ease, height 0.2s ease, font-size 0.2s ease;
-}
-
-/* Barva ikonky podle stránky, na kterou karta odkazuje (shodné s barvami karet níže) */
-#hero-carousel .carousel-slide.slide-cermat .carousel-icon { color: var(--primary); }
-#hero-carousel .carousel-slide.slide-cvut .carousel-icon { color: #0ea5e9; }
-#hero-carousel .carousel-slide.slide-uk .carousel-icon { color: #b91c1c; }
-#hero-carousel .carousel-slide.slide-scio .carousel-icon { color: #b45309; }
-
-/* CERMAT a ČVUT snímky mají na fotce víc prázdného místa - větší ikonka ho vyplní */
-#hero-carousel .carousel-slide.slide-cermat .carousel-icon,
-#hero-carousel .carousel-slide.slide-cvut .carousel-icon {
-    width: 92px;
-    height: 92px;
-    font-size: 2.4rem;
 }
 
 #hero-carousel .carousel-caption {
@@ -2175,6 +2199,13 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         min-width: 0;
     }
 
+    /* Ručně psaná poznámka nad karuselem se na mobilu nevejde (mezera nad
+       karuselem je záměrně malá, ať se nadpis, tlačítko a obrázek vejdou
+       hned na obrazovku) */
+    .hero-carousel-note {
+        display: none;
+    }
+
     .mode-picker,
     .hero-split-btns,
     .hero-facts,
@@ -2235,20 +2266,6 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 
     .hero-stat span {
         display: none;
-    }
-
-    #hero-carousel .carousel-icon {
-        width: 56px;
-        height: 56px;
-        font-size: 1.5rem;
-        margin: 18px;
-    }
-
-    #hero-carousel .carousel-slide.slide-cermat .carousel-icon,
-    #hero-carousel .carousel-slide.slide-cvut .carousel-icon {
-        width: 72px;
-        height: 72px;
-        font-size: 1.9rem;
     }
 
     #hero-carousel .carousel-caption h3 {
