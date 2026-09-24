@@ -850,12 +850,14 @@ h3 {
 /* --- MINI ANKETA (rychlý zájem o konzultaci na konci podstránek) --- */
 .mini-poll {
     padding: 60px 0 20px;
+    background: var(--bg-light);
 }
 
 .mini-poll-grid {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    background: var(--primary);
+    background: #ffffff;
+    border: 1px solid #eef2f7;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
@@ -863,12 +865,13 @@ h3 {
 
 .mini-poll-form {
     padding: 45px 40px;
-    color: #ffffff;
+    color: var(--text-dark);
 }
 
 .mini-poll-tag {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--bg-light);
+    color: var(--primary);
     padding: 6px 16px;
     border-radius: 30px;
     font-size: 0.78rem;
@@ -878,7 +881,7 @@ h3 {
 }
 
 .mini-poll-form h2 {
-    color: #ffffff !important;
+    color: var(--primary) !important;
     text-align: left;
     margin: 0 0 12px;
     font-size: 1.7rem;
@@ -890,24 +893,21 @@ h3 {
 }
 
 .mini-poll-form>p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
     margin-bottom: 25px;
-}
-
-.mini-poll-form .form-group label {
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .mini-poll-topic {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-light);
     padding: 12px 16px;
     border-radius: 12px;
     margin-bottom: 20px;
     font-weight: 600;
     font-size: 0.92rem;
+    color: var(--text-dark);
 }
 
 .mini-poll-topic i {
@@ -919,8 +919,8 @@ h3 {
 }
 
 .mini-poll-form .btn-submit:hover {
-    background: #ffffff;
-    color: var(--primary);
+    background: var(--primary);
+    color: #ffffff;
 }
 
 .mini-poll-image {
@@ -1111,24 +1111,6 @@ h3 {
     justify-content: center;
 }
 
-.contact-grid {
-    width: 100%;
-    max-width: 1100px;
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 32px;
-    align-items: stretch;
-}
-
-.contact-form-container {
-    width: 100%;
-    background-color: #f8fafc;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f1f5f9;
-}
-
 .contact-social {
     display: flex;
     justify-content: center;
@@ -1153,38 +1135,6 @@ h3 {
     background: var(--primary);
     color: #ffffff;
     transform: translateY(-3px);
-}
-
-.contact-visual {
-    position: relative;
-    min-height: 320px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.contact-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-@media (max-width: 860px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-visual {
-        min-height: 220px;
-        order: -1;
-    }
-}
-
-.contact-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #1e3a8a;
 }
 
 .form-group {
@@ -2567,81 +2517,9 @@ STŘÍDÁNÍ POZADÍ SEKCÍ (jasné oddělení jednotlivých částí stránky)
     color: #b6c3e3;
 }
 
-/* Nadpis formuláře sedí na bílé kartě, ne přímo na tmavém pozadí sekce */
-.section-dark .contact-form-container h2 {
-    color: var(--primary);
-}
-
-/* --- Nadpis + podtitul na střed (nová sekce "Nechápu, proč to tak je") --- */
-.section-head-block {
-    max-width: 720px;
-    margin: 0 auto 40px;
-    text-align: center;
-}
-
-.section-sub {
-    margin-top: 14px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+/* Anketa karta (mini-poll) zůstává bílá i uvnitř tmavé sekce (homepage) */
+.section-dark .mini-poll-form > p {
     color: var(--text-light);
-}
-
-.section-dark .section-sub {
-    color: #b6c3e3;
-}
-
-/* ============================================================
-SEKCE „NECHÁPU, PROČ TO TAK JE“
-============================================================ */
-.pain-fix-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-}
-
-.pain-fix-card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    background: #ffffff;
-    text-align: center;
-}
-
-.pain-text {
-    padding: 30px 24px 38px;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.3rem;
-    line-height: 1.25;
-    color: var(--text-dark);
-}
-
-.fix-text {
-    position: relative;
-    flex: 1;
-    padding: 38px 24px 30px;
-    background: rgba(59, 130, 246, 0.08);
-    font-weight: 600;
-    color: var(--primary);
-}
-
-.fix-text::before {
-    content: '\2193';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    display: grid;
-    place-items: center;
-    width: 38px;
-    height: 38px;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: var(--primary);
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #ffffff;
 }
 
 /* ============================================================
@@ -2763,12 +2641,6 @@ SEKCE „NEJDE JEN O VÝSLEDEK. JDE O POCHOPENÍ.“ (tmavá)
 }
 
 @media (max-width: 900px) {
-    .pain-fix-grid {
-        grid-template-columns: 1fr;
-        max-width: 480px;
-        margin: 0 auto;
-    }
-
     .philosophy-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -2777,17 +2649,6 @@ SEKCE „NEJDE JEN O VÝSLEDEK. JDE O POCHOPENÍ.“ (tmavá)
     .philosophy-diagram {
         max-width: 340px;
         margin: 0 auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .pain-fix-card {
-        text-align: left;
-    }
-
-    .fix-text::before {
-        left: 24px;
-        transform: translate(0, -50%);
     }
 }
 

@@ -199,7 +199,9 @@ body.page-individual main.ix-main {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 8vw, 104px);
+    /* pevných 110px nahoře (stejně jako .hero-split u cermat/cvut/uk),
+       ať se eyebrow tag na tabletových šířkách neschová pod fixní navigaci */
+    padding: 110px 0 clamp(56px, 8vw, 104px);
 }
 
 .ix-hero-grid {
@@ -640,26 +642,18 @@ body.page-individual .main-footer {
     flex-direction: column;
     justify-content: center;
     padding: 45px 40px;
-    color: #ffffff;
-}
-
-.ix-anketa-intro .ix-eyebrow {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.ix-anketa-intro .ix-eyebrow::before {
-    background: #ffffff;
+    color: var(--ix-ink);
 }
 
 .ix-main .ix-anketa-intro h2 {
-    color: #ffffff;
+    color: var(--ix-primary);
     font-size: 1.6rem;
     line-height: 1.2;
     margin: 0 0 12px;
 }
 
 .ix-anketa-intro .ix-sub {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--ix-muted);
     margin: 0 0 28px;
     font-size: 1rem;
 }
@@ -669,11 +663,35 @@ body.page-individual .main-footer {
     margin-bottom: 28px;
 }
 
+.ix-anketa-intro .ix-channel {
+    border-color: var(--ix-line);
+    color: var(--ix-ink);
+}
+
+.ix-anketa-intro .ix-channel:hover {
+    border-color: var(--ix-primary);
+    background: var(--ix-tint);
+}
+
 .ix-anketa-intro .ix-others {
     justify-content: flex-start;
     margin-top: 0;
     padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--ix-line);
+}
+
+.ix-anketa-intro .ix-others-label {
+    color: var(--ix-muted);
+}
+
+.ix-anketa-intro .ix-chip {
+    border-color: var(--ix-line);
+    color: var(--ix-ink);
+}
+
+.ix-anketa-intro .ix-chip:hover {
+    border-color: var(--ix-primary);
+    background: var(--ix-tint);
 }
 
 /* ==========================================================================
@@ -727,6 +745,10 @@ body.page-individual .main-footer {
         right: auto;
         width: 2px;
         height: calc(100% + 40px);
+    }
+
+    .ix-steps li::after {
+        display: none;
     }
 
     .ix-cta-actions,

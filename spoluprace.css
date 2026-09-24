@@ -239,7 +239,7 @@ body.page-spoluprace main.sp-main {
     .sp-e2 { animation-delay: 0.5s; }
 
     .sp-edge-open {
-        animation: sp-fade 0.6s ease-out 1.5s both;
+        animation: sp-fade 0.4s ease-out 0.45s both;
     }
 
     .sp-node {
@@ -249,9 +249,9 @@ body.page-spoluprace main.sp-main {
     }
 
     .sp-node-me   { animation-delay: 0s; }
-    .sp-node-blue { animation-delay: 0.85s; }
-    .sp-node-pink { animation-delay: 1s; }
-    .sp-node-open { animation-delay: 1.5s; }
+    .sp-node-blue { animation-delay: 0.2s; }
+    .sp-node-pink { animation-delay: 0.3s; }
+    .sp-node-open { animation-delay: 0.45s; }
 }
 
 /* ==========================================================================

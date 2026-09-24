@@ -199,7 +199,9 @@ body.page-scio main.sc-main {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 8vw, 104px);
+    /* pevných 110px nahoře (stejně jako .hero-split u cermat/cvut/uk),
+       ať se eyebrow tag na tabletových šířkách neschová pod fixní navigaci */
+    padding: 110px 0 clamp(56px, 8vw, 104px);
 }
 
 .sc-hero-grid {
@@ -769,26 +771,18 @@ body.page-scio .main-footer {
     flex-direction: column;
     justify-content: center;
     padding: 45px 40px;
-    color: #ffffff;
-}
-
-.sc-anketa-intro .sc-eyebrow {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.sc-anketa-intro .sc-eyebrow::before {
-    background: #ffffff;
+    color: var(--sc-ink);
 }
 
 .sc-main .sc-anketa-intro h2 {
-    color: #ffffff;
+    color: var(--sc-primary);
     font-size: 1.6rem;
     line-height: 1.2;
     margin: 0 0 12px;
 }
 
 .sc-anketa-intro .sc-sub {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--sc-muted);
     margin: 0 0 28px;
     font-size: 1rem;
 }
@@ -798,11 +792,35 @@ body.page-scio .main-footer {
     margin-bottom: 28px;
 }
 
+.sc-anketa-intro .sc-channel {
+    border-color: var(--sc-line);
+    color: var(--sc-ink);
+}
+
+.sc-anketa-intro .sc-channel:hover {
+    border-color: var(--sc-primary);
+    background: var(--sc-tint);
+}
+
 .sc-anketa-intro .sc-others {
     justify-content: flex-start;
     margin-top: 0;
     padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--sc-line);
+}
+
+.sc-anketa-intro .sc-others-label {
+    color: var(--sc-muted);
+}
+
+.sc-anketa-intro .sc-chip {
+    border-color: var(--sc-line);
+    color: var(--sc-ink);
+}
+
+.sc-anketa-intro .sc-chip:hover {
+    border-color: var(--sc-primary);
+    background: var(--sc-tint);
 }
 
 /* ==========================================================================
@@ -856,6 +874,10 @@ body.page-scio .main-footer {
         right: auto;
         width: 2px;
         height: calc(100% + 40px);
+    }
+
+    .sc-steps li::after {
+        display: none;
     }
 
     .sc-cta-actions,
