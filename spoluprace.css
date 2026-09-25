@@ -384,10 +384,6 @@ body.page-spoluprace main.sp-main {
     text-decoration-color: currentColor;
 }
 
-.sp-more::after {
-    content: " \2192";
-}
-
 /* hrana mezi partnery: přechází z modré do růžové, uprostřed je vrchol */
 .sp-link {
     position: relative;

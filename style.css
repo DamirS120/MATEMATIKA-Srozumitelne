@@ -863,6 +863,13 @@ h3 {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* Anketa na homepage nemá obrázek, formulář zabírá celou kartu */
+#kontakt .mini-poll-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .mini-poll-form {
     padding: 45px 40px;
     color: var(--text-dark);
@@ -2521,11 +2528,6 @@ STŘÍDÁNÍ POZADÍ SEKCÍ (jasné oddělení jednotlivých částí stránky)
 
 .section-dark p {
     color: #b6c3e3;
-}
-
-/* Anketa karta (mini-poll) zůstává bílá i uvnitř tmavé sekce (homepage) */
-.section-dark .mini-poll-form > p {
-    color: var(--text-light);
 }
 
 /* ============================================================
