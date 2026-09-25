@@ -198,7 +198,7 @@ h3 {
 
 .logo span {
     color: #000000;
-    font-weight: 100;
+    font-weight: 700;
     font-size: 1.1rem;
 }
 
@@ -2698,7 +2698,9 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
 ============================================================ */
 .page-cvut .hero-split,
 .page-cermat .hero-split,
-.page-uk .hero-split {
+.page-uk .hero-split,
+.page-index .hero-split,
+.page-omne .hero-split {
     /* clamp misto čistého 100vh: při vysokém zoomu (nebo velmi vysoké/nízké
        liště prohlížeče) by section jinak rostla neomezeně, zatímco obsah
        má díky clamp()/max-width pevný strop, a zůstal by uprostřed obří
@@ -2717,48 +2719,100 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
 .page-cvut .hero-split { background-color: #071c33; }
 .page-cermat .hero-split { background-color: #17123a; }
 .page-uk .hero-split { background-color: #2a0a0a; }
+.page-index .hero-split { background-color: #0e1a40; }
+.page-omne .hero-split { background-color: #0e1a40; }
 
 .page-cvut .hero-split .hero-eyebrow,
 .page-cermat .hero-split .hero-eyebrow,
-.page-uk .hero-split .hero-eyebrow {
+.page-uk .hero-split .hero-eyebrow,
+.page-index .hero-split .hero-eyebrow,
+.page-omne .hero-split .hero-eyebrow {
     background: rgba(255, 255, 255, 0.12);
     color: #ffffff;
 }
 
 .page-cvut .hero-split .hero-split-title,
 .page-cermat .hero-split .hero-split-title,
-.page-uk .hero-split .hero-split-title {
+.page-uk .hero-split .hero-split-title,
+.page-index .hero-split .hero-split-title,
+.page-omne .hero-split .hero-split-title {
     color: #ffffff !important;
 }
 
 .page-cvut .hero-split .hero-split-text,
 .page-cermat .hero-split .hero-split-text,
-.page-uk .hero-split .hero-split-text {
+.page-uk .hero-split .hero-split-text,
+.page-index .hero-split .hero-split-text,
+.page-omne .hero-split .hero-split-text {
     color: rgba(255, 255, 255, 0.75);
 }
 
 .page-cvut .hero-split .hero-facts,
 .page-cermat .hero-split .hero-facts,
-.page-uk .hero-split .hero-facts {
+.page-uk .hero-split .hero-facts,
+.page-index .hero-split .hero-facts,
+.page-omne .hero-split .hero-facts {
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.16);
 }
 
 .page-cvut .hero-split .hero-fact:not(:first-child),
 .page-cermat .hero-split .hero-fact:not(:first-child),
-.page-uk .hero-split .hero-fact:not(:first-child) {
+.page-uk .hero-split .hero-fact:not(:first-child),
+.page-index .hero-split .hero-fact:not(:first-child),
+.page-omne .hero-split .hero-fact:not(:first-child) {
     border-left-color: rgba(255, 255, 255, 0.16);
 }
 
 .page-cvut .hero-split .hero-fact strong,
 .page-cermat .hero-split .hero-fact strong,
-.page-uk .hero-split .hero-fact strong {
+.page-uk .hero-split .hero-fact strong,
+.page-index .hero-split .hero-fact strong,
+.page-omne .hero-split .hero-fact strong {
     color: #ffffff;
 }
 
 .page-cvut .hero-split .hero-fact span,
 .page-cermat .hero-split .hero-fact span,
-.page-uk .hero-split .hero-fact span {
+.page-uk .hero-split .hero-fact span,
+.page-index .hero-split .hero-fact span,
+.page-omne .hero-split .hero-fact span {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.page-index .hero-split .hero-carousel-note,
+.page-index .hero-split .hero-carousel-note svg {
+    color: #ffffff;
+}
+
+.page-index .hero-split .btn-secondary-outline-dark {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.page-index .hero-split .btn-secondary-outline-dark:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.page-omne .hero-split .timeline-dot {
+    box-shadow: 0 0 0 4px #0e1a40;
+}
+
+.page-omne .hero-split .hero-stats-row {
+    border-top-color: rgba(255, 255, 255, 0.16);
+}
+
+.page-omne .hero-split .hero-stat:not(:first-child) {
+    border-left-color: rgba(255, 255, 255, 0.16);
+}
+
+.page-omne .hero-split .hero-stat strong {
+    color: #ffffff;
+}
+
+.page-omne .hero-split .hero-stat span {
     color: rgba(255, 255, 255, 0.65);
 }
 

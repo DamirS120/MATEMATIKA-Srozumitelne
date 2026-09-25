@@ -327,23 +327,14 @@ body.page-scio main.sc-main {
 
 .sc-quote {
     margin-top: clamp(40px, 6vw, 64px);
-    padding: clamp(24px, 5vw, 44px) clamp(24px, 5vw, 56px) clamp(28px, 5vw, 48px);
-    border-radius: 28px;
+    padding: clamp(22px, 5vw, 32px) clamp(24px, 5vw, 40px);
+    border-left: 5px solid var(--sc-primary);
+    border-radius: 0 20px 20px 0;
     background: var(--sc-tint);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    font-style: italic;
     line-height: 1.6;
     color: var(--sc-ink);
-}
-
-.sc-quote::before {
-    content: "\201E";
-    display: block;
-    margin-bottom: -8px;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1;
-    color: var(--sc-primary);
 }
 
 /* ==========================================================================
