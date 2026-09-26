@@ -4,18 +4,6 @@
    ročníků" (třída .cm-guide), zbytek stránky zůstává beze změny.
    ========================================================================== */
 
-/* Uvozovka u ručně psaného citátu v rohu hero fotky */
-.page-cermat .hero-visual-quote-text::before {
-    content: "\201E";
-    display: block;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 1;
-    color: #fca311;
-    margin-bottom: -6px;
-}
-
 .cm-guide-intro {
     display: flex;
     justify-content: center;
