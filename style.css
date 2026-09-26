@@ -2005,23 +2005,6 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     transform: rotate(-2deg);
 }
 
-.hero-visual-quote-text::before {
-    content: "\201E";
-    display: block;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 1;
-    color: #fca311;
-    margin-bottom: -6px;
-}
-
-/* Cermat má vlastní velké barevné uvozovky u citátů níž na stránce,
-   v hero fotce už další navíc nechceme */
-.page-cermat .hero-visual-quote-text::before {
-    content: none;
-}
-
 .hero-visual-quote-text::after {
     content: '';
     display: block;
