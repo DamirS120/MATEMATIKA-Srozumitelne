@@ -1798,7 +1798,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     z-index: 1;
     border-radius: 28px;
     overflow: hidden;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 2.15 / 1;
     box-shadow: 0 25px 50px rgba(30, 58, 138, 0.18);
 }
 
@@ -1823,7 +1823,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     background-position: center;
     background-color: var(--primary);
     opacity: 0;
-    visibility: hidden;
+    pointer-events: none;
     transition: opacity 0.6s ease;
     display: flex;
     align-items: center;
@@ -1839,7 +1839,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 
 #hero-carousel .carousel-slide.active {
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto;
     z-index: 1;
 }
 
