@@ -1820,10 +1820,10 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     content: '';
     position: absolute;
     z-index: 3;
-    top: -60px;
-    left: -60px;
-    width: 200px;
-    height: 200px;
+    top: -95px;
+    left: -95px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: radial-gradient(circle at 65% 65%, #fbbf24, #f59e0b 70%);
     opacity: 0.85;
@@ -2316,6 +2316,14 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     #hero-carousel .carousel-overlay {
         max-width: 100%;
         padding: 0 24px 30px;
+    }
+
+    /* Menší roh na mobilu/tabletu, aby nepřekrýval odznak, který je tu blíž kraji */
+    #hero-carousel::after {
+        top: -62px;
+        left: -62px;
+        width: 80px;
+        height: 80px;
     }
 
     .carousel-feats {
