@@ -2386,6 +2386,10 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         scroll-snap-align: start;
         opacity: 1;
         visibility: visible;
+        /* Na mobilu se snímky posouvají scrollem, ne přepínáním třídy .active,
+           takže tlačítka uvnitř neaktivního snímku by jinak byla nekliknutelná
+           (zděděné pointer-events:none ze základního pravidla výše). */
+        pointer-events: auto;
     }
 
     #hero-carousel .carousel-arrow {
@@ -2430,8 +2434,10 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     }
 
     .carousel-badge {
-        font-size: 0.7rem;
-        padding: 6px 12px;
+        font-size: 0.62rem;
+        padding: 5px 10px;
+        gap: 5px;
+        margin-bottom: 14px;
     }
 }
 
