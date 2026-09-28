@@ -2322,6 +2322,14 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     #hero-carousel .carousel-overlay {
         max-width: 100%;
         padding: 0 24px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Na mobilu ať je jako první vidět velký nadpis, teprve pod ním odznak a text */
+    #hero-carousel .carousel-overlay h3 {
+        order: -1;
+        margin-top: 0;
     }
 
     /* Menší roh na mobilu/tabletu, aby nepřekrýval odznak, který je tu blíž kraji */
@@ -2432,7 +2440,8 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     }
 
     #hero-carousel .carousel-overlay h3 {
-        font-size: 1.35rem;
+        font-size: 1.9rem;
+        margin-bottom: 12px;
     }
 
     #hero-carousel .carousel-overlay p {
