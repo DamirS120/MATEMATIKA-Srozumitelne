@@ -1882,14 +1882,15 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 .carousel-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background: #0d9488;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 7px 14px;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 5px 12px;
     border-radius: 50px;
-    font-size: 0.74rem;
-    font-weight: 700;
-    margin-bottom: 18px;
+    font-size: 0.66rem;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
 #hero-carousel .carousel-overlay h3 .hl-green {
@@ -2452,10 +2453,10 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     }
 
     .carousel-badge {
-        font-size: 0.62rem;
-        padding: 5px 10px;
-        gap: 5px;
-        margin-bottom: 14px;
+        font-size: 0.56rem;
+        padding: 4px 9px;
+        gap: 4px;
+        margin-bottom: 12px;
     }
 }
 

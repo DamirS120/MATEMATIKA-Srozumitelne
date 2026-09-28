@@ -1,7 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var sections = Array.prototype.filter.call(document.body.children, function (el) {
-    if (el.tagName === "SCRIPT" || el.tagName === "NOSCRIPT") return false;
-    return el.offsetHeight > 40;
+  function visibleChildren(el) {
+    return Array.prototype.filter.call(el.children, function (child) {
+      if (child.tagName === "SCRIPT" || child.tagName === "NOSCRIPT") return false;
+      return child.offsetHeight > 40;
+    });
+  }
+
+  // Na podstránkách je obsah zabalený v jednom <main>, na homepage jsou
+  // sekce přímo v <body>. Tady <main> "rozbalíme", aby se šipkami dalo
+  // procházet po jednotlivých sekcích uvnitř, ne po celém <main> najednou.
+  var sections = [];
+  visibleChildren(document.body).forEach(function (el) {
+    if (el.tagName === "MAIN") {
+      sections = sections.concat(visibleChildren(el));
+    } else {
+      sections.push(el);
+    }
   });
 
   if (sections.length < 2) return;
