@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const index = Math.round(carousel.scrollLeft / width);
       current = Math.max(0, Math.min(slides.length - 1, index));
       dots.forEach(function (d, i) { d.classList.toggle("active", i === current); });
+      slides.forEach(function (s, i) { s.classList.toggle("active", i === current); });
       scrollRaf = null;
     });
   }
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // pozici. Teď se stav vždy přepočítá při každé změně matchMedia.
   function enterMobileMode() {
     stopAutoplay();
+    syncClasses(current);
     scrollToCurrent();
   }
 

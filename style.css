@@ -2305,6 +2305,12 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         aspect-ratio: 4 / 5;
     }
 
+    /* Na mobilu na prvním (obecném) snímku s tabulí vzorců ruší modrý
+       roh dole vpravo - na fotkách u dalších snímků zůstává. */
+    #hero-carousel:has(.slide-doucovani.active)::before {
+        display: none;
+    }
+
     #hero-carousel .carousel-slide {
         align-items: flex-end;
     }
