@@ -1764,6 +1764,7 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 /* Karta s přehledem hlavních oblastí v hero (homepage), vpravo vedle textu */
 .hero-carousel-wrap {
     position: relative;
+    min-width: 0;
 }
 
 #hero-carousel {
@@ -1825,11 +1826,13 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 
 #hero-carousel .carousel-overlay h3 {
     color: #fff;
-    font-size: clamp(1.9rem, 2.6vw, 2.5rem);
-    line-height: 1.08;
-    font-weight: 800;
+    font-size: clamp(2.2rem, 3vw, 2.9rem);
+    line-height: 1.04;
+    font-weight: 900;
+    letter-spacing: 0.01em;
     text-transform: uppercase;
-    margin-bottom: 14px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    margin-bottom: 16px;
     padding-bottom: 0;
 }
 
@@ -1883,43 +1886,11 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     filter: brightness(1.08);
 }
 
-/* Šipky a tečky pohromadě v jednom řádku dole v kartě */
-.carousel-controls {
-    position: absolute;
-    right: 28px;
-    bottom: 26px;
+/* Jediná šipka vpravo uprostřed karty - posouvá dál, po SCIO se vrátí na ČVUT */
+#hero-carousel .carousel-arrow.next {
+    top: 50%;
+    right: 20px;
     z-index: 3;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.carousel-controls .carousel-arrow {
-    position: static;
-    width: 34px;
-    height: 34px;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: none;
-    color: #fff;
-    font-size: 0.8rem;
-}
-
-.carousel-controls .carousel-arrow:hover {
-    background: rgba(255, 255, 255, 0.28);
-    color: #fff;
-}
-
-.carousel-controls .carousel-dots {
-    margin-top: 0;
-}
-
-.carousel-controls .carousel-dots .dot {
-    background: rgba(255, 255, 255, 0.35);
-}
-
-.carousel-controls .carousel-dots .dot.active {
-    background: #fff;
 }
 
 /* Statický obrázek v hero (podstránky přijímaček) */
@@ -2217,12 +2188,32 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     }
 
     #hero-carousel .carousel-overlay {
-        padding: 30px 24px 74px;
+        padding: 30px 24px 34px;
     }
 
-    .carousel-controls {
-        right: 20px;
-        bottom: 20px;
+    /* Na mobilu žádná šipka - karta se posouvá jen přejetím prstem */
+    #hero-carousel .carousel-arrow.next {
+        display: none;
+    }
+
+    #hero-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    #hero-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    #hero-carousel .carousel-slide {
+        position: relative;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .hero-split-title,
@@ -2261,16 +2252,6 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     .timeline,
     .hero-stats-row {
         order: 3;
-    }
-
-    /* Tečky trochu zvětšíme, ať se na dotek lépe trefí */
-    .hero-carousel-wrap .carousel-dots .dot {
-        width: 9px;
-        height: 9px;
-    }
-
-    .hero-carousel-wrap .carousel-dots .dot.active {
-        width: 22px;
     }
 }
 

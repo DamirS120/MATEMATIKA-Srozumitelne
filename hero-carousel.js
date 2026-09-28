@@ -3,18 +3,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!carousel) return;
 
   const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
-  const prevBtn = carousel.querySelector(".prev");
   const nextBtn = carousel.querySelector(".next");
-  const dots = Array.from(carousel.querySelectorAll(".dot"));
+  const mq = window.matchMedia("(max-width: 1024px)");
 
   let current = slides.findIndex(function (s) { return s.classList.contains("active"); });
   if (current < 0) current = 0;
   let timer = null;
 
+  function syncClasses(index) {
+    slides.forEach(function (s, i) { s.classList.toggle("active", i === index); });
+  }
+
   function showSlide(index) {
     current = (index + slides.length) % slides.length;
-    slides.forEach(function (s, i) { s.classList.toggle("active", i === current); });
-    dots.forEach(function (d, i) { d.classList.toggle("active", i === current); });
+    syncClasses(current);
   }
 
   function stopAutoplay() {
@@ -31,32 +33,68 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 6000);
   }
 
-  if (prevBtn) {
-    prevBtn.addEventListener("click", function () {
-      stopAutoplay();
-      showSlide(current - 1);
-      startAutoplay();
+  // Na mobilu se karta posouvá jen přejetím prstem (scroll-snap), takže
+  // po otočení displeje jen srovnáme scroll pozici s posledním snímkem.
+  function scrollToCurrent() {
+    carousel.scrollTo({ left: current * carousel.clientWidth, behavior: "auto" });
+  }
+
+  let scrollRaf = null;
+  function handleScroll() {
+    if (!mq.matches) return;
+    if (scrollRaf) return;
+    scrollRaf = window.requestAnimationFrame(function () {
+      const width = carousel.clientWidth || 1;
+      const index = Math.round(carousel.scrollLeft / width);
+      current = Math.max(0, Math.min(slides.length - 1, index));
+      scrollRaf = null;
     });
+  }
+
+  function enterMobileMode() {
+    stopAutoplay();
+    scrollToCurrent();
+  }
+
+  function enterDesktopMode() {
+    syncClasses(current);
+    startAutoplay();
   }
 
   if (nextBtn) {
     nextBtn.addEventListener("click", function () {
+      if (mq.matches) return;
       stopAutoplay();
       showSlide(current + 1);
       startAutoplay();
     });
   }
 
-  dots.forEach(function (dot, i) {
-    dot.addEventListener("click", function () {
-      stopAutoplay();
-      showSlide(i);
-      startAutoplay();
-    });
+  carousel.addEventListener("mouseenter", function () {
+    if (!mq.matches) stopAutoplay();
   });
+  carousel.addEventListener("mouseleave", function () {
+    if (!mq.matches) startAutoplay();
+  });
+  carousel.addEventListener("scroll", handleScroll);
 
-  carousel.addEventListener("mouseenter", stopAutoplay);
-  carousel.addEventListener("mouseleave", startAutoplay);
+  function handleModeChange(e) {
+    if (e.matches) {
+      enterMobileMode();
+    } else {
+      enterDesktopMode();
+    }
+  }
 
-  startAutoplay();
+  if (typeof mq.addEventListener === "function") {
+    mq.addEventListener("change", handleModeChange);
+  } else if (typeof mq.addListener === "function") {
+    mq.addListener(handleModeChange);
+  }
+
+  if (mq.matches) {
+    enterMobileMode();
+  } else {
+    enterDesktopMode();
+  }
 });

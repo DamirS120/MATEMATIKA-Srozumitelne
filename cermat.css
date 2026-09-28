@@ -165,47 +165,71 @@
 }
 
 .cm-guide-cta {
-    margin-top: 8px;
+    margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    background: #eef2ff;
-    border-radius: 20px;
-    padding: 26px 32px;
+    gap: 28px;
+    background: linear-gradient(135deg, var(--primary), #6a63e0);
+    border-radius: 28px;
+    padding: 48px 52px;
+    box-shadow: 0 25px 50px rgba(62, 56, 180, 0.3);
 }
 
 .cm-guide-cta-title {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-weight: 700;
-    color: var(--primary);
-    font-size: 1.15rem;
+    gap: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 1.9rem;
+    line-height: 1.15;
     margin: 0;
+}
+
+.cm-guide-cta-title i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 50%;
+    font-size: 1.4rem;
 }
 
 .cm-guide-cta-facts {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 22px;
+    gap: 12px 28px;
 }
 
 .cm-guide-cta-fact {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: var(--text-light);
-    font-size: 0.92rem;
+    gap: 9px;
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .cm-guide-cta-fact i {
-    color: var(--primary);
+    color: #ffffff;
 }
 
 .cm-guide-cta .cm-guide-btn {
-    background: var(--primary);
+    background: #ffffff;
+    color: var(--primary);
+    font-size: 1.1rem;
+    padding: 16px 32px;
+    flex-shrink: 0;
+}
+
+.cm-guide-cta .cm-guide-btn:hover {
+    filter: none;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1000px) {
@@ -231,6 +255,16 @@
     }
 
     .cm-guide-cta {
-        padding: 22px;
+        padding: 30px 26px;
+    }
+
+    .cm-guide-cta-title {
+        font-size: 1.4rem;
+    }
+
+    .cm-guide-cta-title i {
+        width: 42px;
+        height: 42px;
+        font-size: 1.15rem;
     }
 }
