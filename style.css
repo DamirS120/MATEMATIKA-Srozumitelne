@@ -1902,6 +1902,11 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     z-index: 3;
 }
 
+/* Ukazatel scrollování pod kartami - vidět jen na mobilu, viz media query níže */
+.carousel-scroll-indicator {
+    display: none;
+}
+
 /* Statický obrázek v hero (podstránky přijímaček) */
 .hero-visual {
     position: relative;
@@ -2232,6 +2237,28 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         border-radius: 28px;
         overflow: hidden;
         box-shadow: 0 20px 40px rgba(15, 23, 42, 0.22);
+    }
+
+    /* Pásek pod kartami, který ukazuje polohu ve scrollu - dělá scrollování
+       karuselu vizuálně zjevným i bez šipek a teček. */
+    .carousel-scroll-indicator {
+        display: block;
+        position: relative;
+        height: 4px;
+        margin: 14px 6px 0;
+        background: rgba(15, 23, 42, 0.12);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .carousel-scroll-thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 25%;
+        background: var(--accent);
+        border-radius: 4px;
     }
 
     .hero-split-title,

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
   const nextBtn = carousel.querySelector(".next");
+  const scrollThumb = carousel.parentElement.querySelector(".carousel-scroll-thumb");
   const mq = window.matchMedia("(max-width: 1024px)");
 
   let current = slides.findIndex(function (s) { return s.classList.contains("active"); });
@@ -39,6 +40,20 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel.scrollTo({ left: current * carousel.clientWidth, behavior: "auto" });
   }
 
+  // Ukazatel pod kartami na mobilu - poloha a šířka pásku napovídá, kolik
+  // obsahu je vidět a kde ve scrollu jsme, aby bylo hned jasné, že jde
+  // odscrollovat prstem dál.
+  function updateScrollIndicator() {
+    if (!scrollThumb) return;
+    const scrollWidth = carousel.scrollWidth || 1;
+    const clientWidth = carousel.clientWidth || 1;
+    const maxScroll = scrollWidth - clientWidth;
+    const thumbPct = Math.min(100, (clientWidth / scrollWidth) * 100);
+    const scrollPct = maxScroll > 0 ? carousel.scrollLeft / maxScroll : 0;
+    scrollThumb.style.width = thumbPct + "%";
+    scrollThumb.style.left = scrollPct * (100 - thumbPct) + "%";
+  }
+
   let scrollRaf = null;
   function handleScroll() {
     if (!mq.matches) return;
@@ -47,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const width = carousel.clientWidth || 1;
       const index = Math.round(carousel.scrollLeft / width);
       current = Math.max(0, Math.min(slides.length - 1, index));
+      updateScrollIndicator();
       scrollRaf = null;
     });
   }
@@ -54,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function enterMobileMode() {
     stopAutoplay();
     scrollToCurrent();
+    updateScrollIndicator();
   }
 
   function enterDesktopMode() {
@@ -77,6 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!mq.matches) startAutoplay();
   });
   carousel.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", function () {
+    if (mq.matches) updateScrollIndicator();
+  });
 
   function handleModeChange(e) {
     if (e.matches) {
