@@ -655,8 +655,9 @@ body.page-scio main.sc-main {
         margin-right: auto;
     }
 
+    /* Pořadí na mobilu ať zůstane stejné jako v DOM: Zdarma -> 180 -> 200+ */
     .sc-price-main {
-        order: -1;
+        order: 1;
     }
 }
 

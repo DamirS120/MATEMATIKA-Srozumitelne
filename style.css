@@ -1521,15 +1521,24 @@ h3 {
         text-align: center;
     }
 
+    /* Ať je pořadí: nadpis -> obrázek -> zbytek textu, ne celý text napřed */
     .about-text {
-        flex: none;
+        display: contents;
+    }
+
+    .about-text > h2 {
+        order: 1;
         width: 100%;
+    }
+
+    .about-text > *:not(h2) {
+        order: 3;
     }
 
     .about-image {
         width: 100%;
         max-width: 380px;
-        order: 1;
+        order: 2;
         margin: 0 auto 20px;
         height: auto;
     }
@@ -2196,9 +2205,15 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         display: none;
     }
 
+    /* O kousek užší karty a mezera mezi nimi - vykukující okraj dalšího
+       snímku napovídá, že jde o obsah, který se dá odscrollovat prstem. */
     #hero-carousel {
         display: flex;
+        gap: 14px;
         overflow-x: auto;
+        overflow-y: hidden;
+        border-radius: 0;
+        box-shadow: none;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
@@ -2210,10 +2225,13 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
 
     #hero-carousel .carousel-slide {
         position: relative;
-        flex: 0 0 100%;
+        flex: 0 0 88%;
         scroll-snap-align: start;
         opacity: 1;
         pointer-events: auto;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.22);
     }
 
     .hero-split-title,
@@ -2475,10 +2493,6 @@ KARTA U KROKU (step-item-card) A CENOVÉ KARTY NA HOMEPAGE
         grid-template-columns: 1fr;
         max-width: 420px;
         margin: 0 auto;
-    }
-
-    .price-card.featured {
-        order: -1;
     }
 }
 

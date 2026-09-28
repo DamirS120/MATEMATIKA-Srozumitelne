@@ -714,9 +714,6 @@ body.page-individual .main-footer {
         margin-right: auto;
     }
 
-    .ix-price-main {
-        order: -1;
-    }
 }
 
 @media (max-width: 720px) {
