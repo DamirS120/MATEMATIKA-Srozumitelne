@@ -1761,86 +1761,17 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     margin-bottom: 2px;
 }
 
-/* Karusel s přehledem nabídky v hero (homepage) */
+/* Karta s přehledem hlavních oblastí v hero (homepage), vpravo vedle textu */
 .hero-carousel-wrap {
     position: relative;
-    margin-bottom: 48px;
-}
-
-/* Měkké barevné skvrny za karuselem */
-.hero-carousel-wrap::before,
-.hero-carousel-wrap::after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    border-radius: 50%;
-    background: var(--accent);
-}
-
-.hero-carousel-wrap::before {
-    top: -30px;
-    right: -20px;
-    width: 160px;
-    height: 160px;
-    opacity: 0.16;
-}
-
-.hero-carousel-wrap::after {
-    bottom: -30px;
-    left: -36px;
-    width: 120px;
-    height: 120px;
-    opacity: 0.12;
 }
 
 #hero-carousel {
     position: relative;
-    z-index: 1;
     border-radius: 28px;
     overflow: hidden;
-    aspect-ratio: 2.15 / 1;
-    box-shadow: 0 25px 50px rgba(30, 58, 138, 0.18);
-}
-
-/* Barevné dekorace v rozích karuselu (žlutá skvrna vlevo nahoře, akcent vpravo dole) */
-#hero-carousel::before {
-    content: '';
-    position: absolute;
-    z-index: 3;
-    right: 0;
-    bottom: 0;
-    width: 190px;
-    height: 190px;
-    background: linear-gradient(135deg, transparent 52%, #22d3ee 52%, var(--accent) 100%);
-    opacity: 0.55;
-    pointer-events: none;
-}
-
-#hero-carousel::after {
-    content: '';
-    position: absolute;
-    z-index: 3;
-    top: -95px;
-    left: -95px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 65% 65%, #fbbf24, #f59e0b 70%);
-    opacity: 0.85;
-    pointer-events: none;
-}
-
-/* Drobná zelená "jiskřička" u tlačítka jako doplňkový barevný akcent */
-.carousel-cta::after {
-    content: '';
-    position: absolute;
-    top: -13px;
-    right: -15px;
-    width: 20px;
-    height: 20px;
-    background: #22c55e;
-    clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
-    pointer-events: none;
+    aspect-ratio: 4 / 5;
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.22);
 }
 
 #hero-carousel .carousel-slide {
@@ -1853,15 +1784,13 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     pointer-events: none;
     transition: opacity 0.6s ease;
     display: flex;
-    align-items: center;
 }
 
 #hero-carousel .carousel-slide::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(9, 14, 33, 0.92) 0%, rgba(9, 14, 33, 0.8) 42%, rgba(9, 14, 33, 0.2) 68%, rgba(9, 14, 33, 0) 82%);
-    z-index: 1;
+    background: linear-gradient(180deg, rgba(14, 26, 64, 0.5) 0%, rgba(14, 26, 64, 0.72) 55%, rgba(14, 26, 64, 0.92) 100%);
 }
 
 #hero-carousel .carousel-slide.active {
@@ -1874,112 +1803,79 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     position: relative;
     z-index: 2;
     color: #fff;
-    padding: 44px 40px 44px 104px;
+    padding: 36px 32px 78px;
     width: 100%;
-    max-width: 62%;
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-badge {
     display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    align-self: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     color: rgba(255, 255, 255, 0.85);
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 50px;
-    font-size: 0.66rem;
-    font-weight: 600;
-    margin-bottom: 16px;
-}
-
-#hero-carousel .carousel-overlay h3 .hl-green {
-    color: #4ade80;
-}
-
-#hero-carousel .carousel-overlay h3 .hl-gold {
-    color: #fbbf24;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 #hero-carousel .carousel-overlay h3 {
     color: #fff;
-    font-size: clamp(2.1rem, 3.4vw, 2.9rem);
-    line-height: 1.1;
+    font-size: clamp(1.9rem, 2.6vw, 2.5rem);
+    line-height: 1.08;
+    font-weight: 800;
+    text-transform: uppercase;
     margin-bottom: 14px;
     padding-bottom: 0;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 #hero-carousel .carousel-overlay p {
-    font-size: 1.16rem;
+    font-size: 1rem;
     line-height: 1.5;
-    opacity: 0.92;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0 0 22px;
+    max-width: 30em;
+}
+
+.carousel-check {
+    list-style: none;
+    padding: 0;
     margin: 0 0 26px;
-    max-width: 34em;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
-}
-
-.carousel-feats {
-    display: flex;
-    gap: 22px;
-    margin-bottom: 28px;
-    flex-wrap: wrap;
-}
-
-.carousel-feat {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 0.92rem;
-    font-weight: 600;
-    max-width: 118px;
+    gap: 11px;
 }
 
-.carousel-feat-ico {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
+.carousel-check li {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.15rem;
-    color: #fff;
+    gap: 10px;
+    font-size: 0.98rem;
+    font-weight: 600;
 }
 
-.carousel-feat:nth-child(1) .carousel-feat-ico {
-    background: #3b82f6;
-    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
-}
-
-.carousel-feat:nth-child(2) .carousel-feat-ico {
-    background: #22c55e;
-    box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
-}
-
-.carousel-feat:nth-child(3) .carousel-feat-ico {
-    background: #f59e0b;
-    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
-}
-
-.carousel-feat:nth-child(4) .carousel-feat-ico {
-    background: #a855f7;
-    box-shadow: 0 6px 16px rgba(168, 85, 247, 0.4);
+.carousel-check li i {
+    color: var(--accent);
+    font-size: 0.82rem;
 }
 
 .carousel-cta {
     display: inline-flex;
-    position: relative;
     align-items: center;
     gap: 10px;
-    background: #f5b400;
-    color: #1e293b;
+    align-self: flex-start;
+    background: var(--accent);
+    color: #fff;
     font-weight: 700;
-    font-size: 1.05rem;
-    padding: 16px 30px;
+    font-size: 0.98rem;
+    padding: 14px 26px;
     border-radius: 50px;
     transition: transform 0.2s ease, filter 0.2s ease;
+    margin-top: auto;
 }
 
 .carousel-cta:hover {
@@ -1987,25 +1883,43 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     filter: brightness(1.08);
 }
 
-#hero-carousel .carousel-arrow {
-    top: 50%;
-}
-
-#hero-carousel .carousel-arrow.prev {
-    left: 16px;
-}
-
-#hero-carousel .carousel-arrow.next {
-    right: 16px;
-}
-
-.hero-carousel-wrap .carousel-dots {
+/* Šipky a tečky pohromadě v jednom řádku dole v kartě */
+.carousel-controls {
     position: absolute;
-    bottom: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 0;
+    right: 28px;
+    bottom: 26px;
     z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.carousel-controls .carousel-arrow {
+    position: static;
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.carousel-controls .carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.28);
+    color: #fff;
+}
+
+.carousel-controls .carousel-dots {
+    margin-top: 0;
+}
+
+.carousel-controls .carousel-dots .dot {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.carousel-controls .carousel-dots .dot.active {
+    background: #fff;
 }
 
 /* Statický obrázek v hero (podstránky přijímaček) */
@@ -2302,50 +2216,13 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         aspect-ratio: 16 / 10;
     }
 
-    #hero-carousel {
-        aspect-ratio: 4 / 5;
-    }
-
-    /* Na mobilu na prvním (obecném) snímku s tabulí vzorců ruší modrý
-       roh dole vpravo - na fotkách u dalších snímků zůstává. */
-    #hero-carousel:has(.slide-doucovani.active)::before {
-        display: none;
-    }
-
-    #hero-carousel .carousel-slide {
-        align-items: stretch;
-    }
-
-    /* Rovnoměrněji tmavé pozadí přes celou výšku (obsah teď zabírá celou
-       kartu, ne jen spodní část), aby fotka nebyla tak vidět a text
-       zůstal čitelný nahoře i dole. */
-    #hero-carousel .carousel-slide::after {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.85) 100%);
-    }
-
     #hero-carousel .carousel-overlay {
-        max-width: 100%;
-        padding: 30px 24px;
-        display: flex;
-        flex-direction: column;
+        padding: 30px 24px 74px;
     }
 
-    /* Tlačítko přitažené až na spodní okraj karty, aby obsah vyplnil
-       celou výšku sekce a nezůstávaly velké mezery nahoře ani dole. */
-    #hero-carousel .carousel-overlay .carousel-cta {
-        margin-top: auto;
-    }
-
-    /* Menší roh na mobilu/tabletu, aby nepřekrýval odznak, který je tu blíž kraji */
-    #hero-carousel::after {
-        top: -62px;
-        left: -62px;
-        width: 80px;
-        height: 80px;
-    }
-
-    .carousel-feats {
-        display: none;
+    .carousel-controls {
+        right: 20px;
+        bottom: 20px;
     }
 
     .hero-split-title,
@@ -2373,7 +2250,8 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
     }
 
     .hero-visual-frame,
-    .hero-visual {
+    .hero-visual,
+    .hero-carousel-wrap {
         order: 2;
     }
 
@@ -2385,44 +2263,14 @@ HERO-SPLIT (rozdělený hero s obrázkem/karuselem vpravo)
         order: 3;
     }
 
-    /* Karusel na mobilu bez šipek, posouvá se přejetím prstem */
-    #hero-carousel {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-
-    #hero-carousel::-webkit-scrollbar {
-        display: none;
-    }
-
-    #hero-carousel .carousel-slide {
-        position: relative;
-        flex: 0 0 100%;
-        scroll-snap-align: start;
-        opacity: 1;
-        visibility: visible;
-        /* Na mobilu se snímky posouvají scrollem, ne přepínáním třídy .active,
-           takže tlačítka uvnitř neaktivního snímku by jinak byla nekliknutelná
-           (zděděné pointer-events:none ze základního pravidla výše). */
-        pointer-events: auto;
-    }
-
-    #hero-carousel .carousel-arrow {
-        display: none;
-    }
-
-    /* Tečky jsou teď mimo scrollovaný #hero-carousel (viz .hero-carousel-wrap
-       v HTML), takže se scrollem neodjíždí - jen je na mobilu zvětšíme. */
+    /* Tečky trochu zvětšíme, ať se na dotek lépe trefí */
     .hero-carousel-wrap .carousel-dots .dot {
-        width: 11px;
-        height: 11px;
+        width: 9px;
+        height: 9px;
     }
 
     .hero-carousel-wrap .carousel-dots .dot.active {
-        width: 32px;
+        width: 22px;
     }
 }
 
