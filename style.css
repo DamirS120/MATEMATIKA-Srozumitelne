@@ -4484,3 +4484,57 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
         font-size: 1.8rem;
     }
 }
+
+/* Stránka Často kladené otázky */
+.faq-hero {
+    padding: 150px 0 50px;
+    background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+    text-align: center;
+}
+
+.faq-hero h1 {
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    color: var(--primary);
+    margin-bottom: 14px;
+}
+
+.faq-hero p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    max-width: 34em;
+    margin: 0 auto;
+}
+
+.faq-page {
+    max-width: 860px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.faq-group {
+    margin-bottom: 50px;
+}
+
+.faq-group h2 {
+    font-size: 2rem;
+    text-align: left;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.faq-group h2::after {
+    display: none;
+}
+
+.faq-more {
+    text-align: center;
+    background: var(--bg-light);
+    border-radius: 24px;
+    padding: 40px 24px;
+}
+
+.faq-more p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+}
