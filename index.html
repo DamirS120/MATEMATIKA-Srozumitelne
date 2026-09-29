@@ -26,6 +26,7 @@
     <script src="menu.js" defer></script>
     <script src="section-nav.js" defer></script>
     <script src="hero-carousel.js" defer></script>
+    <script src="kontakt-modal.js" defer></script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -309,76 +310,50 @@
     </div>
 </section>
 
-<section class="section-alt" id="prijimacky-nav">
-      <div class="container">
-        <h2 class="section-title">Vyber si své přijímačky</h2>
-        <div class="detail-grid detail-grid-4">
-            <a href="cermat.html" class="card" style="border-top: 5px solid var(--primary); box-shadow: 0 10px 25px rgba(30, 58, 138, 0.18);">
-                <img src="images/cermat-gymnazia.jpg" class="card-img" alt="CERMAT příprava" loading="lazy">
-                <div class="card-body">
-                    <h3 style="color:var(--primary)">Příprava na CERMAT</h3>
-                    <p>Pro deváťáky i maturanty. Projdeme testy z minulých let a odhalíme chytáky.</p>
+<section class="section-alt split-info-section">
+    <div class="container split-info-grid">
+        <div class="info-card lektor-card">
+            <div class="lektor-card-top">
+                <div class="lektor-photo">
+                    <div class="lektor-photo-blob" aria-hidden="true"></div>
+                    <img src="images/profil.jpg" alt="Lektor matematiky - student PedF UK, dříve ČVUT" loading="lazy">
                 </div>
-            </a>
-            <a href="cvut.html" class="card" style="border-top: 5px solid #0ea5e9; box-shadow: 0 10px 25px rgba(14, 165, 233, 0.2);">
-                <img src="images/cvut-budova.jpg" class="card-img" alt="ČVUT příprava" loading="lazy">
-                <div class="card-body">
-                    <h3 style="color:#0ea5e9">Přijímačky na ČVUT</h3>
-                        <p>Příprava na FIT, FEL a další fakulty od někoho, kdo tam sám úspěšně studoval.</p>
-                    </div>
+                <h2>Kdo tě bude učit?</h2>
+            </div>
+            <p class="lead-text">Jsem student Pedagogické fakulty Univerzity Karlovy se zkušeností z ČVUT. Matematika mě baví a chci, aby bavila i tebe.</p>
+            <ul class="simple-check-list">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Zkušenost s přípravou na přijímací zkoušky</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Trpělivý a srozumitelný přístup</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Individuální tempo podle tebe</li>
+            </ul>
+            <a href="omne.html" class="hero-intro-cta">O mně <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="info-card prijimacky-card">
+            <h2>Vyber si své přijímačky</h2>
+            <p>Připrav se na zkoušky podle toho, kam míříš.</p>
+            <div class="prijimacky-grid">
+                <a href="cermat.html" class="prijimacky-item">
+                    <span class="prijimacky-icon" style="background:rgba(30,58,138,0.1); color:var(--primary);"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></span>
+                    <span class="prijimacky-text"><strong>CERMAT</strong><span>9. třída – maturita</span></span>
+                    <i class="fa-solid fa-chevron-right prijimacky-chevron" aria-hidden="true"></i>
                 </a>
-                <a href="uk.html" class="card" style="border-top: 5px solid #b91c1c; box-shadow: 0 10px 25px rgba(185, 28, 28, 0.18);">
-                    <img src="images/mff.jpg" class="card-img" alt="MFF UK Troja" loading="lazy">
-                    <div class="card-body">
-                        <h3 style="color:#b91c1c">Matematika na UK</h3>
-                        <p>Příprava pro budoucí učitele i vědce. Zaměřeno na hluboké porozumění teorii.</p>
-                    </div>
+                <a href="cvut.html" class="prijimacky-item">
+                    <span class="prijimacky-icon" style="background:rgba(14,165,233,0.12); color:#0ea5e9;"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+                    <span class="prijimacky-text"><strong>ČVUT</strong><span>FIT · FEL · …</span></span>
+                    <i class="fa-solid fa-chevron-right prijimacky-chevron" aria-hidden="true"></i>
                 </a>
-                <a href="scio.html" class="card" style="border-top: 5px solid #b45309; box-shadow: 0 10px 25px rgba(180, 83, 9, 0.18);">
-                    <img src="images/scio-priprava.jpg" class="card-img" alt="Příprava na SCIO testy" loading="lazy">
-                    <div class="card-body">
-                        <h3 style="color:#b45309">SCIO testy</h3>
-                        <p>OSP, NSZ i přijímačky na gymnázia. Naučím tě přemýšlet tak, jak to testy vyžadují.</p>
-                    </div>
+                <a href="uk.html" class="prijimacky-item">
+                    <span class="prijimacky-icon" style="background:rgba(185,28,28,0.1); color:#b91c1c;"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                    <span class="prijimacky-text"><strong>UK</strong><span>matematika pro VŠ</span></span>
+                    <i class="fa-solid fa-chevron-right prijimacky-chevron" aria-hidden="true"></i>
+                </a>
+                <a href="scio.html" class="prijimacky-item">
+                    <span class="prijimacky-icon" style="background:rgba(180,83,9,0.12); color:#b45309;"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span>
+                    <span class="prijimacky-text"><strong>SCIO</strong><span>OSP · NSZ</span></span>
+                    <i class="fa-solid fa-chevron-right prijimacky-chevron" aria-hidden="true"></i>
                 </a>
             </div>
-      </div>
-    </section>
-
-<section class="container" id="lektor">
-    <div class="about-hero">
-        <div class="about-image">
-            <img src="images/profil.jpg" alt="Lektor matematiky - student PedF UK, dříve ČVUT" loading="lazy">
-        </div>
-        <div class="about-text">
-            <h2>Kdo tě bude učit?</h2>
-            <p class="lead-text">
-                Jsem student Pedagogické fakulty Univerzity Karlovy se zkušeností z ČVUT. Vím, co obě zkoušky i studium vyžadují – a naučím tě, jak na to jít krok za krokem, ne nazpaměť.
-            </p>
-            <ul class="focus-list">
-                <li>
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <div>
-                        <strong>Aktuální znalosti</strong>
-                        Znám požadavky CERMATu, ČVUT, UK i SCIO z první ruky.
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-comments"></i>
-                    <div>
-                        <strong>Lidské vysvětlování</strong>
-                        Mluvím jazykem studentů, ne učebnic.
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <div>
-                        <strong>Individuální tempo</strong>
-                        Žádný spěch – probíráme látku, dokud ji opravdu nepochopíš.
-                    </div>
-                </li>
-            </ul>
-            <a href="omne.html" class="btn-nav">CELÝ MŮJ PŘÍBĚH</a>
         </div>
     </div>
 </section>
@@ -388,7 +363,7 @@
     <div class="steps-container">
 
         <div class="step-item">
-            <div class="step-circle">1</div>
+            <div class="step-circle"><i class="fa-solid fa-comments" aria-hidden="true"></i></div>
             <div class="step-item-card">
                 <h4>První kontakt</h4>
                 <p>Domluvíme se přes WhatsApp nebo Telegram na termínu a probereme, co potřebuješ zlepšit.</p>
@@ -396,7 +371,7 @@
         </div>
 
         <div class="step-item">
-            <div class="step-circle">2</div>
+            <div class="step-circle"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
             <div class="step-item-card">
                 <h4>Příprava</h4>
                 <p>Na základě tvých potřeb připravím materiály, příklady z minulých testů a plán lekce.</p>
@@ -404,7 +379,7 @@
         </div>
 
         <div class="step-item">
-            <div class="step-circle">3</div>
+            <div class="step-circle"><i class="fa-solid fa-people-arrows" aria-hidden="true"></i></div>
             <div class="step-item-card">
                 <h4>Lekce</h4>
                 <p>Vysvětlíme si látku srozumitelně. Žádné stresy, počítáme tak dlouho, dokud to nepochopíš.</p>
@@ -412,7 +387,7 @@
         </div>
 
         <div class="step-item">
-            <div class="step-circle">4</div>
+            <div class="step-circle"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
             <div class="step-item-card">
                 <h4>Výsledky</h4>
                 <p>Po lekci budeš vědět, jak na to. Získáš jistotu v počítání a klid na zkoušky.</p>
@@ -505,82 +480,48 @@
 
 
 
-<section class="container partner-section">
-    <h2 class="section-title">Spolupracuji s nejlepšími</h2>
-    <div class="partner-grid">
-        <article class="partner-card">
-            <div class="partner-card-main">
-                <span class="partner-card-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-                <h3>EduJoy</h3>
-                <p>Interaktivní vzdělávání a kroužky pro děti. Společně tvoříme moderní metodiku výuky.</p>
-                <a class="partner-card-link" href="spoluprace.html#edujoy">Zjistit více</a>
-
-                <ul class="partner-card-features">
-                    <li><i class="fa-solid fa-lightbulb"></i><span>Moderní metodiky</span></li>
-                    <li><i class="fa-solid fa-users"></i><span>Zajímavé kroužky</span></li>
-                    <li><i class="fa-solid fa-star"></i><span>Rozvoj potenciálu</span></li>
-                </ul>
-            </div>
-            <div class="partner-card-photo">
-                <img src="images/EduJoy.jpg" alt="EduJoy - interaktivní vzdělávání pro děti" loading="lazy">
-            </div>
-        </article>
-
-        <article class="partner-card partner-card-accent">
-            <div class="partner-card-main">
-                <span class="partner-card-icon"><i class="fa-solid fa-user-group"></i></span>
-                <h3>NEWLIFE</h3>
-                <p>Specialisté na doučování "na poslední chvíli" a přípravu k reparátům a maturitám.</p>
-                <a class="partner-card-link" href="spoluprace.html#newlife">Zjistit více</a>
-
-                <ul class="partner-card-features">
-                    <li><i class="fa-solid fa-bullseye"></i><span>Příprava na zkoušky</span></li>
-                    <li><i class="fa-solid fa-book-open"></i><span>Individuální přístup</span></li>
-                    <li><i class="fa-solid fa-chart-column"></i><span>Zkušení lektoři</span></li>
-                    <li><i class="fa-solid fa-circle-check"></i><span>Výsledek a jistota</span></li>
-                </ul>
-            </div>
-            <div class="partner-card-photo">
-                <img src="images/newlife.jpg" alt="NEWLIFE Doučování - příprava na zkoušky na poslední chvíli" loading="lazy">
-                <p class="partner-card-quote">Příprava na<br>důležité zkoušky</p>
-            </div>
-        </article>
+<section class="section-alt support-row-section">
+  <div class="container support-row-grid">
+    <div class="spoluprace-promo">
+        <span class="promo-badge">Spolupráce</span>
+        <h2>Spolupracuji s nejlepšími</h2>
+        <p>Doučování doplňuju spoluprací s ověřenými vzdělávacími projekty – od interaktivních kroužků pro děti po intenzivní přípravu na poslední chvíli.</p>
+        <a href="spoluprace.html" class="hero-intro-cta">Zjistit více o spolupráci <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </div>
-</section>
 
-<section class="section-alt faq-section">
-  <div class="container">
-    <h2 class="section-title">Časté otázky</h2>
-    <div class="faq-list">
-        <details class="faq-item">
-            <summary>Jak probíhá první lekce? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Napíšeš mi přes WhatsApp nebo Telegram, domluvíme termín a probereme, s čím přesně potřebuješ pomoct. První konzultace je zdarma a nezávazná.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Učíte i online, nebo jen osobně v Praze? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Obojí. Osobní lekce probíhají v Praze, online lekce kdekoli přes videohovor – funguje to stejně dobře, jen si k tomu připravíme sdílenou tabuli nebo materiály na obrazovce.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Co když mi lekce nebude vyhovovat? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Žádný problém. Nejsi ničím vázaný/á – pokračujeme, jen pokud ti to dává smysl a vidíš výsledky.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Kolik lekcí budu potřebovat? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Záleží na tvém cíli a aktuální úrovni. Na první konzultaci probereme, kde jsi teď, a domluvíme si reálný plán – bez zbytečných hodin navíc.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Jak se domluvím na termínu? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Nejrychleji přes WhatsApp nebo Telegram (odkazy v patičce), nebo vyplň formulář níže a ozvu se ti zpět.</p>
-        </details>
+    <div class="faq-compact">
+        <h2>Časté otázky</h2>
+        <div class="faq-list faq-list-plain">
+            <details class="faq-item">
+                <summary>Jak probíhá první lekce? <i class="fa-solid fa-chevron-down"></i></summary>
+                <p>Napíšeš mi přes WhatsApp nebo Telegram, domluvíme termín a probereme, s čím přesně potřebuješ pomoct. První konzultace je zdarma a nezávazná.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Učíte i online, nebo jen osobně v Praze? <i class="fa-solid fa-chevron-down"></i></summary>
+                <p>Obojí. Osobní lekce probíhají v Praze, online lekce kdekoli přes videohovor – funguje to stejně dobře, jen si k tomu připravíme sdílenou tabuli nebo materiály na obrazovce.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Co když mi lekce nebude vyhovovat? <i class="fa-solid fa-chevron-down"></i></summary>
+                <p>Žádný problém. Nejsi ničím vázaný/á – pokračujeme, jen pokud ti to dává smysl a vidíš výsledky.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Kolik lekcí budu potřebovat? <i class="fa-solid fa-chevron-down"></i></summary>
+                <p>Záleží na tvém cíli a aktuální úrovni. Na první konzultaci probereme, kde jsi teď, a domluvíme si reálný plán – bez zbytečných hodin navíc.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Jak se domluvím na termínu? <i class="fa-solid fa-chevron-down"></i></summary>
+                <p>Nejrychleji přes WhatsApp nebo Telegram (odkazy v patičce), nebo vyplň formulář níže a ozvu se ti zpět.</p>
+            </details>
+        </div>
     </div>
   </div>
 </section>
 
-<section id="kontakt" class="contact-section">
-    <div class="container">
-    <div class="mini-poll-grid">
+<div id="kontakt-modal" class="kontakt-modal-overlay">
+    <div class="kontakt-modal-box" role="dialog" aria-modal="true" aria-labelledby="kontakt-modal-title">
+        <button type="button" class="kontakt-modal-close" aria-label="Zavřít"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
         <div class="mini-poll-form">
-        <h2>Pojďme dát matematice smysl</h2>
+        <h2 id="kontakt-modal-title">Pojďme dát matematice smysl</h2>
 
         <div class="contact-social">
             <a class="contact-social-link" href="https://wa.me/420777209320" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
@@ -597,8 +538,8 @@
             </div>
 
             <div class="form-group">
-                <label for="kontakt">E-mail nebo Telefon</label>
-                <input type="text" id="kontakt" name="kontakt" required placeholder="abych se mohl ozvat zpět">
+                <label for="kontakt-info">E-mail nebo Telefon</label>
+                <input type="text" id="kontakt-info" name="kontakt" required placeholder="abych se mohl ozvat zpět">
             </div>
 
             <input type="hidden" name="jazyk" value="CZ">
@@ -633,8 +574,7 @@
         </form>
         </div>
     </div>
-    </div>
-</section>
+</div>
 
  <footer class="main-footer">
     <div class="container footer-grid">
