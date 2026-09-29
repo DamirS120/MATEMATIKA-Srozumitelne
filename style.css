@@ -3748,3 +3748,739 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
         display: none;
     }
 }
+/* ============================================================
+   Větev "new-section" - zvětšení a zvýraznění (hero, karusel,
+   přijímačky, kroky, spolupráce/FAQ, CTA, patička)
+============================================================ */
+.hero-intro {
+    padding: 170px 0 100px;
+}
+
+.hero-intro .hero-split-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.hero-intro-text {
+    max-width: 660px;
+}
+
+.hero-big-title {
+    font-size: clamp(2.6rem, 4.6vw, 4.3rem);
+    line-height: 1.08;
+    margin-bottom: 26px;
+}
+
+.hero-intro .hero-split-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 34em;
+    margin-bottom: 34px;
+}
+
+.hero-intro .hero-feature-row {
+    gap: 18px 30px;
+    margin-bottom: 40px;
+}
+
+.hero-intro .hero-feature-row-item {
+    font-size: 1.05rem;
+}
+
+.hero-intro .hero-feature-row-item i {
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
+}
+
+.hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.hero-intro .hero-intro-cta {
+    padding: 19px 38px;
+    font-size: 1.1rem;
+}
+
+.hero-intro-cta-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 17px 34px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.hero-intro-cta-outline:hover {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.hero-photo-img {
+    aspect-ratio: 4 / 4.6;
+    border-radius: 36px;
+}
+
+.hero-photo-note {
+    font-size: 1.05rem;
+    padding: 18px 24px;
+    max-width: 240px;
+}
+
+/* Karusel větší a s praktickými informacemi */
+.carousel-full-section {
+    padding: 10px 0 90px;
+}
+
+#hero-carousel-full {
+    height: 580px;
+    border-radius: 36px;
+}
+
+#hero-carousel-full .carousel-overlay {
+    padding: 56px 80px;
+    max-width: 860px;
+}
+
+#hero-carousel-full .carousel-overlay h3 {
+    font-size: clamp(2.4rem, 3.6vw, 3.6rem);
+    margin-bottom: 16px;
+}
+
+#hero-carousel-full .carousel-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+}
+
+#hero-carousel-full .carousel-check {
+    gap: 10px 28px;
+    margin-bottom: 20px;
+}
+
+#hero-carousel-full .carousel-check li {
+    font-size: 1.05rem;
+}
+
+.carousel-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.carousel-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 9px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.carousel-meta i {
+    color: #7dd3fc;
+}
+
+#hero-carousel-full .carousel-cta {
+    padding: 17px 34px;
+    font-size: 1.08rem;
+}
+
+/* Benefity bez rámečků */
+.hero-facts-row {
+    padding-bottom: 80px;
+}
+
+.hero-facts-grid {
+    gap: 0;
+}
+
+.hero-fact-card {
+    background: none;
+    border: none;
+    border-left: 1px solid #e2e8f0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 12px 30px;
+}
+
+.hero-fact-card:first-child {
+    border-left: none;
+}
+
+.hero-fact-card i {
+    width: auto;
+    height: auto;
+    background: none;
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.hero-fact-card h4 {
+    font-size: 1.2rem;
+}
+
+.hero-fact-card p {
+    font-size: 1rem;
+}
+
+/* Kdo tě bude učit + osobně/online */
+.split-info-section {
+    padding: 100px 0;
+}
+
+.split-info-grid {
+    gap: 32px;
+}
+
+.info-card {
+    padding: 48px;
+    border-radius: 32px;
+}
+
+.info-card h2 {
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.info-card h2::after,
+.spoluprace-promo h2::after,
+.faq-compact h2::after {
+    left: 0;
+    transform: none;
+}
+
+.lektor-photo {
+    width: 116px;
+    height: 116px;
+}
+
+.lektor-card-top {
+    gap: 26px;
+    margin-bottom: 22px;
+}
+
+.info-card .lead-text {
+    font-size: 1.1rem;
+}
+
+.simple-check-list li {
+    font-size: 1.02rem;
+}
+
+.lektor-modes {
+    margin-bottom: 30px;
+}
+
+.lektor-modes h3 {
+    font-size: 1.15rem;
+    padding-bottom: 0;
+    margin-bottom: 14px;
+}
+
+.lektor-modes-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.lektor-mode {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--bg-light);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text-light);
+    transition: 0.2s;
+}
+
+.lektor-mode input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lektor-mode strong {
+    display: block;
+    color: var(--text-dark);
+    font-size: 0.98rem;
+    margin-bottom: 2px;
+}
+
+.lektor-mode:has(input:checked) {
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.07);
+}
+
+.lektor-mode-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.lektor-card .hero-intro-cta {
+    align-self: flex-start;
+    padding: 17px 34px;
+}
+
+/* Přijímačky - velké interaktivní karty */
+.prijimacky-card > p {
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+}
+
+.prijimacky-grid {
+    gap: 18px;
+    flex: 1;
+}
+
+.prijimacky-item {
+    --c: var(--primary);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 6px;
+    min-height: 200px;
+    padding: 28px;
+    border: 2px solid transparent;
+    border-radius: 22px;
+}
+
+.prijimacky-item:nth-child(2) { --c: #0ea5e9; }
+.prijimacky-item:nth-child(3) { --c: #b91c1c; }
+.prijimacky-item:nth-child(4) { --c: #b45309; }
+
+.prijimacky-item:hover {
+    background: #ffffff;
+    border-color: var(--c);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    transform: translateY(-5px);
+}
+
+.prijimacky-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.prijimacky-text strong {
+    font-size: 1.4rem;
+}
+
+.prijimacky-text span {
+    font-size: 0.92rem;
+}
+
+.prijimacky-more {
+    margin-top: auto;
+    padding-top: 10px;
+    color: var(--c);
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prijimacky-more i {
+    transition: transform 0.2s ease;
+}
+
+.prijimacky-item:hover .prijimacky-more i {
+    transform: translateX(6px);
+}
+
+/* Jak probíhá doučování - větší */
+.steps-large {
+    padding-top: 40px;
+    padding-bottom: 90px;
+}
+
+.steps-large .section-title {
+    font-size: 2.9rem;
+}
+
+.steps-large .steps-container {
+    margin-top: 76px;
+    gap: 40px;
+}
+
+.steps-large .steps-container::before {
+    top: 45px;
+    left: 70px;
+    right: 70px;
+}
+
+.steps-large .step-circle {
+    width: 90px;
+    height: 90px;
+    font-size: 2rem;
+    margin-bottom: 28px;
+}
+
+.steps-large .step-item h4 {
+    font-size: 1.55rem;
+}
+
+.steps-large .step-item p {
+    font-size: 1.12rem;
+}
+
+/* Ceník - jen kosmeticky */
+.cenik-lead {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin: 8px 0 0;
+}
+
+#cenik-pro .price-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#cenik-pro .price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
+}
+
+/* Spolupráce + FAQ - větší a vzdušnější */
+.support-row-section {
+    padding: 120px 0;
+}
+
+.support-row-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+}
+
+.spoluprace-promo {
+    padding: 56px 50px;
+    border-radius: 32px;
+}
+
+.spoluprace-promo h2 {
+    font-size: 2.5rem;
+    line-height: 1.15;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 22px;
+}
+
+.spoluprace-promo p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 34px;
+}
+
+.spoluprace-promo .hero-intro-cta {
+    padding: 18px 36px;
+}
+
+.faq-compact h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.faq-compact .faq-list-plain .faq-item summary {
+    font-size: 1.15rem;
+    padding: 26px 0;
+}
+
+.faq-compact .faq-list-plain .faq-item p {
+    font-size: 1.05rem;
+    padding-bottom: 26px;
+}
+
+/* Silnější zakončení: CTA pruh + patička */
+.cta-banner-section {
+    padding-top: 40px;
+    padding-bottom: 90px;
+}
+
+.cta-banner {
+    position: relative;
+    overflow: hidden;
+    gap: 40px;
+    padding: 64px 64px;
+    border-radius: 36px;
+}
+
+.cta-banner::before,
+.cta-banner::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.22);
+    pointer-events: none;
+}
+
+.cta-banner::before {
+    width: 360px;
+    height: 360px;
+    right: -100px;
+    top: -140px;
+}
+
+.cta-banner::after {
+    width: 220px;
+    height: 220px;
+    left: 30%;
+    bottom: -130px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.cta-banner > * {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-banner-icon {
+    width: 88px;
+    height: 88px;
+    font-size: 2.1rem;
+}
+
+.cta-banner-text h2 {
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    margin-bottom: 8px;
+}
+
+.cta-banner-text p {
+    font-size: 1.2rem;
+}
+
+.cta-banner-points {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 26px;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.cta-banner-points li {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.cta-banner-points i {
+    color: #7dd3fc;
+    margin-right: 8px;
+}
+
+.cta-banner-btn {
+    padding: 22px 46px;
+    font-size: 1.2rem;
+}
+
+.footer-v2 {
+    padding-top: 64px;
+}
+
+.footer-v2-logo {
+    font-size: 1.4rem;
+}
+
+.footer-v2-links a {
+    font-size: 1rem;
+}
+
+.footer-v2-social a {
+    width: 46px;
+    height: 46px;
+    font-size: 1.1rem;
+}
+
+.footer-v2-contacts {
+    font-size: 0.95rem;
+    margin-top: 34px;
+    margin-bottom: 10px;
+}
+
+.footer-v2 .footer-bottom {
+    margin-top: 30px;
+    padding-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+    .hero-intro {
+        padding: 110px 0 60px;
+    }
+
+    .hero-intro .hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-cta-row {
+        justify-content: center;
+    }
+
+    .hero-intro .hero-split-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #hero-carousel-full {
+        height: 680px;
+        aspect-ratio: auto;
+        border-radius: 28px;
+    }
+
+    #hero-carousel-full .carousel-overlay {
+        padding: 70px 28px 30px;
+        max-width: none;
+    }
+
+    #hero-carousel-full .carousel-overlay h3 {
+        font-size: 2.2rem;
+    }
+
+    #hero-carousel-full .carousel-overlay p {
+        font-size: 1.05rem;
+    }
+
+    .carousel-meta {
+        margin-bottom: 22px;
+    }
+
+    .hero-fact-card {
+        border-left: none;
+        padding: 14px 12px;
+    }
+
+    .split-info-section {
+        padding: 70px 0;
+    }
+
+    .info-card {
+        padding: 34px 28px;
+    }
+
+    .steps-large .section-title {
+        font-size: 2.2rem;
+    }
+
+    .steps-large .steps-container {
+        margin-top: 50px;
+        gap: 0;
+    }
+
+    .steps-large .step-circle {
+        width: 70px;
+        height: 70px;
+        font-size: 1.6rem;
+        margin-bottom: 0;
+    }
+
+    .steps-large .step-item::after {
+        top: 70px;
+        left: 34px;
+    }
+
+    .support-row-section {
+        padding: 80px 0;
+    }
+
+    .support-row-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .spoluprace-promo {
+        padding: 36px 28px;
+    }
+
+    .spoluprace-promo h2,
+    .faq-compact h2 {
+        font-size: 2rem;
+    }
+
+    .cta-banner {
+        padding: 44px 26px;
+        gap: 26px;
+    }
+
+    .cta-banner-points {
+        justify-content: center;
+    }
+
+    .cta-banner-btn {
+        padding: 18px 38px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-big-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-intro .hero-split-text {
+        font-size: 1.1rem;
+    }
+
+    .hero-intro .hero-feature-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-cta-row {
+        flex-direction: column;
+    }
+
+    .hero-cta-row a {
+        justify-content: center;
+    }
+
+    #hero-carousel-full {
+        height: 700px;
+    }
+
+    .lektor-modes-row {
+        grid-template-columns: 1fr;
+    }
+
+    .lektor-card-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .prijimacky-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prijimacky-item {
+        min-height: 0;
+    }
+
+    .info-card h2 {
+        font-size: 1.8rem;
+    }
+}
