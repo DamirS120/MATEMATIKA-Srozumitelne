@@ -4538,3 +4538,57 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
     font-size: 1.15rem;
     margin-bottom: 20px;
 }
+
+/* CERMAT + ČVUT: světlé, větší hero podle reference */
+body.page-cermat .hero-split,
+body.page-cvut .hero-split {
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+    min-height: 0;
+    padding: 150px 0 90px;
+}
+
+body.page-cermat .hero-split .hero-eyebrow,
+body.page-cvut .hero-split .hero-eyebrow {
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--primary);
+}
+
+body.page-cermat .hero-split .hero-split-title,
+body.page-cvut .hero-split .hero-split-title {
+    color: var(--text-dark) !important;
+    font-size: clamp(2.6rem, 4.6vw, 4.2rem);
+    line-height: 1.08;
+}
+
+body.page-cermat .hero-split .hero-split-title .highlight-alt,
+body.page-cvut .hero-split .hero-split-title .highlight-alt {
+    color: var(--accent);
+}
+
+body.page-cermat .hero-split .hero-split-text,
+body.page-cvut .hero-split .hero-split-text {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+body.page-cermat .hero-split .hero-facts,
+body.page-cvut .hero-split .hero-facts {
+    background: transparent;
+    border-color: #e2e8f0;
+}
+
+body.page-cermat .hero-split .hero-fact:not(:first-child),
+body.page-cvut .hero-split .hero-fact:not(:first-child) {
+    border-left-color: #e2e8f0;
+}
+
+body.page-cermat .hero-split .hero-fact strong,
+body.page-cvut .hero-split .hero-fact strong {
+    color: var(--text-dark);
+}
+
+body.page-cermat .hero-split .hero-fact span,
+body.page-cvut .hero-split .hero-fact span {
+    color: var(--text-light);
+}

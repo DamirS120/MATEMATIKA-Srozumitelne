@@ -26,6 +26,7 @@
     <script src="menu.js" defer></script>
     <script src="section-nav.js" defer></script>
     <script src="hero-carousel.js" defer></script>
+    <script src="kontakt-modal.js" defer></script>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -160,181 +161,224 @@
     </div>
 </nav>
 
-<header class="hero-split">
+<header class="hero-intro">
     <div class="container hero-split-grid">
-        <div class="hero-left">
-            <span class="hero-eyebrow">Индивидуальный подход</span>
-            <h1 class="hero-split-title">Репетиторство по математике, которое наконец <span class="highlight-alt">обретает смысл</span></h1>
-            <p class="hero-split-text">Подготовлю тебя к поступлению (CERMAT, ČVUT, UK, SCIO) или помогу со сложным материалом в вузе. Никакой зубрёжки — только чистое понимание.</p>
+        <div class="hero-intro-text">
+            <h1 class="hero-split-title hero-big-title">Репетиторство по математике, которое тебе <span class="highlight-alt">понравится</span></h1>
+            <p class="hero-split-text">Подготовлю тебя к вступительным экзаменам (CERMAT, ČVUT, UK, SCIO) и к выпускному экзамену. Понятно, без стресса и с упором на настоящее понимание.</p>
 
-            <div class="mode-picker">
-                <h3>Занимаюсь очно и онлайн</h3>
-                <p>Выбери, что тебе удобнее — оба формата работают с одинаковым вниманием и результатом.</p>
+            <div class="hero-feature-row">
+                <div class="hero-feature-row-item">
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                    <span>Индивидуальный подход</span>
+                </div>
+                <div class="hero-feature-row-item">
+                    <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                    <span>Практические примеры</span>
+                </div>
+                <div class="hero-feature-row-item">
+                    <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+                    <span>Постепенный прогресс</span>
+                </div>
+            </div>
 
-                <label class="mode-option">
-                    <input type="radio" name="vyuka-forma" value="osobne" checked>
-                    <span class="mode-icon"><i class="fa-solid fa-location-dot"></i></span>
-                    <span class="mode-text">
-                        <strong>Очно в Праге</strong>
-                        Занятия у меня, по договорённости возможно и у тебя дома.
-                    </span>
-                </label>
-
-                <label class="mode-option">
-                    <input type="radio" name="vyuka-forma" value="online">
-                    <span class="mode-icon"><i class="fa-solid fa-laptop"></i></span>
-                    <span class="mode-text">
-                        <strong>Онлайн откуда угодно</strong>
-                        По видеосвязи с общим экраном, без разъездов.
-                    </span>
-                </label>
+            <div class="hero-cta-row">
+                <a href="#hero-carousel-section" class="hero-intro-cta">Узнать больше <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="#kontakt" class="hero-intro-cta-outline">Договориться о бесплатном занятии</a>
             </div>
         </div>
 
-        <div class="hero-carousel-wrap">
-            <div class="hero-carousel" id="hero-carousel">
+        <div class="hero-intro-photo">
+            <div class="hero-photo-blob" aria-hidden="true"></div>
+            <img src="images/individualni-anketa.jpg" alt="Занятие по математике за столом с тетрадями и калькулятором" class="hero-photo-img" loading="eager">
+            <div class="hero-photo-note">Математика может<br>быть понятной!</div>
+        </div>
+    </div>
+</header>
+
+<section class="carousel-full-section" id="hero-carousel-section">
+    <div class="container">
+        <div class="hero-carousel-full-wrap">
+            <button type="button" class="carousel-arrow prev" aria-label="Предыдущее предложение"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="hero-carousel-track" id="hero-carousel-full">
                 <div class="carousel-slide slide-cvut active" style="background-image:url('images/cvut-budova.jpg')">
                     <div class="carousel-overlay">
-                        <span class="carousel-badge">Вуз</span>
-                        <h3>Математика<br>в ČVUT</h3>
-                        <p>Подготовка к вступительным экзаменам и математике в вузе.</p>
+                        <span class="carousel-badge">Подготовка к вузам</span>
+                        <h3>Математика в ČVUT</h3>
+                        <p>Подготовка к вступительным экзаменам и к математике в вузе.</p>
                         <ul class="carousel-check">
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Типовые задания</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Типовые задачи</li>
                             <li><i class="fa-solid fa-check" aria-hidden="true"></i>Стратегия решения</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Системная подготовка</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Индивидуальный подход</li>
                         </ul>
+                        <div class="carousel-meta">
+                            <span><i class="fa-solid fa-building-columns" aria-hidden="true"></i>FIT · FEL · FSv</span>
+                            <span><i class="fa-solid fa-laptop" aria-hidden="true"></i>Очно и онлайн</span>
+                            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i>1-я консультация бесплатно</span>
+                        </div>
                         <a href="cvut_ru.html" class="carousel-cta">Подробнее <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="carousel-slide slide-uk" style="background-image:url('images/mff.jpg')">
                     <div class="carousel-overlay">
-                        <span class="carousel-badge">Вуз</span>
-                        <h3>Математика<br>в UK</h3>
-                        <p>Подготовка для будущих учителей и учёных, с упором на глубокое понимание.</p>
+                        <span class="carousel-badge">Подготовка к вузам</span>
+                        <h3>Математика в UK</h3>
+                        <p>Подготовка к вступительным экзаменам в Карлов университет. Сосредоточимся на типовых задачах, стратегии решения и эффективной подготовке.</p>
                         <ul class="carousel-check">
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Типовые задания</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Глубокое понимание</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Системная подготовка</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Типовые задачи</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Стратегия решения</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Индивидуальный подход</li>
                         </ul>
+                        <div class="carousel-meta">
+                            <span><i class="fa-solid fa-building-columns" aria-hidden="true"></i>MFF · PedF · PřF</span>
+                            <span><i class="fa-solid fa-laptop" aria-hidden="true"></i>Очно и онлайн</span>
+                            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i>1-я консультация бесплатно</span>
+                        </div>
                         <a href="uk_ru.html" class="carousel-cta">Подробнее <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="carousel-slide slide-cermat" style="background-image:url('images/cermat-priprava-test.webp')">
                     <div class="carousel-overlay">
                         <span class="carousel-badge">Вступительные экзамены</span>
-                        <h3>Подготовка<br>к CERMAT</h3>
+                        <h3>Подготовка к CERMAT</h3>
                         <p>Для девятиклассников и выпускников — тесты прошлых лет и их подвохи.</p>
                         <ul class="carousel-check">
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Типовые задания</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Типовые задачи</li>
                             <li><i class="fa-solid fa-check" aria-hidden="true"></i>Стратегия решения</li>
                             <li><i class="fa-solid fa-check" aria-hidden="true"></i>Постепенный прогресс</li>
                         </ul>
+                        <div class="carousel-meta">
+                            <span><i class="fa-solid fa-building-columns" aria-hidden="true"></i>9 класс · выпускной</span>
+                            <span><i class="fa-solid fa-laptop" aria-hidden="true"></i>Тесты прошлых лет</span>
+                            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i>От 180 Kč / час</span>
+                        </div>
                         <a href="cermat_ru.html" class="carousel-cta">Подробнее <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="carousel-slide slide-scio" style="background-image:url('images/scio-priprava-test.jpg')">
                     <div class="carousel-overlay">
-                        <span class="carousel-badge">Тесты OSP и NSZ</span>
-                        <h3>Подготовка<br>к SCIO</h3>
-                        <p>OSP, NSZ и поступление в гимназии — научись мыслить так, как требуют тесты.</p>
+                        <span class="carousel-badge">Тесты OSP &amp; NSZ</span>
+                        <h3>Подготовка к SCIO</h3>
+                        <p>OSP, NSZ и поступление в гимназии — научись думать так, как этого требуют тесты.</p>
                         <ul class="carousel-check">
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Типовые задания</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Типовые задачи</li>
                             <li><i class="fa-solid fa-check" aria-hidden="true"></i>Стратегия решения</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Системная подготовка</li>
+                            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Индивидуальный подход</li>
                         </ul>
+                        <div class="carousel-meta">
+                            <span><i class="fa-solid fa-building-columns" aria-hidden="true"></i>OSP · NSZ · гимназии</span>
+                            <span><i class="fa-solid fa-laptop" aria-hidden="true"></i>Тренировка работы на время</span>
+                            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i>От 180 Kč / час</span>
+                        </div>
                         <a href="scio_ru.html" class="carousel-cta">Подробнее <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
-
-                <button type="button" class="carousel-arrow next" aria-label="Следующее предложение"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
-            <div class="carousel-scroll-indicator" aria-hidden="true">
-                <span class="carousel-scroll-thumb"></span>
-            </div>
+            <button type="button" class="carousel-arrow next" aria-label="Следующее предложение"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
-    </div>
-</header>
-
-<section class="section-alt" id="prijimacky-nav">
-      <div class="container">
-        <h2 class="section-title">Выбери свои вступительные экзамены</h2>
-        <div class="detail-grid detail-grid-4">
-            <a href="cermat_ru.html" class="card" style="border-top: 5px solid var(--primary); box-shadow: 0 10px 25px rgba(30, 58, 138, 0.18);">
-                <img src="images/cermat-gymnazia.jpg" class="card-img" alt="Подготовка к CERMAT" loading="lazy">
-                <div class="card-body">
-                    <h3 style="color:var(--primary)">Подготовка к CERMAT</h3>
-                    <p>Для девятиклассников и выпускников. Разберём тесты прошлых лет и найдём все подвохи.</p>
-                </div>
-            </a>
-            <a href="cvut_ru.html" class="card" style="border-top: 5px solid #0ea5e9; box-shadow: 0 10px 25px rgba(14, 165, 233, 0.2);">
-                <img src="images/cvut-budova.jpg" class="card-img" alt="Подготовка к ČVUT" loading="lazy">
-                <div class="card-body">
-                    <h3 style="color:#0ea5e9">Поступление в ČVUT</h3>
-                        <p>Подготовка на FIT, FEL и другие факультеты от человека, который сам там успешно учился.</p>
-                    </div>
-                </a>
-                <a href="uk_ru.html" class="card" style="border-top: 5px solid #b91c1c; box-shadow: 0 10px 25px rgba(185, 28, 28, 0.18);">
-                    <img src="images/mff.jpg" class="card-img" alt="MFF UK Troja" loading="lazy">
-                    <div class="card-body">
-                        <h3 style="color:#b91c1c">Математика для UK</h3>
-                        <p>Подготовка для будущих учителей и учёных. Упор на глубокое понимание теории.</p>
-                    </div>
-                </a>
-                <a href="scio_ru.html" class="card" style="border-top: 5px solid #b45309; box-shadow: 0 10px 25px rgba(180, 83, 9, 0.18);">
-                    <img src="images/scio-priprava.jpg" class="card-img" alt="Подготовка к тестам SCIO" loading="lazy">
-                    <div class="card-body">
-                        <h3 style="color:#b45309">Тесты SCIO</h3>
-                        <p>OSP, NSZ и поступление в гимназии. Научу тебя мыслить так, как этого требуют тесты.</p>
-                    </div>
-                </a>
-            </div>
-      </div>
-    </section>
-
-<section class="container" id="lektor">
-    <div class="about-hero">
-        <div class="about-image">
-            <img src="images/profil.jpg" alt="Репетитор по математике - студент PedF UK, раньше ČVUT" loading="lazy">
-        </div>
-        <div class="about-text">
-            <h2>Кто будет тебя учить?</h2>
-            <p class="lead-text">
-                Я студент Педагогического факультета Карлова университета с опытом учёбы в ČVUT. Знаю, что требуют оба экзамена и учёба в вузе — и научу тебя идти к этому шаг за шагом, а не зубрить.
-            </p>
-            <ul class="focus-list">
-                <li>
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <div>
-                        <strong>Актуальные знания</strong>
-                        Знаю требования CERMAT, ČVUT, UK и SCIO из первых рук.
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-comments"></i>
-                    <div>
-                        <strong>Человеческое объяснение</strong>
-                        Говорю на языке студентов, а не учебников.
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <div>
-                        <strong>Индивидуальный темп</strong>
-                        Никакой спешки — разбираем материал, пока ты действительно его не поймёшь.
-                    </div>
-                </li>
-            </ul>
-            <a href="omne_ru.html" class="btn-nav">ВСЯ МОЯ ИСТОРИЯ</a>
+        <div class="carousel-dots">
+            <button type="button" class="dot active" data-index="0" aria-label="Математика в ČVUT"></button>
+            <button type="button" class="dot" data-index="1" aria-label="Математика в UK"></button>
+            <button type="button" class="dot" data-index="2" aria-label="Подготовка к CERMAT"></button>
+            <button type="button" class="dot" data-index="3" aria-label="Подготовка к SCIO"></button>
         </div>
     </div>
 </section>
 
-<section class="steps-wrapper container">
+<section class="hero-facts-row container">
+    <div class="hero-facts-grid">
+        <div class="hero-fact-card">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <h4>Индивидуальный подход</h4>
+            <p>Каждый ученик особенный. Подстрою занятия под твои потребности.</p>
+        </div>
+        <div class="hero-fact-card">
+            <i class="fa-solid fa-award" aria-hidden="true"></i>
+            <h4>Опыт ČVUT</h4>
+            <p>Учусь на PedF UK и имею опыт учёбы в ČVUT.</p>
+        </div>
+        <div class="hero-fact-card">
+            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+            <h4>Понятное объяснение</h4>
+            <p>Без сложных формулировок. Ясно и шаг за шагом.</p>
+        </div>
+        <div class="hero-fact-card">
+            <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+            <h4>Заметные результаты</h4>
+            <p>Лучшие оценки, больше уверенности в себе.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-alt split-info-section">
+    <div class="container split-info-grid">
+        <div class="info-card lektor-card">
+            <div class="lektor-card-top">
+                <div class="lektor-photo">
+                    <div class="lektor-photo-blob" aria-hidden="true"></div>
+                    <img src="images/profil.jpg" alt="Репетитор по математике — студент PedF UK, ранее ČVUT" loading="lazy">
+                </div>
+                <h2>Кто будет тебя учить?</h2>
+            </div>
+            <p class="lead-text">Я студент Педагогического факультета Карлова университета с опытом учёбы в ČVUT. Мне нравится математика, и я хочу, чтобы она нравилась и тебе.</p>
+            <ul class="simple-check-list">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Опыт подготовки к вступительным экзаменам</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Терпеливый и понятный подход</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Индивидуальный темп под тебя</li>
+            </ul>
+            <div class="lektor-modes">
+                <h3>Занимаюсь очно и онлайн</h3>
+                <div class="lektor-modes-row">
+                    <label class="lektor-mode">
+                        <input type="radio" name="vyuka-forma" value="osobne" checked>
+                        <span class="lektor-mode-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                        <span><strong>Очно в Праге</strong>Занятия у меня, по договорённости и у тебя дома.</span>
+                    </label>
+                    <label class="lektor-mode">
+                        <input type="radio" name="vyuka-forma" value="online">
+                        <span class="lektor-mode-icon"><i class="fa-solid fa-laptop" aria-hidden="true"></i></span>
+                        <span><strong>Онлайн откуда угодно</strong>Видеозвонок с общим экраном.</span>
+                    </label>
+                </div>
+            </div>
+            <a href="omne_ru.html" class="hero-intro-cta">Обо мне <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="info-card prijimacky-card">
+            <h2>Выбери свой экзамен</h2>
+            <p>Готовься к экзаменам в зависимости от того, куда ты нацелен.</p>
+            <div class="prijimacky-grid">
+                <a href="cermat_ru.html" class="prijimacky-item">
+                    <span class="prijimacky-icon" style="background:rgba(30,58,138,0.1); color:var(--primary);"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></span>
+                    <span class="prijimacky-text"><strong>CERMAT</strong><span>9 класс – выпускной</span></span>
+                    <span class="prijimacky-more">Готовиться <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+                <a href="cvut_ru.html" class="prijimacky-item">
+                    <span class="prijimacky-icon" style="background:rgba(14,165,233,0.12); color:#0ea5e9;"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+                    <span class="prijimacky-text"><strong>ČVUT</strong><span>FIT · FEL · …</span></span>
+                    <span class="prijimacky-more">Готовиться <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+                <a href="uk_ru.html" class="prijimacky-item">
+                    <span class="prijimacky-icon" style="background:rgba(185,28,28,0.1); color:#b91c1c;"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+                    <span class="prijimacky-text"><strong>UK</strong><span>математика для вуза</span></span>
+                    <span class="prijimacky-more">Готовиться <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+                <a href="scio_ru.html" class="prijimacky-item">
+                    <span class="prijimacky-icon" style="background:rgba(180,83,9,0.12); color:#b45309;"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span>
+                    <span class="prijimacky-text"><strong>SCIO</strong><span>OSP · NSZ</span></span>
+                    <span class="prijimacky-more">Готовиться <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="steps-wrapper steps-large container">
     <h2 class="section-title">Как проходят занятия?</h2>
     <div class="steps-container">
 
         <div class="step-item">
-            <div class="step-circle">1</div>
+            <div class="step-circle"><i class="fa-solid fa-comments" aria-hidden="true"></i></div>
             <div class="step-item-card">
                 <h4>Первый контакт</h4>
                 <p>Договоримся о времени через WhatsApp или Telegram и обсудим, что нужно подтянуть.</p>
@@ -342,7 +386,7 @@
         </div>
 
         <div class="step-item">
-            <div class="step-circle">2</div>
+            <div class="step-circle"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
             <div class="step-item-card">
                 <h4>Подготовка</h4>
                 <p>На основе твоих потребностей подготовлю материалы, примеры из прошлых тестов и план занятия.</p>
@@ -350,7 +394,7 @@
         </div>
 
         <div class="step-item">
-            <div class="step-circle">3</div>
+            <div class="step-circle"><i class="fa-solid fa-people-arrows" aria-hidden="true"></i></div>
             <div class="step-item-card">
                 <h4>Занятие</h4>
                 <p>Разберём материал понятно. Никакого стресса — считаем столько, сколько нужно, пока не поймёшь.</p>
@@ -358,7 +402,7 @@
         </div>
 
         <div class="step-item">
-            <div class="step-circle">4</div>
+            <div class="step-circle"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
             <div class="step-item-card">
                 <h4>Результаты</h4>
                 <p>После занятия будешь знать, как решать. Обретёшь уверенность в расчётах и спокойствие перед экзаменами.</p>
@@ -406,6 +450,8 @@
 </section>
 
 <section id="cenik-pro" class="container py-10">
+    <h2 class="section-title">Стоимость занятий</h2>
+    <p class="cenik-lead">Честные цены без скрытых платежей — первая консультация всегда бесплатна.</p>
 
     <div class="pricing-cards">
         <!-- 1. Консультация -->
@@ -451,82 +497,11 @@
 
 
 
-<section class="container partner-section">
-    <h2 class="section-title">Сотрудничаю с лучшими</h2>
-    <div class="partner-grid">
-        <article class="partner-card">
-            <div class="partner-card-main">
-                <span class="partner-card-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-                <h3>EduJoy</h3>
-                <p>Интерактивное образование и кружки для детей. Вместе создаём современную методику обучения.</p>
-                <a class="partner-card-link" href="spoluprace_ru.html#edujoy">Узнать больше</a>
-
-                <ul class="partner-card-features">
-                    <li><i class="fa-solid fa-lightbulb"></i><span>Современные методики</span></li>
-                    <li><i class="fa-solid fa-users"></i><span>Интересные кружки</span></li>
-                    <li><i class="fa-solid fa-star"></i><span>Развитие потенциала</span></li>
-                </ul>
-            </div>
-            <div class="partner-card-photo">
-                <img src="images/EduJoy.jpg" alt="EduJoy - интерактивное образование для детей" loading="lazy">
-            </div>
-        </article>
-
-        <article class="partner-card partner-card-accent">
-            <div class="partner-card-main">
-                <span class="partner-card-icon"><i class="fa-solid fa-user-group"></i></span>
-                <h3>NEWLIFE</h3>
-                <p>Специалисты по репетиторству «в последний момент» и подготовке к пересдачам и выпускным экзаменам.</p>
-                <a class="partner-card-link" href="spoluprace_ru.html#newlife">Узнать больше</a>
-
-                <ul class="partner-card-features">
-                    <li><i class="fa-solid fa-bullseye"></i><span>Подготовка к экзаменам</span></li>
-                    <li><i class="fa-solid fa-book-open"></i><span>Индивидуальный подход</span></li>
-                    <li><i class="fa-solid fa-chart-column"></i><span>Опытные преподаватели</span></li>
-                    <li><i class="fa-solid fa-circle-check"></i><span>Результат и уверенность</span></li>
-                </ul>
-            </div>
-            <div class="partner-card-photo">
-                <img src="images/newlife.jpg" alt="NEWLIFE Doučování - подготовка к экзаменам в последний момент" loading="lazy">
-                <p class="partner-card-quote">Подготовка к<br>важным этапам</p>
-            </div>
-        </article>
-    </div>
-</section>
-
-<section class="section-alt faq-section">
-  <div class="container">
-    <h2 class="section-title">Частые вопросы</h2>
-    <div class="faq-list">
-        <details class="faq-item">
-            <summary>Как проходит первое занятие? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Напиши мне в WhatsApp или Telegram, договоримся о времени и обсудим, с чем именно нужна помощь. Первая консультация бесплатна и ни к чему не обязывает.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Вы занимаетесь онлайн или только очно в Праге? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>И то, и другое. Очные занятия проходят в Праге, онлайн-занятия — где угодно через видеозвонок с общим экраном или материалами.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Что если занятия мне не подойдут? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Никаких проблем. Ты ничем не связан(а) — продолжаем только пока это имеет для тебя смысл и приносит результат.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Сколько занятий мне понадобится? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Зависит от твоей цели и текущего уровня. На первой консультации обсудим, где ты сейчас, и составим реальный план — без лишних часов.</p>
-        </details>
-        <details class="faq-item">
-            <summary>Как записаться на занятие? <i class="fa-solid fa-chevron-down"></i></summary>
-            <p>Быстрее всего через WhatsApp или Telegram (ссылки в подвале сайта), либо заполни форму ниже — я свяжусь с тобой.</p>
-        </details>
-    </div>
-  </div>
-</section>
-
-<section id="kontakt" class="contact-section">
-    <div class="container">
-    <div class="mini-poll-grid">
+<div id="kontakt-modal" class="kontakt-modal-overlay">
+    <div class="kontakt-modal-box" role="dialog" aria-modal="true" aria-labelledby="kontakt-modal-title">
+        <button type="button" class="kontakt-modal-close" aria-label="Закрыть"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
         <div class="mini-poll-form">
-        <h2>Пусть математика обретёт смысл</h2>
+        <h2 id="kontakt-modal-title">Пусть математика обретёт смысл</h2>
 
         <div class="contact-social">
             <a class="contact-social-link" href="https://wa.me/420777209320" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
@@ -543,8 +518,8 @@
             </div>
 
             <div class="form-group">
-                <label for="kontakt">E-mail или телефон</label>
-                <input type="text" id="kontakt" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
+                <label for="kontakt-info">E-mail или телефон</label>
+                <input type="text" id="kontakt-info" name="kontakt" required placeholder="чтобы я мог с тобой связаться">
             </div>
 
             <input type="hidden" name="jazyk" value="RU">
@@ -580,45 +555,52 @@
         </form>
         </div>
     </div>
+</div>
+
+<section class="container cta-banner-section">
+    <div class="cta-banner">
+        <span class="cta-banner-icon"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>
+        <div class="cta-banner-text">
+            <h2>Давай вместе наполним математику смыслом.</h2>
+            <p>Напиши мне, и договоримся о первом занятии.</p>
+            <ul class="cta-banner-points">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Первая консультация бесплатно</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Отвечаю в течение 24 часов</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i>Очно и онлайн</li>
+            </ul>
+        </div>
+        <a href="#kontakt" class="cta-banner-btn">Связаться <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </div>
 </section>
 
- <footer class="main-footer">
-    <div class="container footer-grid">
+<footer class="main-footer footer-v2">
+    <div class="container footer-v2-row">
+        <a href="index_ru.html" class="footer-v2-logo">MATEMATIKA <span>Srozumitelně</span></a>
 
-        <div class="footer-column">
-            <h3>Контакты</h3>
-            <ul class="footer-list">
-                <li><i class="fa-solid fa-location-dot"></i> Прага, Чехия</li>
-                <li><i class="fa-solid fa-phone"></i> +420 705 914 190</li>
-                <li><i class="fa-solid fa-envelope"></i> rimad.1203@seznam.cz</li>
-            </ul>
+        <ul class="footer-v2-links">
+            <li><a href="omne_ru.html">Обо мне</a></li>
+            <li><a href="cermat_ru.html">CERMAT</a></li>
+            <li><a href="cvut_ru.html">ČVUT</a></li>
+            <li><a href="uk_ru.html">UK</a></li>
+            <li><a href="scio_ru.html">SCIO</a></li>
+            <li><a href="individualni_ru.html">Репетиторство</a></li>
+            <li><a href="spoluprace_ru.html">Сотрудничество</a></li>
+        </ul>
+
+        <div class="footer-v2-social">
+            <a href="https://wa.me/420777209320" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://t.me/damir_121" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100087010827036" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/rimad.120/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
         </div>
-
-        <div class="footer-column">
-            <h3>Социальные сети</h3>
-            <ul class="footer-list">
-                <li><a href="https://wa.me/420777209320" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
-                <li><a href="https://t.me/damir_121" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i> Telegram</a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100087010827036" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i> Facebook </a></li>
-                <li><a href="https://www.instagram.com/rimad.120/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h3>Быстрое меню</h3>
-            <ul class="footer-list">
-                <li><a href="omne_ru.html">Обо мне</a></li>
-                <li><a href="cermat_ru.html">CERMAT</a></li>
-                <li><a href="cvut_ru.html">ČVUT</a></li>
-                <li><a href="uk_ru.html">UK</a></li>
-                <li><a href="scio_ru.html">SCIO</a></li>
-                <li><a href="individualni_ru.html">Репетиторство</a></li>
-                <li><a href="spoluprace_ru.html">Сотрудничество</a></li>
-            </ul>
-        </div>
-
     </div>
+
+    <div class="container footer-v2-contacts">
+        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Прага, Чехия</span>
+        <a href="tel:+420705914190"><i class="fa-solid fa-phone" aria-hidden="true"></i> +420 705 914 190</a>
+        <a href="mailto:rimad.1203@seznam.cz"><i class="fa-solid fa-envelope" aria-hidden="true"></i> rimad.1203@seznam.cz</a>
+    </div>
+
     <div class="footer-bottom">
         <p>&copy; 2026 Matematika Srozumitelně. Все права защищены.</p>
     </div>
