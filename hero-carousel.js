@@ -118,3 +118,75 @@ document.addEventListener("DOMContentLoaded", function () {
     enterDesktopMode();
   }
 });
+
+// Full-width karusel pod hero (větev "new-section") - klasický fade mezi
+// snímky, šipky po stranách a tečky dole, nezávislé na karuselu výše.
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("hero-carousel-full");
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+  const wrap = carousel.closest(".hero-carousel-full-wrap") || carousel.parentElement;
+  const prevBtn = wrap.querySelector(".carousel-arrow.prev");
+  const nextBtn = wrap.querySelector(".carousel-arrow.next");
+  const dotsWrap = wrap.parentElement.querySelector(".carousel-dots");
+  const dots = dotsWrap ? Array.from(dotsWrap.querySelectorAll(".dot")) : [];
+
+  let current = slides.findIndex(function (s) { return s.classList.contains("active"); });
+  if (current < 0) current = 0;
+  let timer = null;
+
+  function sync(index) {
+    slides.forEach(function (s, i) { s.classList.toggle("active", i === index); });
+    dots.forEach(function (d, i) { d.classList.toggle("active", i === index); });
+  }
+
+  function showSlide(index) {
+    current = (index + slides.length) % slides.length;
+    sync(current);
+  }
+
+  function stopAutoplay() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    timer = setInterval(function () {
+      showSlide(current + 1);
+    }, 6000);
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", function () {
+      stopAutoplay();
+      showSlide(current - 1);
+      startAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", function () {
+      stopAutoplay();
+      showSlide(current + 1);
+      startAutoplay();
+    });
+  }
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener("click", function () {
+      stopAutoplay();
+      showSlide(i);
+      startAutoplay();
+    });
+  });
+
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+
+  sync(current);
+  startAutoplay();
+});
