@@ -5904,3 +5904,37 @@ body.page-uk .hero-split .hero-eyebrow {
         color: #c8912b;
     }
 }
+
+
+/* Homepage: po hero rovnou karta "Kdo tě bude učit?" a pak karusel */
+.split-info-grid {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+}
+
+.split-info-section {
+    padding-bottom: 70px;
+}
+
+@media (max-width: 1024px) {
+    /* Pořadí hero na mobilu: záhlaví, text, fotka, tlačítka (jako na ostatních stránkách, bez odznaku) */
+    .hero-intro .hero-intro-text {
+        display: contents;
+    }
+
+    .hero-intro .hero-split-grid {
+        gap: 20px;
+    }
+
+    .hero-intro .hero-intro-text > .hero-big-title { order: 1; margin-bottom: 0; }
+    .hero-intro .hero-intro-text > .hero-split-text { order: 2; margin-bottom: 0; }
+    .hero-intro .hero-intro-photo { order: 3; margin-top: 8px; }
+    .hero-intro .hero-intro-text > .hero-cta-row { order: 4; }
+}
+
+@media (max-width: 600px) {
+    .split-info-section {
+        padding-top: 30px;
+        padding-bottom: 36px;
+    }
+}
