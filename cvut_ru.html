@@ -24,8 +24,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
 
+    <link rel="preload" href="fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fontawesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -127,7 +130,7 @@
             </div>
             <div class="hero-visual-frame">
                 <div class="hero-visual hero-visual-tilted">
-                    <img src="images/cvut-programovani.jpg" alt="Подготовка к ČVUT">
+                    <img fetchpriority="high" decoding="async" src="images/cvut-programovani.jpg" alt="Подготовка к ČVUT">
                     <div class="hero-visual-quote-text">FIT, FEL, FS и FSv</div>
                 </div>
             </div>
@@ -137,7 +140,7 @@
 <main class="container">
     <div class="about-hero">
         <div class="about-image">
-            <img src="images/cvut-vez-dejvice.webp" alt="Кампус ČVUT в Дейвицах" loading="lazy">
+            <img decoding="async" src="images/cvut-vez-dejvice.webp" alt="Кампус ČVUT в Дейвицах" loading="lazy">
         </div>
         <div class="about-text">
     <h2 class="section-title">Учёба в сердце Дейвиц</h2>
@@ -178,7 +181,7 @@
         <div class="detail-grid detail-grid-4">
 
             <div class="card card-fit">
-                <img src="images/FIT.jpg" class="card-img" alt="FIT ČVUT" loading="lazy">
+                <img decoding="async" src="images/FIT.jpg" class="card-img" alt="FIT ČVUT" loading="lazy">
                 <div class="card-body">
                     <h3>FIT ČVUT</h3>
                     <p>Информатика и современные технологии. Подготовлю тебя к логическим тестам и математическому анализу.</p>
@@ -187,7 +190,7 @@
             </div>
 
             <div class="card card-fel">
-                <img src="images/FEL.jpg" class="card-img" alt="FEL ČVUT" loading="lazy">
+                <img decoding="async" src="images/FEL.jpg" class="card-img" alt="FEL ČVUT" loading="lazy">
                 <div class="card-body">
                     <h3>FEL ČVUT</h3>
                     <p>Электротехника и энергетика. Сосредоточимся на комплексных числах и тригонометрии.</p>
@@ -196,7 +199,7 @@
             </div>
 
             <div class="card card-fs">
-                <img src="images/fs.jpg" class="card-img" alt="FS ČVUT" loading="lazy">
+                <img decoding="async" src="images/fs.jpg" class="card-img" alt="FS ČVUT" loading="lazy">
                 <div class="card-body">
                     <h3>FS ČVUT</h3>
                     <p>Машиностроение. Разберём начертательную геометрию и прикладную математику.</p>
@@ -205,7 +208,7 @@
             </div>
 
             <div class="card card-fsv">
-                <img src="images/fsv.jpg" class="card-img" alt="FSv ČVUT" loading="lazy">
+                <img decoding="async" src="images/fsv.jpg" class="card-img" alt="FSv ČVUT" loading="lazy">
                 <div class="card-body">
                     <h3>FSv ČVUT</h3>
                     <p>Строительство и архитектура. Подготовка пространственного воображения и статики.</p>
@@ -309,7 +312,7 @@
                 </form>
             </div>
             <div class="mini-poll-image">
-                <img src="images/cvut-budova.jpg" alt="Подготовка к ČVUT" loading="lazy">
+                <img decoding="async" src="images/cvut-budova.jpg" alt="Подготовка к ČVUT" loading="lazy">
             </div>
         </div>
     </section>

@@ -49,8 +49,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
 
+    <link rel="preload" href="fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fontawesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -175,7 +178,7 @@
 
         <div class="hero-intro-photo">
             <div class="hero-photo-blob" aria-hidden="true"></div>
-            <img src="images/individualni-anketa.jpg" alt="Занятие по математике за столом с тетрадями и калькулятором" class="hero-photo-img" loading="eager">
+            <img fetchpriority="high" decoding="async" src="images/individualni-anketa.jpg" alt="Занятие по математике за столом с тетрадями и калькулятором" class="hero-photo-img" >
             <div class="hero-photo-note">Математика может<br>быть понятной!</div>
         </div>
     </div>

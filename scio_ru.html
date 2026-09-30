@@ -25,8 +25,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&display=swap"></noscript>
 
+    <link rel="preload" href="fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fontawesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -137,7 +140,7 @@
 
             <div class="hero-visual-frame">
                 <div class="hero-visual hero-visual-tilted">
-                    <img src="images/scio-studenti-test.jpg" alt="Подготовка к тестам SCIO">
+                    <img fetchpriority="high" decoding="async" src="images/scio-studenti-test.jpg" alt="Подготовка к тестам SCIO">
                     <div class="hero-visual-quote-text">Логика вместо<br>зубрёжки.</div>
                 </div>
             </div>
@@ -227,7 +230,7 @@
 
             <div class="sc-tests">
                 <article class="sc-test" style="--t:#7c3aed">
-                    <img src="images/scio-nsz.jpg" class="sc-test-img" alt="NSZ для вузов" loading="lazy">
+                    <img decoding="async" src="images/scio-nsz.jpg" class="sc-test-img" alt="NSZ для вузов" loading="lazy">
                     <div class="sc-test-body">
                         <span class="sc-test-tag">NSZ</span>
                         <h3>NSZ для вузов</h3>
@@ -239,7 +242,7 @@
                 </article>
 
                 <article class="sc-test" style="--t:#15803d">
-                    <img src="images/scio-osp.jpg" class="sc-test-img" alt="Подготовка по математике к OSP" loading="lazy">
+                    <img decoding="async" src="images/scio-osp.jpg" class="sc-test-img" alt="Подготовка по математике к OSP" loading="lazy">
                     <div class="sc-test-body">
                         <span class="sc-test-tag">OSP</span>
                         <h3>Аналитическая часть OSP</h3>

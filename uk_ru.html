@@ -24,8 +24,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
 
+    <link rel="preload" href="fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fontawesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <script type="application/ld+json">
     {
@@ -127,7 +130,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="images/uk-univerzita-budova.webp" alt="Univerzita Karlova">
+                <img fetchpriority="high" decoding="async" src="images/uk-univerzita-budova.webp" alt="Univerzita Karlova">
                 <div class="hero-visual-caption">PedF, Matfyz и другие факультеты</div>
             </div>
         </div>
@@ -137,7 +140,7 @@
 
 <div class="about-hero">
     <div class="about-image">
-            <img src="images/karolinum.jpg" alt="Каролинум" loading="lazy">
+            <img decoding="async" src="images/karolinum.jpg" alt="Каролинум" loading="lazy">
         </div>
     <div class="about-text">
     <h2 class="section-title">Традиции и наука в UK</h2>
@@ -198,7 +201,7 @@
         <div class="detail-grid">
         
         <div class="card card-uk-mff">
-            <img src="images/matfyz.jpg" class="card-img" alt="Matfyz UK" loading="lazy">
+            <img decoding="async" src="images/matfyz.jpg" class="card-img" alt="Matfyz UK" loading="lazy">
             <div class="card-body">
                 <h3>Matfyz (MFF)</h3>
                 <p>Крайне сложные задачи, доказательства и глубокое понимание теории чисел.</p>
@@ -207,7 +210,7 @@
         </div>
 
         <div class="card card-uk-pedf">
-            <img src="images/pedf.jpg" class="card-img" alt="PedF UK" loading="lazy">
+            <img decoding="async" src="images/pedf.jpg" class="card-img" alt="PedF UK" loading="lazy">
             <div class="card-body">
                 <h3>Педагогический факультет</h3>
                 <p>Тесты общих учебных предпосылок (OSP), логика и дидактика.</p>
@@ -216,7 +219,7 @@
         </div>
 
         <div class="card card-uk-prf">
-            <img src="images/prir_fakult.jpg" class="card-img" alt="Естественнонаучный факультет UK" loading="lazy">
+            <img decoding="async" src="images/prir_fakult.jpg" class="card-img" alt="Естественнонаучный факультет UK" loading="lazy">
             <div class="card-body">
                 <h3>Естественнонаучный факультет</h3>
                 <p>Прикладная математика для биологов, химиков и географов.</p>
@@ -320,7 +323,7 @@
             </form>
         </div>
         <div class="mini-poll-image">
-            <img src="images/uk-fakulta.jpg" alt="Подготовка к UK" loading="lazy">
+            <img decoding="async" src="images/uk-fakulta.jpg" alt="Подготовка к UK" loading="lazy">
         </div>
     </div>
 </section>

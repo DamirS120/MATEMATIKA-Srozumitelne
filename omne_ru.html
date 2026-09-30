@@ -24,8 +24,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
 
+    <link rel="preload" href="fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fontawesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
 </head>
 <!-- Google tag (gtag.js) --> 
@@ -132,7 +135,7 @@
                 </div>
             </div>
             <div class="hero-visual hero-visual-quote">
-                <img src="images/profil.jpg" alt="Репетитор математики">
+                <img fetchpriority="high" decoding="async" src="images/profil.jpg" alt="Репетитор математики">
                 <div class="hero-visual-quote-text">Математика обретает смысл,<br>когда её объяснили.</div>
             </div>
         </div>
@@ -253,7 +256,7 @@
                 </form>
             </div>
             <div class="mini-poll-image">
-                <img src="images/lektor.webp" alt="Вводная консультация" loading="lazy">
+                <img decoding="async" src="images/lektor.webp" alt="Вводная консультация" loading="lazy">
             </div>
         </div>
     </section>
