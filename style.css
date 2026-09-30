@@ -5371,3 +5371,73 @@ body.page-uk main > section.py-10 {
 .cta-banner-nobtn {
     justify-content: flex-start;
 }
+
+/* Odznak v hero menší vůči záhlaví (CERMAT, ČVUT, UK vč. RU verzí) */
+body.page-cvut .hero-split .hero-eyebrow,
+body.page-cermat .hero-split .hero-eyebrow,
+body.page-uk .hero-split .hero-eyebrow {
+    font-size: 0.74rem;
+    letter-spacing: 0.02em;
+    padding: 6px 14px;
+    margin-bottom: 16px;
+}
+
+/* Menší mezery mezi nadpisem, fotkou a textem v sekcích s fotkou na tabletu a mobilu */
+@media (max-width: 1024px) {
+    body.page-cvut .about-hero,
+    body.page-uk .about-hero {
+        gap: 14px;
+        margin: 0 0 48px;
+    }
+
+    body.page-cvut .about-hero .about-image,
+    body.page-uk .about-hero .about-image {
+        margin: 4px auto 6px;
+        min-width: 0;
+    }
+
+    body.page-cvut .about-hero .section-title,
+    body.page-uk .about-hero .section-title {
+        margin-bottom: 0;
+    }
+
+    body.page-cvut .about-hero .about-text > *,
+    body.page-uk .about-hero .about-text > * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    body.page-cvut .about-hero .about-text > .mentor-note,
+    body.page-uk .about-hero .about-text > .mission-statement {
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body.page-cvut .hero-split .hero-eyebrow,
+    body.page-cermat .hero-split .hero-eyebrow,
+    body.page-uk .hero-split .hero-eyebrow {
+        justify-self: center;
+        width: fit-content;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    body.page-cvut .hero-split .hero-split-grid,
+    body.page-cermat .hero-split .hero-split-grid,
+    body.page-uk .hero-split .hero-split-grid {
+        gap: 16px;
+    }
+
+    body.page-cvut .hero-split .hero-split-title,
+    body.page-cermat .hero-split .hero-split-title,
+    body.page-uk .hero-split .hero-split-title {
+        margin-bottom: 0;
+    }
+
+    body.page-cvut .hero-split .hero-split-text,
+    body.page-cermat .hero-split .hero-split-text,
+    body.page-uk .hero-split .hero-split-text {
+        margin-bottom: 8px;
+    }
+}
