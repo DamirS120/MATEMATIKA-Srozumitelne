@@ -655,10 +655,7 @@ body.page-scio main.sc-main {
         margin-right: auto;
     }
 
-    /* Pořadí na mobilu ať zůstane stejné jako v DOM: Zdarma -> 180 -> 200+ */
-    .sc-price-main {
-        order: 1;
-    }
+    /* Pořadí na mobilu zůstává jako v DOM: Zdarma -> 180 -> 200+ */
 }
 
 /* ==========================================================================
@@ -914,4 +911,27 @@ body.page-scio .main-footer {
     .sc-cta-actions .sc-btn {
         width: 100%;
     }
+}
+
+
+/* Nová patička, kontaktní pruh a pořadí hero na mobilu (odznak, záhlaví, text, fotka, tlačítko) */
+body.page-scio .main-footer {
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .sc-hero-text {
+        display: contents;
+    }
+
+    .sc-hero-grid {
+        gap: 28px;
+    }
+
+    .sc-hero-text > .sc-eyebrow { order: 1; }
+    .sc-hero-text > h1 { order: 2; }
+    .sc-hero-text > .sc-lead { order: 3; margin-bottom: 0; }
+    .sc-hero-grid > .hero-visual-frame { order: 4; }
+    .sc-hero-text > .sc-cta-row { order: 5; }
+    .sc-hero-text > .hero-facts { order: 6; }
 }
