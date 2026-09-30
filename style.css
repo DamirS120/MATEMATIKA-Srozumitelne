@@ -4539,56 +4539,655 @@ kreslené SVG ukázky - sjednocuje vzhled přípravných stránek.
     margin-bottom: 20px;
 }
 
-/* CERMAT + ČVUT: světlé, větší hero podle reference */
-body.page-cermat .hero-split,
-body.page-cvut .hero-split {
-    background-color: #ffffff;
-    background-image: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
-    min-height: 0;
-    padding: 150px 0 90px;
+/* ============================================================
+   CERMAT + ČVUT – redesign navazující na homepage
+   (společné komponenty + specifika stránek)
+============================================================ */
+body.page-cvut {
+    --primary: #1e3a8a;
+    --accent: #3b82f6;
 }
 
-body.page-cermat .hero-split .hero-eyebrow,
-body.page-cvut .hero-split .hero-eyebrow {
-    background: rgba(59, 130, 246, 0.12);
+body.page-cvut main.container,
+body.page-cermat main.container {
+    max-width: 1240px;
+    min-height: 0;
+    justify-content: flex-start;
+    padding-top: 90px;
+    padding-bottom: 20px;
+}
+
+body.page-cvut main > section,
+body.page-cermat main > section {
+    margin-bottom: 90px;
+}
+
+body.page-cvut .section-title,
+body.page-cermat .section-title {
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
+}
+
+body.page-cvut .main-footer,
+body.page-cermat .main-footer {
+    margin-top: 0;
+}
+
+/* ---------- HERO ---------- */
+body.page-cvut .hero-split,
+body.page-cermat .hero-split {
+    min-height: 0;
+    padding: 160px 0 100px;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+body.page-cvut .hero-split {
+    background-color: #0b1533;
+    background-image:
+        radial-gradient(circle at 88% 15%, rgba(59, 130, 246, 0.38), transparent 45%),
+        linear-gradient(135deg, #0b1533 0%, #1e3a8a 100%);
+}
+
+body.page-cermat .hero-split {
+    background-color: #2a2485;
+    background-image:
+        radial-gradient(circle at 88% 15%, rgba(167, 139, 250, 0.42), transparent 45%),
+        linear-gradient(135deg, #2a2485 0%, #3e38b4 55%, #6a63e0 100%);
+}
+
+body.page-cvut .hero-split .hero-split-grid,
+body.page-cermat .hero-split .hero-split-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+}
+
+body.page-cvut .hero-split .hero-eyebrow,
+body.page-cermat .hero-split .hero-eyebrow {
+    font-size: 0.9rem;
+    padding: 9px 18px;
+    margin-bottom: 24px;
+}
+
+body.page-cvut .hero-split .hero-split-title,
+body.page-cermat .hero-split .hero-split-title {
+    font-size: clamp(2.4rem, 4.4vw, 3.9rem);
+    line-height: 1.08;
+    margin-bottom: 22px;
+}
+
+body.page-cvut .hero-split .hero-split-title .highlight-alt {
+    color: #7db3ff;
+}
+
+body.page-cermat .hero-split .hero-split-title .highlight-alt {
+    color: #d4ccff;
+}
+
+body.page-cvut .hero-split .hero-split-text,
+body.page-cermat .hero-split .hero-split-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 34em;
+}
+
+body.page-cvut .hero-split .btn-primary,
+body.page-cermat .hero-split .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 18px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+body.page-cvut .hero-split .btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+body.page-cermat .hero-split .btn-primary {
+    background: #ffffff;
     color: var(--primary);
 }
 
-body.page-cermat .hero-split .hero-split-title,
-body.page-cvut .hero-split .hero-split-title {
-    color: var(--text-dark) !important;
-    font-size: clamp(2.6rem, 4.6vw, 4.2rem);
-    line-height: 1.08;
+body.page-cvut .hero-split .hero-facts,
+body.page-cermat .hero-split .hero-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 28px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 42px;
 }
 
-body.page-cermat .hero-split .hero-split-title .highlight-alt,
-body.page-cvut .hero-split .hero-split-title .highlight-alt {
-    color: var(--accent);
+body.page-cvut .hero-split .hero-fact,
+body.page-cermat .hero-split .hero-fact {
+    align-items: center;
+    gap: 14px;
+    padding: 0;
 }
 
-body.page-cermat .hero-split .hero-split-text,
-body.page-cvut .hero-split .hero-split-text {
+body.page-cvut .hero-split .hero-fact:not(:first-child),
+body.page-cermat .hero-split .hero-fact:not(:first-child) {
+    border-left: none;
+}
+
+body.page-cvut .hero-split .hero-fact i,
+body.page-cermat .hero-split .hero-fact i {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin: 0;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+body.page-cvut .hero-split .hero-fact strong,
+body.page-cermat .hero-split .hero-fact strong {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+body.page-cvut .hero-split .hero-fact span,
+body.page-cermat .hero-split .hero-fact span {
+    font-size: 0.86rem;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+body.page-cvut .hero-visual,
+body.page-cermat .hero-visual {
+    aspect-ratio: 4 / 4.7;
+    border-radius: 36px;
+}
+
+body.page-cvut .hero-visual-frame::before,
+body.page-cermat .hero-visual-frame::before {
+    border-radius: 40px;
+    opacity: 0.22;
+}
+
+body.page-cvut .hero-visual-quote-text,
+body.page-cermat .hero-visual-quote-text {
+    font-size: 2rem;
+}
+
+/* ---------- ČVUT: Studium v srdci Dejvic ---------- */
+body.page-cvut .about-image {
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.16);
+    border-radius: 32px;
+}
+
+body.page-cvut .about-image img {
+    border-radius: 32px;
+}
+
+body.page-cvut .about-text > p {
+    font-size: 1.12rem;
+    line-height: 1.65;
     color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+body.page-cvut .focus-list {
+    display: grid;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+body.page-cvut .focus-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 18px 20px;
+    box-shadow: none;
+    text-align: left;
+}
+
+body.page-cvut .focus-list li i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(59, 130, 246, 0.1);
+    font-size: 1.1rem;
+}
+
+body.page-cvut .mentor-note {
+    border-radius: 22px;
+    padding: 26px 30px;
+    font-size: 1.05rem;
+    margin-top: 24px;
+    text-align: left;
+}
+
+@media (min-width: 1025px) {
+    body.page-cvut .about-hero {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 64px;
+        align-items: center;
+        margin: 0 0 90px;
+    }
+
+    body.page-cvut .about-image {
+        min-width: 0;
+        margin: 0;
+    }
+
+    body.page-cvut .about-text {
+        min-width: 0;
+    }
+
+    body.page-cvut .about-text .section-title {
+        text-align: left;
+        margin-bottom: 18px;
+    }
+
+    body.page-cvut .about-text .section-title::after {
+        left: 0;
+        transform: none;
+    }
+}
+
+/* ---------- ČVUT: fakulty ---------- */
+body.page-cvut .detail-grid-4 {
+    gap: 28px;
+    padding: 30px 0 0;
+}
+
+body.page-cvut .detail-grid-4 .card {
+    border-radius: 26px;
+}
+
+body.page-cvut .detail-grid-4 .card-img {
+    height: 250px;
+}
+
+body.page-cvut .detail-grid-4 .card-body {
+    margin-top: 0;
+    padding: 24px 28px 28px;
+}
+
+body.page-cvut .detail-grid-4 .card-body h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+body.page-cvut .detail-grid-4 .card-body p {
+    font-size: 1.02rem;
+}
+
+body.page-cvut .btn-detail {
+    border-radius: 50px;
+    padding: 11px 26px;
+    margin-top: 22px;
+}
+
+/* ---------- Ceník (shodný na obou stránkách) ---------- */
+body.page-cvut #cenik,
+body.page-cermat #cenik {
+    padding: 0;
+}
+
+body.page-cvut #cenik .price-card,
+body.page-cermat #cenik .price-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.page-cvut #cenik .price-card:hover,
+body.page-cermat #cenik .price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
+}
+
+/* ---------- FAQ: 4 otázky + odkaz na všechny ---------- */
+.faq-teaser {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-teaser .faq-compact .faq-list-plain .faq-item summary {
+    font-size: 1.1rem;
+    padding: 22px 0;
+}
+
+.faq-all-wrap {
+    text-align: center;
+    margin-top: 34px;
+}
+
+.faq-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    color: var(--primary);
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.faq-all-link:hover {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* ---------- Kontaktní formulář jako závěrečná karta ---------- */
+body.page-cvut .mini-poll,
+body.page-cermat .mini-poll {
+    padding: 0;
+    background: none;
+    margin-bottom: 40px;
+}
+
+body.page-cvut .mini-poll-grid,
+body.page-cermat .mini-poll-grid {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.14);
+}
+
+body.page-cvut .mini-poll-form,
+body.page-cermat .mini-poll-form {
+    padding: 52px 48px;
+}
+
+body.page-cvut .mini-poll-form h2,
+body.page-cermat .mini-poll-form h2 {
+    font-size: 2.1rem;
+}
+
+body.page-cvut .mini-poll-form > p,
+body.page-cermat .mini-poll-form > p {
+    font-size: 1.05rem;
+}
+
+body.page-cvut .form-group input,
+body.page-cvut .form-group select,
+body.page-cermat .form-group input,
+body.page-cermat .form-group select {
+    padding: 14px 16px;
+    border-radius: 14px;
+}
+
+body.page-cvut .mini-poll-form .btn-submit,
+body.page-cermat .mini-poll-form .btn-submit {
+    border-radius: 50px;
+    padding: 17px;
+    font-size: 1.05rem;
+}
+
+body.page-cermat .mini-poll-form .btn-submit {
+    background: var(--primary);
+}
+
+/* ---------- CERMAT: průvodce ročníky 01 → 02 → 03 ---------- */
+body.page-cermat .cm-guide-cards {
+    counter-reset: cm;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+body.page-cermat .cm-guide-card {
+    position: relative;
+    counter-increment: cm;
+    padding: 40px;
+    border-radius: 32px;
+    gap: 32px;
+    --gc: #6d5dd3;
+    --gc-tint: #f5f3ff;
+}
+
+body.page-cermat .cm-guide-card.cm-green {
+    --gc: #2563eb;
+    --gc-tint: #eff6ff;
+}
+
+body.page-cermat .cm-guide-card.cm-amber {
+    --gc: #0f766e;
+    --gc-tint: #f0fdfa;
+}
+
+body.page-cermat .cm-guide-card::before {
+    content: "0" counter(cm);
+    position: absolute;
+    top: 20px;
+    right: 32px;
+    font-family: var(--font-display);
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--gc);
+    opacity: 0.16;
+}
+
+body.page-cermat .cm-guide-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    height: 40px;
+    border-left: 2px dashed #c4c9e8;
+}
+
+body.page-cermat .cm-guide-card h3 {
+    font-size: 1.75rem;
+}
+
+body.page-cermat .cm-guide-body > p {
+    font-size: 1.05rem;
+}
+
+body.page-cermat .cm-guide-checklist li {
+    font-size: 1rem;
+}
+
+body.page-cermat .cm-guide-photo {
+    min-height: 280px;
+    border-radius: 22px;
+}
+
+body.page-cermat .cm-guide-boost {
+    border-radius: 22px;
+}
+
+body.page-cermat .cm-guide-cta {
+    margin-top: 56px;
+    border-radius: 32px;
+    padding: 52px 56px;
+}
+
+/* ---------- CERMAT: klíčová témata (kompaktní grid) ---------- */
+body.page-cermat .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 30px 0 0;
+}
+
+body.page-cermat .services-grid .card {
+    border-radius: 24px;
+}
+
+body.page-cermat .services-grid .card-img {
+    height: 130px;
+}
+
+body.page-cermat .services-grid .card-body {
+    margin-top: 0;
+    padding: 22px 24px 26px;
+}
+
+body.page-cermat .services-grid .card-body h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-body.page-cermat .hero-split .hero-facts,
-body.page-cvut .hero-split .hero-facts {
-    background: transparent;
-    border-color: #e2e8f0;
+body.page-cermat .services-grid .card-body h3 i {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(62, 56, 180, 0.1);
+    color: var(--primary);
+    font-size: 1rem;
 }
 
-body.page-cermat .hero-split .hero-fact:not(:first-child),
-body.page-cvut .hero-split .hero-fact:not(:first-child) {
-    border-left-color: #e2e8f0;
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+    body.page-cvut .hero-split,
+    body.page-cermat .hero-split {
+        padding: 100px 0 60px;
+    }
+
+    body.page-cvut .hero-split .hero-split-grid,
+    body.page-cermat .hero-split .hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    /* Na tabletu i mobilu je fotka nahoře, pak text */
+    body.page-cvut .hero-visual-frame,
+    body.page-cermat .hero-visual-frame {
+        order: 0;
+    }
+
+    body.page-cvut .hero-visual,
+    body.page-cermat .hero-visual {
+        aspect-ratio: 16 / 10;
+        border-radius: 28px;
+    }
+
+    body.page-cvut .hero-split .hero-facts,
+    body.page-cermat .hero-split .hero-facts {
+        justify-items: start;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body.page-cvut main > section,
+    body.page-cermat main > section {
+        margin-bottom: 70px;
+    }
+
+    body.page-cermat .cm-guide-card {
+        grid-template-columns: 1fr 1fr;
+        padding: 32px;
+    }
+
+    body.page-cermat .cm-guide-body {
+        grid-column: 1 / -1;
+    }
+
+    body.page-cermat .cm-guide-photo {
+        order: 0;
+        max-height: none;
+        min-height: 220px;
+    }
+
+    body.page-cvut .mini-poll-grid,
+    body.page-cermat .mini-poll-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-body.page-cermat .hero-split .hero-fact strong,
-body.page-cvut .hero-split .hero-fact strong {
-    color: var(--text-dark);
-}
+/* ---------- Mobil ---------- */
+@media (max-width: 600px) {
+    body.page-cvut .hero-split,
+    body.page-cermat .hero-split {
+        padding: 90px 0 50px;
+    }
 
-body.page-cermat .hero-split .hero-fact span,
-body.page-cvut .hero-split .hero-fact span {
-    color: var(--text-light);
+    body.page-cvut .hero-split .hero-split-title,
+    body.page-cermat .hero-split .hero-split-title {
+        font-size: 2.3rem;
+    }
+
+    body.page-cvut .hero-split .hero-split-text,
+    body.page-cermat .hero-split .hero-split-text {
+        font-size: 1.08rem;
+    }
+
+    body.page-cvut .hero-visual,
+    body.page-cermat .hero-visual {
+        aspect-ratio: 4 / 3;
+    }
+
+    body.page-cvut .hero-visual-frame::before,
+    body.page-cermat .hero-visual-frame::before {
+        display: none;
+    }
+
+    body.page-cvut .hero-split .hero-facts,
+    body.page-cermat .hero-split .hero-facts {
+        grid-template-columns: 1fr;
+    }
+
+    body.page-cvut .hero-split .btn-primary,
+    body.page-cermat .hero-split .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    body.page-cvut main > section,
+    body.page-cermat main > section {
+        margin-bottom: 56px;
+    }
+
+    body.page-cermat .cm-guide-card {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+    }
+
+    body.page-cermat .cm-guide-card::before {
+        font-size: 2.6rem;
+        right: 20px;
+        top: 14px;
+    }
+
+    body.page-cermat .cm-guide-photo {
+        order: -1;
+        min-height: 200px;
+        max-height: 240px;
+    }
+
+    body.page-cermat .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.page-cvut .detail-grid-4 .card-img {
+        height: 210px;
+    }
+
+    body.page-cvut .mini-poll-form,
+    body.page-cermat .mini-poll-form {
+        padding: 32px 22px;
+    }
+
+    body.page-cvut .mini-poll-form h2,
+    body.page-cermat .mini-poll-form h2 {
+        font-size: 1.7rem;
+    }
+
+    body.page-cermat .cm-guide-cta {
+        padding: 32px 24px;
+    }
 }
