@@ -6379,3 +6379,149 @@ body.page-scio .scio-anketa-extra .sc-chip {
         flex: 0 0 34px;
     }
 }
+
+
+/* ============================================================
+   Mobil: hero na celou obrazovku (mezerami) a jednotné mezery mezi sekcemi
+============================================================ */
+@media (max-width: 600px) {
+    .hero-intro,
+    body.page-cvut .hero-split,
+    body.page-cermat .hero-split,
+    body.page-uk .hero-split,
+    .sc-hero,
+    .ix-hero {
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-intro > .container,
+    body.page-cvut .hero-split .hero-split-grid,
+    body.page-cermat .hero-split .hero-split-grid,
+    body.page-uk .hero-split .hero-split-grid,
+    .sc-hero-grid,
+    .ix-hero-grid {
+        flex: 1 0 auto;
+        display: grid;
+        align-content: space-evenly;
+        gap: 12px;
+    }
+
+    /* jako na SCIO a Individuálním: v hero zůstane odznak, záhlaví, obrázek a tlačítko */
+    body.page-cvut .hero-split .hero-split-text,
+    body.page-cermat .hero-split .hero-split-text,
+    body.page-uk .hero-split .hero-split-text,
+    body.page-cvut .hero-split .hero-facts,
+    body.page-cermat .hero-split .hero-facts,
+    body.page-uk .hero-split .hero-facts {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --sec-gap: 64px;
+    }
+
+    /* Domovská stránka */
+    body.page-index:not(.page-faq) .hero-intro {
+        padding-bottom: 28px;
+    }
+
+    body.page-index:not(.page-faq) .hero-facts-row,
+    body.page-index:not(.page-faq) .carousel-full-section,
+    body.page-index:not(.page-faq) .steps-wrapper,
+    body.page-index:not(.page-faq) #cenik-pro {
+        margin-top: var(--sec-gap);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    body.page-index:not(.page-faq) .split-info-section,
+    body.page-index:not(.page-faq) .philosophy-board {
+        margin-top: var(--sec-gap);
+    }
+
+    body.page-index:not(.page-faq) .split-info-section {
+        padding: 40px 0;
+    }
+
+    /* CVUT / CERMAT / UK */
+    body.page-cvut main.container,
+    body.page-cermat main.container,
+    body.page-uk main.container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    body.page-cvut main.container > *,
+    body.page-cermat main.container > *,
+    body.page-uk main.container > * {
+        margin-top: var(--sec-gap);
+        margin-bottom: 0;
+    }
+
+    body.page-cvut main.container > section:not(#cenik),
+    body.page-cermat main.container > section:not(#cenik),
+    body.page-uk main.container > section:not(#cenik),
+    body.page-cermat main.container > .cm-guide {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* SCIO a Individuální */
+    .sc-hero + .sc-sec,
+    .ix-hero + .ix-sec {
+        padding-top: var(--sec-gap);
+    }
+
+    body.page-scio .scio-anketa {
+        padding-top: var(--sec-gap);
+        padding-bottom: 0;
+    }
+
+    .ix-anketa {
+        margin-top: var(--sec-gap);
+    }
+
+    /* Závěrečný banner a patička na všech stránkách */
+    .cta-banner-section {
+        margin-top: var(--sec-gap);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .cta-banner-section + .main-footer {
+        margin-top: var(--sec-gap);
+    }
+}
+
+@media (max-width: 900px) {
+    section > .section-title:first-child,
+    .container > .section-title:first-child {
+        margin-top: 0;
+    }
+
+    body[class] .cta-banner-section + .main-footer,
+    body[class] main.container + .main-footer {
+        margin-top: var(--sec-gap);
+    }
+
+    body.page-faq .faq-page {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body.page-cvut .hero-split .hero-visual,
+    body.page-cermat .hero-split .hero-visual,
+    body.page-uk .hero-split .hero-visual,
+    .sc-hero .hero-visual,
+    .ix-hero .hero-visual {
+        aspect-ratio: auto;
+        height: 262px;
+        height: clamp(110px, calc(100svh - 505px), 262px);
+    }
+}
