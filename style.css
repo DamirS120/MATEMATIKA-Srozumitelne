@@ -5938,3 +5938,47 @@ body.page-uk .hero-split .hero-eyebrow {
         padding-bottom: 36px;
     }
 }
+
+
+/* Menší mezera po hero na CERMAT / ČVUT / UK / SCIO */
+body.page-cvut main.container,
+body.page-cermat main.container,
+body.page-uk main.container {
+    padding-top: 24px;
+}
+
+body.page-cvut .hero-split,
+body.page-cermat .hero-split,
+body.page-uk .hero-split {
+    padding-bottom: 64px;
+}
+
+.sc-hero {
+    padding-bottom: 48px;
+}
+
+.sc-hero + .sc-sec {
+    padding-top: 56px;
+}
+
+@media (max-width: 1024px) {
+    body.page-cvut main.container,
+    body.page-cermat main.container,
+    body.page-uk main.container {
+        padding-top: 10px;
+    }
+
+    body.page-cvut .hero-split,
+    body.page-cermat .hero-split,
+    body.page-uk .hero-split {
+        padding-bottom: 36px;
+    }
+
+    .sc-hero {
+        padding-bottom: 28px;
+    }
+
+    .sc-hero + .sc-sec {
+        padding-top: 40px;
+    }
+}
