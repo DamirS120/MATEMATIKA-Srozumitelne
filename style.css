@@ -5441,3 +5441,111 @@ body.page-uk .hero-split .hero-eyebrow {
         margin-bottom: 8px;
     }
 }
+
+
+/* Homepage (CZ + RU) na mobilu: kompaktnější přehled benefitů a přijímaček */
+@media (max-width: 600px) {
+    .hero-facts-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 4px;
+    }
+
+    .hero-fact-card {
+        padding: 12px 10px;
+    }
+
+    .hero-fact-card i {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .hero-fact-card h4 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .hero-fact-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .info-card {
+        padding: 24px 18px;
+    }
+
+    .prijimacky-card > p {
+        font-size: 0.98rem;
+        margin: 8px 0 16px;
+    }
+
+    .prijimacky-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .prijimacky-item {
+        min-height: 0;
+        padding: 16px 14px;
+        gap: 2px;
+        border-radius: 18px;
+    }
+
+    .prijimacky-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+        border-radius: 13px;
+        margin-bottom: 6px;
+    }
+
+    .prijimacky-text strong {
+        font-size: 1.1rem;
+    }
+
+    .prijimacky-text span {
+        font-size: 0.78rem;
+    }
+
+    .prijimacky-more {
+        font-size: 0.82rem;
+        padding-top: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-full-section {
+        padding-bottom: 36px;
+    }
+
+    .hero-facts-row {
+        padding-top: 0;
+        padding-bottom: 36px;
+    }
+
+    .hero-fact-card h4 {
+        font-size: 0.95rem;
+        overflow-wrap: anywhere;
+    }
+
+    .split-info-section {
+        padding: 44px 0;
+    }
+
+    .info-card h2 {
+        margin-top: 0;
+    }
+
+    .info-card .lead-text,
+    .prijimacky-card > p {
+        margin-top: 8px;
+    }
+
+    .steps-large {
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+
+    .cta-banner-section {
+        padding-bottom: 50px;
+    }
+}

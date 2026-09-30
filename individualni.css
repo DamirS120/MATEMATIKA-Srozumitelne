@@ -796,3 +796,26 @@ body.page-individual .main-footer {
         width: 100%;
     }
 }
+
+
+/* Nová patička, kontaktní pruh a pořadí hero na mobilu (odznak, záhlaví, fotka, tlačítko) */
+body.page-individual .main-footer {
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .ix-hero-text {
+        display: contents;
+    }
+
+    .ix-hero-grid {
+        gap: 28px;
+    }
+
+    .ix-hero-text > .ix-eyebrow { order: 1; }
+    .ix-hero-text > h1 { order: 2; }
+    .ix-hero-text > .ix-lead { order: 3; margin-bottom: 0; }
+    .ix-hero-grid > .hero-visual-frame { order: 4; }
+    .ix-hero-text > .ix-cta-row { order: 5; }
+    .ix-hero-text > .hero-facts { order: 6; }
+}
