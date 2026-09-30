@@ -190,3 +190,55 @@ document.addEventListener("DOMContentLoaded", function () {
   sync(current);
   startAutoplay();
 });
+
+// Přehled přijímaček na mobilu: tečky pod swipe kartami
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.querySelector(".prijimacky-grid");
+  if (!grid) return;
+
+  const items = Array.from(grid.children);
+  const dots = document.createElement("div");
+  dots.className = "prijimacky-dots";
+  dots.setAttribute("aria-hidden", "true");
+  items.forEach(function () { dots.appendChild(document.createElement("span")); });
+  grid.parentNode.appendChild(dots);
+
+  function update() {
+    const center = grid.scrollLeft + grid.clientWidth / 2;
+    let best = 0;
+    let bestDist = Infinity;
+    items.forEach(function (item, i) {
+      const dist = Math.abs(item.offsetLeft + item.offsetWidth / 2 - center);
+      if (dist < bestDist) { bestDist = dist; best = i; }
+    });
+    Array.from(dots.children).forEach(function (d, i) { d.classList.toggle("active", i === best); });
+  }
+
+  grid.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+});
+
+// Swipe na hlavním karuselu (na mobilu není levá šipka)
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("hero-carousel-full");
+  if (!carousel) return;
+  const wrap = carousel.closest(".hero-carousel-full-wrap");
+  const prev = wrap && wrap.querySelector(".carousel-arrow.prev");
+  const next = wrap && wrap.querySelector(".carousel-arrow.next");
+  let x0 = 0;
+  let y0 = 0;
+
+  carousel.addEventListener("touchstart", function (e) {
+    x0 = e.touches[0].clientX;
+    y0 = e.touches[0].clientY;
+  }, { passive: true });
+
+  carousel.addEventListener("touchend", function (e) {
+    const dx = e.changedTouches[0].clientX - x0;
+    const dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy)) return;
+    const btn = dx < 0 ? next : prev;
+    if (btn) btn.click();
+  }, { passive: true });
+});

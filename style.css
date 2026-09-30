@@ -5549,3 +5549,187 @@ body.page-uk .hero-split .hero-eyebrow {
         padding-bottom: 50px;
     }
 }
+
+/* ============================================================
+   Mobil: karusel jen s pravou šipkou uprostřed, přijímačky jako
+   swipe karty a benefity jako karty 2x2 (podle reference)
+============================================================ */
+.prijimacky-dots {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .hero-carousel-full-wrap .carousel-arrow.prev {
+        display: none;
+    }
+
+    .hero-carousel-full-wrap .carousel-arrow.next {
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+        z-index: 5;
+    }
+
+    #hero-carousel-full .carousel-overlay {
+        padding: 40px 58px 30px 22px;
+    }
+}
+
+@media (max-width: 700px) {
+    .split-info-grid > * {
+        min-width: 0;
+    }
+
+    .prijimacky-card {
+        padding: 0;
+        overflow: hidden;
+        background: #ffffff;
+    }
+
+    .prijimacky-card > h2 {
+        color: #ffffff;
+        padding: 28px 22px 0;
+        background: linear-gradient(180deg, #1e3a8a 0%, #2f5fd0 100%);
+        font-size: 1.7rem;
+    }
+
+    .prijimacky-card > h2::after {
+        display: none;
+    }
+
+    .prijimacky-card > p {
+        color: rgba(255, 255, 255, 0.85);
+        background: #2f5fd0;
+        margin: 0;
+        padding: 10px 22px 34px;
+    }
+
+    .prijimacky-grid {
+        position: relative;
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-top: -22px;
+        padding: 4px 22px 18px;
+    }
+
+    .prijimacky-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .prijimacky-item {
+        flex: 0 0 74%;
+        scroll-snap-align: center;
+        background: #ffffff;
+        border: 1px solid #e8edf6;
+        box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+        border-radius: 22px;
+        padding: 20px 18px 18px;
+        gap: 4px;
+    }
+
+    .prijimacky-item:hover {
+        transform: none;
+    }
+
+    .prijimacky-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .prijimacky-text strong {
+        font-size: 1.35rem;
+    }
+
+    .prijimacky-text span {
+        font-size: 0.88rem;
+    }
+
+    .prijimacky-more {
+        align-self: stretch;
+        justify-content: center;
+        margin-top: 14px;
+        padding: 13px 18px;
+        background: var(--primary);
+        color: #ffffff;
+        border-radius: 14px;
+        font-size: 0.95rem;
+    }
+
+    .prijimacky-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 0 22px;
+    }
+
+    .prijimacky-dots span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #d1d5db;
+        transition: 0.2s;
+    }
+
+    .prijimacky-dots span.active {
+        width: 24px;
+        border-radius: 5px;
+        background: var(--primary);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-facts-grid {
+        gap: 14px;
+    }
+
+    .hero-fact-card {
+        background: #ffffff;
+        border: 1px solid #e8edf6;
+        border-radius: 22px;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.07);
+        padding: 18px 16px 20px;
+    }
+
+    .hero-fact-card i {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: rgba(59, 130, 246, 0.1);
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-fact-card h4 {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+    }
+
+    .hero-fact-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-fact-card h4 {
+        font-size: 0.92rem;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: auto;
+    }
+
+    .hero-fact-card {
+        padding: 18px 14px 20px;
+    }
+}
