@@ -5982,3 +5982,304 @@ body.page-uk .hero-split {
         padding-top: 40px;
     }
 }
+
+
+/* ============================================================
+   Ceník výrazný jako na Individuálním doučování (CVUT, CERMAT, UK)
+============================================================ */
+body.page-cvut { --cenik-tint: #eef3ff; --cenik-glow: rgba(30, 58, 138, 0.35); }
+body.page-cermat { --cenik-tint: #f3f1ff; --cenik-glow: rgba(62, 56, 180, 0.35); }
+body.page-uk { --cenik-tint: #fdf1f1; --cenik-glow: rgba(180, 13, 13, 0.32); }
+
+body.page-cvut #cenik,
+body.page-cermat #cenik,
+body.page-uk #cenik {
+    background: var(--cenik-tint);
+    border-radius: 36px;
+    padding: 60px 40px 70px;
+}
+
+body.page-cvut #cenik .cenik-lead,
+body.page-cermat #cenik .cenik-lead,
+body.page-uk #cenik .cenik-lead {
+    margin: 6px 0 0;
+}
+
+body.page-cvut #cenik .pricing-cards,
+body.page-cermat #cenik .pricing-cards,
+body.page-uk #cenik .pricing-cards {
+    padding: 44px 0 10px;
+    gap: 26px;
+    align-items: stretch;
+}
+
+body.page-cvut #cenik .price-card,
+body.page-cermat #cenik .price-card,
+body.page-uk #cenik .price-card {
+    border-radius: 28px;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+}
+
+body.page-cvut #cenik .price-value,
+body.page-cermat #cenik .price-value,
+body.page-uk #cenik .price-value {
+    font-size: clamp(2.8rem, 4.4vw, 3.6rem);
+}
+
+body.page-cvut #cenik .price-tag,
+body.page-cermat #cenik .price-tag,
+body.page-uk #cenik .price-tag {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+}
+
+body.page-cvut #cenik .price-features li,
+body.page-cermat #cenik .price-features li,
+body.page-uk #cenik .price-features li {
+    font-size: 1rem;
+}
+
+body.page-cvut #cenik .price-card.featured,
+body.page-cermat #cenik .price-card.featured,
+body.page-uk #cenik .price-card.featured {
+    margin: -18px 0;
+    padding: 56px 34px;
+    box-shadow: 0 30px 60px var(--cenik-glow);
+}
+
+@media (max-width: 1000px) {
+    body.page-cvut #cenik .price-card.featured,
+    body.page-cermat #cenik .price-card.featured,
+    body.page-uk #cenik .price-card.featured {
+        margin: 0;
+        padding: 40px 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    body.page-cvut #cenik,
+    body.page-cermat #cenik,
+    body.page-uk #cenik {
+        padding: 40px 16px 44px;
+        border-radius: 28px;
+    }
+}
+
+/* SCIO ceník: silnější stíny a větší částky */
+.sc-price {
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+}
+
+.sc-price-main {
+    box-shadow: 0 30px 60px rgba(180, 83, 9, 0.35);
+}
+
+.sc-price-amount {
+    font-size: clamp(2.8rem, 4.6vw, 3.8rem);
+}
+
+/* SCIO anketa ve stejném stylu jako CERMAT / ČVUT / UK */
+body.page-scio .scio-anketa {
+    padding: 90px 0 60px;
+    background: none;
+}
+
+body.page-scio .scio-anketa .mini-poll-grid {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.14);
+}
+
+body.page-scio .scio-anketa .mini-poll-form {
+    padding: 52px 48px;
+}
+
+body.page-scio .scio-anketa .mini-poll-form h2 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin: 0 0 12px;
+}
+
+body.page-scio .scio-anketa .mini-poll-form > p {
+    font-size: 1.05rem;
+}
+
+body.page-scio .scio-anketa .form-group input,
+body.page-scio .scio-anketa .form-group select {
+    padding: 14px 16px;
+    border-radius: 14px;
+}
+
+body.page-scio .scio-anketa .btn-submit {
+    background: var(--primary);
+    border-radius: 50px;
+    padding: 17px;
+    font-size: 1.05rem;
+}
+
+body.page-scio .scio-anketa-extra {
+    margin-top: 34px;
+    text-align: center;
+}
+
+body.page-scio .scio-anketa-extra .sc-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+body.page-scio .scio-anketa-extra .sc-channel {
+    color: var(--primary);
+    border: 1.5px solid rgba(180, 83, 9, 0.35);
+}
+
+body.page-scio .scio-anketa-extra .sc-channel:hover {
+    background: rgba(180, 83, 9, 0.08);
+    border-color: var(--primary);
+}
+
+body.page-scio .scio-anketa-extra .sc-others {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 12px;
+    margin-top: 26px;
+    padding-top: 0;
+    border-top: none;
+}
+
+body.page-scio .scio-anketa-extra .sc-others-label {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+body.page-scio .scio-anketa-extra .sc-chip {
+    color: var(--text-dark);
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+}
+
+@media (max-width: 900px) {
+    body.page-scio .scio-anketa .mini-poll-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    body.page-scio .scio-anketa {
+        padding: 50px 0 40px;
+    }
+
+    body.page-scio .scio-anketa .mini-poll-form {
+        padding: 32px 22px;
+    }
+
+    body.page-scio .scio-anketa .mini-poll-form h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ============================================================
+   Homepage: hero bez textu a vejde se na mobil, karta lektora
+   s důrazem na checklist a volby
+============================================================ */
+.hero-big-title {
+    font-size: clamp(2.8rem, 5vw, 4.6rem);
+}
+
+@media (max-width: 600px) {
+    .hero-intro {
+        padding: 88px 0 28px;
+    }
+
+    .hero-intro .hero-split-grid {
+        gap: 18px;
+    }
+
+    .hero-big-title {
+        font-size: 2.9rem;
+        line-height: 1.05;
+    }
+
+    .hero-intro .hero-intro-photo {
+        max-width: none;
+        margin-top: 0;
+    }
+
+    .hero-photo-img {
+        aspect-ratio: auto;
+        height: 240px;
+        height: clamp(140px, calc(100svh - 500px), 300px);
+        border-radius: 26px;
+    }
+
+    .hero-intro .hero-cta-row {
+        gap: 10px;
+    }
+
+    .hero-intro .hero-intro-cta,
+    .hero-intro .hero-intro-cta-outline {
+        padding: 15px 24px;
+        font-size: 1rem;
+    }
+}
+
+.simple-check-list {
+    gap: 10px;
+}
+
+.lektor-card .simple-check-list li {
+    background: #f4f7ff;
+    border-radius: 16px;
+    padding: 14px 16px;
+    font-size: 1.05rem;
+}
+
+.lektor-card .simple-check-list li > i:first-child {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 0.75rem;
+}
+
+.lektor-modes h3 {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 600px) {
+    .lektor-card-top {
+        margin-bottom: 8px;
+    }
+
+    .lektor-deco {
+        flex: 0 0 auto;
+        width: 170px;
+        height: 70px;
+    }
+
+    .lektor-deco-cap {
+        font-size: 2.3rem;
+        top: 2px;
+    }
+
+    .lektor-deco-uni {
+        font-size: 2.5rem;
+        top: 10px;
+    }
+
+    .lektor-card .simple-check-list li {
+        font-size: 1rem;
+        padding: 12px 14px;
+    }
+
+    .lektor-card .simple-check-list li > i:first-child {
+        align-self: center;
+        margin-top: 0;
+    }
+}
