@@ -5733,3 +5733,174 @@ body.page-uk .hero-split .hero-eyebrow {
         padding: 18px 14px 20px;
     }
 }
+
+/* Karta "Kdo tě bude učit?" na mobilu: fotka vedle nadpisu a kompaktní obsah (jako v referenci) */
+@media (max-width: 600px) {
+    .lektor-card-top {
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 14px;
+    }
+
+    .lektor-photo {
+        width: 88px;
+        height: 88px;
+    }
+
+    .lektor-card .info-card h2,
+    .lektor-card h2 {
+        font-size: 1.55rem;
+        line-height: 1.2;
+    }
+
+    .lektor-card .lead-text {
+        font-size: 1rem;
+        line-height: 1.55;
+        margin: 0 0 16px;
+    }
+
+    .lektor-card .simple-check-list {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .lektor-card .simple-check-list li {
+        font-size: 0.95rem;
+    }
+
+    .lektor-modes {
+        margin-bottom: 20px;
+    }
+
+    .lektor-modes h3 {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .lektor-modes-row {
+        gap: 10px;
+    }
+
+    .lektor-mode {
+        padding: 12px 14px;
+    }
+
+    .lektor-card .hero-intro-cta {
+        align-self: stretch;
+        justify-content: center;
+    }
+}
+
+
+/* Karta "Kdo tě bude učit?" - ilustrace, ikonky u checklistu a barevné volby (podle reference) */
+.lektor-deco,
+.check-deco {
+    display: none;
+}
+
+.lektor-mode:nth-child(1) {
+    background: #e3ecfc;
+}
+
+.lektor-mode:nth-child(2) {
+    background: #fbf2df;
+}
+
+.lektor-mode:nth-child(2) .lektor-mode-icon {
+    color: #c8912b;
+}
+
+.lektor-mode:has(input:checked) {
+    background-color: #e3ecfc;
+}
+
+.lektor-mode:nth-child(2):has(input:checked) {
+    background-color: #fbf2df;
+    border-color: #c8912b;
+}
+
+@media (max-width: 600px) {
+    .lektor-card-top {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 12px 10px;
+    }
+
+    .lektor-photo {
+        width: 92px;
+        height: 92px;
+    }
+
+    .lektor-deco {
+        display: block;
+        position: relative;
+        flex: 1;
+        min-width: 0;
+        height: 92px;
+    }
+
+    .lektor-deco svg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .lektor-deco i {
+        position: absolute;
+        color: #1e3a8a;
+    }
+
+    .lektor-deco-cap {
+        left: 4%;
+        top: 4px;
+        font-size: 3rem;
+    }
+
+    .lektor-deco-uni {
+        right: 0;
+        top: 16px;
+        font-size: 3.3rem;
+        color: #2f5fd0;
+    }
+
+    .lektor-card-top h2 {
+        flex: 0 0 100%;
+        margin-top: 8px;
+    }
+
+    .lektor-card .simple-check-list li {
+        align-items: center;
+    }
+
+    .lektor-card .simple-check-list li i:first-child {
+        align-self: flex-start;
+        margin-top: 5px;
+    }
+
+    .check-deco {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        margin-left: auto;
+        border-radius: 50%;
+        background: #eef3ff;
+        color: #1e3a8a;
+        font-size: 1.15rem;
+    }
+
+    .check-deco i {
+        color: inherit !important;
+        font-size: inherit !important;
+        margin: 0 !important;
+        align-self: auto !important;
+    }
+
+    .simple-check-list li:nth-child(3) .check-deco {
+        background: #fdf3dc;
+        color: #c8912b;
+    }
+}
