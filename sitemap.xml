@@ -3,11 +3,11 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://matematika-srozumitelne.cz/index.html</loc>
+    <loc>https://matematika-srozumitelne.cz/</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://matematika-srozumitelne.cz/index.html"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://matematika-srozumitelne.cz/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://matematika-srozumitelne.cz/index_ru.html"/>
   </url>
   <url>
@@ -15,7 +15,7 @@
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://matematika-srozumitelne.cz/index.html"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://matematika-srozumitelne.cz/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://matematika-srozumitelne.cz/index_ru.html"/>
   </url>
 
